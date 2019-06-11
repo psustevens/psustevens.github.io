@@ -5,5 +5,5 @@ source 'https://rubygems.org'
 gemspec
 
 gem 'rubocop-rails'
-##gem 'github-pages' x64-mingw32
+gem 'wdm', '>= 0.1.0' # added the following to avoid polling for changes. Only needed if on Windows
 gem "github-pages", group: :jekyll_plugins
