@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>@PSUStevens Blog</title>
-    <link>https://blog.psustevens.com/</link>
-    <description>Recent content on @PSUStevens Blog</description>
+    <title>Blogging on @PSUStevens Blog</title>
+    <link>https://blog.psustevens.com/categories/blogging/</link>
+    <description>Recent content in Blogging on @PSUStevens Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <lastBuildDate>Fri, 11 Oct 2019 16:02:46 -0400</lastBuildDate>
     
-	<atom:link href="https://blog.psustevens.com/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://blog.psustevens.com/categories/blogging/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
@@ -18,16 +18,6 @@
       
       <guid>https://blog.psustevens.com/2019/10/11/building-a-blog-with-hugo/</guid>
       <description>If you read my very first post, you would know that I&amp;rsquo;ve been thinking about writing a blog for years. I&amp;rsquo;ve been blogging for years for employers. But, just recently, I finally launched my first technical blog. The one you are reading right now. I also have a travel blog that only gets updated when I travel for vacation. In this blog series, I&amp;rsquo;m going to talk about how I built my blog site using Hugo.</description>
-    </item>
-    
-    <item>
-      <title>Introducing... Me</title>
-      <link>https://blog.psustevens.com/2019/09/30/introducing-me/</link>
-      <pubDate>Mon, 30 Sep 2019 08:48:31 -0400</pubDate>
-      
-      <guid>https://blog.psustevens.com/2019/09/30/introducing-me/</guid>
-      <description>Welcome to the first post of my technical blog where I will write about virtualization technologies such as VMware and Microsoft, desktop and server technologies from Microsoft and the occasional script based on PowerShell.
-A bit about me I hail from Pittsburgh, PA, but now live in New Hampshire. My wife and I have lived in New England for many years. We moved up here so I could work for Dell as a technical marketing engineer in their storage group.</description>
     </item>
     
   </channel>

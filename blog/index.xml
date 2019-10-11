@@ -6,10 +6,19 @@
     <description>Recent content in Blog on @PSUStevens Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Mon, 30 Sep 2019 08:48:31 -0400</lastBuildDate>
+    <lastBuildDate>Fri, 11 Oct 2019 16:02:46 -0400</lastBuildDate>
     
 	<atom:link href="https://blog.psustevens.com/blog/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Building a Blog With Hugo</title>
+      <link>https://blog.psustevens.com/2019/10/11/building-a-blog-with-hugo/</link>
+      <pubDate>Fri, 11 Oct 2019 16:02:46 -0400</pubDate>
+      
+      <guid>https://blog.psustevens.com/2019/10/11/building-a-blog-with-hugo/</guid>
+      <description>If you read my very first post, you would know that I&amp;rsquo;ve been thinking about writing a blog for years. I&amp;rsquo;ve been blogging for years for employers. But, just recently, I finally launched my first technical blog. The one you are reading right now. I also have a travel blog that only gets updated when I travel for vacation. In this blog series, I&amp;rsquo;m going to talk about how I built my blog site using Hugo.</description>
+    </item>
     
     <item>
       <title>Introducing... Me</title>
