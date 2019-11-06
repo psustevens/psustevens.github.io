@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>VMware on @PSUStevens Blog</title>
+    <link>https://blog.psustevens.com/categories/vmware/</link>
+    <description>Recent content in VMware on @PSUStevens Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Wed, 06 Nov 2019 01:20:45 -0500</lastBuildDate>
+    
+	<atom:link href="https://blog.psustevens.com/categories/vmware/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>My First International VMUG</title>
+      <link>https://blog.psustevens.com/2019/11/06/my-first-international-vmug/</link>
+      <pubDate>Wed, 06 Nov 2019 01:20:45 -0500</pubDate>
+      
+      <guid>https://blog.psustevens.com/2019/11/06/my-first-international-vmug/</guid>
+      <description>This week I am attending my very first VMworld Europe in, of all places, beautiful, Barcelona, Spain. I&amp;rsquo;ll write a synopsis of VMworld after it&amp;rsquo;s over, and I&amp;rsquo;ll get back to my blogging series after VMworld is over. For this post, I want to cover my first very International VMUG event. Continue reading for my viewpoint of the event.
+I didn&amp;rsquo;t find out about the VMUG until the very last minute.</description>
+    </item>
+    
+  </channel>
+</rss>
