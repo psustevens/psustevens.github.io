@@ -7,11 +7,9 @@
 
 
 
-  <meta name="generator" content="Hugo 0.58.3" />
+  <meta name="generator" content="Hugo 0.60.1" />
   <meta itemprop="name" content="Building a Blog With Hugo - Part 2">
 <meta itemprop="description" content="Creating your first Hugo site and blog post">
-
-
 <meta itemprop="datePublished" content="2019-11-01T13:07:13-04:00" />
 <meta itemprop="dateModified" content="2019-11-01T13:07:13-04:00" />
 <meta itemprop="wordCount" content="1640">
@@ -19,7 +17,6 @@
 
 
 <meta itemprop="keywords" content="Hugo," />
-
   <meta property="og:title" content="Building a Blog With Hugo - Part 2" />
 <meta property="og:description" content="Creating your first Hugo site and blog post" />
 <meta property="og:type" content="article" />
@@ -149,6 +146,12 @@ if (!doNotTrack) {
         </a>
   
 
+  
+    <a href="//www.reddit.com/submit?url=https%3a%2f%2fblog.psustevens.com%2f2019%2f11%2f01%2fbuilding-a-blog-with-hugo-part2%2f&amp;title=Building%20a%20Blog%20With%20Hugo%20-%20Part%202" target="_blank" rel="noopener" class="share-btn reddit">
+          <i class="fab fa-reddit-alien"></i><p>&nbsp;Reddit</p>
+        </a>
+  
+
 
     </menu>
   
@@ -261,6 +264,12 @@ if (!doNotTrack) {
         </a>
   
 
+  
+    <a href="//www.reddit.com/submit?url=https%3a%2f%2fblog.psustevens.com%2f2019%2f11%2f01%2fbuilding-a-blog-with-hugo-part2%2f&amp;title=Building%20a%20Blog%20With%20Hugo%20-%20Part%202" target="_blank" rel="noopener" class="share-btn reddit">
+          <i class="fab fa-reddit-alien"></i><p>&nbsp;Reddit</p>
+        </a>
+  
+
 
   </section>
   
@@ -270,62 +279,45 @@ if (!doNotTrack) {
 
 
   <div class="content">
-    
-
-<p>In the <a href="/2019/10/11/building-a-blog-with-hugo/">first part</a> of this series, I wrote about why I chose to use <a href="https://github.com/gohugoio/hugo">Hugo</a> to develop this blog and <a href="https://pages.github.com/">GitHub Pages</a> to host it.  In this post, I&rsquo;m going to walk through the steps to create a Hugo site, apply a theme, and create a very simple blog post.  So, let&rsquo;s get going!</p>
-
-<hr />
-
+    <p>In the <a href="/2019/10/11/building-a-blog-with-hugo/">first part</a> of this series, I wrote about why I chose to use <a href="https://github.com/gohugoio/hugo">Hugo</a> to develop this blog and <a href="https://pages.github.com/">GitHub Pages</a> to host it.  In this post, I'm going to walk through the steps to create a Hugo site, apply a theme, and create a very simple blog post.  So, let's get going!</p>
+<hr>
 <h2 id="before-you-get-started">Before You Get Started</h2>
-
 <p>Before you get started, you need to gather a few bits and bytes.</p>
-
 <ul>
 <li>You need to download and install Hugo.  Refer to my <a href="/2019/10/11/building-a-blog-with-hugo/">first post</a> in this series on where to download the binaries for your preferred operating system.</li>
 <li>You need a GitHub account.</li>
 <li>You will need git installed on your development system.
-
 <ul>
 <li>I recommend following the steps over at the <a href="https://help.github.com/en/articles/set-up-git">GitHub Help site</a> to set up git on your system.</li>
 <li>I primarily use <a href="https://desktop.github.com">GitHub Desktop</a> instead of the git CLI.  But, I also installed the &ldquo;CLI version&rdquo; of git on my system.  If you are comfortable using git CLI commands, then there is no need to get this piece of software.  I find this easier for bulk commits and pushes up to my repositories.  Eventually, I will get around to learning how to use the git CLI commands better.</li>
 <li>You can find the latest git installer over at the <a href="https://git-scm.com/downloads">Git project site</a>.</li>
-</ul></li>
-<li>You should consider learning markdown.  I refer to markdown as shorthand HTML code/formatting with less complexity.  Here is a great <a href="https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet">markdown cheatsheet</a> to use as a reference.</li>
-<li>You need a text editor for creating and editing the files behind your site.  I highly recommend <a href="https://code.visualstudio.com">Microsoft Visual Studio Code</a>.  It&rsquo;s available for Linux, MacOS and Windows.   Most examples and screenshots will be from within VSCode and the built-in terminal in VSCode.</li>
 </ul>
-
+</li>
+<li>You should consider learning markdown.  I refer to markdown as shorthand HTML code/formatting with less complexity.  Here is a great <a href="https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet">markdown cheatsheet</a> to use as a reference.</li>
+<li>You need a text editor for creating and editing the files behind your site.  I highly recommend <a href="https://code.visualstudio.com">Microsoft Visual Studio Code</a>.  It's available for Linux, MacOS and Windows.   Most examples and screenshots will be from within VSCode and the built-in terminal in VSCode.</li>
+</ul>
 <p>After completing all of this you are ready to get going.</p>
-
-<hr />
-
+<hr>
 <h2 id="creating-your-first-hugo-site">Creating Your First Hugo Site</h2>
-
 <p>Now that you have Hugo installed and a GitHub account you are ready to create your first site.</p>
-
-<p><strong>FYI.  I use Windows for developing my site.  So, you may need to make adjustments to any of the code snippets I post in the event you aren&rsquo;t using Windows.</strong></p>
-
+<p><strong>FYI.  I use Windows for developing my site.  So, you may need to make adjustments to any of the code snippets I post in the event you aren't using Windows.</strong></p>
 <p>Begin by creating a directory where your site development will take place.  In my case this is the &ldquo;GitHub&rdquo; directory in my &ldquo;Documents&rdquo; folder.</p>
-
 <p>Change to this directory and issue the following command to create a new site.</p>
-
-<pre><code class="language-plaintext">PS C:\Users\Administrator\Documents\GitHub&gt; hugo new site exampleSite
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-plaintext" data-lang="plaintext">PS C:\Users\Administrator\Documents\GitHub&gt; hugo new site exampleSite
 Congratulations! Your new Hugo site is created in C:\Users\Administrator\Documents\GitHub\exampleSite.
 
-Just a few more steps and you're ready to go:
+Just a few more steps and you&#39;re ready to go:
 
 1. Download a theme into the same-named folder.
    Choose a theme from https://themes.gohugo.io/ or
-   create your own with the &quot;hugo new theme &lt;THEMENAME&gt;&quot; command.
+   create your own with the &#34;hugo new theme &lt;THEMENAME&gt;&#34; command.
 2. Perhaps you want to add some content. You can add single files
-   with &quot;hugo new &lt;SECTIONNAME&gt;\&lt;FILENAME&gt;.&lt;FORMAT&gt;&quot;.
-3. Start the built-in live server via &quot;hugo server&quot;.
+   with &#34;hugo new &lt;SECTIONNAME&gt;\&lt;FILENAME&gt;.&lt;FORMAT&gt;&#34;.
+3. Start the built-in live server via &#34;hugo server&#34;.
 
 Visit https://gohugo.io/ for quickstart guide and full documentation.
-</code></pre>
-
-<p>This will result in a directory listing that looks similar to the following:</p>
-
-<pre><code class="language-plaintext">PS C:\Users\Administrator\Documents\GitHub\exampleSite&gt; dir
+</code></pre></div><p>This will result in a directory listing that looks similar to the following:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-plaintext" data-lang="plaintext">PS C:\Users\Administrator\Documents\GitHub\exampleSite&gt; dir
 
     Directory: C:\Users\Administrator\Documents\GitHub\exampleSite
 
@@ -338,27 +330,19 @@ d-----       10/13/2019  11:01 PM                layouts
 d-----       10/13/2019  11:01 PM                static
 d-----       10/13/2019  11:01 PM                themes
 -a----       10/13/2019  11:01 PM             82 config.toml
-</code></pre>
-
-<p>This is the basic directory layout for a Hugo site.</p>
-
+</code></pre></div><p>This is the basic directory layout for a Hugo site.</p>
 <p>If you are curious about the directory structure Hugo initially creates jump over to the write-up about <a href="https://gohugo.io/getting-started/directory-structure/">Hugo Directory Structure</a>.</p>
-
-<hr />
-
+<hr>
 <h2 id="adding-a-theme">Adding a Theme</h2>
-
-<p>It&rsquo;s possible to begin developing your site right away.  But, it will be easier to apply a <a href="https://themes.gohugo.io/">Hugo Theme</a>.  My blog is using the <a href="https://themes.gohugo.io/hugo-future-imperfect-slim/">Hugo Future Imperfect Slim</a> theme.  So, I&rsquo;m going to use it in my examples.</p>
-
+<p>It's possible to begin developing your site right away.  But, it will be easier to apply a <a href="https://themes.gohugo.io/">Hugo Theme</a>.  My blog is using the <a href="https://themes.gohugo.io/hugo-future-imperfect-slim/">Hugo Future Imperfect Slim</a> theme.  So, I'm going to use it in my examples.</p>
 <p>From the root of the site directory issue the following commands:</p>
-
-<pre><code class="language-markdown"># This creates and initializes an empty Git repository on your local machine
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-markdown" data-lang="markdown"># This creates and initializes an empty Git repository on your local machine
 PS C:\Users\Administrator\Documents\GitHub\exampleSite&gt; git init
 Initialized empty Git repository in C:/Users/Administrator/Documents/GitHub/exampleSite/.git/
 
 # This adds the Hugo theme as a Git submodule to the site directory
 PS C:\Users\Administrator\Documents\GitHub\exampleSite&gt; git submodule add https://github.com/pacollins/hugo-future-imperfect-slim.git themes/hugo-future-imperfect-slim
-Cloning into 'C:/Users/Administrator/Documents/GitHub/exampleSite/themes/hugo-future-imperfect-slim'...
+Cloning into &#39;C:/Users/Administrator/Documents/GitHub/exampleSite/themes/hugo-future-imperfect-slim&#39;...
 remote: Enumerating objects: 22, done.
 remote: Counting objects: 100% (22/22), done.
 remote: Compressing objects: 100% (18/18), done.
@@ -367,10 +351,7 @@ Receiving objects: 100% (2243/2243), 7.04 MiB | 15.71 MiB/s, done.
 Resolving deltas: 100% (1255/1255), done.
 warning: LF will be replaced by CRLF in .gitmodules.
 The file will have its original line endings in your working directory
-</code></pre>
-
-<p>This is what the directory listing will look like in VSCode.</p>
-
+</code></pre></div><p>This is what the directory listing will look like in VSCode.</p>
 <figure>
     <img src="/img/2019/10/18/theme-directory-listing.png"
          alt="Theme directory listing"/> <figcaption>
@@ -378,11 +359,8 @@ The file will have its original line endings in your working directory
         </figcaption>
 </figure>
 
-
 <p>Take note of the redundant directories in the populated, themes directory and the exampleSite directory in the themes directory.  We will be copying some of those directories to get the site up and running quickly.</p>
-
 <p>In the image below you will see the numbered directories, content (1), resources (2), static (3) and a the config.toml (4) file.  Copy the contents of the content, resources and static directories in the bottom of the image to their corresponding upper location.  Then copy the config.toml file (labled as #4) and copy it to the root of your site.</p>
-
 <figure>
     <img src="/img/2019/11/01/exampleSite_dir_numbers.png"
          alt="Numbered directories to copy"/> <figcaption>
@@ -390,13 +368,10 @@ The file will have its original line endings in your working directory
         </figcaption>
 </figure>
 
-
 <p>Once you copy all of the neccessary folders and their contents and the config.toml file to the proper locations you are ready to see what your site it starting to look like.</p>
-
 <p>Move to the root of your site.  In my case it is: C:\Users\Administrator\Documents\GitHub\exampleSite
 and issue the <strong>hugo server</strong> command:</p>
-
-<pre><code class="language-plaintext">PS C:\Users\Administrator\Documents\GitHub\exampleSite&gt; hugo server
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-plaintext" data-lang="plaintext">PS C:\Users\Administrator\Documents\GitHub\exampleSite&gt; hugo server
 port 1313 already in use, attempting to use an available port
 Building sites …
                    | EN | DE | FR | PL | PT
@@ -413,17 +388,13 @@ Building sites …
 Total in 645 ms
 Watching for changes in C:\Users\Administrator\Documents\GitHub\exampleSite\{archetypes,content,data,layouts,static,themes}
 Watching for config changes in C:\Users\Administrator\Documents\GitHub\exampleSite\config.toml
-Environment: &quot;development&quot;
+Environment: &#34;development&#34;
 Serving pages from memory
 Running in Fast Render Mode. For full rebuilds on change: hugo server --disableFastRender
 Web Server is available at http://localhost:51534/ (bind address 127.0.0.1)
 Press Ctrl+C to stop
-</code></pre>
-
-<p><em><strong>NOTE:</strong>  If you receive the error &ldquo;TOCSS … this feature is not available in your current Hugo version&rdquo; then you may need to install the extended version of Hugo on your development machine.  You can get more details at <a href="https://gohugo.io/troubleshooting/faq/#i-get-tocss-this-feature-is-not-available-in-your-current-hugo-version">this link</a> on how to proceed.</em></p>
-
+</code></pre></div><p>_<strong>NOTE:</strong>  If you receive the error &ldquo;TOCSS … this feature is not available in your current Hugo version&rdquo; then you may need to install the extended version of Hugo on your development machine.  You can get more details at <a href="https://gohugo.io/troubleshooting/faq/#i-get-tocss-this-feature-is-not-available-in-your-current-hugo-version">this link</a> on how to proceed._</p>
 <p>Ctrl + click on the URL and you should see something similar to the following:</p>
-
 <figure>
     <img src="/img/2019/11/01/examplesite_homepage.png"
          alt="ExampleSite homepage" width="459"/> <figcaption>
@@ -431,28 +402,18 @@ Press Ctrl+C to stop
         </figcaption>
 </figure>
 
-
-<p>Click around the site and briefly check it out.  After you&rsquo;re finished exploring, we&rsquo;ll walk through creating a simple blog post.  Don&rsquo;t worry about customizing the site yet.  We&rsquo;ll get to that in a fugure post.</p>
-
-<p><em>You may be wondering why I received the error about &ldquo;port 1313 already in use.&rdquo;  I got this harmless, error because I have my dev site running simultaneously while I write this post.  Yes, you can have multiple hugo web servers running simultaneously.  Under normal circumstances, you won&rsquo;t see this.</em></p>
-
+<p>Click around the site and briefly check it out.  After you're finished exploring, we'll walk through creating a simple blog post.  Don't worry about customizing the site yet.  We'll get to that in a fugure post.</p>
+<p><em>You may be wondering why I received the error about &ldquo;port 1313 already in use.&rdquo;  I got this harmless, error because I have my dev site running simultaneously while I write this post.  Yes, you can have multiple hugo web servers running simultaneously.  Under normal circumstances, you won't see this.</em></p>
 <p>Press Ctrl+C to stop the web server.</p>
-
-<hr />
-
+<hr>
 <h2 id="creating-a-blog-post">Creating a Blog Post</h2>
-
 <p>Before you can start creating blog posts there is some work that needs to be done.  You can manually create content files (for example as <strong>content/&lt;CATEGORY&gt;/&lt;FILE&gt;.&lt;FORMAT&gt;</strong>) and provide metadata in them, however I prefer to use the <strong>hugo new</strong> command to do a few things for me (like add a title and date automatically to a new post).  Run the following command from the root of your site.</p>
-
-<pre><code class="language-markdown"># command to create a new blog post
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-markdown" data-lang="markdown"># command to create a new blog post
 PS C:\Users\Administrator\Documents\GitHub\exampleSite&gt; hugo new blog/my-first-post.md
 
 # output from the hugo new command
 C:\Users\Administrator\Documents\GitHub\exampleSite\content\blog\my-first-post.md created
-</code></pre>
-
-<p>This will create a new file named: my-first-post.md and save it in the <strong>&lt;site root&gt;/content/blog</strong> folder as you can see in the image below.</p>
-
+</code></pre></div><p>This will create a new file named: my-first-post.md and save it in the <strong>&lt;site root&gt;/content/blog</strong> folder as you can see in the image below.</p>
 <figure>
     <img src="/img/2019/11/01/exampleSite_firstPost.png"
          alt="First blog post location"/> <figcaption>
@@ -460,9 +421,7 @@ C:\Users\Administrator\Documents\GitHub\exampleSite\content\blog\my-first-post.m
         </figcaption>
 </figure>
 
-
-<p>The nice thing about creating a new blog post this way is that it is stored in the correct location and has, in Hugo terminology, front matter.  What is front matter?  In a nutshell, it&rsquo;s metadata about or in a file.  For a blog post, there is metadata in the very beginning of a post, such as:</p>
-
+<p>The nice thing about creating a new blog post this way is that it is stored in the correct location and has, in Hugo terminology, front matter.  What is front matter?  In a nutshell, it's metadata about or in a file.  For a blog post, there is metadata in the very beginning of a post, such as:</p>
 <ul>
 <li>Date</li>
 <li>Slug</li>
@@ -471,48 +430,34 @@ C:\Users\Administrator\Documents\GitHub\exampleSite\content\blog\my-first-post.m
 <li>Tags</li>
 <li>Categories</li>
 </ul>
-
-<p>There are other front matter items that can be added in a post, that&rsquo;s just a sample.  For more information on the topic, take a peek at <a href="https://gohugo.io/content-management/front-matter/">this link on the subject</a>.</p>
-
+<p>There are other front matter items that can be added in a post, that's just a sample.  For more information on the topic, take a peek at <a href="https://gohugo.io/content-management/front-matter/">this link on the subject</a>.</p>
 <p>Open your new post and you will see the following at the very beginning of the file:</p>
-
-<pre><code class="language-plaintext">+++
-author = &quot;&quot;
-categories = [&quot;&quot;]
-date = &quot;&quot;
-description = &quot;&quot;
-images = [&quot;&quot;]
-linktitle = &quot;&quot;
-title = &quot;&quot;
-type = &quot;post&quot;
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-plaintext" data-lang="plaintext">+++
+author = &#34;&#34;
+categories = [&#34;&#34;]
+date = &#34;&#34;
+description = &#34;&#34;
+images = [&#34;&#34;]
+linktitle = &#34;&#34;
+title = &#34;&#34;
+type = &#34;post&#34;
 
 +++
-</code></pre>
-
-<p>Go ahead and enter values (obviously between the quotation marks) for author, categories, date, description, and title.  Then enter some text below the three plus signs &ldquo;+++&rdquo; and save the file.  Oh yeah!  Make sure you enter today&rsquo;s date in the format of year-month-day (2019-11-01).  Otherwise, your post may not show up. Ignore the images front matter item for now.  Afer entering some text for the values and post text start up the web server.</p>
-
-<pre><code class="language-plaintext">hugo server
-</code></pre>
-
-<p>You should now have your first blog post on your new site.</p>
-
-<p>In the next post in this series I&rsquo;ll go over some steps to customize the theme and site.</p>
-
-<hr />
-
+</code></pre></div><p>Go ahead and enter values (obviously between the quotation marks) for author, categories, date, description, and title.  Then enter some text below the three plus signs &ldquo;+++&rdquo; and save the file.  Oh yeah!  Make sure you enter today's date in the format of year-month-day (2019-11-01).  Otherwise, your post may not show up. Ignore the images front matter item for now.  Afer entering some text for the values and post text start up the web server.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-plaintext" data-lang="plaintext">hugo server
+</code></pre></div><p>You should now have your first blog post on your new site.</p>
+<p>In the next post in this series I'll go over some steps to customize the theme and site.</p>
+<hr>
 <h2 id="series-table-of-contents">Series Table of Contents</h2>
-
 <p>Here are links to the rest of the series:</p>
-
 <ul>
 <li><a href="/2019/10/11/building-a-blog-with-hugo/">Part 1: A quick introduction to GitHub Pages and Hugo</a></li>
 <li>Part 2:  Creating your first Hugo site</li>
-<li>Part 3:  Customizing your theme/site</li>
+<li><a href="/2019/12/13/building-a-blog-with-hugo-part3/">Part 3:  Customizing your theme/site</a></li>
 <li>Part 4:  Configuring Google Analytics</li>
 <li>Part 5:  Publishing your site</li>
 </ul>
-
-<p>If there is something you think I&rsquo;m missing and feel should be added, please let me know.</p>
+<p>If there is something you think I'm missing and feel should be added, please let me know.</p>
 
   </div>
   <footer>
@@ -570,6 +515,21 @@ type = &quot;post&quot;
       <article class="mini-post">
         <section>
           
+  <a href="/2019/12/18/building-a-blog-with-hugo-part3/" class="image featured">
+    <img src="/img/2019/12/under-construction.jpg" alt="Under Construction image">
+  </a>
+
+
+        </section>
+        <header>
+          <h1><a href="/2019/12/18/building-a-blog-with-hugo-part3/">Building a Blog With Hugo - Part 3</a></h1>
+          <time class="published" datetime="">December 18, 2019</time>
+        </header>
+      </article>
+      
+      <article class="mini-post">
+        <section>
+          
   <a href="/2019/11/06/my-first-international-vmug/" class="image featured">
     <img src="/img/2019/11/VMUG-BCN.png" alt="VMUG Barcelona VMUG logo">
   </a>
@@ -597,21 +557,6 @@ type = &quot;post&quot;
         </header>
       </article>
       
-      <article class="mini-post">
-        <section>
-          
-  <a href="/2019/10/11/building-a-blog-with-hugo/" class="image featured">
-    <img src="/img/2019/10/alphabet-arts-and-crafts-blog-cropped.png" alt="Blog image">
-  </a>
-
-
-        </section>
-        <header>
-          <h1><a href="/2019/10/11/building-a-blog-with-hugo/">Building a Blog With Hugo</a></h1>
-          <time class="published" datetime="">October 11, 2019</time>
-        </header>
-      </article>
-      
       
         <a href="/blog/" class="button">See more</a>
       
@@ -631,7 +576,7 @@ type = &quot;post&quot;
           
           <li>
             
-              <a href="/categories/blogging/">blogging<span class="count">2</span></a>
+              <a href="/categories/blogging/">blogging<span class="count">3</span></a>
             
           
           <li>
@@ -716,7 +661,7 @@ type = &quot;post&quot;
         @PSUStevens Blog
       
     . <br>
-    Theme: <a href='https://github.com/pacollins/hugo-future-imperfect-slim' target='_blank' rel='noopener'>Hugo Future Imperfect Slim</a><br>A <a href='https://html5up.net/future-imperfect' target='_blank' rel='noopener'>HTML5 UP port</a> | Powered by <a href='https://gohugo.io/' title='0.58.3' target='_blank' rel='noopener'>Hugo</a>
+    Theme: <a href='https://github.com/pacollins/hugo-future-imperfect-slim' target='_blank' rel='noopener'>Hugo Future Imperfect Slim</a><br>A <a href='https://html5up.net/future-imperfect' target='_blank' rel='noopener'>HTML5 UP port</a> | Powered by <a href='https://gohugo.io/' title='0.60.1' target='_blank' rel='noopener'>Hugo</a>
   </p>
 </footer>
 <a id="back-to-top" href="#" class="fas fa-arrow-up fa-2x"></a>

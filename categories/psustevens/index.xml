@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>PSUStevens on @PSUStevens Blog</title>
@@ -18,7 +18,7 @@
       
       <guid>https://blog.psustevens.com/2019/09/30/introducing-me/</guid>
       <description>Welcome to the first post of my technical blog where I will write about virtualization technologies such as VMware and Microsoft, desktop and server technologies from Microsoft and the occasional script based on PowerShell.
-A bit about me I hail from Pittsburgh, PA, but now live in New Hampshire. My wife and I have lived in New England for many years. We moved up here so I could work for Dell as a technical marketing engineer in their storage group.</description>
+ A bit about me I hail from Pittsburgh, PA, but now live in New Hampshire. My wife and I have lived in New England for many years. We moved up here so I could work for Dell as a technical marketing engineer in their storage group.</description>
     </item>
     
   </channel>

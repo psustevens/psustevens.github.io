@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>@PSUStevens Blog</title>
@@ -6,10 +6,19 @@
     <description>Recent content on @PSUStevens Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Wed, 06 Nov 2019 01:20:45 -0500</lastBuildDate>
+    <lastBuildDate>Wed, 18 Dec 2019 01:49:05 -0500</lastBuildDate>
     
 	<atom:link href="https://blog.psustevens.com/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Building a Blog With Hugo - Part 3</title>
+      <link>https://blog.psustevens.com/2019/12/18/building-a-blog-with-hugo-part3/</link>
+      <pubDate>Wed, 18 Dec 2019 01:49:05 -0500</pubDate>
+      
+      <guid>https://blog.psustevens.com/2019/12/18/building-a-blog-with-hugo-part3/</guid>
+      <description>In the previous post, I covered how to build your first Hugo site using the Hugo Future Imperfect Slim theme. I also walked through the process to create the first blog post for your new site. In this post, I&#39;m going to walk through different customization options for the theme. The customizations aren&#39;t exhaustive but are good enough for you to get started and possibly expand on. Let&#39;s get started.</description>
+    </item>
     
     <item>
       <title>My First International VMUG</title>
@@ -17,8 +26,8 @@
       <pubDate>Wed, 06 Nov 2019 01:20:45 -0500</pubDate>
       
       <guid>https://blog.psustevens.com/2019/11/06/my-first-international-vmug/</guid>
-      <description>This week I am attending my very first VMworld Europe in, of all places, beautiful, Barcelona, Spain. I&amp;rsquo;ll write a synopsis of VMworld after it&amp;rsquo;s over, and I&amp;rsquo;ll get back to my blogging series after VMworld is over. For this post, I want to cover my first very International VMUG event. Continue reading for my viewpoint of the event.
-I didn&amp;rsquo;t find out about the VMUG until the very last minute.</description>
+      <description>This week I am attending my very first VMworld Europe in, of all places, beautiful, Barcelona, Spain. I&#39;ll write a synopsis of VMworld after it&#39;s over, and I&#39;ll get back to my blogging series after VMworld is over. For this post, I want to cover my first very International VMUG event. Continue reading for my viewpoint of the event.
+I didn&#39;t find out about the VMUG until the very last minute.</description>
     </item>
     
     <item>
@@ -27,8 +36,8 @@ I didn&amp;rsquo;t find out about the VMUG until the very last minute.</descript
       <pubDate>Fri, 01 Nov 2019 13:07:13 -0400</pubDate>
       
       <guid>https://blog.psustevens.com/2019/11/01/building-a-blog-with-hugo-part2/</guid>
-      <description>In the first part of this series, I wrote about why I chose to use Hugo to develop this blog and GitHub Pages to host it. In this post, I&amp;rsquo;m going to walk through the steps to create a Hugo site, apply a theme, and create a very simple blog post. So, let&amp;rsquo;s get going!
-Before You Get Started Before you get started, you need to gather a few bits and bytes.</description>
+      <description>In the first part of this series, I wrote about why I chose to use Hugo to develop this blog and GitHub Pages to host it. In this post, I&#39;m going to walk through the steps to create a Hugo site, apply a theme, and create a very simple blog post. So, let&#39;s get going!
+ Before You Get Started Before you get started, you need to gather a few bits and bytes.</description>
     </item>
     
     <item>
@@ -37,7 +46,7 @@ Before You Get Started Before you get started, you need to gather a few bits and
       <pubDate>Fri, 11 Oct 2019 16:02:46 -0400</pubDate>
       
       <guid>https://blog.psustevens.com/2019/10/11/building-a-blog-with-hugo/</guid>
-      <description>If you read my very first post, you would know that I&amp;rsquo;ve been thinking about writing a blog for years. I&amp;rsquo;ve been blogging for years for employers. But, just recently, I finally launched my first technical blog. The one you are reading right now. I also have a travel blog that only gets updated when I travel for vacation. In this blog series, I&amp;rsquo;m going to talk about how I built my blog site using Hugo.</description>
+      <description>If you read my very first post, you would know that I&#39;ve been thinking about writing a blog for years. I&#39;ve been blogging for years for employers. But, just recently, I finally launched my first technical blog. The one you are reading right now. I also have a travel blog that only gets updated when I travel for vacation. In this blog series, I&#39;m going to talk about how I built my blog site using Hugo.</description>
     </item>
     
     <item>
@@ -47,7 +56,7 @@ Before You Get Started Before you get started, you need to gather a few bits and
       
       <guid>https://blog.psustevens.com/2019/09/30/introducing-me/</guid>
       <description>Welcome to the first post of my technical blog where I will write about virtualization technologies such as VMware and Microsoft, desktop and server technologies from Microsoft and the occasional script based on PowerShell.
-A bit about me I hail from Pittsburgh, PA, but now live in New Hampshire. My wife and I have lived in New England for many years. We moved up here so I could work for Dell as a technical marketing engineer in their storage group.</description>
+ A bit about me I hail from Pittsburgh, PA, but now live in New Hampshire. My wife and I have lived in New England for many years. We moved up here so I could work for Dell as a technical marketing engineer in their storage group.</description>
     </item>
     
   </channel>
