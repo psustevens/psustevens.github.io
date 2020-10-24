@@ -7,7 +7,7 @@
 
 
 
-  <meta name="generator" content="Hugo 0.60.1" />
+  <meta name="generator" content="Hugo 0.76.5" />
   <meta itemprop="name" content="Building a Blog With Hugo - Part 4">
 <meta itemprop="description" content="Your blog is up and running (locally), you&#39;ve created your first post and customized the look of the site.  Let&#39;s get cracking on seeing who is visiting the site.">
 <meta itemprop="datePublished" content="2019-12-20T01:24:15-05:00" />
@@ -17,6 +17,7 @@
 
 
 <meta itemprop="keywords" content="Hugo,Google Analytics," />
+
   <meta property="og:title" content="Building a Blog With Hugo - Part 4" />
 <meta property="og:description" content="Your blog is up and running (locally), you&#39;ve created your first post and customized the look of the site.  Let&#39;s get cracking on seeing who is visiting the site." />
 <meta property="og:type" content="article" />
@@ -56,7 +57,7 @@ if (!doNotTrack) {
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.3.5/jquery.fancybox.min.css" />
       
       
-      <link rel="stylesheet" href="/css/main.min.df53c1edadafb8a1aaadcf6624a13b50f5d7bc72fd7e046927c32c5ea541e244.css" integrity="sha256-31PB7a2vuKGqrc9mJKE7UPXXvHL9fgRpJ8MsXqVB4kQ=">
+      <link rel="stylesheet" href="/css/main.min.0a64f3eede6e78edc2d8b2ca7051e4d9a6379f472dac76b1168733b88d27146a.css" integrity="sha256-CmTz7t5ueO3C2LLKcFHk2aY3n0ctrHaxFoczuI0nFGo=">
       <link rel="stylesheet" href="/css/add-on.css">
     
   
@@ -279,7 +280,7 @@ if (!doNotTrack) {
 
 
   <div class="content">
-    <p>In the previous post, I covered how to customize the theme for your Hugo site.  I apologize if it was a bit long.  This post is considerably shorter.  In this post, I'm going to walk through how to configure <a href="https://analytics.google.com">Google Analytics</a> for your site.  Let's get started.</p>
+    <p>In the previous post, I covered how to customize the theme for your Hugo site.  I apologize if it was a bit long.  This post is considerably shorter.  In this post, I&rsquo;m going to walk through how to configure <a href="https://analytics.google.com">Google Analytics</a> for your site.  Let&rsquo;s get started.</p>
 <hr>
 <h2 id="before-we-get-started">Before we get started&hellip;</h2>
 <p>If you are already familiar with <a href="https://analytics.google.com">Google Analytics</a>, then this will be a short read for you.  All you need to do is:</p>
@@ -298,11 +299,11 @@ if (!doNotTrack) {
 <p>Then you are done!</p>
 </li>
 </ol>
-<p>For those of you who haven't ever set up Google Analytics before, buckle up, and I'll walk you through the process.</p>
-<p>If you don't have a Google Analytics account, you need to set up one by going to this URL:  <a href="https://analytics.google.com"><a href="https://analytics.google.com">https://analytics.google.com</a></a></p>
+<p>For those of you who haven&rsquo;t ever set up Google Analytics before, buckle up, and I&rsquo;ll walk you through the process.</p>
+<p>If you don&rsquo;t have a Google Analytics account, you need to set up one by going to this URL:  <a href="https://analytics.google.com">https://analytics.google.com</a></p>
 <hr>
 <h2 id="set-up-google-analytics">Set Up Google Analytics</h2>
-<p>I'm going to assume you have created your Google Analytics account, and have logged in to it.  But, if you aren't logged in, go ahead and do that now.</p>
+<p>I&rsquo;m going to assume you have created your Google Analytics account, and have logged in to it.  But, if you aren&rsquo;t logged in, go ahead and do that now.</p>
 <p><strong>NOTE:  Please beware that some of the images/screenshots I use in this post are slightly different from what you see when following the steps.  This is due to me using my existing Google Analytics account.</strong></p>
 <ol>
 <li>
@@ -326,7 +327,7 @@ if (!doNotTrack) {
 </p>
 </li>
 <li>
-<p>Select <strong><em>Web</em></strong> because that is why we're doing this and click <strong><em>Next</em></strong>.
+<p>Select <strong><em>Web</em></strong> because that is why we&rsquo;re doing this and click <strong><em>Next</em></strong>.
 <figure>
     <img src="/img/2019/12/20/WhatToMeasure.png"
          alt="Image of What to Measure step"/> <figcaption>
@@ -355,14 +356,14 @@ I selected <strong><em>Online Communities.</em></strong></li>
 </li>
 <li>
 <p>Agree to the terms of service and click the <strong><em>I Accept</em></strong> button.
-Only accept these terms if you agree to them, but understand you can't proceed unless you accept them.</p>
+Only accept these terms if you agree to them, but understand you can&rsquo;t proceed unless you accept them.</p>
 </li>
 <li>
 <p>Finally, the Property page for your new Google Analytics Account is presented.<br>
 The <code>Tracking ID</code> is easy to see in the Property screen.   Keep the <code>Tracking ID</code> handy.  It is needed in the next section.</p>
 </li>
 </ol>
-<p><strong>NOTE:  The Tracking ID is unique to your site so, don't share it!</strong></p>
+<p><strong>NOTE:  The Tracking ID is unique to your site so, don&rsquo;t share it!</strong></p>
 <hr>
 <h2 id="configuring-google-analytics-in-hugo">Configuring Google Analytics in Hugo</h2>
 <p>Open the <code>config.toml</code> file for editing.  If you have been following along with the series it should look similar to the following text snippet:</p>
@@ -382,13 +383,13 @@ disableLanguages        = [&#34;&#34;]
 <ol start="4">
 <li>Then you are done!</li>
 </ol>
-<p>That's all there is to configuring your Hugo site to work with Google Analytics.</p>
-<p>In the next post, I'll cover how to publish your site to <a href="https://www.github.com">GitHub</a> for all to read and enjoy.</p>
+<p>That&rsquo;s all there is to configuring your Hugo site to work with Google Analytics.</p>
+<p>In the next post, I&rsquo;ll cover how to publish your site to <a href="https://www.github.com">GitHub</a> for all to read and enjoy.</p>
 <hr>
 <h2 id="summary">Summary</h2>
-<p>Let's summarize what we covered in this post:</p>
+<p>Let&rsquo;s summarize what we covered in this post:</p>
 <ul>
-<li>You created a Google Analytics account (if you didn't have one already).</li>
+<li>You created a Google Analytics account (if you didn&rsquo;t have one already).</li>
 <li>We setup your Google Analytics Account for your site so we could get a Tracking ID.</li>
 <li>We added the Tracking ID to the Hugo config.toml file.</li>
 </ul>
@@ -403,7 +404,7 @@ disableLanguages        = [&#34;&#34;]
 <li>Part 4:  Configuring Google Analytics</li>
 <li>Part 5:  Publishing your site</li>
 </ul>
-<p>If there is something you think I'm missing and feel should be added, please let me know.</p>
+<p>If there is something you think I&rsquo;m missing and feel should be added, please let me know.</p>
 
   </div>
   <footer>
@@ -448,6 +449,8 @@ disableLanguages        = [&#34;&#34;]
     <a href="/2019/12/18/building-a-blog-with-hugo-part3/" class="button big previous"><i class="fas fa-angle-left"></i> Building a Blog With Hugo - Part 3</a>
   
   
+    <a href="/2020/10/24/blogtober-tech-edition-2020/" class="button big next">Blogtober Tech Edition 2020 <i class="fas fa-angle-right"></i></a>
+  
 </div>
 
 
@@ -458,6 +461,21 @@ disableLanguages        = [&#34;&#34;]
       <header>
         <h1>Recent posts</h1>
       </header>
+      
+      <article class="mini-post">
+        <section>
+          
+  <a href="/2020/10/24/blogtober-tech-edition-2020/" class="image featured">
+    <img src="/img/2020/10/Blogtober2020.jpg" alt="Fall scene">
+  </a>
+
+
+        </section>
+        <header>
+          <h1><a href="/2020/10/24/blogtober-tech-edition-2020/">Blogtober Tech Edition 2020</a></h1>
+          <time class="published" datetime="">October 24, 2020</time>
+        </header>
+      </article>
       
       <article class="mini-post">
         <section>
@@ -489,21 +507,6 @@ disableLanguages        = [&#34;&#34;]
         </header>
       </article>
       
-      <article class="mini-post">
-        <section>
-          
-  <a href="/2019/11/06/my-first-international-vmug/" class="image featured">
-    <img src="/img/2019/11/VMUG-BCN.png" alt="VMUG Barcelona VMUG logo">
-  </a>
-
-
-        </section>
-        <header>
-          <h1><a href="/2019/11/06/my-first-international-vmug/">My First International VMUG</a></h1>
-          <time class="published" datetime="">November 6, 2019</time>
-        </header>
-      </article>
-      
       
         <a href="/blog/" class="button">See more</a>
       
@@ -523,7 +526,7 @@ disableLanguages        = [&#34;&#34;]
           
           <li>
             
-              <a href="/categories/blogging/">blogging<span class="count">4</span></a>
+              <a href="/categories/blogging/">blogging<span class="count">5</span></a>
             
           
           <li>
@@ -603,12 +606,12 @@ disableLanguages        = [&#34;&#34;]
   
   <p class="copyright">
     
-      &copy; 2019
+      &copy; 2020
       
         @PSUStevens Blog
       
     . <br>
-    Theme: <a href='https://github.com/pacollins/hugo-future-imperfect-slim' target='_blank' rel='noopener'>Hugo Future Imperfect Slim</a><br>A <a href='https://html5up.net/future-imperfect' target='_blank' rel='noopener'>HTML5 UP port</a> | Powered by <a href='https://gohugo.io/' title='0.60.1' target='_blank' rel='noopener'>Hugo</a>
+    Theme: <a href='https://github.com/pacollins/hugo-future-imperfect-slim' target='_blank' rel='noopener'>Hugo Future Imperfect Slim</a><br>A <a href='https://html5up.net/future-imperfect' target='_blank' rel='noopener'>HTML5 UP port</a> | Powered by <a href='https://gohugo.io/' title='0.76.5' target='_blank' rel='noopener'>Hugo</a>
   </p>
 </footer>
 <a id="back-to-top" href="#" class="fas fa-arrow-up fa-2x"></a>

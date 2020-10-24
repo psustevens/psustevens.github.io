@@ -7,7 +7,7 @@
 
 
 
-  <meta name="generator" content="Hugo 0.60.1" />
+  <meta name="generator" content="Hugo 0.76.5" />
   <meta itemprop="name" content="Building a Blog With Hugo">
 <meta itemprop="description" content="A quick introduction to GitHub Pages and Hugo">
 <meta itemprop="datePublished" content="2019-10-11T16:02:46-04:00" />
@@ -17,6 +17,7 @@
 
 
 <meta itemprop="keywords" content="Hugo," />
+
   <meta property="og:title" content="Building a Blog With Hugo" />
 <meta property="og:description" content="A quick introduction to GitHub Pages and Hugo" />
 <meta property="og:type" content="article" />
@@ -56,7 +57,7 @@ if (!doNotTrack) {
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.3.5/jquery.fancybox.min.css" />
       
       
-      <link rel="stylesheet" href="/css/main.min.df53c1edadafb8a1aaadcf6624a13b50f5d7bc72fd7e046927c32c5ea541e244.css" integrity="sha256-31PB7a2vuKGqrc9mJKE7UPXXvHL9fgRpJ8MsXqVB4kQ=">
+      <link rel="stylesheet" href="/css/main.min.0a64f3eede6e78edc2d8b2ca7051e4d9a6379f472dac76b1168733b88d27146a.css" integrity="sha256-CmTz7t5ueO3C2LLKcFHk2aY3n0ctrHaxFoczuI0nFGo=">
       <link rel="stylesheet" href="/css/add-on.css">
     
   
@@ -279,7 +280,7 @@ if (!doNotTrack) {
 
 
   <div class="content">
-    <p>If you read my <a href="/2019/09/30/introducing-me/">very first post</a>, you would know that I've been thinking about writing a blog for years.  I've been blogging for years for employers.  But, just recently, I finally launched my first technical blog.  The one you are reading right now.  I also have a travel blog that only gets updated when I travel for vacation.  In this blog series, I'm going to talk about how I built my blog site using Hugo.  This post is part one of a five-part series.  Why Hugo?  Keep reading to find out.</p>
+    <p>If you read my <a href="/2019/09/30/introducing-me/">very first post</a>, you would know that I&rsquo;ve been thinking about writing a blog for years.  I&rsquo;ve been blogging for years for employers.  But, just recently, I finally launched my first technical blog.  The one you are reading right now.  I also have a travel blog that only gets updated when I travel for vacation.  In this blog series, I&rsquo;m going to talk about how I built my blog site using Hugo.  This post is part one of a five-part series.  Why Hugo?  Keep reading to find out.</p>
 <hr>
 <h2 id="where-do-i-start">Where do I start?</h2>
 <p>When I decided it was time to get off my butt and finally do what I have been thinking about for years, I looked at WordPress.  I have used WordPress in the past for company blogs.  It turns out that I built my travel blog on WordPress.  However, this time, I wanted to see if I could do things differently.  I spoke with several friends about what they were using.  Many were using WordPress.  But, a few had mentioned they were using GitHub to host their blog.</p>
@@ -288,22 +289,22 @@ if (!doNotTrack) {
 <li><a href="https://dzone.com/articles/what-is-cicd">What is CI/CD?</a></li>
 <li><a href="https://www.digitalocean.com/community/tutorials/an-introduction-to-continuous-integration-delivery-and-deployment">An Introduction to CI/CD and Deployment</a></li>
 </ul>
-<p>In a future blog post, I'll write about how I use CI/CD concepts to publish my blog.  For these reasons, I decided I would take a peek at GitHub and see what my friends were talking about.</p>
+<p>In a future blog post, I&rsquo;ll write about how I use CI/CD concepts to publish my blog.  For these reasons, I decided I would take a peek at GitHub and see what my friends were talking about.</p>
 <hr>
 <h2 id="github-pages">GitHub Pages</h2>
-<p>It turns out that GitHub has a feature known as <a href="https://pages.github.com/">GitHub Pages</a>.  To put it concisely, GitHub Pages is a &ldquo;feature&rdquo; of GitHub where you can develop your website and host it in a special GitHub repository.  Once you are ready to release your website to the rest of the world, commit your changes, push it to your repository on GitHub.  Voila!!  You have a live website that you built from scratch.  You also don't need to worry about running the infrastructure behind it.  GitHub takes care of that for you.  Wanna know more?  Watch the video below:</p>
+<p>It turns out that GitHub has a feature known as <a href="https://pages.github.com/">GitHub Pages</a>.  To put it concisely, GitHub Pages is a &ldquo;feature&rdquo; of GitHub where you can develop your website and host it in a special GitHub repository.  Once you are ready to release your website to the rest of the world, commit your changes, push it to your repository on GitHub.  Voila!!  You have a live website that you built from scratch.  You also don&rsquo;t need to worry about running the infrastructure behind it.  GitHub takes care of that for you.  Wanna know more?  Watch the video below:</p>
 
 <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
   <iframe src="https://www.youtube.com/embed/2MsN8gpT6jY" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen title="YouTube Video"></iframe>
 </div>
 
-<p>GitHub recommends using <a href="https://jekyllrb.com/">Jekyll</a> to create your blog.  However, I struggled to get the hang of it.  I also wasn't impressed with the Jekyll themes that are officially supported by GitHub Pages.  So, I chose to go with <a href="https://github.com/gohugoio/hugo">Hugo</a>.</p>
+<p>GitHub recommends using <a href="https://jekyllrb.com/">Jekyll</a> to create your blog.  However, I struggled to get the hang of it.  I also wasn&rsquo;t impressed with the Jekyll themes that are officially supported by GitHub Pages.  So, I chose to go with <a href="https://github.com/gohugoio/hugo">Hugo</a>.</p>
 <hr>
 <h2 id="hugo">Hugo</h2>
-<p><a href="https://github.com/gohugoio/hugo">Hugo</a> is an open-source framework, similar to Jekyll, for building static websites.  It is written in the programming language: <a href="https://golang.org/">Go</a>.   It is typically referred to as Golang.  I have no clue how to write anything in Go.  But don't fret if you are in the same boat as me.  You don't need to know anything about it.  Hugo is a simple executable that is available for <a href="https://gohugo.io/getting-started/installing/#linux">Linux</a>, <a href="https://gohugo.io/getting-started/installing/#macos">MacOS</a>, and <a href="https://gohugo.io/getting-started/installing/#windows">Windows</a>.  You can find the latest <a href="https://github.com/gohugoio/hugo/releases">release here</a>.  If you are up for the task, you can download the source for Hugo and build it yourself.  I chose NOT to go that route.  I'm most familiar with <a href="https://gohugo.io/getting-started/installing/#windows">Windows</a> so, that's what I decided to do.</p>
+<p><a href="https://github.com/gohugoio/hugo">Hugo</a> is an open-source framework, similar to Jekyll, for building static websites.  It is written in the programming language: <a href="https://golang.org/">Go</a>.   It is typically referred to as Golang.  I have no clue how to write anything in Go.  But don&rsquo;t fret if you are in the same boat as me.  You don&rsquo;t need to know anything about it.  Hugo is a simple executable that is available for <a href="https://gohugo.io/getting-started/installing/#linux">Linux</a>, <a href="https://gohugo.io/getting-started/installing/#macos">MacOS</a>, and <a href="https://gohugo.io/getting-started/installing/#windows">Windows</a>.  You can find the latest <a href="https://github.com/gohugoio/hugo/releases">release here</a>.  If you are up for the task, you can download the source for Hugo and build it yourself.  I chose NOT to go that route.  I&rsquo;m most familiar with <a href="https://gohugo.io/getting-started/installing/#windows">Windows</a> so, that&rsquo;s what I decided to do.</p>
 <p>Once you get Hugo installed on your system, you are off to the races!</p>
 <p>But, before you create your first Hugo site, go check out the <a href="https://themes.gohugo.io/">Hugo Themes</a> site.  There are a bunch of themes to choose from on the site.  My blog is using the <a href="https://themes.gohugo.io/hugo-future-imperfect-slim/">Hugo Future Imperfect Slim</a> theme.  Once you have figured out what theme you want to use, then you can begin down the path to Hugo website development.</p>
-<p>In part 2 of this series, I'll go through what it takes to get a bare Hugo site built and up and running.</p>
+<p>In part 2 of this series, I&rsquo;ll go through what it takes to get a bare Hugo site built and up and running.</p>
 <hr>
 <h2 id="series-table-of-contents">Series Table of Contents</h2>
 <p>Here is what the rest of the series will cover:</p>
@@ -313,7 +314,7 @@ if (!doNotTrack) {
 <li><a href="/2019/12/20/building-a-blog-with-hugo-part4/">Part 4:  Configuring Google Analytics</a></li>
 <li>Part 5:  Publishing your site</li>
 </ul>
-<p>If there is something you think I'm missing and feel should be added, please let me know.</p>
+<p>If there is something you think I&rsquo;m missing and feel should be added, please let me know.</p>
 
   </div>
   <footer>
@@ -371,6 +372,21 @@ if (!doNotTrack) {
       <article class="mini-post">
         <section>
           
+  <a href="/2020/10/24/blogtober-tech-edition-2020/" class="image featured">
+    <img src="/img/2020/10/Blogtober2020.jpg" alt="Fall scene">
+  </a>
+
+
+        </section>
+        <header>
+          <h1><a href="/2020/10/24/blogtober-tech-edition-2020/">Blogtober Tech Edition 2020</a></h1>
+          <time class="published" datetime="">October 24, 2020</time>
+        </header>
+      </article>
+      
+      <article class="mini-post">
+        <section>
+          
   <a href="/2019/12/20/building-a-blog-with-hugo-part4/" class="image featured">
     <img src="/img/2019/12/Hugo&#43;GAnalytics.png" alt="Hugo and Google Analytics Logos">
   </a>
@@ -398,21 +414,6 @@ if (!doNotTrack) {
         </header>
       </article>
       
-      <article class="mini-post">
-        <section>
-          
-  <a href="/2019/11/06/my-first-international-vmug/" class="image featured">
-    <img src="/img/2019/11/VMUG-BCN.png" alt="VMUG Barcelona VMUG logo">
-  </a>
-
-
-        </section>
-        <header>
-          <h1><a href="/2019/11/06/my-first-international-vmug/">My First International VMUG</a></h1>
-          <time class="published" datetime="">November 6, 2019</time>
-        </header>
-      </article>
-      
       
         <a href="/blog/" class="button">See more</a>
       
@@ -432,7 +433,7 @@ if (!doNotTrack) {
           
           <li>
             
-              <a href="/categories/blogging/">blogging<span class="count">4</span></a>
+              <a href="/categories/blogging/">blogging<span class="count">5</span></a>
             
           
           <li>
@@ -512,12 +513,12 @@ if (!doNotTrack) {
   
   <p class="copyright">
     
-      &copy; 2019
+      &copy; 2020
       
         @PSUStevens Blog
       
     . <br>
-    Theme: <a href='https://github.com/pacollins/hugo-future-imperfect-slim' target='_blank' rel='noopener'>Hugo Future Imperfect Slim</a><br>A <a href='https://html5up.net/future-imperfect' target='_blank' rel='noopener'>HTML5 UP port</a> | Powered by <a href='https://gohugo.io/' title='0.60.1' target='_blank' rel='noopener'>Hugo</a>
+    Theme: <a href='https://github.com/pacollins/hugo-future-imperfect-slim' target='_blank' rel='noopener'>Hugo Future Imperfect Slim</a><br>A <a href='https://html5up.net/future-imperfect' target='_blank' rel='noopener'>HTML5 UP port</a> | Powered by <a href='https://gohugo.io/' title='0.76.5' target='_blank' rel='noopener'>Hugo</a>
   </p>
 </footer>
 <a id="back-to-top" href="#" class="fas fa-arrow-up fa-2x"></a>

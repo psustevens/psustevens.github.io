@@ -7,7 +7,7 @@
 
 
 
-  <meta name="generator" content="Hugo 0.60.1" />
+  <meta name="generator" content="Hugo 0.76.5" />
   <meta itemprop="name" content="Building a Blog With Hugo - Part 2">
 <meta itemprop="description" content="Creating your first Hugo site and blog post">
 <meta itemprop="datePublished" content="2019-11-01T13:07:13-04:00" />
@@ -17,6 +17,7 @@
 
 
 <meta itemprop="keywords" content="Hugo," />
+
   <meta property="og:title" content="Building a Blog With Hugo - Part 2" />
 <meta property="og:description" content="Creating your first Hugo site and blog post" />
 <meta property="og:type" content="article" />
@@ -56,7 +57,7 @@ if (!doNotTrack) {
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.3.5/jquery.fancybox.min.css" />
       
       
-      <link rel="stylesheet" href="/css/main.min.df53c1edadafb8a1aaadcf6624a13b50f5d7bc72fd7e046927c32c5ea541e244.css" integrity="sha256-31PB7a2vuKGqrc9mJKE7UPXXvHL9fgRpJ8MsXqVB4kQ=">
+      <link rel="stylesheet" href="/css/main.min.0a64f3eede6e78edc2d8b2ca7051e4d9a6379f472dac76b1168733b88d27146a.css" integrity="sha256-CmTz7t5ueO3C2LLKcFHk2aY3n0ctrHaxFoczuI0nFGo=">
       <link rel="stylesheet" href="/css/add-on.css">
     
   
@@ -279,7 +280,7 @@ if (!doNotTrack) {
 
 
   <div class="content">
-    <p>In the <a href="/2019/10/11/building-a-blog-with-hugo/">first part</a> of this series, I wrote about why I chose to use <a href="https://github.com/gohugoio/hugo">Hugo</a> to develop this blog and <a href="https://pages.github.com/">GitHub Pages</a> to host it.  In this post, I'm going to walk through the steps to create a Hugo site, apply a theme, and create a very simple blog post.  So, let's get going!</p>
+    <p>In the <a href="/2019/10/11/building-a-blog-with-hugo/">first part</a> of this series, I wrote about why I chose to use <a href="https://github.com/gohugoio/hugo">Hugo</a> to develop this blog and <a href="https://pages.github.com/">GitHub Pages</a> to host it.  In this post, I&rsquo;m going to walk through the steps to create a Hugo site, apply a theme, and create a very simple blog post.  So, let&rsquo;s get going!</p>
 <hr>
 <h2 id="before-you-get-started">Before You Get Started</h2>
 <p>Before you get started, you need to gather a few bits and bytes.</p>
@@ -294,13 +295,13 @@ if (!doNotTrack) {
 </ul>
 </li>
 <li>You should consider learning markdown.  I refer to markdown as shorthand HTML code/formatting with less complexity.  Here is a great <a href="https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet">markdown cheatsheet</a> to use as a reference.</li>
-<li>You need a text editor for creating and editing the files behind your site.  I highly recommend <a href="https://code.visualstudio.com">Microsoft Visual Studio Code</a>.  It's available for Linux, MacOS and Windows.   Most examples and screenshots will be from within VSCode and the built-in terminal in VSCode.</li>
+<li>You need a text editor for creating and editing the files behind your site.  I highly recommend <a href="https://code.visualstudio.com">Microsoft Visual Studio Code</a>.  It&rsquo;s available for Linux, MacOS and Windows.   Most examples and screenshots will be from within VSCode and the built-in terminal in VSCode.</li>
 </ul>
 <p>After completing all of this you are ready to get going.</p>
 <hr>
 <h2 id="creating-your-first-hugo-site">Creating Your First Hugo Site</h2>
 <p>Now that you have Hugo installed and a GitHub account you are ready to create your first site.</p>
-<p><strong>FYI.  I use Windows for developing my site.  So, you may need to make adjustments to any of the code snippets I post in the event you aren't using Windows.</strong></p>
+<p><strong>FYI.  I use Windows for developing my site.  So, you may need to make adjustments to any of the code snippets I post in the event you aren&rsquo;t using Windows.</strong></p>
 <p>Begin by creating a directory where your site development will take place.  In my case this is the &ldquo;GitHub&rdquo; directory in my &ldquo;Documents&rdquo; folder.</p>
 <p>Change to this directory and issue the following command to create a new site.</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-plaintext" data-lang="plaintext">PS C:\Users\Administrator\Documents\GitHub&gt; hugo new site exampleSite
@@ -334,7 +335,7 @@ d-----       10/13/2019  11:01 PM                themes
 <p>If you are curious about the directory structure Hugo initially creates jump over to the write-up about <a href="https://gohugo.io/getting-started/directory-structure/">Hugo Directory Structure</a>.</p>
 <hr>
 <h2 id="adding-a-theme">Adding a Theme</h2>
-<p>It's possible to begin developing your site right away.  But, it will be easier to apply a <a href="https://themes.gohugo.io/">Hugo Theme</a>.  My blog is using the <a href="https://themes.gohugo.io/hugo-future-imperfect-slim/">Hugo Future Imperfect Slim</a> theme.  So, I'm going to use it in my examples.</p>
+<p>It&rsquo;s possible to begin developing your site right away.  But, it will be easier to apply a <a href="https://themes.gohugo.io/">Hugo Theme</a>.  My blog is using the <a href="https://themes.gohugo.io/hugo-future-imperfect-slim/">Hugo Future Imperfect Slim</a> theme.  So, I&rsquo;m going to use it in my examples.</p>
 <p>From the root of the site directory issue the following commands:</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-markdown" data-lang="markdown"># This creates and initializes an empty Git repository on your local machine
 PS C:\Users\Administrator\Documents\GitHub\exampleSite&gt; git init
@@ -393,7 +394,7 @@ Serving pages from memory
 Running in Fast Render Mode. For full rebuilds on change: hugo server --disableFastRender
 Web Server is available at http://localhost:51534/ (bind address 127.0.0.1)
 Press Ctrl+C to stop
-</code></pre></div><p>_<strong>NOTE:</strong>  If you receive the error &ldquo;TOCSS … this feature is not available in your current Hugo version&rdquo; then you may need to install the extended version of Hugo on your development machine.  You can get more details at <a href="https://gohugo.io/troubleshooting/faq/#i-get-tocss-this-feature-is-not-available-in-your-current-hugo-version">this link</a> on how to proceed._</p>
+</code></pre></div><p><em><strong>NOTE:</strong>  If you receive the error &ldquo;TOCSS … this feature is not available in your current Hugo version&rdquo; then you may need to install the extended version of Hugo on your development machine.  You can get more details at <a href="https://gohugo.io/troubleshooting/faq/#i-get-tocss-this-feature-is-not-available-in-your-current-hugo-version">this link</a> on how to proceed.</em></p>
 <p>Ctrl + click on the URL and you should see something similar to the following:</p>
 <figure>
     <img src="/img/2019/11/01/examplesite_homepage.png"
@@ -402,8 +403,8 @@ Press Ctrl+C to stop
         </figcaption>
 </figure>
 
-<p>Click around the site and briefly check it out.  After you're finished exploring, we'll walk through creating a simple blog post.  Don't worry about customizing the site yet.  We'll get to that in a fugure post.</p>
-<p><em>You may be wondering why I received the error about &ldquo;port 1313 already in use.&rdquo;  I got this harmless, error because I have my dev site running simultaneously while I write this post.  Yes, you can have multiple hugo web servers running simultaneously.  Under normal circumstances, you won't see this.</em></p>
+<p>Click around the site and briefly check it out.  After you&rsquo;re finished exploring, we&rsquo;ll walk through creating a simple blog post.  Don&rsquo;t worry about customizing the site yet.  We&rsquo;ll get to that in a fugure post.</p>
+<p><em>You may be wondering why I received the error about &ldquo;port 1313 already in use.&rdquo;  I got this harmless, error because I have my dev site running simultaneously while I write this post.  Yes, you can have multiple hugo web servers running simultaneously.  Under normal circumstances, you won&rsquo;t see this.</em></p>
 <p>Press Ctrl+C to stop the web server.</p>
 <hr>
 <h2 id="creating-a-blog-post">Creating a Blog Post</h2>
@@ -421,7 +422,7 @@ C:\Users\Administrator\Documents\GitHub\exampleSite\content\blog\my-first-post.m
         </figcaption>
 </figure>
 
-<p>The nice thing about creating a new blog post this way is that it is stored in the correct location and has, in Hugo terminology, front matter.  What is front matter?  In a nutshell, it's metadata about or in a file.  For a blog post, there is metadata in the very beginning of a post, such as:</p>
+<p>The nice thing about creating a new blog post this way is that it is stored in the correct location and has, in Hugo terminology, front matter.  What is front matter?  In a nutshell, it&rsquo;s metadata about or in a file.  For a blog post, there is metadata in the very beginning of a post, such as:</p>
 <ul>
 <li>Date</li>
 <li>Slug</li>
@@ -430,7 +431,7 @@ C:\Users\Administrator\Documents\GitHub\exampleSite\content\blog\my-first-post.m
 <li>Tags</li>
 <li>Categories</li>
 </ul>
-<p>There are other front matter items that can be added in a post, that's just a sample.  For more information on the topic, take a peek at <a href="https://gohugo.io/content-management/front-matter/">this link on the subject</a>.</p>
+<p>There are other front matter items that can be added in a post, that&rsquo;s just a sample.  For more information on the topic, take a peek at <a href="https://gohugo.io/content-management/front-matter/">this link on the subject</a>.</p>
 <p>Open your new post and you will see the following at the very beginning of the file:</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-plaintext" data-lang="plaintext">+++
 author = &#34;&#34;
@@ -443,10 +444,10 @@ title = &#34;&#34;
 type = &#34;post&#34;
 
 +++
-</code></pre></div><p>Go ahead and enter values (obviously between the quotation marks) for author, categories, date, description, and title.  Then enter some text below the three plus signs &ldquo;+++&rdquo; and save the file.  Oh yeah!  Make sure you enter today's date in the format of year-month-day (2019-11-01).  Otherwise, your post may not show up. Ignore the images front matter item for now.  Afer entering some text for the values and post text start up the web server.</p>
+</code></pre></div><p>Go ahead and enter values (obviously between the quotation marks) for author, categories, date, description, and title.  Then enter some text below the three plus signs &ldquo;+++&rdquo; and save the file.  Oh yeah!  Make sure you enter today&rsquo;s date in the format of year-month-day (2019-11-01).  Otherwise, your post may not show up. Ignore the images front matter item for now.  Afer entering some text for the values and post text start up the web server.</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-plaintext" data-lang="plaintext">hugo server
 </code></pre></div><p>You should now have your first blog post on your new site.</p>
-<p>In the next post in this series I'll go over some steps to customize the theme and site.</p>
+<p>In the next post in this series I&rsquo;ll go over some steps to customize the theme and site.</p>
 <hr>
 <h2 id="series-table-of-contents">Series Table of Contents</h2>
 <p>Here are links to the rest of the series:</p>
@@ -457,7 +458,7 @@ type = &#34;post&#34;
 <li><a href="/2019/12/20/building-a-blog-with-hugo-part4/">Part 4:  Configuring Google Analytics</a></li>
 <li>Part 5:  Publishing your site</li>
 </ul>
-<p>If there is something you think I'm missing and feel should be added, please let me know.</p>
+<p>If there is something you think I&rsquo;m missing and feel should be added, please let me know.</p>
 
   </div>
   <footer>
@@ -515,6 +516,21 @@ type = &#34;post&#34;
       <article class="mini-post">
         <section>
           
+  <a href="/2020/10/24/blogtober-tech-edition-2020/" class="image featured">
+    <img src="/img/2020/10/Blogtober2020.jpg" alt="Fall scene">
+  </a>
+
+
+        </section>
+        <header>
+          <h1><a href="/2020/10/24/blogtober-tech-edition-2020/">Blogtober Tech Edition 2020</a></h1>
+          <time class="published" datetime="">October 24, 2020</time>
+        </header>
+      </article>
+      
+      <article class="mini-post">
+        <section>
+          
   <a href="/2019/12/20/building-a-blog-with-hugo-part4/" class="image featured">
     <img src="/img/2019/12/Hugo&#43;GAnalytics.png" alt="Hugo and Google Analytics Logos">
   </a>
@@ -542,21 +558,6 @@ type = &#34;post&#34;
         </header>
       </article>
       
-      <article class="mini-post">
-        <section>
-          
-  <a href="/2019/11/06/my-first-international-vmug/" class="image featured">
-    <img src="/img/2019/11/VMUG-BCN.png" alt="VMUG Barcelona VMUG logo">
-  </a>
-
-
-        </section>
-        <header>
-          <h1><a href="/2019/11/06/my-first-international-vmug/">My First International VMUG</a></h1>
-          <time class="published" datetime="">November 6, 2019</time>
-        </header>
-      </article>
-      
       
         <a href="/blog/" class="button">See more</a>
       
@@ -576,7 +577,7 @@ type = &#34;post&#34;
           
           <li>
             
-              <a href="/categories/blogging/">blogging<span class="count">4</span></a>
+              <a href="/categories/blogging/">blogging<span class="count">5</span></a>
             
           
           <li>
@@ -656,12 +657,12 @@ type = &#34;post&#34;
   
   <p class="copyright">
     
-      &copy; 2019
+      &copy; 2020
       
         @PSUStevens Blog
       
     . <br>
-    Theme: <a href='https://github.com/pacollins/hugo-future-imperfect-slim' target='_blank' rel='noopener'>Hugo Future Imperfect Slim</a><br>A <a href='https://html5up.net/future-imperfect' target='_blank' rel='noopener'>HTML5 UP port</a> | Powered by <a href='https://gohugo.io/' title='0.60.1' target='_blank' rel='noopener'>Hugo</a>
+    Theme: <a href='https://github.com/pacollins/hugo-future-imperfect-slim' target='_blank' rel='noopener'>Hugo Future Imperfect Slim</a><br>A <a href='https://html5up.net/future-imperfect' target='_blank' rel='noopener'>HTML5 UP port</a> | Powered by <a href='https://gohugo.io/' title='0.76.5' target='_blank' rel='noopener'>Hugo</a>
   </p>
 </footer>
 <a id="back-to-top" href="#" class="fas fa-arrow-up fa-2x"></a>

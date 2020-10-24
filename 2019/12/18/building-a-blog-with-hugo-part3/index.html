@@ -7,7 +7,7 @@
 
 
 
-  <meta name="generator" content="Hugo 0.60.1" />
+  <meta name="generator" content="Hugo 0.76.5" />
   <meta itemprop="name" content="Building a Blog With Hugo - Part 3">
 <meta itemprop="description" content="Now that we have the basics for the site done let&#39;s begin customizing the theme/site">
 <meta itemprop="datePublished" content="2019-12-18T01:49:05-05:00" />
@@ -17,6 +17,7 @@
 
 
 <meta itemprop="keywords" content="Hugo," />
+
   <meta property="og:title" content="Building a Blog With Hugo - Part 3" />
 <meta property="og:description" content="Now that we have the basics for the site done let&#39;s begin customizing the theme/site" />
 <meta property="og:type" content="article" />
@@ -56,7 +57,7 @@ if (!doNotTrack) {
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.3.5/jquery.fancybox.min.css" />
       
       
-      <link rel="stylesheet" href="/css/main.min.df53c1edadafb8a1aaadcf6624a13b50f5d7bc72fd7e046927c32c5ea541e244.css" integrity="sha256-31PB7a2vuKGqrc9mJKE7UPXXvHL9fgRpJ8MsXqVB4kQ=">
+      <link rel="stylesheet" href="/css/main.min.0a64f3eede6e78edc2d8b2ca7051e4d9a6379f472dac76b1168733b88d27146a.css" integrity="sha256-CmTz7t5ueO3C2LLKcFHk2aY3n0ctrHaxFoczuI0nFGo=">
       <link rel="stylesheet" href="/css/add-on.css">
     
   
@@ -279,10 +280,10 @@ if (!doNotTrack) {
 
 
   <div class="content">
-    <p>In the previous post, I covered how to build your first Hugo site using the <a href="https://themes.gohugo.io/hugo-future-imperfect-slim/">Hugo Future Imperfect Slim theme</a>.  I also walked through the process to create the first blog post for your new site.  In this post, I'm going to walk through different customization options for the theme.  The customizations aren't exhaustive but are good enough for you to get started and possibly expand on.  Let's get started.</p>
+    <p>In the previous post, I covered how to build your first Hugo site using the <a href="https://themes.gohugo.io/hugo-future-imperfect-slim/">Hugo Future Imperfect Slim theme</a>.  I also walked through the process to create the first blog post for your new site.  In this post, I&rsquo;m going to walk through different customization options for the theme.  The customizations aren&rsquo;t exhaustive but are good enough for you to get started and possibly expand on.  Let&rsquo;s get started.</p>
 <hr>
 <h2 id="configtoml">Config.toml</h2>
-<p>The <code>config.toml</code> file, located at the root directory of your site, is where most of the site customization is done.  Picking up where we left off in <a href="/2019/11/01/building-a-blog-with-hugo-part2/">part 2</a>, let's review the very beginning of the file.  It should look similar to the following text snippet:</p>
+<p>The <code>config.toml</code> file, located at the root directory of your site, is where most of the site customization is done.  Picking up where we left off in <a href="/2019/11/01/building-a-blog-with-hugo-part2/">part 2</a>, let&rsquo;s review the very beginning of the file.  It should look similar to the following text snippet:</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-plaintext" data-lang="plaintext">baseurl                 = &#34;https://example.com/&#34;
 DefaultContentLanguage  = &#34;en&#34;
 title                   = &#34;Learning Hugo&#34;
@@ -293,14 +294,14 @@ disqusShortname         = &#34;&#34;
 googleAnalytics         = &#34;&#34;
 pluralizeListTitles     = false
 disableLanguages        = [&#34;&#34;]
-</code></pre></div><p>The <code>baseurl</code> line sets the URL of where your site will ultimately be published.  For now, we are going to skip this line and the <code>googleAnalytics</code> line.  I'll cover these in parts 4 and 5 of the series.</p>
-<p>In addition to English, the Hugo Future Imperfect Slim theme supports multiple languages such as Spanish, German, French, and a few others.  For now, leave the <code>DefaultContentLanguage</code> line as it is.  If you know how to write/speak other languages, then I'll leave it to you to translate anything we do in English to one or more of the languages you understand and get the multi-language support to work correctly.</p>
-<p>The <code>title</code> line is just what you think it is.  It is where you set the title for the site.  Change the text in the parentheses to your preference.  As you probably noticed, I used &ldquo;Learning Hugo&rdquo; as the title for the example site I'm using in this series.  This is the same text that appears in the title bar of the web browser if you aren't using a tabbed interface.  If you have enabled tabs then this will appear in the name of the tab as you can see in the image below:</p>
+</code></pre></div><p>The <code>baseurl</code> line sets the URL of where your site will ultimately be published.  For now, we are going to skip this line and the <code>googleAnalytics</code> line.  I&rsquo;ll cover these in parts 4 and 5 of the series.</p>
+<p>In addition to English, the Hugo Future Imperfect Slim theme supports multiple languages such as Spanish, German, French, and a few others.  For now, leave the <code>DefaultContentLanguage</code> line as it is.  If you know how to write/speak other languages, then I&rsquo;ll leave it to you to translate anything we do in English to one or more of the languages you understand and get the multi-language support to work correctly.</p>
+<p>The <code>title</code> line is just what you think it is.  It is where you set the title for the site.  Change the text in the parentheses to your preference.  As you probably noticed, I used &ldquo;Learning Hugo&rdquo; as the title for the example site I&rsquo;m using in this series.  This is the same text that appears in the title bar of the web browser if you aren&rsquo;t using a tabbed interface.  If you have enabled tabs then this will appear in the name of the tab as you can see in the image below:</p>
 <!-- raw HTML omitted -->
 <p>The <code>theme</code> line is the name of the <a href="https://themes.gohugo.io/">Hugo Theme</a> in use.  We set this in the previous post.  So, you can skip this line.</p>
 <p>You can ignore the <code>preserveTaxonomyNames</code> line.  There is no need to change it unless you feel the need to create a custom taxonomy.  What is a taxonomy?  In Hugo-speak, a taxonomy is a way to classify content and define the relationships between the content.  I suggest reading more about the subject on the <a href="https://gohugo.io/content-management/taxonomies/">Hugo taxonomy</a> page.</p>
 <p>The <code>paginate</code> line determines the number of posts that appear on the home page of your blog site.  For now, keep this at the default.  You can change the default if you would like to see how it changes the look of the site homepage.</p>
-<p>We will skip over the remaining lines in this section of the config.toml file.  As I mentioned previously, we'll cover the <code>googleAnalytics</code> line in part 4 of the series.  The <code>disqusShortname</code> line enables comments and discussion for posts on your site.  I won't be covering that in this series.  But, if I do enable it on my site in the future, then I will write a post about it.</p>
+<p>We will skip over the remaining lines in this section of the config.toml file.  As I mentioned previously, we&rsquo;ll cover the <code>googleAnalytics</code> line in part 4 of the series.  The <code>disqusShortname</code> line enables comments and discussion for posts on your site.  I won&rsquo;t be covering that in this series.  But, if I do enable it on my site in the future, then I will write a post about it.</p>
 <hr>
 <h2 id="params-section">Params Section</h2>
 <p>The Params section is essential to how your site appears to readers.  It also has several sub-sections.  I will go over all sub-sections except for the <code>staticman</code> and <code>recaptcha</code> sub-sections.</p>
@@ -350,7 +351,7 @@ disableLanguages        = [&#34;&#34;]
     faviconVersion      = &#34;1&#34;
     msColor             = &#34;#ffffff&#34; # Copy from the https://realfavicongenerator.net
     iOSColor            = &#34;#ffffff&#34; # Copy from the https://realfavicongenerator.net
-</code></pre></div><p>My recommendation is to update the <code>description</code> and <code>author</code> lines to reflect you better.  I'll leave it to you to create a favicon for your site.  I haven't done this yet.  But, when I do, I'll post about it.</p>
+</code></pre></div><p>My recommendation is to update the <code>description</code> and <code>author</code> lines to reflect you better.  I&rsquo;ll leave it to you to create a favicon for your site.  I haven&rsquo;t done this yet.  But, when I do, I&rsquo;ll post about it.</p>
 <h3 id="paramsheader">Params.header</h3>
 <p>This sub-section is where you will set the text shown in the web browser title bar or the tab in which users are viewing your site.  It will also dynamically change the text based on the section of your site a user is viewing.  For now, all you need to do is update the <code>navbarTitle</code> line.</p>
 <p>If you have no intention of supporting multiple languages on your site, then make sure you update the <code>languageMenu</code> line to false.</p>
@@ -432,7 +433,7 @@ Here is a snippet of the params.intro sub-section after making the changes I men
 <li><a href="/2019/12/20/building-a-blog-with-hugo-part4/">Part 4:  Configuring Google Analytics</a></li>
 <li>Part 5:  Publishing your site</li>
 </ul>
-<p>If there is something you think I'm missing and feel should be added, please let me know.</p>
+<p>If there is something you think I&rsquo;m missing and feel should be added, please let me know.</p>
 
   </div>
   <footer>
@@ -490,6 +491,21 @@ Here is a snippet of the params.intro sub-section after making the changes I men
       <article class="mini-post">
         <section>
           
+  <a href="/2020/10/24/blogtober-tech-edition-2020/" class="image featured">
+    <img src="/img/2020/10/Blogtober2020.jpg" alt="Fall scene">
+  </a>
+
+
+        </section>
+        <header>
+          <h1><a href="/2020/10/24/blogtober-tech-edition-2020/">Blogtober Tech Edition 2020</a></h1>
+          <time class="published" datetime="">October 24, 2020</time>
+        </header>
+      </article>
+      
+      <article class="mini-post">
+        <section>
+          
   <a href="/2019/12/20/building-a-blog-with-hugo-part4/" class="image featured">
     <img src="/img/2019/12/Hugo&#43;GAnalytics.png" alt="Hugo and Google Analytics Logos">
   </a>
@@ -517,21 +533,6 @@ Here is a snippet of the params.intro sub-section after making the changes I men
         </header>
       </article>
       
-      <article class="mini-post">
-        <section>
-          
-  <a href="/2019/11/06/my-first-international-vmug/" class="image featured">
-    <img src="/img/2019/11/VMUG-BCN.png" alt="VMUG Barcelona VMUG logo">
-  </a>
-
-
-        </section>
-        <header>
-          <h1><a href="/2019/11/06/my-first-international-vmug/">My First International VMUG</a></h1>
-          <time class="published" datetime="">November 6, 2019</time>
-        </header>
-      </article>
-      
       
         <a href="/blog/" class="button">See more</a>
       
@@ -551,7 +552,7 @@ Here is a snippet of the params.intro sub-section after making the changes I men
           
           <li>
             
-              <a href="/categories/blogging/">blogging<span class="count">4</span></a>
+              <a href="/categories/blogging/">blogging<span class="count">5</span></a>
             
           
           <li>
@@ -631,12 +632,12 @@ Here is a snippet of the params.intro sub-section after making the changes I men
   
   <p class="copyright">
     
-      &copy; 2019
+      &copy; 2020
       
         @PSUStevens Blog
       
     . <br>
-    Theme: <a href='https://github.com/pacollins/hugo-future-imperfect-slim' target='_blank' rel='noopener'>Hugo Future Imperfect Slim</a><br>A <a href='https://html5up.net/future-imperfect' target='_blank' rel='noopener'>HTML5 UP port</a> | Powered by <a href='https://gohugo.io/' title='0.60.1' target='_blank' rel='noopener'>Hugo</a>
+    Theme: <a href='https://github.com/pacollins/hugo-future-imperfect-slim' target='_blank' rel='noopener'>Hugo Future Imperfect Slim</a><br>A <a href='https://html5up.net/future-imperfect' target='_blank' rel='noopener'>HTML5 UP port</a> | Powered by <a href='https://gohugo.io/' title='0.76.5' target='_blank' rel='noopener'>Hugo</a>
   </p>
 </footer>
 <a id="back-to-top" href="#" class="fas fa-arrow-up fa-2x"></a>
