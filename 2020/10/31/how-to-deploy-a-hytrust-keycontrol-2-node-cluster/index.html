@@ -1,0 +1,944 @@
+<!doctype html>
+<html lang="en">
+  <head>
+  <meta charset="utf-8">
+<title>How to Deploy a HyTrust KeyControl 2 Node Cluster - @PSUStevens Blog</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+
+  <meta name="generator" content="Hugo 0.76.5" />
+  <meta itemprop="name" content="How to Deploy a HyTrust KeyControl 2 Node Cluster">
+<meta itemprop="description" content="See how easy it is to deploy a 2-node HyTrust KeyControl Key Management Server (KMS) for encrypting sensitive data in virtual machines.">
+<meta itemprop="datePublished" content="2020-10-31T14:04:12-04:00" />
+<meta itemprop="dateModified" content="2020-10-31T14:04:12-04:00" />
+<meta itemprop="wordCount" content="1319">
+
+
+
+<meta itemprop="keywords" content="KMS,Key Management Server,vCenter," />
+
+  <meta property="og:title" content="How to Deploy a HyTrust KeyControl 2 Node Cluster" />
+<meta property="og:description" content="See how easy it is to deploy a 2-node HyTrust KeyControl Key Management Server (KMS) for encrypting sensitive data in virtual machines." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://blog.psustevens.com/2020/10/31/how-to-deploy-a-hytrust-keycontrol-2-node-cluster/" />
+<meta property="article:published_time" content="2020-10-31T14:04:12-04:00" />
+<meta property="article:modified_time" content="2020-10-31T14:04:12-04:00" />
+
+  <meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="How to Deploy a HyTrust KeyControl 2 Node Cluster"/>
+<meta name="twitter:description" content="See how easy it is to deploy a 2-node HyTrust KeyControl Key Management Server (KMS) for encrypting sensitive data in virtual machines."/>
+<meta name="twitter:site" content="@PSUStevens"/>
+
+  
+  
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+	ga('create', 'UA-149142929-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+
+
+  <link rel="stylesheet"
+      href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/styles/github.min.css">
+  
+    
+      <link rel="stylesheet" href="/css/normalize.css">
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway:400,800,900|Source+Sans+Pro:400,700">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/academicons/1.8.6/css/academicons.min.css">
+      <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.9.0/css/all.css" integrity="sha384-i1LQnF23gykqWXg6jxC2ZbCbUMxyw5gLZY6UiUS98LYV5unm8GWmfkIS6jqJfb4E" crossorigin="anonymous">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.3.5/jquery.fancybox.min.css" />
+      
+      
+      <link rel="stylesheet" href="/css/main.min.0a64f3eede6e78edc2d8b2ca7051e4d9a6379f472dac76b1168733b88d27146a.css" integrity="sha256-CmTz7t5ueO3C2LLKcFHk2aY3n0ctrHaxFoczuI0nFGo=">
+      <link rel="stylesheet" href="/css/add-on.css">
+    
+  
+  
+  
+  
+</head>
+
+  <body>
+    
+<header id="site-header">
+  <nav id="site-nav">
+    <h1 class="nav-title">
+      <a href="/">
+        
+          
+            Blog
+          
+        
+      </a>
+    </h1>
+    <menu id="site-nav-menu" class="flyout-menu">
+      
+        
+          
+          
+            <a href="/" class="link"><i class='fa fa-home'></i> Home</a>
+          
+        
+      
+        
+          
+          
+            <a href="/about/" class="link"><i class='far fa-id-card'></i> About</a>
+          
+        
+      
+        
+          
+          
+            <a href="/blog/" class="link"><i class='far fa-newspaper'></i> Blog</a>
+          
+        
+      
+        
+          
+          
+            <a href="/categories/" class="link"><i class='fas fa-sitemap'></i> Categories</a>
+          
+        
+      
+      <a href="#share-menu" class="share-toggle"><i class="fas fa-share-alt">&nbsp;</i>Share</a>
+      
+
+    </menu>
+    
+
+    <a href="#share-menu" class="share-toggle"><i class="fas fa-share-alt fa-2x">&nbsp;</i></a>
+    
+    <a href="#site-nav" class="nav-toggle"><i class="fas fa-bars fa-2x"></i></a>
+  </nav>
+  
+  
+    <menu id="share-menu" class="flyout-menu">
+      <h1>Share Post</h1>
+      
+
+
+
+
+  
+    
+    <a href="//twitter.com/share?text=How%20to%20Deploy%20a%20HyTrust%20KeyControl%202%20Node%20Cluster&amp;url=https%3a%2f%2fblog.psustevens.com%2f2020%2f10%2f31%2fhow-to-deploy-a-hytrust-keycontrol-2-node-cluster%2f" target="_blank" rel="noopener" class="share-btn twitter">
+        <i class="fab fa-twitter"></i><p>&nbsp;Twitter</p>
+      </a>
+  
+
+  
+        <a href="//www.linkedin.com/shareArticle?url=https%3a%2f%2fblog.psustevens.com%2f2020%2f10%2f31%2fhow-to-deploy-a-hytrust-keycontrol-2-node-cluster%2f&amp;title=How%20to%20Deploy%20a%20HyTrust%20KeyControl%202%20Node%20Cluster" target="_blank" rel="noopener" class="share-btn linkedin">
+            <i class="fab fa-linkedin"></i><p>&nbsp;LinkedIn</p>
+          </a>
+  
+
+  
+        <a href="mailto:?subject=Check out this post by %7b%20%20%20%20%20%20%20%20map%5b%5d%7d&amp;body=https%3a%2f%2fblog.psustevens.com%2f2020%2f10%2f31%2fhow-to-deploy-a-hytrust-keycontrol-2-node-cluster%2f" target="_blank" class="share-btn email" data-proofer-ignore>
+          <i class="fas fa-envelope"></i><p>&nbsp;Email</p>
+        </a>
+  
+
+  
+    <a href="//www.reddit.com/submit?url=https%3a%2f%2fblog.psustevens.com%2f2020%2f10%2f31%2fhow-to-deploy-a-hytrust-keycontrol-2-node-cluster%2f&amp;title=How%20to%20Deploy%20a%20HyTrust%20KeyControl%202%20Node%20Cluster" target="_blank" rel="noopener" class="share-btn reddit">
+          <i class="fab fa-reddit-alien"></i><p>&nbsp;Reddit</p>
+        </a>
+  
+
+
+    </menu>
+  
+</header>
+
+    <div id="wrapper">
+      <section id="site-intro">
+  <a href="/"><img src="/img/main/logo.jpg" class="circle" width="" alt="@PSUStevens headshot" /></a>
+  <header>
+    <h1>@PSUStevens blog</h1>
+  </header>
+  <main>
+    <p>You are reading the blog of <a href='https://twitter.com/PSUStevens'>@PSUStevens</a>.  </br>You can reach me through one of the social accounts below.</p>
+  </main>
+  
+    <footer>
+      <ul class="socnet-icons">
+        
+
+        <li><a href="//github.com/psustevens" target="_blank" rel="noopener" title="GitHub" class="fab fa-github"></a></li>
+
+
+
+
+
+
+
+
+
+
+
+<li><a href="//linkedin.com/in/davidlstevens" target="_blank" rel="noopener" title="LinkedIn" class="fab fa-linkedin"></a></li>
+<li><a href="//linkedin.com/company/236893" target="_blank" rel="noopener" title="LinkedIn Company" class="fab fa-linkedin"></a></li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<li><a href="//twitter.com/PSUStevens" target="_blank" rel="noopener" title="Twitter" class="fab fa-twitter"></a></li>
+
+
+
+
+
+
+
+
+
+
+
+
+      </ul>
+    </footer>
+  
+</section>
+
+      <main id="site-main">
+        <article class="post">
+  <header>
+  <div class="title">
+    
+        <h2><a href="/2020/10/31/how-to-deploy-a-hytrust-keycontrol-2-node-cluster/">How to Deploy a HyTrust KeyControl 2 Node Cluster</a></h2>
+    
+    
+        <p>See how easy it is to deploy a 2-node HyTrust KeyControl Key Management Server (KMS) for encrypting sensitive data in virtual machines.</p>
+    
+</div>
+  <div class="meta">
+    <time class="published" datetime="2020-10-31 14:04:12 -0400 EDT">
+      October 31, 2020
+    </time>
+    <span class="author">PSUStevens</span>
+    
+      <p>7 minutes read</p>
+    
+  </div>
+</header>
+
+  <section id="socnet-share">
+    
+
+
+
+
+  
+    
+    <a href="//twitter.com/share?text=How%20to%20Deploy%20a%20HyTrust%20KeyControl%202%20Node%20Cluster&amp;url=https%3a%2f%2fblog.psustevens.com%2f2020%2f10%2f31%2fhow-to-deploy-a-hytrust-keycontrol-2-node-cluster%2f" target="_blank" rel="noopener" class="share-btn twitter">
+        <i class="fab fa-twitter"></i><p>&nbsp;Twitter</p>
+      </a>
+  
+
+  
+        <a href="//www.linkedin.com/shareArticle?url=https%3a%2f%2fblog.psustevens.com%2f2020%2f10%2f31%2fhow-to-deploy-a-hytrust-keycontrol-2-node-cluster%2f&amp;title=How%20to%20Deploy%20a%20HyTrust%20KeyControl%202%20Node%20Cluster" target="_blank" rel="noopener" class="share-btn linkedin">
+            <i class="fab fa-linkedin"></i><p>&nbsp;LinkedIn</p>
+          </a>
+  
+
+  
+        <a href="mailto:?subject=Check out this post by %7b%20%20%20%20%20%20%20%20map%5b%5d%7d&amp;body=https%3a%2f%2fblog.psustevens.com%2f2020%2f10%2f31%2fhow-to-deploy-a-hytrust-keycontrol-2-node-cluster%2f" target="_blank" class="share-btn email" data-proofer-ignore>
+          <i class="fas fa-envelope"></i><p>&nbsp;Email</p>
+        </a>
+  
+
+  
+    <a href="//www.reddit.com/submit?url=https%3a%2f%2fblog.psustevens.com%2f2020%2f10%2f31%2fhow-to-deploy-a-hytrust-keycontrol-2-node-cluster%2f&amp;title=How%20to%20Deploy%20a%20HyTrust%20KeyControl%202%20Node%20Cluster" target="_blank" rel="noopener" class="share-btn reddit">
+          <i class="fab fa-reddit-alien"></i><p>&nbsp;Reddit</p>
+        </a>
+  
+
+
+  </section>
+  
+  <a href="/2020/10/31/how-to-deploy-a-hytrust-keycontrol-2-node-cluster/" class="image featured">
+    <img src="/img/2020/10/KeyControl.png" alt="KeyControl">
+  </a>
+
+
+  <div class="content">
+    <h2 id="deploy-the-first-hytrust-keycontrol-appliance">Deploy the First HyTrust KeyControl Appliance</h2>
+<ol>
+<li>Log in to the Virtual Center Appliance (VCSA).  Once logged in, right-click and select <strong>Deploy OVF Template&hellip;</strong></li>
+</ol>
+<figure>
+    <img src="/img/2020/10/31/HTKCDeploy01.png"
+         alt="Deploy OVF Template"/> <figcaption>
+            <h4>Deploy OVF Template...</h4>
+        </figcaption>
+</figure>
+
+<ol start="2">
+<li>Click on <strong>Upload Files</strong> and navigate to the directory where you placed the HyTrust KeyControl OVA, select it, then click <strong>Open.</strong></li>
+</ol>
+<figure>
+    <img src="/img/2020/10/31/HTKCDeploy02.png"
+         alt="Select OVF Template step"/> <figcaption>
+            <h4>Select OVF Template</h4>
+        </figcaption>
+</figure>
+
+<ol start="3">
+<li>Now that you have the HyTrust KeyControl OVA selected, click on <strong>Next.</strong></li>
+</ol>
+<figure>
+    <img src="/img/2020/10/31/HTKCDeploy03.png"
+         alt="Selected OVF Template"/> <figcaption>
+            <h4>Selected OVF Template</h4>
+        </figcaption>
+</figure>
+
+<ol start="4">
+<li>Provide a name for the HyTrust KeyControl appliance, select a deployment location, then click <strong>Next.</strong></li>
+</ol>
+<figure>
+    <img src="/img/2020/10/31/HTKCDeploy04.png"
+         alt="Select a Name and Folder step"/> <figcaption>
+            <h4>Select a Name and Folder</h4>
+        </figcaption>
+</figure>
+
+<ol start="5">
+<li>Select the vSphere Cluster or host, then click <strong>Next.</strong></li>
+</ol>
+<figure>
+    <img src="/img/2020/10/31/HTKCDeploy05.png"
+         alt="Select a Compute Resource step"/> <figcaption>
+            <h4>Select a Compute Resource</h4>
+        </figcaption>
+</figure>
+
+<ol start="6">
+<li>Review the details, then click <strong>Next.</strong></li>
+</ol>
+<figure>
+    <img src="/img/2020/10/31/HTKCDeploy06.png"
+         alt="Review Details"/> <figcaption>
+            <h4>Review Details</h4>
+        </figcaption>
+</figure>
+
+<ol start="7">
+<li>Accept the license agreement, then click <strong>Next.</strong></li>
+</ol>
+<figure>
+    <img src="/img/2020/10/31/HTKCDeploy07.png"
+         alt="License Agreement step"/> <figcaption>
+            <h4>License Agreement</h4>
+        </figcaption>
+</figure>
+
+<ol start="8">
+<li>Select the proper configuration from the list, then click <strong>Next.</strong></li>
+</ol>
+<figure>
+    <img src="/img/2020/10/31/HTKCDeploy08.png"
+         alt="Deployment Size"/> <figcaption>
+            <h4>Deployment Size</h4>
+        </figcaption>
+</figure>
+
+<ol start="9">
+<li>Select the appropriate storage and disk format for the appliance, then click <strong>Next.</strong></li>
+</ol>
+<figure>
+    <img src="/img/2020/10/31/HTKCDeploy09.png"
+         alt="Select Storage step"/> <figcaption>
+            <h4>Select Storage</h4>
+        </figcaption>
+</figure>
+
+<ol start="10">
+<li>Select the appropriate network, then click <strong>Next.</strong></li>
+</ol>
+<figure>
+    <img src="/img/2020/10/31/HTKCDeploy10.png"
+         alt="Select Network step"/> <figcaption>
+            <h4>Select Network</h4>
+        </figcaption>
+</figure>
+
+<ol start="11">
+<li>Provide the required information, then click <strong>Next.</strong></li>
+</ol>
+<figure>
+    <img src="/img/2020/10/31/HTKCDeploy11.png"
+         alt="Appliance Properties"/> <figcaption>
+            <h4>Appliance Properties</h4>
+        </figcaption>
+</figure>
+
+<ol start="12">
+<li>Review the summary screen. If everything is correct, click <strong>Finish.</strong></li>
+</ol>
+<figure>
+    <img src="/img/2020/10/31/HTKCDeploy12.png"
+         alt="Review step"/> <figcaption>
+            <h4>Review Settings</h4>
+        </figcaption>
+</figure>
+
+<p>You have successfully deployed the first HyTrust KeyControl node.</p>
+<hr>
+<h2 id="deploy-the-second-hytrust-keycontrol-appliance">Deploy the Second HyTrust KeyControl Appliance</h2>
+<p>Before moving forward, run back through the same steps again and deploy a second virtual appliance.  I strongly suggest this because once you begin encrypting VM workloads, you should make sure you don&rsquo;t lose access to them.  Treat the Key Management Service (KMS) as critical as the Domain Name Service (DNS).  Losing access to encryption keys could turn out to be a bad day for you.  Later in the steps below, I will walk you through configuring both virtual appliances into a 2-node HA cluster.</p>
+<p>After you have deployed the second appliance, come back to this point and work on configuring the first appliance.</p>
+<hr>
+<h2 id="configure-the-first-appliance">Configure the First Appliance</h2>
+<ol>
+<li>
+<p>Locate the newly deployed HyTrust KeyControl appliance. Power it on, then open a console to it.</p>
+</li>
+<li>
+<p>Set the password for the system administrator account, <em>htadmin</em> on the appliance.  Using the <em>Tab</em> key, move to <strong>OK</strong> and press <strong>Enter</strong> on your keyboard.</p>
+</li>
+</ol>
+<p><strong><em>NOTE:  This password controls access to the HyTrust KeyControl System Console, allowing users to perform some privileged KeyControl administration tasks.</em></strong></p>
+<p>After pressing OK, the networking and other subsystems are configured.  This can take several minutes.  So, be patient.</p>
+<figure>
+    <img src="/img/2020/10/31/HTKCDeploy13.png"
+         alt="Specify htadmin Password"/> <figcaption>
+            <h4>Specify htadmin Password</h4>
+        </figcaption>
+</figure>
+
+<ol start="3">
+<li>After setup has completed, a window will display the management IP address of the appliance.  Please make a note of the management IP address because you will need it in the next step.  Tab to <strong>OK</strong> and press <strong>Enter</strong> on your keyboard.</li>
+</ol>
+<figure>
+    <img src="/img/2020/10/31/HTKCDeploy14.png"
+         alt="Setup Complete"/> <figcaption>
+            <h4>Setup Complete</h4>
+        </figcaption>
+</figure>
+
+<hr>
+<h2 id="continue-configuration-using-the-webgui">Continue Configuration using the WebGUI</h2>
+<ol>
+<li>Launch a web browser and navigate to the IP Address or fully-qualified domain name (FQDN) of the management IP address of the appliance. Use the following credentials to log in:
+<ul>
+<li>User Name: secroot</li>
+<li>Password: secroot</li>
+</ul>
+</li>
+</ol>
+<figure>
+    <img src="/img/2020/10/31/HTKCDeploy15.png"
+         alt="KeyControl Login screen"/> <figcaption>
+            <h4>KeyControl Login screen</h4>
+        </figcaption>
+</figure>
+
+<ol start="2">
+<li>Upon logging in, read and accept the EULA by clicking on, <strong>I Agree</strong> at the bottom of the agreement.</li>
+</ol>
+<figure>
+    <img src="/img/2020/10/31/HTKCDeploy16.png"
+         alt="EULA screen"/> <figcaption>
+            <h4>EULA screen</h4>
+        </figcaption>
+</figure>
+
+<ol start="3">
+<li>Since this is the first KeyControl node, click <strong>Continue as a Standalone Node.</strong></li>
+</ol>
+<figure>
+    <img src="/img/2020/10/31/HTKCDeploy17.png"
+         alt="Welcome to KeyControl screen"/> <figcaption>
+            <h4>Welcome to KeyControl screen</h4>
+        </figcaption>
+</figure>
+
+<ol start="4">
+<li>Enter a new password for the secroot account, making sure to follow the password complexity rules, then click <strong>Update Password.</strong></li>
+</ol>
+<figure>
+    <img src="/img/2020/10/31/HTKCDeploy18.png"
+         alt="Change Password screen"/> <figcaption>
+            <h4>Change Password</h4>
+        </figcaption>
+</figure>
+
+<ol start="5">
+<li>Configure E-Mail and Mail Server Settings by entering the relevant information for your email address and email server.</li>
+</ol>
+<p><strong><em>I discourage you from disabling e-mail notifications because if you are running a trial, then you want to be notified when the trial license is about to expire.  You will also miss out on potentially important system alerts.  The same applies if you are not using a trial license.</em></strong></p>
+<p>If you do decide to skip this step, you can configure email notifications at a later time.</p>
+<figure>
+    <img src="/img/2020/10/31/HTKCDeploy19.png"
+         alt="Email and Mail Server settings"/> <figcaption>
+            <h4>Email and Mail Server settings</h4>
+        </figcaption>
+</figure>
+
+<ol start="6">
+<li><strong><em>This is a crucial step.</em></strong>  Please, please, please click the <strong>Download</strong> button.  Read through the entire text in this dialog.  I want to stress that if you do not download the Admin key and for whatever reason you need to do some sort of recovery of the appliance, you <strong><em>MUST</em></strong> have this key.  Otherwise, as the text states, you may lose access to your encryption keys.</li>
+</ol>
+<figure>
+    <img src="/img/2020/10/31/HTKCDeploy20.png"
+         alt="Download Admin Key"/> <figcaption>
+            <h4>Download Admin Key</h4>
+        </figcaption>
+</figure>
+
+<ol start="7">
+<li>If you are running a trial of KeyControl Vitals, reporting <em>cannot</em> be disabled.  Otherwise, you can disable Vitals after you apply a purchased license.  Vitals is a good thing.  Trust me. Click <strong>Continue.</strong></li>
+</ol>
+<figure>
+    <img src="/img/2020/10/31/HTKCDeploy21.png"
+         alt="Vitals Reporting"/> <figcaption>
+            <h4>Vitals Reporting</h4>
+        </figcaption>
+</figure>
+
+<p>After clicking the Continue button, the main WebGUI is displayed.  You have successfully finished configuring the first node of the cluster.  Move to the next step to add the second node to the cluster.</p>
+<hr>
+<h2 id="adding-the-second-keycontrol-node-to-the-cluster">Adding the Second KeyControl Node to the Cluster</h2>
+<ol>
+<li>Launch a web browser and navigate to the IP Address or fully-qualified domain name (FQDN) of the management IP address of the second appliance. Use the following credentials to log in:
+<ul>
+<li>User Name: secroot</li>
+<li>Password: secroot</li>
+</ul>
+</li>
+</ol>
+<figure>
+    <img src="/img/2020/10/31/HTKCDeploy15.png"
+         alt="KeyControl Login screen"/> <figcaption>
+            <h4>KeyControl Login screen</h4>
+        </figcaption>
+</figure>
+
+<ol start="2">
+<li>Upon logging in, read and accept the EULA by clicking on, <strong>I Agree</strong> at the bottom of the agreement.</li>
+</ol>
+<figure>
+    <img src="/img/2020/10/31/HTKCDeploy16.png"
+         alt="EULA screen"/> <figcaption>
+            <h4>EULA screen</h4>
+        </figcaption>
+</figure>
+
+<ol start="3">
+<li>Since this is the second KeyControl node, click <strong>Join an Existing Cluster.</strong></li>
+</ol>
+<figure>
+    <img src="/img/2020/10/31/HTKCDeploy22.png"
+         alt="Welcome to KeyControl screen"/> <figcaption>
+            <h4>Welcome to KeyControl screen</h4>
+        </figcaption>
+</figure>
+
+<ol start="4">
+<li>You will notice the workflow for configuring the second node is quite different.  Review the information and click <strong>Continue.</strong></li>
+</ol>
+<figure>
+    <img src="/img/2020/10/31/HTKCDeploy23.png"
+         alt="Getting Started with Cluster Join"/> <figcaption>
+            <h4>Getting Started with Cluster Join</h4>
+        </figcaption>
+</figure>
+
+<ol start="5">
+<li>Click <strong>Generate and Download CSR</strong>.  This will place a .csr file in your downloads directory.  We will need this file in just a few steps.</li>
+</ol>
+<figure>
+    <img src="/img/2020/10/31/HTKCDeploy24.png"
+         alt="Generate &amp; Download CSR"/> <figcaption>
+            <h4>Generate &amp; Download CSR</h4>
+        </figcaption>
+</figure>
+
+<ol start="6">
+<li>Click <strong>Continue</strong>.</li>
+</ol>
+<figure>
+    <img src="/img/2020/10/31/HTKCDeploy25.png"
+         alt="Downloaded CSR"/> <figcaption>
+            <h4>Downloaded CSR</h4>
+        </figcaption>
+</figure>
+
+<ol start="7">
+<li>At this point, you need to open a new browser window or a new tab and login to the first KeyControl node.  <strong><em>Do NOT</em></strong> click the continue button on this screen yet!</li>
+</ol>
+<figure>
+    <img src="/img/2020/10/31/HTKCDeploy26.png"
+         alt="Add Node to Cluster"/> <figcaption>
+            <h4>Add Node to Cluster</h4>
+        </figcaption>
+</figure>
+
+<ol start="8">
+<li>After logging into the first KeyControl node, click <em>Cluster</em> in the top menu.  Next, click the blue <strong>Actions</strong> button and select <strong>Add a Node.</strong></li>
+</ol>
+<figure>
+    <img src="/img/2020/10/31/HTKCDeploy27.png"
+         alt="Add Node"/> <figcaption>
+            <h4>Add Node</h4>
+        </figcaption>
+</figure>
+
+<ol start="9">
+<li>Click the <strong>Load File</strong> button and select the .csr file from step 6.  Next, enter a passphrase that is at least 12 characters long.  You will need this passphrase in an upcoming step.  Click <strong>Save and Download Bundle.</strong>  A zip file is placed in the downloads directory on your computer.  The zip file contains both an encrypted SSL certificate in .p12 format and a CA certificate in .pem format.</li>
+</ol>
+<figure>
+    <img src="/img/2020/10/31/HTKCDeploy28.png"
+         alt="Load CSR"/> <figcaption>
+            <h4>Load CSR</h4>
+        </figcaption>
+</figure>
+
+<ol start="10">
+<li>As the window states, click <strong>OK</strong> and switch back to the browser window or browser tab of the second node, you are in the process of adding to the cluster.</li>
+</ol>
+<figure>
+    <img src="/img/2020/10/31/HTKCDeploy30.png"
+         alt="Switch to First Node"/> <figcaption>
+            <h4>Switch to First Node</h4>
+        </figcaption>
+</figure>
+
+<ol start="11">
+<li>Now, you can click the <strong>Continue</strong> button on this screen.</li>
+</ol>
+<figure>
+    <img src="/img/2020/10/31/HTKCDeploy26.png"
+         alt="Click Continue"/> <figcaption>
+            <h4>Click Continue</h4>
+        </figcaption>
+</figure>
+
+<ol start="12">
+<li>Under <em>Upload SSL Certificate</em> click the <strong>Load File</strong> button and select the encrypted SSL certificate.  The SSL certificate is the file that does NOT have a .pem extension.  Under <em>Upload CA Certificate</em> click the <strong>Load File</strong> button and select the CA certificate.  This is the file that has a .pem file extension (cacert.pem).  Enter the passphrase that you created back in step 9.  Click <strong>Join.</strong></li>
+</ol>
+<figure>
+    <img src="/img/2020/10/31/HTKCDeploy31a.png"
+         alt="Upload Certificates"/> <figcaption>
+            <h4>Upload Certificates</h4>
+        </figcaption>
+</figure>
+
+<ol start="13">
+<li>After clicking the join button, the joining process will display the steps it takes to join the node to the cluster.  The second node will be restarted during this process</li>
+</ol>
+<figure>
+    <img src="/img/2020/10/31/HTKCDeploy32.png"
+         alt="Cluster Join Progress"/> <figcaption>
+            <h4>Cluster Join Progress</h4>
+        </figcaption>
+</figure>
+
+<ol start="14">
+<li>After the node has successfully restarted, click the <strong>Login</strong> button and login to the newly joined node.  You will use the new secroot password you created during the configuration of the first KeyControl node.</li>
+</ol>
+<figure>
+    <img src="/img/2020/10/31/HTKCDeploy34.png"
+         alt="Node Addition Successful"/> <figcaption>
+            <h4>Node Addition Successful</h4>
+        </figcaption>
+</figure>
+
+<p>After logging into the second node, you will notice that the <em>Cluster</em> button in the top menu will show a green number two.  Click to see all of the nodes in the cluster.</p>
+<figure>
+    <img src="/img/2020/10/31/HTKCDeploy35.png"
+         alt="Confirm Node Status"/> <figcaption>
+            <h4>Confirm Node Status</h4>
+        </figcaption>
+</figure>
+
+<p>Pat yourself on the back.  You have successfully created a 2-node HyTrust KeyControl KMS cluster.</p>
+<hr>
+<h2 id="summary">Summary</h2>
+<p>In summary, creating a Key Management cluster involves a few steps.  But, it should be something you can complete in under 30 minutes.  I do this regularly and can go through this process in under 15 minutes.</p>
+<p>In a follow-on blog, I will write about connecting this cluster to vCenter so you can begin encrypting VMs.</p>
+<p>Thanks for reading!</p>
+
+  </div>
+  <footer>
+    <ul class="stats">
+  
+    
+    
+      <li class="categories">
+        <ul>
+          
+            
+            <li><a class="article-category-link" href="https://blog.psustevens.com/categories/hytrust">HyTrust</a></li>
+          
+            
+            <li><a class="article-category-link" href="https://blog.psustevens.com/categories/vmware">VMware</a></li>
+          
+            
+            <li><a class="article-category-link" href="https://blog.psustevens.com/categories/howto">HowTo</a></li>
+          
+        </ul>
+      </li>
+    
+  
+  
+    
+    
+      <li class="tags">
+        <ul>
+          
+            
+            <li><a class="article-category-link" href="https://blog.psustevens.com/tags/kms">KMS</a></li>
+          
+            
+            <li><a class="article-category-link" href="https://blog.psustevens.com/tags/key-management-server">Key Management Server</a></li>
+          
+            
+            <li><a class="article-category-link" href="https://blog.psustevens.com/tags/vcenter">vCenter</a></li>
+          
+        </ul>
+      </li>
+    
+  
+</ul>
+
+  </footer>
+</article>
+
+
+<div class="pagination">
+  
+    <a href="/2020/10/30/how-to-backup-vcenter-v7-using-smb/" class="button big previous"><i class="fas fa-angle-left"></i> How to Backup vCenter v7 using the SMB protocol</a>
+  
+  
+</div>
+
+
+      </main>
+      <section id="site-sidebar">
+  
+    <section id="recent-posts">
+      <header>
+        <h1>Recent posts</h1>
+      </header>
+      
+      <article class="mini-post">
+        <section>
+          
+  <a href="/2020/10/31/how-to-deploy-a-hytrust-keycontrol-2-node-cluster/" class="image featured">
+    <img src="/img/2020/10/KeyControl.png" alt="KeyControl">
+  </a>
+
+
+        </section>
+        <header>
+          <h1><a href="/2020/10/31/how-to-deploy-a-hytrust-keycontrol-2-node-cluster/">How to Deploy a HyTrust KeyControl 2 Node Cluster</a></h1>
+          <time class="published" datetime="">October 31, 2020</time>
+        </header>
+      </article>
+      
+      <article class="mini-post">
+        <section>
+          
+  <a href="/2020/10/30/how-to-backup-vcenter-v7-using-smb/" class="image featured">
+    <img src="/img/2020/10/vCenterBackups.png" alt="vCenter Backup image">
+  </a>
+
+
+        </section>
+        <header>
+          <h1><a href="/2020/10/30/how-to-backup-vcenter-v7-using-smb/">How to Backup vCenter v7 using the SMB protocol</a></h1>
+          <time class="published" datetime="">October 30, 2020</time>
+        </header>
+      </article>
+      
+      <article class="mini-post">
+        <section>
+          
+  <a href="/2020/10/29/how-i-diyd-my-career-into-a-sales-engineer/" class="image featured">
+    <img src="/img/2020/10/SalesBurrito.png" alt="Sales Burrito logo">
+  </a>
+
+
+        </section>
+        <header>
+          <h1><a href="/2020/10/29/how-i-diyd-my-career-into-a-sales-engineer/">How I DIY&#39;d My Career Into a Sales Engineer</a></h1>
+          <time class="published" datetime="">October 29, 2020</time>
+        </header>
+      </article>
+      
+      
+        <a href="/blog/" class="button">See more</a>
+      
+    </section>
+  
+
+  
+    
+      <section id="categories">
+        <header>
+          <h1><a href="/categories">Categories</a></h1>
+        </header>
+        <ul>
+          
+            
+          
+          
+          <li>
+            
+              <a href="/categories/blogging/">blogging<span class="count">6</span></a>
+            
+          
+          <li>
+            
+              <a href="/categories/vmware/">vmware<span class="count">3</span></a>
+            
+          
+          <li>
+            
+              <a href="/categories/howto/">howto<span class="count">2</span></a>
+            
+          
+          <li>
+            
+              <a href="/categories/career/">career<span class="count">1</span></a>
+            
+          
+          <li>
+            
+              <a href="/categories/hytrust/">hytrust<span class="count">1</span></a>
+            
+          
+          <li>
+            
+              <a href="/categories/psustevens/">psustevens<span class="count">1</span></a>
+            
+          
+          </li>
+        </ul>
+      </section>
+    
+  
+
+  <section id="mini-bio">
+    <header>
+      <h1>About</h1>
+    </header>
+    <p>This is my personal blog about technical topics including virtualization, storage, networking, backups, and some random IT stuff that strikes my fancy.</p>
+    <footer>
+      <a href="/about" class="button">Learn More</a>
+    </footer>
+  </section>
+</section>
+
+      <footer id="site-footer">
+  
+      <ul class="socnet-icons">
+        
+
+        <li><a href="//github.com/psustevens" target="_blank" rel="noopener" title="GitHub" class="fab fa-github"></a></li>
+
+
+
+
+
+
+
+
+
+
+
+<li><a href="//linkedin.com/in/davidlstevens" target="_blank" rel="noopener" title="LinkedIn" class="fab fa-linkedin"></a></li>
+<li><a href="//linkedin.com/company/236893" target="_blank" rel="noopener" title="LinkedIn Company" class="fab fa-linkedin"></a></li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<li><a href="//twitter.com/PSUStevens" target="_blank" rel="noopener" title="Twitter" class="fab fa-twitter"></a></li>
+
+
+
+
+
+
+
+
+
+
+
+
+      </ul>
+  
+  <p class="copyright">
+    
+      &copy; 2020
+      
+        @PSUStevens Blog
+      
+    . <br>
+    Theme: <a href='https://github.com/pacollins/hugo-future-imperfect-slim' target='_blank' rel='noopener'>Hugo Future Imperfect Slim</a><br>A <a href='https://html5up.net/future-imperfect' target='_blank' rel='noopener'>HTML5 UP port</a> | Powered by <a href='https://gohugo.io/' title='0.76.5' target='_blank' rel='noopener'>Hugo</a>
+  </p>
+</footer>
+<a id="back-to-top" href="#" class="fas fa-arrow-up fa-2x"></a>
+
+      
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/highlight.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/languages/html.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/languages/css.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/languages/js.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/languages/toml.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/languages/PowerShell.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/languages/markdown.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/languages/plaintext.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script>
+
+
+  
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/skel/3.0.1/skel.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.3.5/jquery.fancybox.min.js"></script>
+  <script src=/js/util.js></script>
+  <script src=/js/main.js></script>
+  <script src=/js/add-on.js></script>
+  
+
+
+
+
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-149142929-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+
+    </div>
+  </body>
+</html>

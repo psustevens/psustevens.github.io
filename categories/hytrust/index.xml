@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>HyTrust on @PSUStevens Blog</title>
+    <link>https://blog.psustevens.com/categories/hytrust/</link>
+    <description>Recent content in HyTrust on @PSUStevens Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Sat, 31 Oct 2020 14:04:12 -0400</lastBuildDate><atom:link href="https://blog.psustevens.com/categories/hytrust/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>How to Deploy a HyTrust KeyControl 2 Node Cluster</title>
+      <link>https://blog.psustevens.com/2020/10/31/how-to-deploy-a-hytrust-keycontrol-2-node-cluster/</link>
+      <pubDate>Sat, 31 Oct 2020 14:04:12 -0400</pubDate>
+      
+      <guid>https://blog.psustevens.com/2020/10/31/how-to-deploy-a-hytrust-keycontrol-2-node-cluster/</guid>
+      <description>Deploy the First HyTrust KeyControl Appliance  Log in to the Virtual Center Appliance (VCSA). Once logged in, right-click and select Deploy OVF Template&amp;hellip;    Deploy OVF Template...   Click on Upload Files and navigate to the directory where you placed the HyTrust KeyControl OVA, select it, then click Open.    Select OVF Template   Now that you have the HyTrust KeyControl OVA selected, click on Next.</description>
+    </item>
+    
+  </channel>
+</rss>
