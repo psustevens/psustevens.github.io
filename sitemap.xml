@@ -4,56 +4,61 @@
   
   <url>
     <loc>https://blog.psustevens.com/</loc>
-    <lastmod>2020-10-31T14:04:12-04:00</lastmod>
+    <lastmod>2020-11-04T08:07:16-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://blog.psustevens.com/2020/11/04/add-a-hytrust-kms-to-vcenter-v7/</loc>
+    <lastmod>2020-11-04T08:07:16-05:00</lastmod>
   </url>
   
   <url>
     <loc>https://blog.psustevens.com/blog/</loc>
-    <lastmod>2020-10-31T14:04:12-04:00</lastmod>
+    <lastmod>2020-11-04T08:07:16-05:00</lastmod>
   </url>
   
   <url>
     <loc>https://blog.psustevens.com/categories/</loc>
-    <lastmod>2020-10-31T14:04:12-04:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://blog.psustevens.com/2020/10/31/how-to-deploy-a-hytrust-keycontrol-2-node-cluster/</loc>
-    <lastmod>2020-10-31T14:04:12-04:00</lastmod>
+    <lastmod>2020-11-04T08:07:16-05:00</lastmod>
   </url>
   
   <url>
     <loc>https://blog.psustevens.com/categories/howto/</loc>
-    <lastmod>2020-10-31T14:04:12-04:00</lastmod>
+    <lastmod>2020-11-04T08:07:16-05:00</lastmod>
   </url>
   
   <url>
     <loc>https://blog.psustevens.com/categories/hytrust/</loc>
-    <lastmod>2020-10-31T14:04:12-04:00</lastmod>
+    <lastmod>2020-11-04T08:07:16-05:00</lastmod>
   </url>
   
   <url>
     <loc>https://blog.psustevens.com/tags/key-management-server/</loc>
-    <lastmod>2020-10-31T14:04:12-04:00</lastmod>
+    <lastmod>2020-11-04T08:07:16-05:00</lastmod>
   </url>
   
   <url>
     <loc>https://blog.psustevens.com/tags/kms/</loc>
-    <lastmod>2020-10-31T14:04:12-04:00</lastmod>
+    <lastmod>2020-11-04T08:07:16-05:00</lastmod>
   </url>
   
   <url>
     <loc>https://blog.psustevens.com/tags/</loc>
-    <lastmod>2020-10-31T14:04:12-04:00</lastmod>
+    <lastmod>2020-11-04T08:07:16-05:00</lastmod>
   </url>
   
   <url>
     <loc>https://blog.psustevens.com/tags/vcenter/</loc>
-    <lastmod>2020-10-31T14:04:12-04:00</lastmod>
+    <lastmod>2020-11-04T08:07:16-05:00</lastmod>
   </url>
   
   <url>
     <loc>https://blog.psustevens.com/categories/vmware/</loc>
+    <lastmod>2020-11-04T08:07:16-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://blog.psustevens.com/2020/10/31/how-to-deploy-a-hytrust-keycontrol-2-node-cluster/</loc>
     <lastmod>2020-10-31T14:04:12-04:00</lastmod>
   </url>
   
