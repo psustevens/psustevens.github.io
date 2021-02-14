@@ -6,7 +6,16 @@
     <description>Recent content in Blog on @PSUStevens Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Wed, 04 Nov 2020 08:07:16 -0500</lastBuildDate><atom:link href="https://blog.psustevens.com/blog/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 14 Feb 2021 11:45:19 -0500</lastBuildDate><atom:link href="https://blog.psustevens.com/blog/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>New Year, New Changes!</title>
+      <link>https://blog.psustevens.com/2021/02/14/new-year-new-changes/</link>
+      <pubDate>Sun, 14 Feb 2021 11:45:19 -0500</pubDate>
+      
+      <guid>https://blog.psustevens.com/2021/02/14/new-year-new-changes/</guid>
+      <description>Most people post their New Years&#39; blog posts within the first week of the new year. But, there have been some things brewing that I needed to wait to complete. This blog post isn&amp;rsquo;t like my other posts. It&amp;rsquo;s a brief look back at what transpired in 2020 and what I hope to accomplish this year. I also have an announcement about some exciting new changes that have been brewing since late last year.</description>
+    </item>
+    
     <item>
       <title>Add a HyTrust KMS to vCenter v7 as a Key Provider</title>
       <link>https://blog.psustevens.com/2020/11/04/add-a-hytrust-kms-to-vcenter-v7/</link>
