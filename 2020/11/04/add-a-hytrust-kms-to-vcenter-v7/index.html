@@ -7,23 +7,19 @@
 
 
 
-  <meta name="generator" content="Hugo 0.76.5" />
+  <meta name="generator" content="Hugo 0.88.1" />
   <meta itemprop="name" content="Add a HyTrust KMS to vCenter v7 as a Key Provider">
-<meta itemprop="description" content="In vCenter 7 VMware moved away from the term KMS (Key Management Server) to Key Provider.  This post will explain how to add HyTrust KeyControl as a Key Provider in vCenter 7.">
-<meta itemprop="datePublished" content="2020-11-04T08:07:16-05:00" />
+<meta itemprop="description" content="In vCenter 7 VMware moved away from the term KMS (Key Management Server) to Key Provider.  This post will explain how to add HyTrust KeyControl as a Key Provider in vCenter 7."><meta itemprop="datePublished" content="2020-11-04T08:07:16-05:00" />
 <meta itemprop="dateModified" content="2020-11-04T08:07:16-05:00" />
 <meta itemprop="wordCount" content="838">
-
-
-
 <meta itemprop="keywords" content="KMS,Key Management Server,vCenter," />
-
   <meta property="og:title" content="Add a HyTrust KMS to vCenter v7 as a Key Provider" />
 <meta property="og:description" content="In vCenter 7 VMware moved away from the term KMS (Key Management Server) to Key Provider.  This post will explain how to add HyTrust KeyControl as a Key Provider in vCenter 7." />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://blog.psustevens.com/2020/11/04/add-a-hytrust-kms-to-vcenter-v7/" />
+<meta property="og:url" content="https://blog.psustevens.com/2020/11/04/add-a-hytrust-kms-to-vcenter-v7/" /><meta property="article:section" content="blog" />
 <meta property="article:published_time" content="2020-11-04T08:07:16-05:00" />
 <meta property="article:modified_time" content="2020-11-04T08:07:16-05:00" />
+
 
   <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Add a HyTrust KMS to vCenter v7 as a Key Provider"/>
@@ -44,7 +40,6 @@ if (!doNotTrack) {
 	ga('send', 'pageview');
 }
 </script>
-
 
   <link rel="stylesheet"
       href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/styles/github.min.css">
@@ -291,9 +286,8 @@ if (!doNotTrack) {
 <ol>
 <li>Log in to one of the <a href="/2020/10/31/how-to-deploy-a-hytrust-keycontrol-2-node-cluster/">KeyControl nodes.</a>  After logging in, click on the big KMIP icon in the top menu bar of the WebUI.</li>
 </ol>
-<figure>
-    <img src="/img/2020/11/04/KMIP-Trust01.png"
-         alt="KMIP icon"/> <figcaption>
+<figure><img src="/img/2020/11/04/KMIP-Trust01.png"
+         alt="KMIP icon"/><figcaption>
             <h4>KMIP icon</h4>
         </figcaption>
 </figure>
@@ -310,9 +304,8 @@ if (!doNotTrack) {
 </li>
 </ol>
 <p>VMware supports <strong>KMIP version 1.1</strong> for Key Providers.</p>
-<figure>
-    <img src="/img/2020/11/04/KMIP-Trust02.png"
-         alt="KMIP Server settings screen"/> <figcaption>
+<figure><img src="/img/2020/11/04/KMIP-Trust02.png"
+         alt="KMIP Server settings screen"/><figcaption>
             <h4>KMIP Server settings screen</h4>
         </figcaption>
 </figure>
@@ -322,9 +315,8 @@ if (!doNotTrack) {
 <ol>
 <li>Next to the blue <em>Actions</em> button, you will see the text, <strong>Client Certificates</strong>.  Click this text, then click the blue <strong>Actions</strong> button and select <strong>Create Certificate</strong>.</li>
 </ol>
-<figure>
-    <img src="/img/2020/11/04/KMIP-Trust03.png"
-         alt="Create Certificate"/> <figcaption>
+<figure><img src="/img/2020/11/04/KMIP-Trust03.png"
+         alt="Create Certificate"/><figcaption>
             <h4>Create Certificate</h4>
         </figcaption>
 </figure>
@@ -332,9 +324,8 @@ if (!doNotTrack) {
 <ol start="2">
 <li>Enter a name for the certificate in the <strong>Certificate Name</strong> field.  You can adjust the expiration date.  But, do <strong><em>NOT</em></strong> add a certificate password—finally, click <strong>Create</strong>.</li>
 </ol>
-<figure>
-    <img src="/img/2020/11/04/KMIP-Trust04.png"
-         alt="Create New Client Certificate screen"/> <figcaption>
+<figure><img src="/img/2020/11/04/KMIP-Trust04.png"
+         alt="Create New Client Certificate screen"/><figcaption>
             <h4>Create New Client Certificate screen</h4>
         </figcaption>
 </figure>
@@ -342,9 +333,8 @@ if (!doNotTrack) {
 <ol start="3">
 <li>You will see the new certificate in the WebUI.  Click the certificate, then click the blue <strong>Action</strong> button and select <strong>Download Certificate</strong>.  This will result in a zip file being downloaded to your system.  Unzip the contents of the file.  You will need the unzipped contents later.</li>
 </ol>
-<figure>
-    <img src="/img/2020/11/04/KMIP-Trust05.png"
-         alt="Download Certificate"/> <figcaption>
+<figure><img src="/img/2020/11/04/KMIP-Trust05.png"
+         alt="Download Certificate"/><figcaption>
             <h4>Download Certificate</h4>
         </figcaption>
 </figure>
@@ -366,9 +356,8 @@ if (!doNotTrack) {
 <p>Click <strong>Add Standard Key Provider</strong></p>
 </li>
 </ol>
-<figure>
-    <img src="/img/2020/11/04/KMIP-Trust06.png"
-         alt="Add Standard Key Provider"/> <figcaption>
+<figure><img src="/img/2020/11/04/KMIP-Trust06.png"
+         alt="Add Standard Key Provider"/><figcaption>
             <h4>Add Standard Key Provider</h4>
         </figcaption>
 </figure>
@@ -384,9 +373,8 @@ if (!doNotTrack) {
 <p>You can ignore the optional proxy and password sections.  Click <strong>Add Key Provider</strong> when you are finished.</p>
 </li>
 </ol>
-<figure>
-    <img src="/img/2020/11/04/KMIP-Trust07.png"
-         alt="Standard Key Provider Details screen"/> <figcaption>
+<figure><img src="/img/2020/11/04/KMIP-Trust07.png"
+         alt="Standard Key Provider Details screen"/><figcaption>
             <h4>Standard Key Provider Details screen</h4>
         </figcaption>
 </figure>
@@ -395,9 +383,8 @@ if (!doNotTrack) {
 <ol start="8">
 <li>Click the <strong>Trust</strong> button.</li>
 </ol>
-<figure>
-    <img src="/img/2020/11/04/KMIP-Trust08.png"
-         alt="KMS Node Certificate Details"/> <figcaption>
+<figure><img src="/img/2020/11/04/KMIP-Trust08.png"
+         alt="KMS Node Certificate Details"/><figcaption>
             <h4>KMS Node Certificate Details</h4>
         </figcaption>
 </figure>
@@ -406,9 +393,8 @@ if (!doNotTrack) {
 <ol start="9">
 <li>Check the radio button next to the Key Provider.  This will list the Key Management Servers at the bottom of the window.</li>
 </ol>
-<figure>
-    <img src="/img/2020/11/04/KMIP-Trust09.png"
-         alt="Key Provider list and KMS Servers"/> <figcaption>
+<figure><img src="/img/2020/11/04/KMIP-Trust09.png"
+         alt="Key Provider list and KMS Servers"/><figcaption>
             <h4>Key Provider list and KMS Servers</h4>
         </figcaption>
 </figure>
@@ -418,9 +404,8 @@ if (!doNotTrack) {
 <ol>
 <li>Click one of the KMS servers, then click <strong>Establish Trust</strong>.  Select <strong>Make KMS trust vCenter</strong>.</li>
 </ol>
-<figure>
-    <img src="/img/2020/11/04/KMIP-Trust10.png"
-         alt="Make KMS trust vCenter"/> <figcaption>
+<figure><img src="/img/2020/11/04/KMIP-Trust10.png"
+         alt="Make KMS trust vCenter"/><figcaption>
             <h4>Make KMS trust vCenter</h4>
         </figcaption>
 </figure>
@@ -428,9 +413,8 @@ if (!doNotTrack) {
 <ol start="2">
 <li>Click <strong>KMS certificate and private key</strong>, then click <strong>Next</strong>.</li>
 </ol>
-<figure>
-    <img src="/img/2020/11/04/KMIP-Trust11.png"
-         alt="Choose a Trust Method"/> <figcaption>
+<figure><img src="/img/2020/11/04/KMIP-Trust11.png"
+         alt="Choose a Trust Method"/><figcaption>
             <h4>Choose a Trust Method</h4>
         </figcaption>
 </figure>
@@ -444,9 +428,8 @@ if (!doNotTrack) {
 <p>Repeat these steps for the <em>KMS Private Key</em>, then click <strong>Establish Trust</strong></p>
 </li>
 </ol>
-<figure>
-    <img src="/img/2020/11/04/KMIP-Trust13.png"
-         alt="Upload KMS Credentials"/> <figcaption>
+<figure><img src="/img/2020/11/04/KMIP-Trust13.png"
+         alt="Upload KMS Credentials"/><figcaption>
             <h4>Upload KMS Credentials</h4>
         </figcaption>
 </figure>
@@ -454,17 +437,15 @@ if (!doNotTrack) {
 <ol start="5">
 <li>At this point, all of the yellowish triangles from a previous step should now be green circles with checkmarks in them.</li>
 </ol>
-<figure>
-    <img src="/img/2020/11/04/KMIP-Trust14.png"
-         alt="Trusted KMS Servers"/> <figcaption>
+<figure><img src="/img/2020/11/04/KMIP-Trust14.png"
+         alt="Trusted KMS Servers"/><figcaption>
             <h4>Trusted KMS Servers</h4>
         </figcaption>
 </figure>
 
 <p>If you want a bit more detail, expand one of the KMS Server entries.</p>
-<figure>
-    <img src="/img/2020/11/04/KMIP-Trust15.png"
-         alt="KMS Server Trust Detailss"/> <figcaption>
+<figure><img src="/img/2020/11/04/KMIP-Trust15.png"
+         alt="KMS Server Trust Detailss"/><figcaption>
             <h4>KMS Server Trust Details</h4>
         </figcaption>
 </figure>
@@ -536,7 +517,7 @@ if (!doNotTrack) {
 
 <div class="pagination">
   
-    <a href="/2020/10/31/how-to-deploy-a-hytrust-keycontrol-2-node-cluster/" class="button big previous"><i class="fas fa-angle-left"></i> How to Deploy a HyTrust KeyControl 2-Node Cluster</a>
+    <a href="/2020/10/31/how-to-deploy-a-hytrust-keycontrol-2-node-cluster/" class="button big previous"><i class="fas fa-angle-left"></i> How to Deploy a HyTrust KeyControl v5.2.1, 2-Node Cluster</a>
   
   
     <a href="/2021/02/14/new-year-new-changes/" class="button big next">New Year, New Changes! <i class="fas fa-angle-right"></i></a>
@@ -551,6 +532,21 @@ if (!doNotTrack) {
       <header>
         <h1>Recent posts</h1>
       </header>
+      
+      <article class="mini-post">
+        <section>
+          
+  <a href="/2021/10/01/how-to-deploy-entrust-keycontrol-5.4/" class="image featured">
+    <img src="/img/2021/10/ETKC.png" alt="Entrust Keycontrol">
+  </a>
+
+
+        </section>
+        <header>
+          <h1><a href="/2021/10/01/how-to-deploy-entrust-keycontrol-5.4/">How to Deploy Entrust KeyControl 5.4</a></h1>
+          <time class="published" datetime="">October 1, 2021</time>
+        </header>
+      </article>
       
       <article class="mini-post">
         <section>
@@ -582,21 +578,6 @@ if (!doNotTrack) {
         </header>
       </article>
       
-      <article class="mini-post">
-        <section>
-          
-  <a href="/2020/10/31/how-to-deploy-a-hytrust-keycontrol-2-node-cluster/" class="image featured">
-    <img src="/img/2020/10/KeyControl.png" alt="KeyControl">
-  </a>
-
-
-        </section>
-        <header>
-          <h1><a href="/2020/10/31/how-to-deploy-a-hytrust-keycontrol-2-node-cluster/">How to Deploy a HyTrust KeyControl 2-Node Cluster</a></h1>
-          <time class="published" datetime="">October 31, 2020</time>
-        </header>
-      </article>
-      
       
         <a href="/blog/" class="button">See more</a>
       
@@ -621,12 +602,17 @@ if (!doNotTrack) {
           
           <li>
             
-              <a href="/categories/vmware/">vmware<span class="count">4</span></a>
+              <a href="/categories/vmware/">vmware<span class="count">5</span></a>
             
           
           <li>
             
-              <a href="/categories/howto/">howto<span class="count">3</span></a>
+              <a href="/categories/howto/">howto<span class="count">4</span></a>
+            
+          
+          <li>
+            
+              <a href="/categories/hytrust/">hytrust<span class="count">3</span></a>
             
           
           <li>
@@ -636,7 +622,7 @@ if (!doNotTrack) {
           
           <li>
             
-              <a href="/categories/hytrust/">hytrust<span class="count">2</span></a>
+              <a href="/categories/entrust/">entrust<span class="count">1</span></a>
             
           
           <li>
@@ -716,7 +702,7 @@ if (!doNotTrack) {
         @PSUStevens Blog
       
     . <br>
-    Theme: <a href='https://github.com/pacollins/hugo-future-imperfect-slim' target='_blank' rel='noopener'>Hugo Future Imperfect Slim</a><br>A <a href='https://html5up.net/future-imperfect' target='_blank' rel='noopener'>HTML5 UP port</a> | Powered by <a href='https://gohugo.io/' title='0.76.5' target='_blank' rel='noopener'>Hugo</a>
+    Theme: <a href='https://github.com/pacollins/hugo-future-imperfect-slim' target='_blank' rel='noopener'>Hugo Future Imperfect Slim</a><br>A <a href='https://html5up.net/future-imperfect' target='_blank' rel='noopener'>HTML5 UP port</a> | Powered by <a href='https://gohugo.io/' title='0.88.1' target='_blank' rel='noopener'>Hugo</a>
   </p>
 </footer>
 <a id="back-to-top" href="#" class="fas fa-arrow-up fa-2x"></a>

@@ -7,23 +7,19 @@
 
 
 
-  <meta name="generator" content="Hugo 0.76.5" />
+  <meta name="generator" content="Hugo 0.88.1" />
   <meta itemprop="name" content="Building a Blog With Hugo - Part 4">
-<meta itemprop="description" content="Your blog is up and running (locally), you&#39;ve created your first post and customized the look of the site.  Let&#39;s get cracking on seeing who is visiting the site.">
-<meta itemprop="datePublished" content="2019-12-20T01:24:15-05:00" />
+<meta itemprop="description" content="Your blog is up and running (locally), you&#39;ve created your first post and customized the look of the site.  Let&#39;s get cracking on seeing who is visiting the site."><meta itemprop="datePublished" content="2019-12-20T01:24:15-05:00" />
 <meta itemprop="dateModified" content="2019-12-20T01:24:15-05:00" />
 <meta itemprop="wordCount" content="690">
-
-
-
 <meta itemprop="keywords" content="Hugo,Google Analytics," />
-
   <meta property="og:title" content="Building a Blog With Hugo - Part 4" />
 <meta property="og:description" content="Your blog is up and running (locally), you&#39;ve created your first post and customized the look of the site.  Let&#39;s get cracking on seeing who is visiting the site." />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://blog.psustevens.com/2019/12/20/building-a-blog-with-hugo-part4/" />
+<meta property="og:url" content="https://blog.psustevens.com/2019/12/20/building-a-blog-with-hugo-part4/" /><meta property="article:section" content="blog" />
 <meta property="article:published_time" content="2019-12-20T01:24:15-05:00" />
 <meta property="article:modified_time" content="2019-12-20T01:24:15-05:00" />
+
 
   <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Building a Blog With Hugo - Part 4"/>
@@ -44,7 +40,6 @@ if (!doNotTrack) {
 	ga('send', 'pageview');
 }
 </script>
-
 
   <link rel="stylesheet"
       href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/styles/github.min.css">
@@ -293,7 +288,7 @@ if (!doNotTrack) {
 </li>
 <li>
 <p>Enter the <code>Tracking ID</code> between the quotes on the <code>googleAnalytics</code> line near the beginning of your <code>config.toml</code> file.  Like so:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-plaintext" data-lang="plaintext">googleAnalytics         = &#34;your tracking id here&#34;
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-plaintext" data-lang="plaintext">googleAnalytics         = &#34;your tracking id here&#34;
 </code></pre></div></li>
 <li>
 <p>Then you are done!</p>
@@ -308,9 +303,8 @@ if (!doNotTrack) {
 <ol>
 <li>
 <p>Begin by clicking on the <strong><em>Admin button</em></strong> in the lower-left corner of the dashboard.
-<figure>
-    <img src="/img/2019/12/20/AdminDashboard.png"
-         alt="Image of Admin Dashboard button"/> <figcaption>
+<figure><img src="/img/2019/12/20/AdminDashboard.png"
+         alt="Image of Admin Dashboard button"/><figcaption>
             <h4>Admin Button</h4>
         </figcaption>
 </figure>
@@ -318,9 +312,8 @@ if (!doNotTrack) {
 </li>
 <li>
 <p>Click <strong><em>Create Account</em></strong> and enter a name for the account and determine the data sharing options you are comfortable using and click <strong><em>Next.</em></strong>.   I left everything checked.
-<figure>
-    <img src="/img/2019/12/20/CreateAccount.png"
-         alt="Image of Account Setup step"/> <figcaption>
+<figure><img src="/img/2019/12/20/CreateAccount.png"
+         alt="Image of Account Setup step"/><figcaption>
             <h4>Account Setup step</h4>
         </figcaption>
 </figure>
@@ -328,9 +321,8 @@ if (!doNotTrack) {
 </li>
 <li>
 <p>Select <strong><em>Web</em></strong> because that is why we&rsquo;re doing this and click <strong><em>Next</em></strong>.
-<figure>
-    <img src="/img/2019/12/20/WhatToMeasure.png"
-         alt="Image of What to Measure step"/> <figcaption>
+<figure><img src="/img/2019/12/20/WhatToMeasure.png"
+         alt="Image of What to Measure step"/><figcaption>
             <h4>What to Measure step</h4>
         </figcaption>
 </figure>
@@ -345,9 +337,8 @@ Keep in mind that what you enter does not need to match the domain name of your 
 I selected <strong><em>Online Communities.</em></strong></li>
 <li>Select the <strong><em>Country</em></strong> and the <strong><em>Timezone.</em></strong></li>
 <li>Click <strong><em>Create.</em></strong>
-<figure>
-    <img src="/img/2019/12/20/PropertySetup.png"
-         alt="Image of the Property Setup step"/> <figcaption>
+<figure><img src="/img/2019/12/20/PropertySetup.png"
+         alt="Image of the Property Setup step"/><figcaption>
             <h4>Property Setup step</h4>
         </figcaption>
 </figure>
@@ -367,7 +358,7 @@ The <code>Tracking ID</code> is easy to see in the Property screen.   Keep the <
 <hr>
 <h2 id="configuring-google-analytics-in-hugo">Configuring Google Analytics in Hugo</h2>
 <p>Open the <code>config.toml</code> file for editing.  If you have been following along with the series it should look similar to the following text snippet:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-plaintext" data-lang="plaintext">baseurl                 = &#34;https://example.com/&#34;
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-plaintext" data-lang="plaintext">baseurl                 = &#34;https://example.com/&#34;
 DefaultContentLanguage  = &#34;en&#34;
 title                   = &#34;Learning Hugo&#34;
 theme                   = &#34;hugo-future-imperfect-slim&#34;
@@ -378,7 +369,7 @@ googleAnalytics         = &#34;&#34;
 pluralizeListTitles     = false
 disableLanguages        = [&#34;&#34;]
 </code></pre></div><p>Enter the <code>Tracking ID</code> between the quotes on the <code>googleAnalytics</code> line like so:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-plaintext" data-lang="plaintext">googleAnalytics         = &#34;UA-987654321-1&#34;
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-plaintext" data-lang="plaintext">googleAnalytics         = &#34;UA-987654321-1&#34;
 </code></pre></div><p><strong>FYI!  That is NOT a real Tracking ID.</strong></p>
 <ol start="4">
 <li>Then you are done!</li>
@@ -465,6 +456,21 @@ disableLanguages        = [&#34;&#34;]
       <article class="mini-post">
         <section>
           
+  <a href="/2021/10/01/how-to-deploy-entrust-keycontrol-5.4/" class="image featured">
+    <img src="/img/2021/10/ETKC.png" alt="Entrust Keycontrol">
+  </a>
+
+
+        </section>
+        <header>
+          <h1><a href="/2021/10/01/how-to-deploy-entrust-keycontrol-5.4/">How to Deploy Entrust KeyControl 5.4</a></h1>
+          <time class="published" datetime="">October 1, 2021</time>
+        </header>
+      </article>
+      
+      <article class="mini-post">
+        <section>
+          
   <a href="/2021/02/14/new-year-new-changes/" class="image featured">
     <img src="/img/2021/02/changes-ahead.jpg" alt="Changes Ahead">
   </a>
@@ -492,21 +498,6 @@ disableLanguages        = [&#34;&#34;]
         </header>
       </article>
       
-      <article class="mini-post">
-        <section>
-          
-  <a href="/2020/10/31/how-to-deploy-a-hytrust-keycontrol-2-node-cluster/" class="image featured">
-    <img src="/img/2020/10/KeyControl.png" alt="KeyControl">
-  </a>
-
-
-        </section>
-        <header>
-          <h1><a href="/2020/10/31/how-to-deploy-a-hytrust-keycontrol-2-node-cluster/">How to Deploy a HyTrust KeyControl 2-Node Cluster</a></h1>
-          <time class="published" datetime="">October 31, 2020</time>
-        </header>
-      </article>
-      
       
         <a href="/blog/" class="button">See more</a>
       
@@ -531,12 +522,17 @@ disableLanguages        = [&#34;&#34;]
           
           <li>
             
-              <a href="/categories/vmware/">vmware<span class="count">4</span></a>
+              <a href="/categories/vmware/">vmware<span class="count">5</span></a>
             
           
           <li>
             
-              <a href="/categories/howto/">howto<span class="count">3</span></a>
+              <a href="/categories/howto/">howto<span class="count">4</span></a>
+            
+          
+          <li>
+            
+              <a href="/categories/hytrust/">hytrust<span class="count">3</span></a>
             
           
           <li>
@@ -546,7 +542,7 @@ disableLanguages        = [&#34;&#34;]
           
           <li>
             
-              <a href="/categories/hytrust/">hytrust<span class="count">2</span></a>
+              <a href="/categories/entrust/">entrust<span class="count">1</span></a>
             
           
           <li>
@@ -626,7 +622,7 @@ disableLanguages        = [&#34;&#34;]
         @PSUStevens Blog
       
     . <br>
-    Theme: <a href='https://github.com/pacollins/hugo-future-imperfect-slim' target='_blank' rel='noopener'>Hugo Future Imperfect Slim</a><br>A <a href='https://html5up.net/future-imperfect' target='_blank' rel='noopener'>HTML5 UP port</a> | Powered by <a href='https://gohugo.io/' title='0.76.5' target='_blank' rel='noopener'>Hugo</a>
+    Theme: <a href='https://github.com/pacollins/hugo-future-imperfect-slim' target='_blank' rel='noopener'>Hugo Future Imperfect Slim</a><br>A <a href='https://html5up.net/future-imperfect' target='_blank' rel='noopener'>HTML5 UP port</a> | Powered by <a href='https://gohugo.io/' title='0.88.1' target='_blank' rel='noopener'>Hugo</a>
   </p>
 </footer>
 <a id="back-to-top" href="#" class="fas fa-arrow-up fa-2x"></a>

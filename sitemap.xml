@@ -1,179 +1,118 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
-  
   <url>
     <loc>https://blog.psustevens.com/</loc>
-    <lastmod>2021-02-14T11:45:19-05:00</lastmod>
-  </url>
-  
-  <url>
+    <lastmod>2021-10-01T09:45:33-04:00</lastmod>
+  </url><url>
     <loc>https://blog.psustevens.com/blog/</loc>
-    <lastmod>2021-02-14T11:45:19-05:00</lastmod>
-  </url>
-  
-  <url>
+    <lastmod>2021-10-01T09:45:33-04:00</lastmod>
+  </url><url>
+    <loc>https://blog.psustevens.com/categories/</loc>
+    <lastmod>2021-10-01T09:45:33-04:00</lastmod>
+  </url><url>
+    <loc>https://blog.psustevens.com/categories/entrust/</loc>
+    <lastmod>2021-10-01T09:45:33-04:00</lastmod>
+  </url><url>
+    <loc>https://blog.psustevens.com/2021/10/01/how-to-deploy-entrust-keycontrol-5.4/</loc>
+    <lastmod>2021-10-01T09:45:33-04:00</lastmod>
+  </url><url>
+    <loc>https://blog.psustevens.com/categories/howto/</loc>
+    <lastmod>2021-10-01T09:45:33-04:00</lastmod>
+  </url><url>
+    <loc>https://blog.psustevens.com/categories/hytrust/</loc>
+    <lastmod>2021-10-01T09:45:33-04:00</lastmod>
+  </url><url>
+    <loc>https://blog.psustevens.com/tags/key-management-server/</loc>
+    <lastmod>2021-10-01T09:45:33-04:00</lastmod>
+  </url><url>
+    <loc>https://blog.psustevens.com/tags/keycontrol/</loc>
+    <lastmod>2021-10-01T09:45:33-04:00</lastmod>
+  </url><url>
+    <loc>https://blog.psustevens.com/tags/kms/</loc>
+    <lastmod>2021-10-01T09:45:33-04:00</lastmod>
+  </url><url>
+    <loc>https://blog.psustevens.com/tags/</loc>
+    <lastmod>2021-10-01T09:45:33-04:00</lastmod>
+  </url><url>
+    <loc>https://blog.psustevens.com/tags/vcenter/</loc>
+    <lastmod>2021-10-01T09:45:33-04:00</lastmod>
+  </url><url>
+    <loc>https://blog.psustevens.com/categories/vmware/</loc>
+    <lastmod>2021-10-01T09:45:33-04:00</lastmod>
+  </url><url>
     <loc>https://blog.psustevens.com/categories/career/</loc>
     <lastmod>2021-02-14T11:45:19-05:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://blog.psustevens.com/categories/</loc>
-    <lastmod>2021-02-14T11:45:19-05:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://blog.psustevens.com/2021/02/14/new-year-new-changes/</loc>
     <lastmod>2021-02-14T11:45:19-05:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://blog.psustevens.com/tags/self-improvement/</loc>
     <lastmod>2021-02-14T11:45:19-05:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://blog.psustevens.com/tags/</loc>
-    <lastmod>2021-02-14T11:45:19-05:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://blog.psustevens.com/2020/11/04/add-a-hytrust-kms-to-vcenter-v7/</loc>
     <lastmod>2020-11-04T08:07:16-05:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://blog.psustevens.com/categories/howto/</loc>
-    <lastmod>2020-11-04T08:07:16-05:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://blog.psustevens.com/categories/hytrust/</loc>
-    <lastmod>2020-11-04T08:07:16-05:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://blog.psustevens.com/tags/key-management-server/</loc>
-    <lastmod>2020-11-04T08:07:16-05:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://blog.psustevens.com/tags/kms/</loc>
-    <lastmod>2020-11-04T08:07:16-05:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://blog.psustevens.com/tags/vcenter/</loc>
-    <lastmod>2020-11-04T08:07:16-05:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://blog.psustevens.com/categories/vmware/</loc>
-    <lastmod>2020-11-04T08:07:16-05:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://blog.psustevens.com/2020/10/31/how-to-deploy-a-hytrust-keycontrol-2-node-cluster/</loc>
     <lastmod>2020-10-31T14:04:12-04:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://blog.psustevens.com/tags/backup/</loc>
     <lastmod>2020-10-30T11:12:54-04:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://blog.psustevens.com/2020/10/30/how-to-backup-vcenter-v7-using-smb/</loc>
     <lastmod>2020-10-30T11:12:54-04:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://blog.psustevens.com/2020/10/29/how-i-diyd-my-career-into-a-sales-engineer/</loc>
     <lastmod>2020-10-29T05:41:14-04:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://blog.psustevens.com/categories/blogging/</loc>
     <lastmod>2020-10-26T12:21:08-04:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://blog.psustevens.com/2020/10/26/building-a-blog-with-hugo-part5/</loc>
     <lastmod>2020-10-26T12:21:08-04:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://blog.psustevens.com/tags/github/</loc>
     <lastmod>2020-10-26T12:21:08-04:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://blog.psustevens.com/tags/hugo/</loc>
     <lastmod>2020-10-26T12:21:08-04:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://blog.psustevens.com/tags/blogtober-2020/</loc>
     <lastmod>2020-10-24T01:34:42-04:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://blog.psustevens.com/2020/10/24/blogtober-tech-edition-2020/</loc>
     <lastmod>2020-10-24T01:34:42-04:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://blog.psustevens.com/2019/12/20/building-a-blog-with-hugo-part4/</loc>
     <lastmod>2019-12-20T01:24:15-05:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://blog.psustevens.com/tags/google-analytics/</loc>
     <lastmod>2019-12-20T01:24:15-05:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://blog.psustevens.com/2019/12/18/building-a-blog-with-hugo-part3/</loc>
     <lastmod>2019-12-18T01:49:05-05:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://blog.psustevens.com/2019/11/06/my-first-international-vmug/</loc>
     <lastmod>2019-11-06T01:20:45-05:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://blog.psustevens.com/tags/vmug/</loc>
     <lastmod>2019-11-06T01:20:45-05:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://blog.psustevens.com/2019/11/01/building-a-blog-with-hugo-part2/</loc>
     <lastmod>2019-11-01T13:07:13-04:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://blog.psustevens.com/2019/10/11/building-a-blog-with-hugo/</loc>
     <lastmod>2019-10-11T16:02:46-04:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://blog.psustevens.com/2019/09/30/introducing-me/</loc>
     <lastmod>2019-09-30T08:48:31-04:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://blog.psustevens.com/categories/psustevens/</loc>
     <lastmod>2019-09-30T08:48:31-04:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://blog.psustevens.com/about/</loc>
     <lastmod>2019-09-09T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://blog.psustevens.com/contact/_index.de/</loc>
   </url>
-  
 </urlset>

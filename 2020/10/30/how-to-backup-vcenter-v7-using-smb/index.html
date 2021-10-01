@@ -7,23 +7,19 @@
 
 
 
-  <meta name="generator" content="Hugo 0.76.5" />
+  <meta name="generator" content="Hugo 0.88.1" />
   <meta itemprop="name" content="How to Backup vCenter v7 using the SMB protocol">
-<meta itemprop="description" content="VMware vCenter is a vital management tool for your VMware environment.  Are you backing it up?  No? Well, read-on.">
-<meta itemprop="datePublished" content="2020-10-30T11:12:54-04:00" />
+<meta itemprop="description" content="VMware vCenter is a vital management tool for your VMware environment.  Are you backing it up?  No? Well, read-on."><meta itemprop="datePublished" content="2020-10-30T11:12:54-04:00" />
 <meta itemprop="dateModified" content="2020-10-30T11:12:54-04:00" />
 <meta itemprop="wordCount" content="664">
-
-
-
 <meta itemprop="keywords" content="vCenter,backup," />
-
   <meta property="og:title" content="How to Backup vCenter v7 using the SMB protocol" />
 <meta property="og:description" content="VMware vCenter is a vital management tool for your VMware environment.  Are you backing it up?  No? Well, read-on." />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://blog.psustevens.com/2020/10/30/how-to-backup-vcenter-v7-using-smb/" />
+<meta property="og:url" content="https://blog.psustevens.com/2020/10/30/how-to-backup-vcenter-v7-using-smb/" /><meta property="article:section" content="blog" />
 <meta property="article:published_time" content="2020-10-30T11:12:54-04:00" />
 <meta property="article:modified_time" content="2020-10-30T11:12:54-04:00" />
+
 
   <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="How to Backup vCenter v7 using the SMB protocol"/>
@@ -44,7 +40,6 @@ if (!doNotTrack) {
 	ga('send', 'pageview');
 }
 </script>
-
 
   <link rel="stylesheet"
       href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/styles/github.min.css">
@@ -298,49 +293,43 @@ if (!doNotTrack) {
 <hr>
 <h2 id="lets-begin">Let&rsquo;s Begin!</h2>
 <p>As the title of this blog states, I will write about using the SMB protocol for backups.  To start, make sure you have the storage location configured on your Windows system.  I&rsquo;m going with a simple folder with the name: <strong>vCenter backups</strong></p>
-<figure>
-    <img src="/img/2020/10/30/vCenterBackups1.png"
-         alt="Folder for storing backups"/> <figcaption>
+<figure><img src="/img/2020/10/30/vCenterBackups1.png"
+         alt="Folder for storing backups"/><figcaption>
             <h4>Folder for storing backups</h4>
         </figcaption>
 </figure>
 
 <p>Right-click the folder and select <strong>Properties</strong>, click the <strong>Sharing</strong> tab, then click the <strong>Advanced Sharing</strong> button.</p>
-<figure>
-    <img src="/img/2020/10/30/vCenterBackups2.png"
-         alt="vCenter backups folder properties"/> <figcaption>
+<figure><img src="/img/2020/10/30/vCenterBackups2.png"
+         alt="vCenter backups folder properties"/><figcaption>
             <h4>vCenter backups folder properties</h4>
         </figcaption>
 </figure>
 
 <p>Click the <strong>Share this folder</strong> checkbox.  Enter a name for the share name.  Then click the <strong>Permissions</strong> button.</p>
-<figure>
-    <img src="/img/2020/10/30/vCenterBackups3.png"
-         alt="Advanced Sharing window"/> <figcaption>
+<figure><img src="/img/2020/10/30/vCenterBackups3.png"
+         alt="Advanced Sharing window"/><figcaption>
             <h4>Advanced Sharing window</h4>
         </figcaption>
 </figure>
 
 <p>In this screenshot, I pre-created a service account (<strong>vcBackcups-svc</strong>) for backups and added it to the users list.  Select the service account and check off all of the permissions checkboxes.  After doing this, click the <strong>OK</strong> button.  Click the <strong>OK</strong> button on the Advanced Sharing dialog box.</p>
-<figure>
-    <img src="/img/2020/10/30/vCenterBackups4.png"
-         alt="Share Permissions tab"/> <figcaption>
+<figure><img src="/img/2020/10/30/vCenterBackups4.png"
+         alt="Share Permissions tab"/><figcaption>
             <h4>Share Permissions tab</h4>
         </figcaption>
 </figure>
 
 <p>This returns you to the folder properties window.  Click the <strong>Security</strong> tab, select the service account, and click the <strong>Advanced</strong> button.</p>
-<figure>
-    <img src="/img/2020/10/30/vCenterBackups6.png"
-         alt="Security tab of vCenter backups folder"/> <figcaption>
+<figure><img src="/img/2020/10/30/vCenterBackups6.png"
+         alt="Security tab of vCenter backups folder"/><figcaption>
             <h4>Security tab of vCenter backups folder</h4>
         </figcaption>
 </figure>
 
 <p>Add the service account and give it Full control.  Click the <strong>OK</strong> button then the <strong>Close</strong> button on the folder properties window.</p>
-<figure>
-    <img src="/img/2020/10/30/vCenterBackups5.png"
-         alt="Advanced Security Settings window"/> <figcaption>
+<figure><img src="/img/2020/10/30/vCenterBackups5.png"
+         alt="Advanced Security Settings window"/><figcaption>
             <h4>Advanced Security Settings window</h4>
         </figcaption>
 </figure>
@@ -381,25 +370,22 @@ if (!doNotTrack) {
 <p>Once you are finished, click the <strong>Create</strong> button.</p>
 </li>
 </ol>
-<figure>
-    <img src="/img/2020/10/30/vCenterBackups7.png"
-         alt="Create Backup Schedule window"/> <figcaption>
+<figure><img src="/img/2020/10/30/vCenterBackups7.png"
+         alt="Create Backup Schedule window"/><figcaption>
             <h4>Create Backup Schedule window</h4>
         </figcaption>
 </figure>
 
 <p>Expand the <strong>Backup Schedule</strong> to confirm your choices were saved.</p>
-<figure>
-    <img src="/img/2020/10/30/vCenterBackups8.png"
-         alt="Backup Schedule settings"/> <figcaption>
+<figure><img src="/img/2020/10/30/vCenterBackups8.png"
+         alt="Backup Schedule settings"/><figcaption>
             <h4>Backup Schedule settings</h4>
         </figcaption>
 </figure>
 
 <p>To verify the backups are configured and working correctly, click the <strong>Backup Now</strong> button.</p>
-<figure>
-    <img src="/img/2020/10/30/vCenterBackups9.png"
-         alt="Backup Activity in progress"/> <figcaption>
+<figure><img src="/img/2020/10/30/vCenterBackups9.png"
+         alt="Backup Activity in progress"/><figcaption>
             <h4>Backup Activity in progress</h4>
         </figcaption>
 </figure>
@@ -454,7 +440,7 @@ if (!doNotTrack) {
     <a href="/2020/10/29/how-i-diyd-my-career-into-a-sales-engineer/" class="button big previous"><i class="fas fa-angle-left"></i> How I DIY&#39;d My Career Into a Sales Engineer</a>
   
   
-    <a href="/2020/10/31/how-to-deploy-a-hytrust-keycontrol-2-node-cluster/" class="button big next">How to Deploy a HyTrust KeyControl 2-Node Cluster <i class="fas fa-angle-right"></i></a>
+    <a href="/2020/10/31/how-to-deploy-a-hytrust-keycontrol-2-node-cluster/" class="button big next">How to Deploy a HyTrust KeyControl v5.2.1, 2-Node Cluster <i class="fas fa-angle-right"></i></a>
   
 </div>
 
@@ -466,6 +452,21 @@ if (!doNotTrack) {
       <header>
         <h1>Recent posts</h1>
       </header>
+      
+      <article class="mini-post">
+        <section>
+          
+  <a href="/2021/10/01/how-to-deploy-entrust-keycontrol-5.4/" class="image featured">
+    <img src="/img/2021/10/ETKC.png" alt="Entrust Keycontrol">
+  </a>
+
+
+        </section>
+        <header>
+          <h1><a href="/2021/10/01/how-to-deploy-entrust-keycontrol-5.4/">How to Deploy Entrust KeyControl 5.4</a></h1>
+          <time class="published" datetime="">October 1, 2021</time>
+        </header>
+      </article>
       
       <article class="mini-post">
         <section>
@@ -497,21 +498,6 @@ if (!doNotTrack) {
         </header>
       </article>
       
-      <article class="mini-post">
-        <section>
-          
-  <a href="/2020/10/31/how-to-deploy-a-hytrust-keycontrol-2-node-cluster/" class="image featured">
-    <img src="/img/2020/10/KeyControl.png" alt="KeyControl">
-  </a>
-
-
-        </section>
-        <header>
-          <h1><a href="/2020/10/31/how-to-deploy-a-hytrust-keycontrol-2-node-cluster/">How to Deploy a HyTrust KeyControl 2-Node Cluster</a></h1>
-          <time class="published" datetime="">October 31, 2020</time>
-        </header>
-      </article>
-      
       
         <a href="/blog/" class="button">See more</a>
       
@@ -536,12 +522,17 @@ if (!doNotTrack) {
           
           <li>
             
-              <a href="/categories/vmware/">vmware<span class="count">4</span></a>
+              <a href="/categories/vmware/">vmware<span class="count">5</span></a>
             
           
           <li>
             
-              <a href="/categories/howto/">howto<span class="count">3</span></a>
+              <a href="/categories/howto/">howto<span class="count">4</span></a>
+            
+          
+          <li>
+            
+              <a href="/categories/hytrust/">hytrust<span class="count">3</span></a>
             
           
           <li>
@@ -551,7 +542,7 @@ if (!doNotTrack) {
           
           <li>
             
-              <a href="/categories/hytrust/">hytrust<span class="count">2</span></a>
+              <a href="/categories/entrust/">entrust<span class="count">1</span></a>
             
           
           <li>
@@ -631,7 +622,7 @@ if (!doNotTrack) {
         @PSUStevens Blog
       
     . <br>
-    Theme: <a href='https://github.com/pacollins/hugo-future-imperfect-slim' target='_blank' rel='noopener'>Hugo Future Imperfect Slim</a><br>A <a href='https://html5up.net/future-imperfect' target='_blank' rel='noopener'>HTML5 UP port</a> | Powered by <a href='https://gohugo.io/' title='0.76.5' target='_blank' rel='noopener'>Hugo</a>
+    Theme: <a href='https://github.com/pacollins/hugo-future-imperfect-slim' target='_blank' rel='noopener'>Hugo Future Imperfect Slim</a><br>A <a href='https://html5up.net/future-imperfect' target='_blank' rel='noopener'>HTML5 UP port</a> | Powered by <a href='https://gohugo.io/' title='0.88.1' target='_blank' rel='noopener'>Hugo</a>
   </p>
 </footer>
 <a id="back-to-top" href="#" class="fas fa-arrow-up fa-2x"></a>

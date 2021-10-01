@@ -7,23 +7,19 @@
 
 
 
-  <meta name="generator" content="Hugo 0.76.5" />
+  <meta name="generator" content="Hugo 0.88.1" />
   <meta itemprop="name" content="Building a Blog With Hugo - Part 5">
-<meta itemprop="description" content="You finished customizing your site and wrote your first blog entry.  Now let&#39;s get it published to Github so others can enjoy it and share it with the world.">
-<meta itemprop="datePublished" content="2020-10-26T12:21:08-04:00" />
+<meta itemprop="description" content="You finished customizing your site and wrote your first blog entry.  Now let&#39;s get it published to Github so others can enjoy it and share it with the world."><meta itemprop="datePublished" content="2020-10-26T12:21:08-04:00" />
 <meta itemprop="dateModified" content="2020-10-26T12:21:08-04:00" />
 <meta itemprop="wordCount" content="1008">
-
-
-
 <meta itemprop="keywords" content="Hugo,Github," />
-
   <meta property="og:title" content="Building a Blog With Hugo - Part 5" />
 <meta property="og:description" content="You finished customizing your site and wrote your first blog entry.  Now let&#39;s get it published to Github so others can enjoy it and share it with the world." />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://blog.psustevens.com/2020/10/26/building-a-blog-with-hugo-part5/" />
+<meta property="og:url" content="https://blog.psustevens.com/2020/10/26/building-a-blog-with-hugo-part5/" /><meta property="article:section" content="blog" />
 <meta property="article:published_time" content="2020-10-26T12:21:08-04:00" />
 <meta property="article:modified_time" content="2020-10-26T12:21:08-04:00" />
+
 
   <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Building a Blog With Hugo - Part 5"/>
@@ -44,7 +40,6 @@ if (!doNotTrack) {
 	ga('send', 'pageview');
 }
 </script>
-
 
   <link rel="stylesheet"
       href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/styles/github.min.css">
@@ -292,68 +287,60 @@ if (!doNotTrack) {
 <h2 id="committing-code">Committing Code</h2>
 <p>I use <a href="https://code.visualstudio.com/">Microsoft Visual Studio Code (VSCode)</a> for all of my blog work.  The nice thing about it is that git is built-in.  It also has a parser for <a href="https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet">markdown</a>.  If you are comfortable with the git CLI, you don&rsquo;t need <a href="https://desktop.github.com/">Github Desktop</a>.   Alas, I&rsquo;m not as up to speed on the git CLI.  This is why  I stick with <a href="https://desktop.github.com/">Github Desktop</a>.  I will get there eventually.</p>
 <p>In <a href="/2019/11/01/building-a-blog-with-hugo-part2/">Part 2:  Creating your first Hugo site</a>, I walked through the steps for creating a local repository on your development computer and adding the submodule for the Hugo Theme.  To make the local repository something that Github Desktop is aware of you need to add it as a local repository.  In Github Desktop click the <strong>File</strong> menu, select <strong>Add Local Repository.</strong></p>
-<figure>
-    <img src="/img/2020/10/26/Part5.1.png"
-         alt="Add Local Repository"/> <figcaption>
+<figure><img src="/img/2020/10/26/Part5.1.png"
+         alt="Add Local Repository"/><figcaption>
             <h4>Add Local Repository</h4>
         </figcaption>
 </figure>
 
 <p>The following dialog box appears.  Click the <strong>Choose</strong> button and select the folder where you saved your local repository.  Then click the <strong>Add Repository</strong> button.</p>
-<figure>
-    <img src="/img/2020/10/26/Part5.2.png"
-         alt="Choose Local Repository Directory"/> <figcaption>
+<figure><img src="/img/2020/10/26/Part5.2.png"
+         alt="Choose Local Repository Directory"/><figcaption>
             <h4>Choose Local Repository Directory</h4>
         </figcaption>
 </figure>
 
 <p>After you click the button, you will see the following dialog box.</p>
-<figure>
-    <img src="/img/2020/10/26/Part5.4.png"
-         alt="Publish Repository"/> <figcaption>
+<figure><img src="/img/2020/10/26/Part5.4.png"
+         alt="Publish Repository"/><figcaption>
             <h4>Publish Repository</h4>
         </figcaption>
 </figure>
 
 <p>You can accept the same repository name (I suggest sticking with the same name) on Github.com and if you want to make this repository private.  This is what I have done for the repository I use for my development Hugo site.  After publishing your repository you may see the following puzzling message.  This just means that you haven&rsquo;t committed anything to the local repository.</p>
-<figure>
-    <img src="/img/2020/10/26/Part5.5.png"
-         alt="Unborn head issue"/> <figcaption>
+<figure><img src="/img/2020/10/26/Part5.5.png"
+         alt="Unborn head issue"/><figcaption>
             <h4>Unborn head issue</h4>
         </figcaption>
 </figure>
 
 <p>So, all you need to do is create a commit to your local repository.  If you have been following along with the entire series you should have a bunch of files to commit.  Github Desktop will recognize this.  You should see something similar to the image below.</p>
-<figure>
-    <img src="/img/2020/10/26/Part5.10.png"
-         alt="Changes to Local Repository"/> <figcaption>
+<figure><img src="/img/2020/10/26/Part5.10.png"
+         alt="Changes to Local Repository"/><figcaption>
             <h4>Changes to Local Repository</h4>
         </figcaption>
 </figure>
 
 <p>The green plus sign indicates the file is new.  The yellow dot indicates a file has been changed.  The red minus sign indicates a file has been deleted.  You can hover your mouse over any the icons that show up in the window to learn their meaning.</p>
 <p>Now let&rsquo;s commit the files to the repository.  In the bottom left of the Github Desktop window you will see an area where you can enter a summary of what you want to commit to the repository along with a more detailed description of the commit.</p>
-<figure>
-    <img src="/img/2020/10/26/Part5.7.png"
-         alt="Commit to Github area"/> <figcaption>
+<figure><img src="/img/2020/10/26/Part5.7.png"
+         alt="Commit to Github area"/><figcaption>
             <h4>Commit to Github area</h4>
         </figcaption>
 </figure>
 
 <p>After you have filled in the summary of the commit (this is required) and a more detailed description (this is optional), click the <strong>Commit to master</strong> button.</p>
 <p>Now you are ready to publish your master branch with changes up to Github.  Click the <strong>Publish branch</strong> button.</p>
-<figure>
-    <img src="/img/2020/10/26/Part5.8.png"
-         alt="Publish to Github"/> <figcaption>
+<figure><img src="/img/2020/10/26/Part5.8.png"
+         alt="Publish to Github"/><figcaption>
             <h4>Publish to Github</h4>
         </figcaption>
 </figure>
 
 <p>Nice!  You just published your local repository up to your private repository on Github.</p>
 <p>For future changes to any file or directory in your local repository all you need to do is commit your change(s), like you just did then click the <strong>Push to origin</strong> button near the top of the Github Desktop window.</p>
-<figure>
-    <img src="/img/2020/10/26/Part5.9.png"
-         alt="Push to Origin"/> <figcaption>
+<figure><img src="/img/2020/10/26/Part5.9.png"
+         alt="Push to Origin"/><figcaption>
             <h4>Push to Origin</h4>
         </figcaption>
 </figure>
@@ -446,6 +433,21 @@ if (!doNotTrack) {
       <article class="mini-post">
         <section>
           
+  <a href="/2021/10/01/how-to-deploy-entrust-keycontrol-5.4/" class="image featured">
+    <img src="/img/2021/10/ETKC.png" alt="Entrust Keycontrol">
+  </a>
+
+
+        </section>
+        <header>
+          <h1><a href="/2021/10/01/how-to-deploy-entrust-keycontrol-5.4/">How to Deploy Entrust KeyControl 5.4</a></h1>
+          <time class="published" datetime="">October 1, 2021</time>
+        </header>
+      </article>
+      
+      <article class="mini-post">
+        <section>
+          
   <a href="/2021/02/14/new-year-new-changes/" class="image featured">
     <img src="/img/2021/02/changes-ahead.jpg" alt="Changes Ahead">
   </a>
@@ -473,21 +475,6 @@ if (!doNotTrack) {
         </header>
       </article>
       
-      <article class="mini-post">
-        <section>
-          
-  <a href="/2020/10/31/how-to-deploy-a-hytrust-keycontrol-2-node-cluster/" class="image featured">
-    <img src="/img/2020/10/KeyControl.png" alt="KeyControl">
-  </a>
-
-
-        </section>
-        <header>
-          <h1><a href="/2020/10/31/how-to-deploy-a-hytrust-keycontrol-2-node-cluster/">How to Deploy a HyTrust KeyControl 2-Node Cluster</a></h1>
-          <time class="published" datetime="">October 31, 2020</time>
-        </header>
-      </article>
-      
       
         <a href="/blog/" class="button">See more</a>
       
@@ -512,12 +499,17 @@ if (!doNotTrack) {
           
           <li>
             
-              <a href="/categories/vmware/">vmware<span class="count">4</span></a>
+              <a href="/categories/vmware/">vmware<span class="count">5</span></a>
             
           
           <li>
             
-              <a href="/categories/howto/">howto<span class="count">3</span></a>
+              <a href="/categories/howto/">howto<span class="count">4</span></a>
+            
+          
+          <li>
+            
+              <a href="/categories/hytrust/">hytrust<span class="count">3</span></a>
             
           
           <li>
@@ -527,7 +519,7 @@ if (!doNotTrack) {
           
           <li>
             
-              <a href="/categories/hytrust/">hytrust<span class="count">2</span></a>
+              <a href="/categories/entrust/">entrust<span class="count">1</span></a>
             
           
           <li>
@@ -607,7 +599,7 @@ if (!doNotTrack) {
         @PSUStevens Blog
       
     . <br>
-    Theme: <a href='https://github.com/pacollins/hugo-future-imperfect-slim' target='_blank' rel='noopener'>Hugo Future Imperfect Slim</a><br>A <a href='https://html5up.net/future-imperfect' target='_blank' rel='noopener'>HTML5 UP port</a> | Powered by <a href='https://gohugo.io/' title='0.76.5' target='_blank' rel='noopener'>Hugo</a>
+    Theme: <a href='https://github.com/pacollins/hugo-future-imperfect-slim' target='_blank' rel='noopener'>Hugo Future Imperfect Slim</a><br>A <a href='https://html5up.net/future-imperfect' target='_blank' rel='noopener'>HTML5 UP port</a> | Powered by <a href='https://gohugo.io/' title='0.88.1' target='_blank' rel='noopener'>Hugo</a>
   </p>
 </footer>
 <a id="back-to-top" href="#" class="fas fa-arrow-up fa-2x"></a>
