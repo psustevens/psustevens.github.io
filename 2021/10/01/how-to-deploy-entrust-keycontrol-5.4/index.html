@@ -11,7 +11,7 @@
   <meta itemprop="name" content="How to Deploy Entrust KeyControl 5.4">
 <meta itemprop="description" content="Read how easy it is to deploy a 2-node Entrust (formerly HyTrust) KeyControl Key Management Server (KMS) for encrypting sensitive data in virtual machines."><meta itemprop="datePublished" content="2021-10-01T09:45:33-04:00" />
 <meta itemprop="dateModified" content="2021-10-01T09:45:33-04:00" />
-<meta itemprop="wordCount" content="1608">
+<meta itemprop="wordCount" content="1616">
 <meta itemprop="keywords" content="KeyControl,KMS,Key Management Server,vCenter," />
   <meta property="og:title" content="How to Deploy Entrust KeyControl 5.4" />
 <meta property="og:description" content="Read how easy it is to deploy a 2-node Entrust (formerly HyTrust) KeyControl Key Management Server (KMS) for encrypting sensitive data in virtual machines." />
@@ -270,12 +270,12 @@ if (!doNotTrack) {
   </section>
   
   <a href="/2021/10/01/how-to-deploy-entrust-keycontrol-5.4/" class="image featured">
-    <img src="/img/2021/10/ETKC.png" alt="Entrust Keycontrol">
+    <img src="/img/2021/10/ETKC.png" alt="Entrust Keycontrol 5.4 Login screen">
   </a>
 
 
   <div class="content">
-    <p>Around this time last year I wrote about how to deploy a 2-node HyTrust KeyControl cluster.  That post covered KeyControl version 5.2.1. You can find that blog post over <a href="/2020/10/31/how-to-deploy-a-hytrust-keycontrol-2-node-cluster/">here.</a></p>
+    <p>Around this time last year I wrote about how to deploy a 2-node HyTrust KeyControl cluster.  That post covered KeyControl version 5.2.1. You can find that blog post over <a href="2020/10/31/how-to-deploy-a-hytrust-keycontrol-2-node-cluster/">here.</a></p>
 <p>This post is very similar.  The difference between it and the last post is that I will cover <a href="https://www.entrust.com/solutions/use-cases/key-management-control">Entrust KeyControl version 5.4.</a>.  Are you scratching your head about the name change?  Head over to this post I wrote about changes that occurred in January of this year where I talk about HyTrust being acquired by <a href="https://www.entrust.com">Entrust</a>.  The full press release can be found <a href="https://www.entrust.com/newsroom/press-releases/2021/entrust-acquires-hytrust">here.</a></p>
 <p>To get started here is what you will need to complete the steps in this post:</p>
 <ul>
@@ -527,78 +527,76 @@ if (!doNotTrack) {
 <li>User Name: secroot</li>
 <li>Password: secroot</li>
 </ul>
-</li>
-</ol>
 <figure><img src="/img/2021/10/01/ETKCDeploy15.png"
          alt="KeyControl Login screen"/><figcaption>
             <h4>KeyControl Login screen</h4>
         </figcaption>
 </figure>
 
-<ol start="3">
-<li>Upon logging in, read and accept the EULA by clicking on, <strong>I Agree</strong> at the bottom of the agreement.</li>
-</ol>
+</li>
+<li>
+<p>Upon logging in, read and accept the EULA by clicking on, <strong>I Agree</strong> at the bottom of the agreement.</p>
 <figure><img src="/img/2020/10/31/HTKCDeploy16.png"
          alt="EULA screen"/><figcaption>
             <h4>EULA screen</h4>
         </figcaption>
 </figure>
 
-<ol start="4">
-<li>Since this is the second KeyControl node, click <strong>Join an Existing Cluster.</strong></li>
-</ol>
+</li>
+<li>
+<p>Since this is the second KeyControl node, click <strong>Join an Existing Cluster.</strong></p>
 <figure><img src="/img/2020/10/31/HTKCDeploy22.png"
          alt="Welcome to KeyControl screen"/><figcaption>
             <h4>Welcome to KeyControl screen</h4>
         </figcaption>
 </figure>
 
-<ol start="5">
-<li>You will notice the workflow for configuring the second node is quite different.  Review the information and click <strong>Continue.</strong></li>
-</ol>
+</li>
+<li>
+<p>You will notice the workflow for configuring the second node is quite different.  Review the information and click <strong>Continue.</strong></p>
 <figure><img src="/img/2021/10/01/ETKCDeploy23.png"
          alt="Getting Started with Cluster Join"/><figcaption>
             <h4>Getting Started with Cluster Join</h4>
         </figcaption>
 </figure>
 
-<ol start="6">
-<li>Click <strong>Generate and Download CSR</strong>.  This will place a .csr.pem file in your downloads directory.  We will need this file in just a few steps.</li>
-</ol>
+</li>
+<li>
+<p>Click <strong>Generate and Download CSR</strong>.  This will place a .csr.pem file in your downloads directory.  We will need this file in just a few steps.</p>
 <figure><img src="/img/2020/10/31/HTKCDeploy24.png"
          alt="Generate &amp; Download CSR"/><figcaption>
             <h4>Generate &amp; Download CSR</h4>
         </figcaption>
 </figure>
 
-<ol start="7">
-<li>Click <strong>Continue</strong>.</li>
-</ol>
+</li>
+<li>
+<p>Click <strong>Continue</strong>.</p>
 <figure><img src="/img/2020/10/31/HTKCDeploy25.png"
          alt="Downloaded CSR"/><figcaption>
             <h4>Downloaded CSR</h4>
         </figcaption>
 </figure>
 
-<ol start="8">
-<li>At this point, you need to open a new browser window or a new tab and login to the first KeyControl node.  <strong><em>Do NOT</em></strong> click the continue button on this screen yet!</li>
-</ol>
+</li>
+<li>
+<p>At this point, you need to open a new browser window or a new tab and login to the first KeyControl node.  <strong><em>Do NOT</em></strong> click the continue button on this screen yet!</p>
 <figure><img src="/img/2021/10/01/ETKCDeploy26.png"
          alt="Add Node to Cluster"/><figcaption>
             <h4>Add Node to Cluster</h4>
         </figcaption>
 </figure>
 
-<ol start="9">
-<li>After logging into the first KeyControl node, click <em>Cluster</em> in the top menu.  Next, click the blue <strong>Actions</strong> button and select <strong>Add a Node.</strong></li>
-</ol>
+</li>
+<li>
+<p>After logging into the first KeyControl node, click <em>Cluster</em> in the top menu.  Next, click the blue <strong>Actions</strong> button and select <strong>Add a Node.</strong></p>
 <figure><img src="/img/2021/10/01/ETKCDeploy27.png"
          alt="Add Node"/><figcaption>
             <h4>Add Node</h4>
         </figcaption>
 </figure>
 
-<ol start="10">
+</li>
 <li>
 <p>Click the <strong>Load File</strong> button and select the .csr.pem file from step 6.  Next, enter a passphrase that is at least 12 characters long.  You will need this passphrase in an upcoming step.</p>
 <p>Click <strong>Save and Download Bundle.</strong>  A zip file is placed in the downloads directory on your computer.  The zip file contains both an encrypted SSL certificate in .p12 format and a CA certificate in .pem format.</p>
@@ -671,6 +669,7 @@ if (!doNotTrack) {
 <h2 id="related-posts">Related Posts</h2>
 <p>Here are links to related posts:</p>
 <ul>
+<li><a href="/2021/10/05/2021-10-05-how-to-connect-keycontrol-5.4-to-activedirectory/">How to connect KeyControl 5.4 to Active Directory</a></li>
 <li><a href="https://www.youtube.com/playlist?list=PLU9f96GzAbdKcNSeQmlr5Ftz1VkWSi-Ej">Entrust KeyControl YouTube playlist</a></li>
 <li><a href="https://youtu.be/Yx6AKXTDOiE">YouTube video:  Entrust KeyControl - Deploying a 2-node KMS Cluster</a></li>
 </ul>
@@ -735,6 +734,8 @@ if (!doNotTrack) {
     <a href="/2021/02/14/new-year-new-changes/" class="button big previous"><i class="fas fa-angle-left"></i> New Year, New Changes!</a>
   
   
+    <a href="/2021/10/05/2021-10-05-how-to-connect-keycontrol-5.4-to-activedirectory/" class="button big next">How to Connect KeyControl 5.4 to Active Directory <i class="fas fa-angle-right"></i></a>
+  
 </div>
 
 
@@ -749,8 +750,23 @@ if (!doNotTrack) {
       <article class="mini-post">
         <section>
           
+  <a href="/2021/10/05/2021-10-05-how-to-connect-keycontrol-5.4-to-activedirectory/" class="image featured">
+    <img src="/img/2021/10/ETKC-AD.png" alt="Entrust and Active Directory">
+  </a>
+
+
+        </section>
+        <header>
+          <h1><a href="/2021/10/05/2021-10-05-how-to-connect-keycontrol-5.4-to-activedirectory/">How to Connect KeyControl 5.4 to Active Directory</a></h1>
+          <time class="published" datetime="">October 5, 2021</time>
+        </header>
+      </article>
+      
+      <article class="mini-post">
+        <section>
+          
   <a href="/2021/10/01/how-to-deploy-entrust-keycontrol-5.4/" class="image featured">
-    <img src="/img/2021/10/ETKC.png" alt="Entrust Keycontrol">
+    <img src="/img/2021/10/ETKC.png" alt="Entrust Keycontrol 5.4 Login screen">
   </a>
 
 
@@ -773,21 +789,6 @@ if (!doNotTrack) {
         <header>
           <h1><a href="/2021/02/14/new-year-new-changes/">New Year, New Changes!</a></h1>
           <time class="published" datetime="">February 14, 2021</time>
-        </header>
-      </article>
-      
-      <article class="mini-post">
-        <section>
-          
-  <a href="/2020/11/04/add-a-hytrust-kms-to-vcenter-v7/" class="image featured">
-    <img src="/img/2020/11/vCenter-KeyProvider.png" alt="vCenter Key Provider (KMS)">
-  </a>
-
-
-        </section>
-        <header>
-          <h1><a href="/2020/11/04/add-a-hytrust-kms-to-vcenter-v7/">Add a HyTrust KMS to vCenter v7 as a Key Provider</a></h1>
-          <time class="published" datetime="">November 4, 2020</time>
         </header>
       </article>
       
@@ -815,17 +816,17 @@ if (!doNotTrack) {
           
           <li>
             
-              <a href="/categories/vmware/">vmware<span class="count">5</span></a>
+              <a href="/categories/vmware/">vmware<span class="count">6</span></a>
             
           
           <li>
             
-              <a href="/categories/howto/">howto<span class="count">4</span></a>
+              <a href="/categories/howto/">howto<span class="count">5</span></a>
             
           
           <li>
             
-              <a href="/categories/hytrust/">hytrust<span class="count">3</span></a>
+              <a href="/categories/hytrust/">hytrust<span class="count">4</span></a>
             
           
           <li>
@@ -835,7 +836,7 @@ if (!doNotTrack) {
           
           <li>
             
-              <a href="/categories/entrust/">entrust<span class="count">1</span></a>
+              <a href="/categories/entrust/">entrust<span class="count">2</span></a>
             
           
           <li>

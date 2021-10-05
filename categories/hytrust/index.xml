@@ -6,7 +6,19 @@
     <description>Recent content in HyTrust on @PSUStevens Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Fri, 01 Oct 2021 09:45:33 -0400</lastBuildDate><atom:link href="https://blog.psustevens.com/categories/hytrust/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 05 Oct 2021 08:08:40 -0400</lastBuildDate><atom:link href="https://blog.psustevens.com/categories/hytrust/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>How to Connect KeyControl 5.4 to Active Directory</title>
+      <link>https://blog.psustevens.com/2021/10/05/2021-10-05-how-to-connect-keycontrol-5.4-to-activedirectory/</link>
+      <pubDate>Tue, 05 Oct 2021 08:08:40 -0400</pubDate>
+      
+      <guid>https://blog.psustevens.com/2021/10/05/2021-10-05-how-to-connect-keycontrol-5.4-to-activedirectory/</guid>
+      <description>To get started here is what you will need to complete the steps in this post:
+ A deployed Entrust KeyControl v5.4 cluster (Click this sentence to learn how to do this) Active Directory service account  Now, let&amp;rsquo;s get started&amp;hellip;
+Connect KeyControl to Active Directory   Log in to the deployed Entrust KeyControl cluster. Once logged in:
+ Click the Settings menu item Under the &amp;ldquo;General Settings&amp;rdquo; group click Authentication   Settings &amp;gt; Authentication     Click the Type drop-down box and select LDAP from the list.</description>
+    </item>
+    
     <item>
       <title>How to Deploy Entrust KeyControl 5.4</title>
       <link>https://blog.psustevens.com/2021/10/01/how-to-deploy-entrust-keycontrol-5.4/</link>
