@@ -6,7 +6,18 @@
     <description>Recent content in KMS on @PSUStevens Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Tue, 05 Oct 2021 08:08:40 -0400</lastBuildDate><atom:link href="https://blog.psustevens.com/tags/kms/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 08 Oct 2021 08:08:04 -0400</lastBuildDate><atom:link href="https://blog.psustevens.com/tags/kms/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>How to Add Another KeyControl Security Admin From Active Directory</title>
+      <link>https://blog.psustevens.com/2021/10/08/2021-10-08-how-to-add-another-security-admin-from-ad/</link>
+      <pubDate>Fri, 08 Oct 2021 08:08:04 -0400</pubDate>
+      
+      <guid>https://blog.psustevens.com/2021/10/08/2021-10-08-how-to-add-another-security-admin-from-ad/</guid>
+      <description>To get started here is what you will need to complete the steps in this post:
+ A deployed Entrust KeyControl v5.4 cluster connected to Active Directory (Click this sentence to learn how to do this) Active Directory account info to be added  Now, let&amp;rsquo;s get started&amp;hellip;
+Add a Second KeyControl Security Administrator from Active Directory   Click Security from the menu bar then click the blue Actions button and select Create User</description>
+    </item>
+    
     <item>
       <title>How to Connect KeyControl 5.4 to Active Directory</title>
       <link>https://blog.psustevens.com/2021/10/05/2021-10-05-how-to-connect-keycontrol-5.4-to-activedirectory/</link>
