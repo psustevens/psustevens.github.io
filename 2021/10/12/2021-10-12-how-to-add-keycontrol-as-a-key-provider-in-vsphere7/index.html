@@ -1,0 +1,762 @@
+<!doctype html>
+<html lang="en">
+  <head>
+  <meta charset="utf-8">
+<title>How to Add KeyControl v5.4 as a Key Provider in VSphere 7 - @PSUStevens Blog</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+
+  <meta name="generator" content="Hugo 0.88.1" />
+  <meta itemprop="name" content="How to Add KeyControl v5.4 as a Key Provider in VSphere 7">
+<meta itemprop="description" content="This post will walk you through the steps to add Entrust KeyControl v5.4 as a Key Provider in vCenter v7.x."><meta itemprop="datePublished" content="2021-10-12T08:15:28-04:00" />
+<meta itemprop="dateModified" content="2021-10-12T08:15:28-04:00" />
+<meta itemprop="wordCount" content="834">
+<meta itemprop="keywords" content="KeyControl,KeyControl v5.4,KMS,Key Management Server,vCenter,Key Provider," />
+  <meta property="og:title" content="How to Add KeyControl v5.4 as a Key Provider in VSphere 7" />
+<meta property="og:description" content="This post will walk you through the steps to add Entrust KeyControl v5.4 as a Key Provider in vCenter v7.x." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://blog.psustevens.com/2021/10/12/2021-10-12-how-to-add-keycontrol-as-a-key-provider-in-vsphere7/" /><meta property="article:section" content="blog" />
+<meta property="article:published_time" content="2021-10-12T08:15:28-04:00" />
+<meta property="article:modified_time" content="2021-10-12T08:15:28-04:00" />
+
+
+  <meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="How to Add KeyControl v5.4 as a Key Provider in VSphere 7"/>
+<meta name="twitter:description" content="This post will walk you through the steps to add Entrust KeyControl v5.4 as a Key Provider in vCenter v7.x."/>
+<meta name="twitter:site" content="@PSUStevens"/>
+
+  
+  
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+	ga('create', 'UA-149142929-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+
+  <link rel="stylesheet"
+      href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/styles/github.min.css">
+  
+    
+      <link rel="stylesheet" href="/css/normalize.css">
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway:400,800,900|Source+Sans+Pro:400,700">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/academicons/1.8.6/css/academicons.min.css">
+      <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.9.0/css/all.css" integrity="sha384-i1LQnF23gykqWXg6jxC2ZbCbUMxyw5gLZY6UiUS98LYV5unm8GWmfkIS6jqJfb4E" crossorigin="anonymous">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.3.5/jquery.fancybox.min.css" />
+      
+      
+      <link rel="stylesheet" href="/css/main.min.0a64f3eede6e78edc2d8b2ca7051e4d9a6379f472dac76b1168733b88d27146a.css" integrity="sha256-CmTz7t5ueO3C2LLKcFHk2aY3n0ctrHaxFoczuI0nFGo=">
+      <link rel="stylesheet" href="/css/add-on.css">
+    
+  
+  
+  
+  
+</head>
+
+  <body>
+    
+<header id="site-header">
+  <nav id="site-nav">
+    <h1 class="nav-title">
+      <a href="/">
+        
+          
+            Blog
+          
+        
+      </a>
+    </h1>
+    <menu id="site-nav-menu" class="flyout-menu">
+      
+        
+          
+          
+            <a href="/" class="link"><i class='fa fa-home'></i> Home</a>
+          
+        
+      
+        
+          
+          
+            <a href="/about/" class="link"><i class='far fa-id-card'></i> About</a>
+          
+        
+      
+        
+          
+          
+            <a href="/blog/" class="link"><i class='far fa-newspaper'></i> Blog</a>
+          
+        
+      
+        
+          
+          
+            <a href="/categories/" class="link"><i class='fas fa-sitemap'></i> Categories</a>
+          
+        
+      
+      <a href="#share-menu" class="share-toggle"><i class="fas fa-share-alt">&nbsp;</i>Share</a>
+      
+
+    </menu>
+    
+
+    <a href="#share-menu" class="share-toggle"><i class="fas fa-share-alt fa-2x">&nbsp;</i></a>
+    
+    <a href="#site-nav" class="nav-toggle"><i class="fas fa-bars fa-2x"></i></a>
+  </nav>
+  
+  
+    <menu id="share-menu" class="flyout-menu">
+      <h1>Share Post</h1>
+      
+
+
+
+
+  
+    
+    <a href="//twitter.com/share?text=How%20to%20Add%20KeyControl%20v5.4%20as%20a%20Key%20Provider%20in%20VSphere%207&amp;url=https%3a%2f%2fblog.psustevens.com%2f2021%2f10%2f12%2f2021-10-12-how-to-add-keycontrol-as-a-key-provider-in-vsphere7%2f" target="_blank" rel="noopener" class="share-btn twitter">
+        <i class="fab fa-twitter"></i><p>&nbsp;Twitter</p>
+      </a>
+  
+
+  
+        <a href="//www.linkedin.com/shareArticle?url=https%3a%2f%2fblog.psustevens.com%2f2021%2f10%2f12%2f2021-10-12-how-to-add-keycontrol-as-a-key-provider-in-vsphere7%2f&amp;title=How%20to%20Add%20KeyControl%20v5.4%20as%20a%20Key%20Provider%20in%20VSphere%207" target="_blank" rel="noopener" class="share-btn linkedin">
+            <i class="fab fa-linkedin"></i><p>&nbsp;LinkedIn</p>
+          </a>
+  
+
+  
+        <a href="mailto:?subject=Check out this post by %7b%20%20%20%20%20%20%20%20map%5b%5d%7d&amp;body=https%3a%2f%2fblog.psustevens.com%2f2021%2f10%2f12%2f2021-10-12-how-to-add-keycontrol-as-a-key-provider-in-vsphere7%2f" target="_blank" class="share-btn email" data-proofer-ignore>
+          <i class="fas fa-envelope"></i><p>&nbsp;Email</p>
+        </a>
+  
+
+  
+    <a href="//www.reddit.com/submit?url=https%3a%2f%2fblog.psustevens.com%2f2021%2f10%2f12%2f2021-10-12-how-to-add-keycontrol-as-a-key-provider-in-vsphere7%2f&amp;title=How%20to%20Add%20KeyControl%20v5.4%20as%20a%20Key%20Provider%20in%20VSphere%207" target="_blank" rel="noopener" class="share-btn reddit">
+          <i class="fab fa-reddit-alien"></i><p>&nbsp;Reddit</p>
+        </a>
+  
+
+
+    </menu>
+  
+</header>
+
+    <div id="wrapper">
+      <section id="site-intro">
+  <a href="/"><img src="/img/main/logo.jpg" class="circle" width="" alt="@PSUStevens headshot" /></a>
+  <header>
+    <h1>@PSUStevens blog</h1>
+  </header>
+  <main>
+    <p>You are reading the blog of <a href='https://twitter.com/PSUStevens'>@PSUStevens</a>.  </br>You can reach me through one of the social accounts below.</p>
+  </main>
+  
+    <footer>
+      <ul class="socnet-icons">
+        
+
+        <li><a href="//github.com/psustevens" target="_blank" rel="noopener" title="GitHub" class="fab fa-github"></a></li>
+
+
+
+
+
+
+
+
+
+
+
+<li><a href="//linkedin.com/in/davidlstevens" target="_blank" rel="noopener" title="LinkedIn" class="fab fa-linkedin"></a></li>
+<li><a href="//linkedin.com/company/236893" target="_blank" rel="noopener" title="LinkedIn Company" class="fab fa-linkedin"></a></li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<li><a href="//twitter.com/PSUStevens" target="_blank" rel="noopener" title="Twitter" class="fab fa-twitter"></a></li>
+
+
+
+
+
+
+
+
+
+
+
+
+      </ul>
+    </footer>
+  
+</section>
+
+      <main id="site-main">
+        <article class="post">
+  <header>
+  <div class="title">
+    
+        <h2><a href="/2021/10/12/2021-10-12-how-to-add-keycontrol-as-a-key-provider-in-vsphere7/">How to Add KeyControl v5.4 as a Key Provider in VSphere 7</a></h2>
+    
+    
+        <p>This post will walk you through the steps to add Entrust KeyControl v5.4 as a Key Provider in vCenter v7.x.</p>
+    
+</div>
+  <div class="meta">
+    <time class="published" datetime="2021-10-12 08:15:28 -0400 EDT">
+      October 12, 2021
+    </time>
+    <span class="author">PSUStevens</span>
+    
+      <p>4 minutes read</p>
+    
+  </div>
+</header>
+
+  <section id="socnet-share">
+    
+
+
+
+
+  
+    
+    <a href="//twitter.com/share?text=How%20to%20Add%20KeyControl%20v5.4%20as%20a%20Key%20Provider%20in%20VSphere%207&amp;url=https%3a%2f%2fblog.psustevens.com%2f2021%2f10%2f12%2f2021-10-12-how-to-add-keycontrol-as-a-key-provider-in-vsphere7%2f" target="_blank" rel="noopener" class="share-btn twitter">
+        <i class="fab fa-twitter"></i><p>&nbsp;Twitter</p>
+      </a>
+  
+
+  
+        <a href="//www.linkedin.com/shareArticle?url=https%3a%2f%2fblog.psustevens.com%2f2021%2f10%2f12%2f2021-10-12-how-to-add-keycontrol-as-a-key-provider-in-vsphere7%2f&amp;title=How%20to%20Add%20KeyControl%20v5.4%20as%20a%20Key%20Provider%20in%20VSphere%207" target="_blank" rel="noopener" class="share-btn linkedin">
+            <i class="fab fa-linkedin"></i><p>&nbsp;LinkedIn</p>
+          </a>
+  
+
+  
+        <a href="mailto:?subject=Check out this post by %7b%20%20%20%20%20%20%20%20map%5b%5d%7d&amp;body=https%3a%2f%2fblog.psustevens.com%2f2021%2f10%2f12%2f2021-10-12-how-to-add-keycontrol-as-a-key-provider-in-vsphere7%2f" target="_blank" class="share-btn email" data-proofer-ignore>
+          <i class="fas fa-envelope"></i><p>&nbsp;Email</p>
+        </a>
+  
+
+  
+    <a href="//www.reddit.com/submit?url=https%3a%2f%2fblog.psustevens.com%2f2021%2f10%2f12%2f2021-10-12-how-to-add-keycontrol-as-a-key-provider-in-vsphere7%2f&amp;title=How%20to%20Add%20KeyControl%20v5.4%20as%20a%20Key%20Provider%20in%20VSphere%207" target="_blank" rel="noopener" class="share-btn reddit">
+          <i class="fab fa-reddit-alien"></i><p>&nbsp;Reddit</p>
+        </a>
+  
+
+
+  </section>
+  
+  <a href="/2021/10/12/2021-10-12-how-to-add-keycontrol-as-a-key-provider-in-vsphere7/" class="image featured">
+    <img src="/img/2021/10/vCenter-KeyProvider-v2.png" alt="Key Management (KMS) and vCenter Key Provider">
+  </a>
+
+
+  <div class="content">
+    <p>To get started here is what you will need to complete the steps in this post:</p>
+<ul>
+<li>A deployed <a href="https://www.entrust.com/solutions/use-cases/key-management-control">Entrust KeyControl</a> v5.4 cluster <a href="/2021/10/01/how-to-deploy-entrust-keycontrol-5.4/">(Click this sentence to learn how to do this)</a></li>
+<li>vCenter and ESXi Host(s) running vSphere 7.x</li>
+</ul>
+<p>Now, let&rsquo;s get started&hellip;</p>
+<hr>
+<h2 id="enable-the-kmip-server-in-keycontrol">Enable the KMIP Server in KeyControl</h2>
+<ol>
+<li>
+<p>Log in to the deployed Entrust KeyControl cluster and click the <strong>KMIP</strong> menu item.</p>
+<figure><img src="/img/2021/10/12/ETKC-vCenter01.png"
+         alt="Create User"/><figcaption>
+            <h4>KMIP menu item</h4>
+        </figcaption>
+</figure>
+
+</li>
+</ol>
+<hr>
+<h2 id="kmip-server-settings">KMIP Server Settings</h2>
+<p>This is the screen where you will enable and make changes to the KMIP server settings.</p>
+<ol>
+<li>
+<p>Change the <em>State</em> field from <em>Disabled</em> to <strong>Enabled</strong>.</p>
+</li>
+<li>
+<p>You will also need to change the version of the KMIP Protocol the server speaks in the <em>Protocol</em> field.  Change the version from the default of <em>1.0</em> to <strong>1.1</strong></p>
+</li>
+</ol>
+<p>VMware supports <strong>KMIP version 1.1</strong> for Key Providers.</p>
+<figure><img src="/img/2021/10/12/ETKC-vCenter02.png"
+         alt="Create User"/><figcaption>
+            <h4>Configured KMIP options</h4>
+        </figcaption>
+</figure>
+
+<p>After you have made these two changes click the <strong>Apply</strong> button.  You will be presented with a dialog to <em>&ldquo;Overwrite all existing KMIP Server settings&rdquo;</em>.  Click <strong>Proceed</strong>.</p>
+<hr>
+<h2 id="create-a-client-certificate">Create a Client Certificate</h2>
+<p>The communication between <a href="https://www.hytrust.com/products/keycontrol/">Entrust KeyControl</a> and vCenter is done via certificates.  So, the next step in the process is to create a client certificate for this purpose.</p>
+<ol>
+<li>
+<p>Next to the blue <em>Actions</em> button, you will see the text, <strong>Client Certificates</strong>.  Click this text, then click the blue <strong>Actions</strong> button and select <strong>Create Certificate</strong>.</p>
+<figure><img src="/img/2021/10/12/ETKC-vCenter03.png"
+         alt="Create Certificate"/><figcaption>
+            <h4>Create Certificate</h4>
+        </figcaption>
+</figure>
+
+</li>
+<li>
+<p>Enter a name for the certificate in the <strong>Certificate Name</strong> field.  You can adjust the expiration date.  But, do <strong><em>NOT</em></strong> add a certificate password.  Adding a password will prevent vCenter from importing the certificate.  Finally, click <strong>Create</strong>.</p>
+<figure><img src="/img/2021/10/12/ETKC-vCenter04.png"
+         alt="Create New Client Certificate screen"/><figcaption>
+            <h4>Create New Client Certificate screen</h4>
+        </figcaption>
+</figure>
+
+</li>
+<li>
+<p>You will see the new certificate in the WebUI.  Click the certificate, then click the blue <strong>Action</strong> button and select <strong>Download Certificate</strong>.  This will result in a zip file being downloaded to your system.  Unzip the contents of the file.  You will need the unzipped contents later.</p>
+<figure><img src="/img/2021/10/12/ETKC-vCenter05.png"
+         alt="Download Certificate"/><figcaption>
+            <h4>Download Certificate</h4>
+        </figcaption>
+</figure>
+
+</li>
+</ol>
+<hr>
+<h2 id="add-a-key-provider">Add a Key Provider</h2>
+<p>Log in to vCenter.  Then perform the following steps.</p>
+<ol>
+<li>
+<p>Click on the name of your <strong>vCenter</strong></p>
+</li>
+<li>
+<p>Click <strong>Configure</strong></p>
+</li>
+<li>
+<p>Click <strong>Key Providers</strong> in the <em>Security</em> section</p>
+</li>
+<li>
+<p>Click <strong>Add Standard Key Provider</strong></p>
+<figure><img src="/img/2020/11/04/KMIP-Trust06.png"
+         alt="Add Standard Key Provider"/><figcaption>
+            <h4>Add Standard Key Provider</h4>
+        </figcaption>
+</figure>
+
+</li>
+<li>
+<p>Enter a name for the Key Provider.  This is just a reference name.  It doesn&rsquo;t need to match any name you use in Entrust KeyControl.</p>
+</li>
+<li>
+<p>Enter a name for the KMS Server and the IP Address or FQDN of the first KeyControl node.  I typically match the name of the KMS Server to the hostname of the node I&rsquo;m adding.  Click the <strong>Add KMS</strong> button and add the second KeyControl node.</p>
+</li>
+<li>
+<p>You can ignore the optional proxy and password sections.  Click <strong>Add Key Provider</strong> when you are finished.</p>
+<figure><img src="/img/2020/11/04/KMIP-Trust07.png"
+         alt="Standard Key Provider Details screen"/><figcaption>
+            <h4>Standard Key Provider Details screen</h4>
+        </figcaption>
+</figure>
+
+<p>The certificate details for each node will be displayed.</p>
+</li>
+<li>
+<p>Click the <strong>Trust</strong> button.</p>
+<figure><img src="/img/2020/11/04/KMIP-Trust08.png"
+         alt="KMS Node Certificate Details"/><figcaption>
+            <h4>KMS Node Certificate Details</h4>
+        </figcaption>
+</figure>
+
+<p>The newly added <em>Key Provider</em> will be displayed.</p>
+</li>
+<li>
+<p>Check the radio button next to the Key Provider.  This will list the Key Management Servers at the bottom of the window.  Yes, I know the image below still refers to HyTrust KeyControl.  Habits are hard to break.  HaHa!!</p>
+<figure><img src="/img/2020/11/04/KMIP-Trust09.png"
+         alt="Key Provider list and KMS Servers"/><figcaption>
+            <h4>Key Provider list and KMS Servers</h4>
+        </figcaption>
+</figure>
+
+</li>
+</ol>
+<hr>
+<h2 id="establish-trust">Establish Trust</h2>
+<ol>
+<li>
+<p>Click one of the KMS servers, then click <strong>Establish Trust</strong>.  Select <strong>Make KMS trust vCenter</strong>.</p>
+<figure><img src="/img/2020/11/04/KMIP-Trust10.png"
+         alt="Make KMS trust vCenter"/><figcaption>
+            <h4>Make KMS trust vCenter</h4>
+        </figcaption>
+</figure>
+
+</li>
+<li>
+<p>Click <strong>KMS certificate and private key</strong>, then click <strong>Next</strong>.</p>
+<figure><img src="/img/2020/11/04/KMIP-Trust11.png"
+         alt="Choose a Trust Method"/><figcaption>
+            <h4>Choose a Trust Method</h4>
+        </figcaption>
+</figure>
+
+<p>This is the point in the process where the <em>client certificate</em> is needed.</p>
+</li>
+<li>
+<p>Click the <em>KMS Certificate</em> <strong>Upload a File</strong> button.  Navigate to the location where you unzipped the contents of the <em>client certificate</em> zip file.  You will see two .pem files.  You can ignore the <em>cacert.pem</em> file.  Select the second .pem file and click <strong>OK</strong>.</p>
+</li>
+<li>
+<p>Repeat the last step for the <em>KMS Private Key</em>, then click <strong>Establish Trust</strong></p>
+<figure><img src="/img/2020/11/04/KMIP-Trust13.png"
+         alt="Upload KMS Credentials"/><figcaption>
+            <h4>Upload KMS Credentials</h4>
+        </figcaption>
+</figure>
+
+</li>
+<li>
+<p>At this point, all of the yellowish triangles from the previous step should now be green circles with checkmarks in them.</p>
+<figure><img src="/img/2020/11/04/KMIP-Trust14.png"
+         alt="Trusted KMS Servers"/><figcaption>
+            <h4>Trusted KMS Servers</h4>
+        </figcaption>
+</figure>
+
+</li>
+</ol>
+<p>If you want a bit more detail, expand one of the KMS Server entries.</p>
+<figure><img src="/img/2020/11/04/KMIP-Trust15.png"
+         alt="KMS Server Trust Detailss"/><figcaption>
+            <h4>KMS Server Trust Details</h4>
+        </figcaption>
+</figure>
+
+<p>Congratulations!!  You are finished.  You are ready to begin encrypting VMs or enabling encryption for vSAN.</p>
+<hr>
+<h2 id="summary">Summary</h2>
+<p>Let&rsquo;s summarize what was covered in this post:</p>
+<ul>
+<li>You created a client certificate using the <a href="/2021/10/01/how-to-deploy-entrust-keycontrol-5.4/">2-node Entrust KeyControl v5.4 cluster</a> from a <a href="/2021/10/01/how-to-deploy-entrust-keycontrol-5.4/">previous post</a></li>
+<li>You added a Key Provider to vCenter, which includes the two KeyControl Cluster nodes</li>
+<li>You established a trust between the KeyControl Cluster using the client certificate</li>
+</ul>
+<p>In the next blog post, I&rsquo;ll walk through the steps for encrypting a VM.  I hope this post has helped you.</p>
+<hr>
+<h2 id="related-posts">Related Posts</h2>
+<p>Here are links to related posts:</p>
+<ul>
+<li><a href="https://go.entrust.com/HyTrust_KeyControl">Register for a 30-day trial of Entrust KeyControl</a></li>
+<li><a href="/2021/10/01/how-to-deploy-entrust-keycontrol-5.4/">How to deploy a 2-node Entrust KeyControl v5.4 cluster</a></li>
+<li><a href="/2021/10/05/2021-10-05-how-to-connect-keycontrol-5.4-to-activedirectory/">How to Connect Entrust KeyControl v5.4 to Active Directory</a></li>
+<li><a href="/2021/10/08/2021-10-08-how-to-add-another-security-admin-from-ad/">How to Add a Another Security Admin to Entrust KeyControl v5.4 from Active Directory</a></li>
+<li><a href="https://www.youtube.com/playlist?list=PLU9f96GzAbdKcNSeQmlr5Ftz1VkWSi-Ej">Entrust KeyControl YouTube playlist</a></li>
+<li><a href="https://youtu.be/tcEr-ZSgAYA">YouTube video:  Entrust KeyControl - Adding a KMS Cluster as a Key Provider in vSphere 7</a></li>
+</ul>
+<p>If there is something you think I&rsquo;m missing and feel should be added, <a href="http://twitter.com/PSUStevens">please let me know.</a></p>
+<p>Thanks for reading!</p>
+
+  </div>
+  <footer>
+    <ul class="stats">
+  
+    
+    
+      <li class="categories">
+        <ul>
+          
+            
+            <li><a class="article-category-link" href="https://blog.psustevens.com/categories/entrust">Entrust</a></li>
+          
+            
+            <li><a class="article-category-link" href="https://blog.psustevens.com/categories/hytrust">HyTrust</a></li>
+          
+            
+            <li><a class="article-category-link" href="https://blog.psustevens.com/categories/vmware">VMware</a></li>
+          
+            
+            <li><a class="article-category-link" href="https://blog.psustevens.com/categories/howto">HowTo</a></li>
+          
+        </ul>
+      </li>
+    
+  
+  
+    
+    
+      <li class="tags">
+        <ul>
+          
+            
+            <li><a class="article-category-link" href="https://blog.psustevens.com/tags/keycontrol">KeyControl</a></li>
+          
+            
+            <li><a class="article-category-link" href="https://blog.psustevens.com/tags/keycontrol-v5.4">KeyControl v5.4</a></li>
+          
+            
+            <li><a class="article-category-link" href="https://blog.psustevens.com/tags/kms">KMS</a></li>
+          
+            
+            <li><a class="article-category-link" href="https://blog.psustevens.com/tags/key-management-server">Key Management Server</a></li>
+          
+            
+            <li><a class="article-category-link" href="https://blog.psustevens.com/tags/vcenter">vCenter</a></li>
+          
+            
+            <li><a class="article-category-link" href="https://blog.psustevens.com/tags/key-provider">Key Provider</a></li>
+          
+        </ul>
+      </li>
+    
+  
+</ul>
+
+  </footer>
+</article>
+
+
+<div class="pagination">
+  
+    <a href="/2021/10/08/2021-10-08-how-to-add-another-security-admin-from-ad/" class="button big previous"><i class="fas fa-angle-left"></i> How to Add Another KeyControl Security Admin From Active Directory</a>
+  
+  
+</div>
+
+
+      </main>
+      <section id="site-sidebar">
+  
+    <section id="recent-posts">
+      <header>
+        <h1>Recent posts</h1>
+      </header>
+      
+      <article class="mini-post">
+        <section>
+          
+  <a href="/2021/10/12/2021-10-12-how-to-add-keycontrol-as-a-key-provider-in-vsphere7/" class="image featured">
+    <img src="/img/2021/10/vCenter-KeyProvider-v2.png" alt="Key Management (KMS) and vCenter Key Provider">
+  </a>
+
+
+        </section>
+        <header>
+          <h1><a href="/2021/10/12/2021-10-12-how-to-add-keycontrol-as-a-key-provider-in-vsphere7/">How to Add KeyControl v5.4 as a Key Provider in VSphere 7</a></h1>
+          <time class="published" datetime="">October 12, 2021</time>
+        </header>
+      </article>
+      
+      <article class="mini-post">
+        <section>
+          
+  <a href="/2021/10/08/2021-10-08-how-to-add-another-security-admin-from-ad/" class="image featured">
+    <img src="/img/2021/10/ETKC.png" alt="KeyControl graphic">
+  </a>
+
+
+        </section>
+        <header>
+          <h1><a href="/2021/10/08/2021-10-08-how-to-add-another-security-admin-from-ad/">How to Add Another KeyControl Security Admin From Active Directory</a></h1>
+          <time class="published" datetime="">October 8, 2021</time>
+        </header>
+      </article>
+      
+      <article class="mini-post">
+        <section>
+          
+  <a href="/2021/10/05/2021-10-05-how-to-connect-keycontrol-5.4-to-activedirectory/" class="image featured">
+    <img src="/img/2021/10/ETKC-AD.png" alt="Entrust and Active Directory">
+  </a>
+
+
+        </section>
+        <header>
+          <h1><a href="/2021/10/05/2021-10-05-how-to-connect-keycontrol-5.4-to-activedirectory/">How to Connect KeyControl 5.4 to Active Directory</a></h1>
+          <time class="published" datetime="">October 5, 2021</time>
+        </header>
+      </article>
+      
+      
+        <a href="/blog/" class="button">See more</a>
+      
+    </section>
+  
+
+  
+    
+      <section id="categories">
+        <header>
+          <h1><a href="/categories">Categories</a></h1>
+        </header>
+        <ul>
+          
+            
+          
+          
+          <li>
+            
+              <a href="/categories/vmware/">vmware<span class="count">8</span></a>
+            
+          
+          <li>
+            
+              <a href="/categories/howto/">howto<span class="count">7</span></a>
+            
+          
+          <li>
+            
+              <a href="/categories/blogging/">blogging<span class="count">6</span></a>
+            
+          
+          <li>
+            
+              <a href="/categories/hytrust/">hytrust<span class="count">6</span></a>
+            
+          
+          <li>
+            
+              <a href="/categories/entrust/">entrust<span class="count">4</span></a>
+            
+          
+          <li>
+            
+              <a href="/categories/career/">career<span class="count">2</span></a>
+            
+          
+          <li>
+            
+              <a href="/categories/psustevens/">psustevens<span class="count">1</span></a>
+            
+          
+          </li>
+        </ul>
+      </section>
+    
+  
+
+  <section id="mini-bio">
+    <header>
+      <h1>About</h1>
+    </header>
+    <p>This is my personal blog about technical topics including virtualization, storage, networking, backups, and some random IT stuff that strikes my fancy.</p>
+    <footer>
+      <a href="/about" class="button">Learn More</a>
+    </footer>
+  </section>
+</section>
+
+      <footer id="site-footer">
+  
+      <ul class="socnet-icons">
+        
+
+        <li><a href="//github.com/psustevens" target="_blank" rel="noopener" title="GitHub" class="fab fa-github"></a></li>
+
+
+
+
+
+
+
+
+
+
+
+<li><a href="//linkedin.com/in/davidlstevens" target="_blank" rel="noopener" title="LinkedIn" class="fab fa-linkedin"></a></li>
+<li><a href="//linkedin.com/company/236893" target="_blank" rel="noopener" title="LinkedIn Company" class="fab fa-linkedin"></a></li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<li><a href="//twitter.com/PSUStevens" target="_blank" rel="noopener" title="Twitter" class="fab fa-twitter"></a></li>
+
+
+
+
+
+
+
+
+
+
+
+
+      </ul>
+  
+  <p class="copyright">
+    
+      &copy; 2021
+      
+        @PSUStevens Blog
+      
+    . <br>
+    Theme: <a href='https://github.com/pacollins/hugo-future-imperfect-slim' target='_blank' rel='noopener'>Hugo Future Imperfect Slim</a><br>A <a href='https://html5up.net/future-imperfect' target='_blank' rel='noopener'>HTML5 UP port</a> | Powered by <a href='https://gohugo.io/' title='0.88.1' target='_blank' rel='noopener'>Hugo</a>
+  </p>
+</footer>
+<a id="back-to-top" href="#" class="fas fa-arrow-up fa-2x"></a>
+
+      
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/highlight.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/languages/html.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/languages/css.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/languages/js.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/languages/toml.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/languages/PowerShell.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/languages/markdown.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/languages/plaintext.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script>
+
+
+  
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/skel/3.0.1/skel.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.3.5/jquery.fancybox.min.js"></script>
+  <script src=/js/util.js></script>
+  <script src=/js/main.js></script>
+  <script src=/js/add-on.js></script>
+  
+
+
+
+
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-149142929-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+
+    </div>
+  </body>
+</html>

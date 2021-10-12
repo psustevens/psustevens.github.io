@@ -11,8 +11,8 @@
   <meta itemprop="name" content="How to Add Another KeyControl Security Admin From Active Directory">
 <meta itemprop="description" content="This post will show how to add another Security Admin to Entrust KeyControl from Active Directory."><meta itemprop="datePublished" content="2021-10-08T08:08:04-04:00" />
 <meta itemprop="dateModified" content="2021-10-08T08:08:04-04:00" />
-<meta itemprop="wordCount" content="441">
-<meta itemprop="keywords" content="KeyControl,KMS,Key Management Server,vCenter,Active Directory,Security Admin," />
+<meta itemprop="wordCount" content="476">
+<meta itemprop="keywords" content="KeyControl,KMS,Key Management Server,Active Directory,Security Admin," />
   <meta property="og:title" content="How to Add Another KeyControl Security Admin From Active Directory" />
 <meta property="og:description" content="This post will show how to add another Security Admin to Entrust KeyControl from Active Directory." />
 <meta property="og:type" content="article" />
@@ -348,8 +348,11 @@ if (!doNotTrack) {
 <h2 id="related-posts">Related Posts</h2>
 <p>Here are links to related posts:</p>
 <ul>
+<li><a href="https://go.entrust.com/HyTrust_KeyControl">Register for a 30-day trial of Entrust KeyControl</a></li>
 <li><a href="/2021/10/01/how-to-deploy-entrust-keycontrol-5.4/">How to deploy a 2-node Entrust KeyControl v5.4 cluster</a></li>
-<li><a href="/2021/10/05/2021-10-05-how-to-connect-keycontrol-5.4-to-activedirectory/">How to Connect KeyControl v5.4 to Active Directory</a></li>
+<li><a href="/2021/10/05/2021-10-05-how-to-connect-keycontrol-5.4-to-activedirectory/">How to Connect Entrust KeyControl v5.4 to Active Directory</a></li>
+<li><a href="/2021/10/08/2021-10-08-how-to-add-another-security-admin-from-ad/">How to Add a Another Security Admin to Entrust KeyControl v5.4 from Active Directory</a></li>
+<li><a href="/2021/10/12/2021-10-12-how-to-add-keycontrol-as-a-key-provider-in-vsphere7/">How to Add KeyControl v5.4 as a Key Provider in VSphere 7</a></li>
 <li><a href="https://www.youtube.com/playlist?list=PLU9f96GzAbdKcNSeQmlr5Ftz1VkWSi-Ej">Entrust KeyControl YouTube playlist</a></li>
 <li><a href="https://youtu.be/z3-ilw5mDos?t=41s">YouTube video:  Entrust KeyControl - Joining a KMS Cluster to Active Directory</a></li>
 </ul>
@@ -397,9 +400,6 @@ if (!doNotTrack) {
             <li><a class="article-category-link" href="https://blog.psustevens.com/tags/key-management-server">Key Management Server</a></li>
           
             
-            <li><a class="article-category-link" href="https://blog.psustevens.com/tags/vcenter">vCenter</a></li>
-          
-            
             <li><a class="article-category-link" href="https://blog.psustevens.com/tags/active-directory">Active Directory</a></li>
           
             
@@ -420,6 +420,8 @@ if (!doNotTrack) {
     <a href="/2021/10/05/2021-10-05-how-to-connect-keycontrol-5.4-to-activedirectory/" class="button big previous"><i class="fas fa-angle-left"></i> How to Connect KeyControl 5.4 to Active Directory</a>
   
   
+    <a href="/2021/10/12/2021-10-12-how-to-add-keycontrol-as-a-key-provider-in-vsphere7/" class="button big next">How to Add KeyControl v5.4 as a Key Provider in VSphere 7 <i class="fas fa-angle-right"></i></a>
+  
 </div>
 
 
@@ -430,6 +432,21 @@ if (!doNotTrack) {
       <header>
         <h1>Recent posts</h1>
       </header>
+      
+      <article class="mini-post">
+        <section>
+          
+  <a href="/2021/10/12/2021-10-12-how-to-add-keycontrol-as-a-key-provider-in-vsphere7/" class="image featured">
+    <img src="/img/2021/10/vCenter-KeyProvider-v2.png" alt="Key Management (KMS) and vCenter Key Provider">
+  </a>
+
+
+        </section>
+        <header>
+          <h1><a href="/2021/10/12/2021-10-12-how-to-add-keycontrol-as-a-key-provider-in-vsphere7/">How to Add KeyControl v5.4 as a Key Provider in VSphere 7</a></h1>
+          <time class="published" datetime="">October 12, 2021</time>
+        </header>
+      </article>
       
       <article class="mini-post">
         <section>
@@ -461,21 +478,6 @@ if (!doNotTrack) {
         </header>
       </article>
       
-      <article class="mini-post">
-        <section>
-          
-  <a href="/2021/10/01/how-to-deploy-entrust-keycontrol-5.4/" class="image featured">
-    <img src="/img/2021/10/ETKC.png" alt="Entrust Keycontrol 5.4 Login screen">
-  </a>
-
-
-        </section>
-        <header>
-          <h1><a href="/2021/10/01/how-to-deploy-entrust-keycontrol-5.4/">How to Deploy Entrust KeyControl 5.4</a></h1>
-          <time class="published" datetime="">October 1, 2021</time>
-        </header>
-      </article>
-      
       
         <a href="/blog/" class="button">See more</a>
       
@@ -495,7 +497,12 @@ if (!doNotTrack) {
           
           <li>
             
-              <a href="/categories/vmware/">vmware<span class="count">7</span></a>
+              <a href="/categories/vmware/">vmware<span class="count">8</span></a>
+            
+          
+          <li>
+            
+              <a href="/categories/howto/">howto<span class="count">7</span></a>
             
           
           <li>
@@ -505,17 +512,12 @@ if (!doNotTrack) {
           
           <li>
             
-              <a href="/categories/howto/">howto<span class="count">6</span></a>
+              <a href="/categories/hytrust/">hytrust<span class="count">6</span></a>
             
           
           <li>
             
-              <a href="/categories/hytrust/">hytrust<span class="count">5</span></a>
-            
-          
-          <li>
-            
-              <a href="/categories/entrust/">entrust<span class="count">3</span></a>
+              <a href="/categories/entrust/">entrust<span class="count">4</span></a>
             
           
           <li>

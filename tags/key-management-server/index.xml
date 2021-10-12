@@ -6,7 +6,19 @@
     <description>Recent content in Key Management Server on @PSUStevens Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Fri, 08 Oct 2021 08:08:04 -0400</lastBuildDate><atom:link href="https://blog.psustevens.com/tags/key-management-server/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 12 Oct 2021 08:15:28 -0400</lastBuildDate><atom:link href="https://blog.psustevens.com/tags/key-management-server/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>How to Add KeyControl v5.4 as a Key Provider in VSphere 7</title>
+      <link>https://blog.psustevens.com/2021/10/12/2021-10-12-how-to-add-keycontrol-as-a-key-provider-in-vsphere7/</link>
+      <pubDate>Tue, 12 Oct 2021 08:15:28 -0400</pubDate>
+      
+      <guid>https://blog.psustevens.com/2021/10/12/2021-10-12-how-to-add-keycontrol-as-a-key-provider-in-vsphere7/</guid>
+      <description>To get started here is what you will need to complete the steps in this post:
+ A deployed Entrust KeyControl v5.4 cluster (Click this sentence to learn how to do this) vCenter and ESXi Host(s) running vSphere 7.x  Now, let&amp;rsquo;s get started&amp;hellip;
+ Enable the KMIP Server in KeyControl   Log in to the deployed Entrust KeyControl cluster and click the KMIP menu item.
+ KMIP menu item      KMIP Server Settings This is the screen where you will enable and make changes to the KMIP server settings.</description>
+    </item>
+    
     <item>
       <title>How to Add Another KeyControl Security Admin From Active Directory</title>
       <link>https://blog.psustevens.com/2021/10/08/2021-10-08-how-to-add-another-security-admin-from-ad/</link>
