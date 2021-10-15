@@ -9,12 +9,12 @@
 
   <meta name="generator" content="Hugo 0.88.1" />
   <meta itemprop="name" content="How to Add KeyControl v5.4 as a Key Provider in VSphere 7">
-<meta itemprop="description" content="This post will walk you through the steps to add Entrust KeyControl v5.4 as a Key Provider in vCenter v7.x."><meta itemprop="datePublished" content="2021-10-12T08:15:28-04:00" />
+<meta itemprop="description" content="This post will walk you through the steps to add Entrust KeyControl v5.4 as a Key Provider in vCenter v7.x.  **Updated 10-15-2021**"><meta itemprop="datePublished" content="2021-10-12T08:15:28-04:00" />
 <meta itemprop="dateModified" content="2021-10-12T08:15:28-04:00" />
-<meta itemprop="wordCount" content="834">
+<meta itemprop="wordCount" content="1101">
 <meta itemprop="keywords" content="KeyControl,KeyControl v5.4,KMS,Key Management Server,vCenter,Key Provider," />
   <meta property="og:title" content="How to Add KeyControl v5.4 as a Key Provider in VSphere 7" />
-<meta property="og:description" content="This post will walk you through the steps to add Entrust KeyControl v5.4 as a Key Provider in vCenter v7.x." />
+<meta property="og:description" content="This post will walk you through the steps to add Entrust KeyControl v5.4 as a Key Provider in vCenter v7.x.  **Updated 10-15-2021**" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://blog.psustevens.com/2021/10/12/2021-10-12-how-to-add-keycontrol-as-a-key-provider-in-vsphere7/" /><meta property="article:section" content="blog" />
 <meta property="article:published_time" content="2021-10-12T08:15:28-04:00" />
@@ -23,7 +23,7 @@
 
   <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="How to Add KeyControl v5.4 as a Key Provider in VSphere 7"/>
-<meta name="twitter:description" content="This post will walk you through the steps to add Entrust KeyControl v5.4 as a Key Provider in vCenter v7.x."/>
+<meta name="twitter:description" content="This post will walk you through the steps to add Entrust KeyControl v5.4 as a Key Provider in vCenter v7.x.  **Updated 10-15-2021**"/>
 <meta name="twitter:site" content="@PSUStevens"/>
 
   
@@ -221,7 +221,7 @@ if (!doNotTrack) {
         <h2><a href="/2021/10/12/2021-10-12-how-to-add-keycontrol-as-a-key-provider-in-vsphere7/">How to Add KeyControl v5.4 as a Key Provider in VSphere 7</a></h2>
     
     
-        <p>This post will walk you through the steps to add Entrust KeyControl v5.4 as a Key Provider in vCenter v7.x.</p>
+        <p>This post will walk you through the steps to add Entrust KeyControl v5.4 as a Key Provider in vCenter v7.x.  **Updated 10-15-2021**</p>
     
 </div>
   <div class="meta">
@@ -230,7 +230,7 @@ if (!doNotTrack) {
     </time>
     <span class="author">PSUStevens</span>
     
-      <p>4 minutes read</p>
+      <p>6 minutes read</p>
     
   </div>
 </header>
@@ -328,13 +328,21 @@ if (!doNotTrack) {
 </li>
 <li>
 <p>Enter a name for the certificate in the <strong>Certificate Name</strong> field.  You can adjust the expiration date.  But, do <strong><em>NOT</em></strong> add a certificate password.  Adding a password will prevent vCenter from importing the certificate.  Finally, click <strong>Create</strong>.</p>
+</li>
+</ol>
+<blockquote>
+<h3 id="-please-read-this-">***** Please read this *****</h3>
+<p><strong>Even though I mention above that you should NOT enter a password in the dialog below I want to hammer this point home.  It was recently brought to my attention by one of my colleagues in our Support organization that some of you are inadvertantly entering passwords in this dialog box.</strong></p>
+<p><strong>I know you probably have raised eyebrows telling yourself &ldquo;What is he talking about?&rdquo; Keep reading.</strong></p>
+<p><strong>Some of you probably use a password manager which has the ability to automatically fill in passwords in dialogs like the one below.  If this is you, then make sure you clear the password fields that your password manager automatically filled in for you BEFORE you click the Create button.</strong></p>
+</blockquote>
 <figure><img src="/img/2021/10/12/ETKC-vCenter04.png"
          alt="Create New Client Certificate screen"/><figcaption>
             <h4>Create New Client Certificate screen</h4>
         </figcaption>
 </figure>
 
-</li>
+<ol start="3">
 <li>
 <p>You will see the new certificate in the WebUI.  Click the certificate, then click the blue <strong>Action</strong> button and select <strong>Download Certificate</strong>.  This will result in a zip file being downloaded to your system.  Unzip the contents of the file.  You will need the unzipped contents later.</p>
 <figure><img src="/img/2021/10/12/ETKC-vCenter05.png"
@@ -375,6 +383,15 @@ if (!doNotTrack) {
 </li>
 <li>
 <p>You can ignore the optional proxy and password sections.  Click <strong>Add Key Provider</strong> when you are finished.</p>
+</li>
+</ol>
+<blockquote>
+<h3 id="-please-read-this--1">***** Please read this *****</h3>
+<p><strong>Just like I mentioned above about inadvertantly having a password automatically entered for you by your password manager when creating the client certificate.  The same colleague of mine asked me to remind you that sometimes the same thing happens during this step in the process.</strong></p>
+<p><strong>So, make sure you expand the Password Protection section of the dialog below and confirm the fields are blank before clicking the &ldquo;Add Key Provider&rdquo; button.</strong></p>
+<p><strong>It will be apparent to you that you inadvertantly entered a password.  When you go to encrypt a VM, (which I cover in my next post) you will receive an error similar to &ldquo;KMIP Response: Operation Failed DENIED&rdquo;</strong></p>
+<p><strong>To resolve this issue remove the Key Provider and run through the steps in this section.  Just make sure to remove the password BEFORE you click the &ldquo;Add Key Provider&rdquo; button.</strong></p>
+</blockquote>
 <figure><img src="/img/2020/11/04/KMIP-Trust07.png"
          alt="Standard Key Provider Details screen"/><figcaption>
             <h4>Standard Key Provider Details screen</h4>
@@ -382,7 +399,7 @@ if (!doNotTrack) {
 </figure>
 
 <p>The certificate details for each node will be displayed.</p>
-</li>
+<ol start="8">
 <li>
 <p>Click the <strong>Trust</strong> button.</p>
 <figure><img src="/img/2020/11/04/KMIP-Trust08.png"
