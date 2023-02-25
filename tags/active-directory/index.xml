@@ -14,8 +14,8 @@
       
       <guid>https://blog.psustevens.com/2021/10/08/2021-10-08-how-to-add-another-security-admin-from-ad/</guid>
       <description>To get started here is what you will need to complete the steps in this post:
- A deployed Entrust KeyControl v5.4 cluster connected to Active Directory (Click this sentence to learn how to do this) Active Directory account info to be added  Now, let&amp;rsquo;s get started&amp;hellip;
-Add a Second KeyControl Security Administrator from Active Directory   Click Security from the menu bar then click the blue Actions button and select Create User</description>
+A deployed Entrust KeyControl v5.4 cluster connected to Active Directory (Click this sentence to learn how to do this) Active Directory account info to be added Now, let&amp;rsquo;s get started&amp;hellip;
+Add a Second KeyControl Security Administrator from Active Directory Click Security from the menu bar then click the blue Actions button and select Create User</description>
     </item>
     
     <item>
@@ -25,9 +25,9 @@ Add a Second KeyControl Security Administrator from Active Directory   Click Sec
       
       <guid>https://blog.psustevens.com/2021/10/05/2021-10-05-how-to-connect-keycontrol-5.4-to-activedirectory/</guid>
       <description>To get started here is what you will need to complete the steps in this post:
- A deployed Entrust KeyControl v5.4 cluster (Click this sentence to learn how to do this) Active Directory service account  Now, let&amp;rsquo;s get started&amp;hellip;
-Connect KeyControl to Active Directory   Log in to the deployed Entrust KeyControl cluster. Once logged in:
- Click the Settings menu item Under the &amp;ldquo;General Settings&amp;rdquo; group click Authentication   Settings &amp;gt; Authentication     Click the Type drop-down box and select LDAP from the list.</description>
+A deployed Entrust KeyControl v5.4 cluster (Click this sentence to learn how to do this) Active Directory service account Now, let&amp;rsquo;s get started&amp;hellip;
+Connect KeyControl to Active Directory Log in to the deployed Entrust KeyControl cluster. Once logged in:
+Click the Settings menu item Under the &amp;ldquo;General Settings&amp;rdquo; group click Authentication Settings &amp;gt; Authentication Click the Type drop-down box and select LDAP from the list.</description>
     </item>
     
   </channel>

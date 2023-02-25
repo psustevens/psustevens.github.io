@@ -7,7 +7,7 @@
 
 
 
-  <meta name="generator" content="Hugo 0.88.1" />
+  <meta name="generator" content="Hugo 0.110.0">
   <meta itemprop="name" content="Building a Blog With Hugo - Part 3">
 <meta itemprop="description" content="Now that we have the basics for the site done let&#39;s begin customizing the theme/site"><meta itemprop="datePublished" content="2019-12-18T01:49:05-05:00" />
 <meta itemprop="dateModified" content="2019-12-18T01:49:05-05:00" />
@@ -19,7 +19,6 @@
 <meta property="og:url" content="https://blog.psustevens.com/2019/12/18/building-a-blog-with-hugo-part3/" /><meta property="article:section" content="blog" />
 <meta property="article:published_time" content="2019-12-18T01:49:05-05:00" />
 <meta property="article:modified_time" content="2019-12-18T01:49:05-05:00" />
-
 
   <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Building a Blog With Hugo - Part 3"/>
@@ -142,12 +141,6 @@ if (!doNotTrack) {
         </a>
   
 
-  
-    <a href="//www.reddit.com/submit?url=https%3a%2f%2fblog.psustevens.com%2f2019%2f12%2f18%2fbuilding-a-blog-with-hugo-part3%2f&amp;title=Building%20a%20Blog%20With%20Hugo%20-%20Part%203" target="_blank" rel="noopener" class="share-btn reddit">
-          <i class="fab fa-reddit-alien"></i><p>&nbsp;Reddit</p>
-        </a>
-  
-
 
     </menu>
   
@@ -180,7 +173,7 @@ if (!doNotTrack) {
 
 
 <li><a href="//linkedin.com/in/davidlstevens" target="_blank" rel="noopener" title="LinkedIn" class="fab fa-linkedin"></a></li>
-<li><a href="//linkedin.com/company/236893" target="_blank" rel="noopener" title="LinkedIn Company" class="fab fa-linkedin"></a></li>
+<li><a href="//linkedin.com/company/entrust" target="_blank" rel="noopener" title="LinkedIn Company" class="fab fa-linkedin"></a></li>
 
 
 
@@ -260,12 +253,6 @@ if (!doNotTrack) {
         </a>
   
 
-  
-    <a href="//www.reddit.com/submit?url=https%3a%2f%2fblog.psustevens.com%2f2019%2f12%2f18%2fbuilding-a-blog-with-hugo-part3%2f&amp;title=Building%20a%20Blog%20With%20Hugo%20-%20Part%203" target="_blank" rel="noopener" class="share-btn reddit">
-          <i class="fab fa-reddit-alien"></i><p>&nbsp;Reddit</p>
-        </a>
-  
-
 
   </section>
   
@@ -279,17 +266,17 @@ if (!doNotTrack) {
 <hr>
 <h2 id="configtoml">Config.toml</h2>
 <p>The <code>config.toml</code> file, located at the root directory of your site, is where most of the site customization is done.  Picking up where we left off in <a href="/2019/11/01/building-a-blog-with-hugo-part2/">part 2</a>, let&rsquo;s review the very beginning of the file.  It should look similar to the following text snippet:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-plaintext" data-lang="plaintext">baseurl                 = &#34;https://example.com/&#34;
-DefaultContentLanguage  = &#34;en&#34;
-title                   = &#34;Learning Hugo&#34;
-theme                   = &#34;hugo-future-imperfect-slim&#34;
-preserveTaxonomyNames   = true
-paginate                = 3
-disqusShortname         = &#34;&#34;
-googleAnalytics         = &#34;&#34;
-pluralizeListTitles     = false
-disableLanguages        = [&#34;&#34;]
-</code></pre></div><p>The <code>baseurl</code> line sets the URL of where your site will ultimately be published.  For now, we are going to skip this line and the <code>googleAnalytics</code> line.  I&rsquo;ll cover these in parts 4 and 5 of the series.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-plaintext" data-lang="plaintext"><span style="display:flex;"><span>baseurl                 = &#34;https://example.com/&#34;
+</span></span><span style="display:flex;"><span>DefaultContentLanguage  = &#34;en&#34;
+</span></span><span style="display:flex;"><span>title                   = &#34;Learning Hugo&#34;
+</span></span><span style="display:flex;"><span>theme                   = &#34;hugo-future-imperfect-slim&#34;
+</span></span><span style="display:flex;"><span>preserveTaxonomyNames   = true
+</span></span><span style="display:flex;"><span>paginate                = 3
+</span></span><span style="display:flex;"><span>disqusShortname         = &#34;&#34;
+</span></span><span style="display:flex;"><span>googleAnalytics         = &#34;&#34;
+</span></span><span style="display:flex;"><span>pluralizeListTitles     = false
+</span></span><span style="display:flex;"><span>disableLanguages        = [&#34;&#34;]
+</span></span></code></pre></div><p>The <code>baseurl</code> line sets the URL of where your site will ultimately be published.  For now, we are going to skip this line and the <code>googleAnalytics</code> line.  I&rsquo;ll cover these in parts 4 and 5 of the series.</p>
 <p>In addition to English, the Hugo Future Imperfect Slim theme supports multiple languages such as Spanish, German, French, and a few others.  For now, leave the <code>DefaultContentLanguage</code> line as it is.  If you know how to write/speak other languages, then I&rsquo;ll leave it to you to translate anything we do in English to one or more of the languages you understand and get the multi-language support to work correctly.</p>
 <p>The <code>title</code> line is just what you think it is.  It is where you set the title for the site.  Change the text in the parentheses to your preference.  As you probably noticed, I used &ldquo;Learning Hugo&rdquo; as the title for the example site I&rsquo;m using in this series.  This is the same text that appears in the title bar of the web browser if you aren&rsquo;t using a tabbed interface.  If you have enabled tabs then this will appear in the name of the tab as you can see in the image below:</p>
 <!-- raw HTML omitted -->
@@ -301,27 +288,27 @@ disableLanguages        = [&#34;&#34;]
 <h2 id="params-section">Params Section</h2>
 <p>The Params section is essential to how your site appears to readers.  It also has several sub-sections.  I will go over all sub-sections except for the <code>staticman</code> and <code>recaptcha</code> sub-sections.</p>
 <p>The main section of your Params section should look similar to the text snippet below:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-plaintext" data-lang="plaintext">[params]
-  mainSections = [&#34;blog&#34;, &#34;post&#34;]
-  # Loads CSS and JavaScript files. The variable is an array so that you can load
-  # multiple/additional files if necessary. The standard theme files can be loaded
-  # by adding the value, &#34;default&#34;. Default includes the add-on.css and and-on.js.
-  # Example: [&#34;default&#34;, &#34;/path/to/file&#34;]
-  cssFiles              = [&#34;default&#34;]
-  jsFiles               = [&#34;default&#34;]
-  # Sets options for highlight.js
-  highlightjs           = true
-  highlightjsTheme      = &#34;github&#34;
-  highlightjsLang       = [&#34;html&#34;, &#34;css&#34;, &#34;js&#34;, &#34;toml&#34;]
-  # Sets where &#34;View More Posts&#34; links to
-  viewMorePostsLink     = &#34;/blog/&#34;
-  # Activate Estimated Reading Times, which appear in the post headers
-  readingTime           = true
-  # Sets which Social Share links appear in posts.
-  # Options are twitter, facebook, reddit, linkedin, pinterest, email
-  socialShare           = [&#34;twitter&#34;, &#34;facebook&#34;, &#34;reddit&#34;, &#34;linkedin&#34;,
-                          &#34;pinterest&#34;, &#34;email&#34;]
-</code></pre></div><p>You can leave all of the &ldquo;option lines&rdquo; at their default.  But, the last line, <code>socialShare</code>, is the one you should modify.  This line determines which social network link appear with your post and make it easy for your readers to share your blog posts.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-plaintext" data-lang="plaintext"><span style="display:flex;"><span>[params]
+</span></span><span style="display:flex;"><span>  mainSections = [&#34;blog&#34;, &#34;post&#34;]
+</span></span><span style="display:flex;"><span>  # Loads CSS and JavaScript files. The variable is an array so that you can load
+</span></span><span style="display:flex;"><span>  # multiple/additional files if necessary. The standard theme files can be loaded
+</span></span><span style="display:flex;"><span>  # by adding the value, &#34;default&#34;. Default includes the add-on.css and and-on.js.
+</span></span><span style="display:flex;"><span>  # Example: [&#34;default&#34;, &#34;/path/to/file&#34;]
+</span></span><span style="display:flex;"><span>  cssFiles              = [&#34;default&#34;]
+</span></span><span style="display:flex;"><span>  jsFiles               = [&#34;default&#34;]
+</span></span><span style="display:flex;"><span>  # Sets options for highlight.js
+</span></span><span style="display:flex;"><span>  highlightjs           = true
+</span></span><span style="display:flex;"><span>  highlightjsTheme      = &#34;github&#34;
+</span></span><span style="display:flex;"><span>  highlightjsLang       = [&#34;html&#34;, &#34;css&#34;, &#34;js&#34;, &#34;toml&#34;]
+</span></span><span style="display:flex;"><span>  # Sets where &#34;View More Posts&#34; links to
+</span></span><span style="display:flex;"><span>  viewMorePostsLink     = &#34;/blog/&#34;
+</span></span><span style="display:flex;"><span>  # Activate Estimated Reading Times, which appear in the post headers
+</span></span><span style="display:flex;"><span>  readingTime           = true
+</span></span><span style="display:flex;"><span>  # Sets which Social Share links appear in posts.
+</span></span><span style="display:flex;"><span>  # Options are twitter, facebook, reddit, linkedin, pinterest, email
+</span></span><span style="display:flex;"><span>  socialShare           = [&#34;twitter&#34;, &#34;facebook&#34;, &#34;reddit&#34;, &#34;linkedin&#34;,
+</span></span><span style="display:flex;"><span>                          &#34;pinterest&#34;, &#34;email&#34;]
+</span></span></code></pre></div><p>You can leave all of the &ldquo;option lines&rdquo; at their default.  But, the last line, <code>socialShare</code>, is the one you should modify.  This line determines which social network link appear with your post and make it easy for your readers to share your blog posts.</p>
 <p>Here is an example of a blog post with all of the <code>socialShare</code> icons at the beginning of the post.</p>
 <figure><img src="/img/2019/12/18/socialShareIcons.png"
          alt="Image of socialShare Icons"/><figcaption>
@@ -331,34 +318,34 @@ disableLanguages        = [&#34;&#34;]
 
 <h3 id="paramsmeta">Params.meta</h3>
 <p>The Params.meta sub-section contains items that can be picked up by search engines.  Your Params.meta sub-section should look similar to the text snippet below:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-plaintext" data-lang="plaintext">[params.meta]
-    # Sets the meta tag description
-    description         = &#34;An example blog site built on Hugo, the fastest statice website engine and skinned with the Hugo Future Imperfect Slim theme by HTML5 UP and ported by Julio Pescador.  Slimmed and enhanced by Patrick Collins. Multilingual by StatnMap.&#34;
-    # Sets the meta tag author
-    author              = &#34;Whoever is working on this blog site&#34;
-    # If you would like to add more comprehensive favicon support past the root
-    # directory favicon.ico, utilize this function. It is recommended to use
-    # https://realfavicongenerator.net to generate your icons as that is the basis
-    # for the theme&#39;s naming.
-    favicon             = false
-    svg                 = true
-    faviconVersion      = &#34;1&#34;
-    msColor             = &#34;#ffffff&#34; # Copy from the https://realfavicongenerator.net
-    iOSColor            = &#34;#ffffff&#34; # Copy from the https://realfavicongenerator.net
-</code></pre></div><p>My recommendation is to update the <code>description</code> and <code>author</code> lines to reflect you better.  I&rsquo;ll leave it to you to create a favicon for your site.  I haven&rsquo;t done this yet.  But, when I do, I&rsquo;ll post about it.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-plaintext" data-lang="plaintext"><span style="display:flex;"><span>[params.meta]
+</span></span><span style="display:flex;"><span>    # Sets the meta tag description
+</span></span><span style="display:flex;"><span>    description         = &#34;An example blog site built on Hugo, the fastest statice website engine and skinned with the Hugo Future Imperfect Slim theme by HTML5 UP and ported by Julio Pescador.  Slimmed and enhanced by Patrick Collins. Multilingual by StatnMap.&#34;
+</span></span><span style="display:flex;"><span>    # Sets the meta tag author
+</span></span><span style="display:flex;"><span>    author              = &#34;Whoever is working on this blog site&#34;
+</span></span><span style="display:flex;"><span>    # If you would like to add more comprehensive favicon support past the root
+</span></span><span style="display:flex;"><span>    # directory favicon.ico, utilize this function. It is recommended to use
+</span></span><span style="display:flex;"><span>    # https://realfavicongenerator.net to generate your icons as that is the basis
+</span></span><span style="display:flex;"><span>    # for the theme&#39;s naming.
+</span></span><span style="display:flex;"><span>    favicon             = false
+</span></span><span style="display:flex;"><span>    svg                 = true
+</span></span><span style="display:flex;"><span>    faviconVersion      = &#34;1&#34;
+</span></span><span style="display:flex;"><span>    msColor             = &#34;#ffffff&#34; # Copy from the https://realfavicongenerator.net
+</span></span><span style="display:flex;"><span>    iOSColor            = &#34;#ffffff&#34; # Copy from the https://realfavicongenerator.net
+</span></span></code></pre></div><p>My recommendation is to update the <code>description</code> and <code>author</code> lines to reflect you better.  I&rsquo;ll leave it to you to create a favicon for your site.  I haven&rsquo;t done this yet.  But, when I do, I&rsquo;ll post about it.</p>
 <h3 id="paramsheader">Params.header</h3>
 <p>This sub-section is where you will set the text shown in the web browser title bar or the tab in which users are viewing your site.  It will also dynamically change the text based on the section of your site a user is viewing.  For now, all you need to do is update the <code>navbarTitle</code> line.</p>
 <p>If you have no intention of supporting multiple languages on your site, then make sure you update the <code>languageMenu</code> line to false.</p>
 <p>The text snippet below is what the params.header sub-section looks like after I made the changes I suggested:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-plaintext" data-lang="plaintext">  [params.header]
-    # Sets the navbarTitle that appears in the top left of the navigation bar
-    navbarTitle         = &#34;Example Learning Hugo Site navBar Title&#34;
-    # Sets navbarTitle to match the section of the website
-    dynamicTitles       = true
-    searchMenu          = true
-    shareMenu           = true
-    languageMenu        = false
-</code></pre></div><p>You can see the navbarTitle hightlighted in green text in this image:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-plaintext" data-lang="plaintext"><span style="display:flex;"><span>  [params.header]
+</span></span><span style="display:flex;"><span>    # Sets the navbarTitle that appears in the top left of the navigation bar
+</span></span><span style="display:flex;"><span>    navbarTitle         = &#34;Example Learning Hugo Site navBar Title&#34;
+</span></span><span style="display:flex;"><span>    # Sets navbarTitle to match the section of the website
+</span></span><span style="display:flex;"><span>    dynamicTitles       = true
+</span></span><span style="display:flex;"><span>    searchMenu          = true
+</span></span><span style="display:flex;"><span>    shareMenu           = true
+</span></span><span style="display:flex;"><span>    languageMenu        = false
+</span></span></code></pre></div><p>You can see the navbarTitle hightlighted in green text in this image:</p>
 <figure><img src="/img/2019/12/18/navBarTitle.png"
          alt="Image of navbarTitle"/><figcaption>
             <h4>navbarTitle highlighted in green text</h4>
@@ -372,18 +359,18 @@ disableLanguages        = [&#34;&#34;]
 The <code>paragraph</code> line is the text located between the <code>header</code> text and the social media accounts that appear in the sidebar.</p>
 <p>You can ignore the last two lines in this sub-section.
 Here is a snippet of the params.intro sub-section after making the changes I mentioned:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-plaintext" data-lang="plaintext">  # These are optional params related to the sidebar. They are recommended, but not
-  # required for proper functionality. HTML is supported within the params.
-  [params.intro]
-    header                = &#34;Learning Hugo header text&#34;
-    paragraph             = &#34;This text is beneath the header text.  &lt;/br&gt;You can also put links in the text. &lt;/br&gt;&lt;a href=&#39;http://someURL.com&#39;&gt;Your Blog&lt;/a&gt;.&#34;
-    rssIntro              = true
-    socialIntro           = true
-</code></pre></div><h3 id="paramsintropic">Params.intro.pic</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-plaintext" data-lang="plaintext"><span style="display:flex;"><span>  # These are optional params related to the sidebar. They are recommended, but not
+</span></span><span style="display:flex;"><span>  # required for proper functionality. HTML is supported within the params.
+</span></span><span style="display:flex;"><span>  [params.intro]
+</span></span><span style="display:flex;"><span>    header                = &#34;Learning Hugo header text&#34;
+</span></span><span style="display:flex;"><span>    paragraph             = &#34;This text is beneath the header text.  &lt;/br&gt;You can also put links in the text. &lt;/br&gt;&lt;a href=&#39;http://someURL.com&#39;&gt;Your Blog&lt;/a&gt;.&#34;
+</span></span><span style="display:flex;"><span>    rssIntro              = true
+</span></span><span style="display:flex;"><span>    socialIntro           = true
+</span></span></code></pre></div><h3 id="paramsintropic">Params.intro.pic</h3>
 <p>This sub-section is a sub-section of the params.intro sub-section.  It is pretty easy to understand what is in this section, a logo that represents you and your blog site.  On my blog site, I used a headshot of myself.  But, you may want to get a little more creative and create or choose something more appealing to your style.</p>
 <p>Make sure that any image you create or choose is no more than 100 pixels (px) wide and no more than 100px in height.  Once you have determined the image you are going to use then store the image in the following directory of your site:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-plaintext" data-lang="plaintext">&lt;site root directory&gt;\static\img\main\
-</code></pre></div><p>If you decide to name the image logo.jpg, then the <code>src</code> line would appear as:  &ldquo;/img/main/logo.jpg&rdquo;</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-plaintext" data-lang="plaintext"><span style="display:flex;"><span>&lt;site root directory&gt;\static\img\main\
+</span></span></code></pre></div><p>If you decide to name the image logo.jpg, then the <code>src</code> line would appear as:  &ldquo;/img/main/logo.jpg&rdquo;</p>
 <p>Next, you need to pick the shape of the image mask for the site logo.  I went with a circle on my site.  Other options are:  triangle, diamond, or a hexagon.  The <code>shape</code> line is where you set this option.</p>
 <p>Optionally, you can set the width of the image on the <code>width</code> line.  I left this line at the default.</p>
 <p>For the <code>alt</code> line, I put a simple description of the logo image.  The browser uses this text as the image is downloaded.  I also believe it is used by sight-impaired folks who use special reading software to view websites.</p>
@@ -482,6 +469,21 @@ Here is a snippet of the params.intro sub-section after making the changes I men
       <article class="mini-post">
         <section>
           
+  <a href="/2023/02/23/2023-02-24-how-to-update-esxi-7.0u3d_to_7.0u3k_using_vsphere_lifecycle_manager/" class="image featured">
+    <img src="/img/2023/02/vSphere_LCM.png" alt="vSphere Lifecycle Manager">
+  </a>
+
+
+        </section>
+        <header>
+          <h1><a href="/2023/02/23/2023-02-24-how-to-update-esxi-7.0u3d_to_7.0u3k_using_vsphere_lifecycle_manager/">How to Update Esxi 7.0u3d to 7.0u3k using vSphere Lifecycle_Manager</a></h1>
+          <time class="published" datetime="">February 23, 2023</time>
+        </header>
+      </article>
+      
+      <article class="mini-post">
+        <section>
+          
   <a href="/2021/10/19/2021-10-19-how-to-encrypt-a-vm-using-vsphere-encryption/" class="image featured">
     <img src="/img/2021/10/ETKC-graphic.png" alt="VMware Encryption">
   </a>
@@ -509,21 +511,6 @@ Here is a snippet of the params.intro sub-section after making the changes I men
         </header>
       </article>
       
-      <article class="mini-post">
-        <section>
-          
-  <a href="/2021/10/08/2021-10-08-how-to-add-another-security-admin-from-ad/" class="image featured">
-    <img src="/img/2021/10/ETKC.png" alt="KeyControl graphic">
-  </a>
-
-
-        </section>
-        <header>
-          <h1><a href="/2021/10/08/2021-10-08-how-to-add-another-security-admin-from-ad/">How to Add Another KeyControl Security Admin From Active Directory</a></h1>
-          <time class="published" datetime="">October 8, 2021</time>
-        </header>
-      </article>
-      
       
         <a href="/blog/" class="button">See more</a>
       
@@ -543,12 +530,12 @@ Here is a snippet of the params.intro sub-section after making the changes I men
           
           <li>
             
-              <a href="/categories/vmware/">vmware<span class="count">9</span></a>
+              <a href="/categories/vmware/">vmware<span class="count">10</span></a>
             
           
           <li>
             
-              <a href="/categories/howto/">howto<span class="count">8</span></a>
+              <a href="/categories/howto/">howto<span class="count">9</span></a>
             
           
           <li>
@@ -611,7 +598,7 @@ Here is a snippet of the params.intro sub-section after making the changes I men
 
 
 <li><a href="//linkedin.com/in/davidlstevens" target="_blank" rel="noopener" title="LinkedIn" class="fab fa-linkedin"></a></li>
-<li><a href="//linkedin.com/company/236893" target="_blank" rel="noopener" title="LinkedIn Company" class="fab fa-linkedin"></a></li>
+<li><a href="//linkedin.com/company/entrust" target="_blank" rel="noopener" title="LinkedIn Company" class="fab fa-linkedin"></a></li>
 
 
 
@@ -643,12 +630,12 @@ Here is a snippet of the params.intro sub-section after making the changes I men
   
   <p class="copyright">
     
-      &copy; 2021
+      &copy; 2023
       
         @PSUStevens Blog
       
     . <br>
-    Theme: <a href='https://github.com/pacollins/hugo-future-imperfect-slim' target='_blank' rel='noopener'>Hugo Future Imperfect Slim</a><br>A <a href='https://html5up.net/future-imperfect' target='_blank' rel='noopener'>HTML5 UP port</a> | Powered by <a href='https://gohugo.io/' title='0.88.1' target='_blank' rel='noopener'>Hugo</a>
+    Theme: <a href='https://github.com/pacollins/hugo-future-imperfect-slim' target='_blank' rel='noopener'>Hugo Future Imperfect Slim</a><br>A <a href='https://html5up.net/future-imperfect' target='_blank' rel='noopener'>HTML5 UP port</a> | Powered by <a href='https://gohugo.io/' title='0.110.0' target='_blank' rel='noopener'>Hugo</a>
   </p>
 </footer>
 <a id="back-to-top" href="#" class="fas fa-arrow-up fa-2x"></a>

@@ -6,7 +6,17 @@
     <description>Recent content in VMware on @PSUStevens Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Tue, 19 Oct 2021 06:50:26 -0400</lastBuildDate><atom:link href="https://blog.psustevens.com/categories/vmware/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 23 Feb 2023 19:14:04 -0500</lastBuildDate><atom:link href="https://blog.psustevens.com/categories/vmware/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>How to Update Esxi 7.0u3d to 7.0u3k using vSphere Lifecycle_Manager</title>
+      <link>https://blog.psustevens.com/2023/02/23/2023-02-24-how-to-update-esxi-7.0u3d_to_7.0u3k_using_vsphere_lifecycle_manager/</link>
+      <pubDate>Thu, 23 Feb 2023 19:14:04 -0500</pubDate>
+      
+      <guid>https://blog.psustevens.com/2023/02/23/2023-02-24-how-to-update-esxi-7.0u3d_to_7.0u3k_using_vsphere_lifecycle_manager/</guid>
+      <description>Recently, I ran into an issue where I really needed to get my vSphere homelab upgraded to version 7.0U3k. More on why this was so urgent in a future post. However, I was still back on 7.0U3d. To get to 7.0U3 I used vSphere Lifecycle Manager (vLCM). In case you missed it, vSphere Lifecycle Manager is built into vSphere 7.
+If you aren&amp;rsquo;t familiar with vLCM, then you can read more about vSphere Lifecycle Manager over here: https://blogs.</description>
+    </item>
+    
     <item>
       <title>How to Encrypt a VM Using vSphere Encryption</title>
       <link>https://blog.psustevens.com/2021/10/19/2021-10-19-how-to-encrypt-a-vm-using-vsphere-encryption/</link>
@@ -14,8 +24,8 @@
       
       <guid>https://blog.psustevens.com/2021/10/19/2021-10-19-how-to-encrypt-a-vm-using-vsphere-encryption/</guid>
       <description>To get started here is what you will need to complete the steps in this post:
- A deployed Entrust KeyControl v5.4 cluster (Click this sentence to learn how to do this) vCenter and ESXi Host(s) running vSphere 7.x or higher Trusted connection between Entrust KeyControl and vCenter (Click this sentence to learn how to do this) Powered-off VM  Now, let&amp;rsquo;s get started&amp;hellip;
- Select a VM to Encrypt   Right click a VM and select VM Policies, Edit VM Storage Policies</description>
+A deployed Entrust KeyControl v5.4 cluster (Click this sentence to learn how to do this) vCenter and ESXi Host(s) running vSphere 7.x or higher Trusted connection between Entrust KeyControl and vCenter (Click this sentence to learn how to do this) Powered-off VM Now, let&amp;rsquo;s get started&amp;hellip;
+Select a VM to Encrypt Right click a VM and select VM Policies, Edit VM Storage Policies</description>
     </item>
     
     <item>
@@ -25,9 +35,9 @@
       
       <guid>https://blog.psustevens.com/2021/10/12/2021-10-12-how-to-add-keycontrol-as-a-key-provider-in-vsphere7/</guid>
       <description>To get started here is what you will need to complete the steps in this post:
- A deployed Entrust KeyControl v5.4 cluster (Click this sentence to learn how to do this) vCenter and ESXi Host(s) running vSphere 7.x  Now, let&amp;rsquo;s get started&amp;hellip;
- Enable the KMIP Server in KeyControl   Log in to the deployed Entrust KeyControl cluster and click the KMIP menu item.
- KMIP menu item      KMIP Server Settings This is the screen where you will enable and make changes to the KMIP server settings.</description>
+A deployed Entrust KeyControl v5.4 cluster (Click this sentence to learn how to do this) vCenter and ESXi Host(s) running vSphere 7.x Now, let&amp;rsquo;s get started&amp;hellip;
+Enable the KMIP Server in KeyControl Log in to the deployed Entrust KeyControl cluster and click the KMIP menu item.
+KMIP menu item KMIP Server Settings This is the screen where you will enable and make changes to the KMIP server settings.</description>
     </item>
     
     <item>
@@ -37,8 +47,8 @@
       
       <guid>https://blog.psustevens.com/2021/10/08/2021-10-08-how-to-add-another-security-admin-from-ad/</guid>
       <description>To get started here is what you will need to complete the steps in this post:
- A deployed Entrust KeyControl v5.4 cluster connected to Active Directory (Click this sentence to learn how to do this) Active Directory account info to be added  Now, let&amp;rsquo;s get started&amp;hellip;
-Add a Second KeyControl Security Administrator from Active Directory   Click Security from the menu bar then click the blue Actions button and select Create User</description>
+A deployed Entrust KeyControl v5.4 cluster connected to Active Directory (Click this sentence to learn how to do this) Active Directory account info to be added Now, let&amp;rsquo;s get started&amp;hellip;
+Add a Second KeyControl Security Administrator from Active Directory Click Security from the menu bar then click the blue Actions button and select Create User</description>
     </item>
     
     <item>
@@ -48,9 +58,9 @@ Add a Second KeyControl Security Administrator from Active Directory   Click Sec
       
       <guid>https://blog.psustevens.com/2021/10/05/2021-10-05-how-to-connect-keycontrol-5.4-to-activedirectory/</guid>
       <description>To get started here is what you will need to complete the steps in this post:
- A deployed Entrust KeyControl v5.4 cluster (Click this sentence to learn how to do this) Active Directory service account  Now, let&amp;rsquo;s get started&amp;hellip;
-Connect KeyControl to Active Directory   Log in to the deployed Entrust KeyControl cluster. Once logged in:
- Click the Settings menu item Under the &amp;ldquo;General Settings&amp;rdquo; group click Authentication   Settings &amp;gt; Authentication     Click the Type drop-down box and select LDAP from the list.</description>
+A deployed Entrust KeyControl v5.4 cluster (Click this sentence to learn how to do this) Active Directory service account Now, let&amp;rsquo;s get started&amp;hellip;
+Connect KeyControl to Active Directory Log in to the deployed Entrust KeyControl cluster. Once logged in:
+Click the Settings menu item Under the &amp;ldquo;General Settings&amp;rdquo; group click Authentication Settings &amp;gt; Authentication Click the Type drop-down box and select LDAP from the list.</description>
     </item>
     
     <item>
@@ -70,7 +80,7 @@ This post is very similar. The difference between it and the last post is that I
       
       <guid>https://blog.psustevens.com/2020/11/04/add-a-hytrust-kms-to-vcenter-v7/</guid>
       <description>Introduction In my How to Deploy a HyTrust KeyControl 2-node Cluster post I walked through the steps for deploying and configuring a 2-node HyTrust KeyControl cluster. Now that you have it deployed, let&amp;rsquo;s start using it. But before we can do that, we need to add it vCenter as a Key Provider. Let&amp;rsquo;s go!!
- Before Starting Before starting, I want to clear up some terminology. If you are familiar with using encryption in vCenter 6.</description>
+Before Starting Before starting, I want to clear up some terminology. If you are familiar with using encryption in vCenter 6.</description>
     </item>
     
     <item>
@@ -80,7 +90,7 @@ This post is very similar. The difference between it and the last post is that I
       
       <guid>https://blog.psustevens.com/2020/10/31/how-to-deploy-a-hytrust-keycontrol-2-node-cluster/</guid>
       <description>To get started here is what you will need to complete the steps in this post:
- KeyControl OVA v5.2.1 vCenter and ESX host at least version 6.5 or greater 2 vCPU, 8GB RAM, 60GB disk per KeyControl node Network address information such as:  IP address (one per node) Subnet mask Gateway address DNS server information DNS registered hostname for each node    Deploy the First HyTrust KeyControl Appliance  Log in to the Virtual Center Appliance (VCSA).</description>
+KeyControl OVA v5.2.1 vCenter and ESX host at least version 6.5 or greater 2 vCPU, 8GB RAM, 60GB disk per KeyControl node Network address information such as: IP address (one per node) Subnet mask Gateway address DNS server information DNS registered hostname for each node Deploy the First HyTrust KeyControl Appliance Log in to the Virtual Center Appliance (VCSA).</description>
     </item>
     
     <item>

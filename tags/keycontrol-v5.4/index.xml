@@ -14,8 +14,8 @@
       
       <guid>https://blog.psustevens.com/2021/10/19/2021-10-19-how-to-encrypt-a-vm-using-vsphere-encryption/</guid>
       <description>To get started here is what you will need to complete the steps in this post:
- A deployed Entrust KeyControl v5.4 cluster (Click this sentence to learn how to do this) vCenter and ESXi Host(s) running vSphere 7.x or higher Trusted connection between Entrust KeyControl and vCenter (Click this sentence to learn how to do this) Powered-off VM  Now, let&amp;rsquo;s get started&amp;hellip;
- Select a VM to Encrypt   Right click a VM and select VM Policies, Edit VM Storage Policies</description>
+A deployed Entrust KeyControl v5.4 cluster (Click this sentence to learn how to do this) vCenter and ESXi Host(s) running vSphere 7.x or higher Trusted connection between Entrust KeyControl and vCenter (Click this sentence to learn how to do this) Powered-off VM Now, let&amp;rsquo;s get started&amp;hellip;
+Select a VM to Encrypt Right click a VM and select VM Policies, Edit VM Storage Policies</description>
     </item>
     
     <item>
@@ -25,9 +25,9 @@
       
       <guid>https://blog.psustevens.com/2021/10/12/2021-10-12-how-to-add-keycontrol-as-a-key-provider-in-vsphere7/</guid>
       <description>To get started here is what you will need to complete the steps in this post:
- A deployed Entrust KeyControl v5.4 cluster (Click this sentence to learn how to do this) vCenter and ESXi Host(s) running vSphere 7.x  Now, let&amp;rsquo;s get started&amp;hellip;
- Enable the KMIP Server in KeyControl   Log in to the deployed Entrust KeyControl cluster and click the KMIP menu item.
- KMIP menu item      KMIP Server Settings This is the screen where you will enable and make changes to the KMIP server settings.</description>
+A deployed Entrust KeyControl v5.4 cluster (Click this sentence to learn how to do this) vCenter and ESXi Host(s) running vSphere 7.x Now, let&amp;rsquo;s get started&amp;hellip;
+Enable the KMIP Server in KeyControl Log in to the deployed Entrust KeyControl cluster and click the KMIP menu item.
+KMIP menu item KMIP Server Settings This is the screen where you will enable and make changes to the KMIP server settings.</description>
     </item>
     
   </channel>

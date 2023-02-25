@@ -14,7 +14,7 @@
       
       <guid>https://blog.psustevens.com/2020/10/26/building-a-blog-with-hugo-part5/</guid>
       <description>It&amp;rsquo;s been a long time since I last updated this series. I apologize to anyone who is following it and lost interest. I hope to be quicker in future series I write.
- Introduction In this post, I will walk through what I do to publish my blog to Github. I use private and public repositories and GitHub Desktop. This way, I can do some testing in my private repo before pushing it to my public repo.</description>
+Introduction In this post, I will walk through what I do to publish my blog to Github. I use private and public repositories and GitHub Desktop. This way, I can do some testing in my private repo before pushing it to my public repo.</description>
     </item>
     
     <item>
@@ -24,7 +24,7 @@
       
       <guid>https://blog.psustevens.com/2019/12/20/building-a-blog-with-hugo-part4/</guid>
       <description>In the previous post, I covered how to customize the theme for your Hugo site. I apologize if it was a bit long. This post is considerably shorter. In this post, I&amp;rsquo;m going to walk through how to configure Google Analytics for your site. Let&amp;rsquo;s get started.
- Before we get started&amp;hellip; If you are already familiar with Google Analytics, then this will be a short read for you. All you need to do is:</description>
+Before we get started&amp;hellip; If you are already familiar with Google Analytics, then this will be a short read for you. All you need to do is:</description>
     </item>
     
     <item>
@@ -43,7 +43,7 @@
       
       <guid>https://blog.psustevens.com/2019/11/01/building-a-blog-with-hugo-part2/</guid>
       <description>In the first part of this series, I wrote about why I chose to use Hugo to develop this blog and GitHub Pages to host it. In this post, I&amp;rsquo;m going to walk through the steps to create a Hugo site, apply a theme, and create a very simple blog post. So, let&amp;rsquo;s get going!
- Before You Get Started Before you get started, you need to gather a few bits and bytes.</description>
+Before You Get Started Before you get started, you need to gather a few bits and bytes.</description>
     </item>
     
     <item>

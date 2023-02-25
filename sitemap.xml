@@ -3,13 +3,43 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://blog.psustevens.com/</loc>
-    <lastmod>2021-10-19T06:50:26-04:00</lastmod>
+    <lastmod>2023-02-23T19:14:04-05:00</lastmod>
   </url><url>
     <loc>https://blog.psustevens.com/blog/</loc>
-    <lastmod>2021-10-19T06:50:26-04:00</lastmod>
+    <lastmod>2023-02-23T19:14:04-05:00</lastmod>
   </url><url>
     <loc>https://blog.psustevens.com/categories/</loc>
-    <lastmod>2021-10-19T06:50:26-04:00</lastmod>
+    <lastmod>2023-02-23T19:14:04-05:00</lastmod>
+  </url><url>
+    <loc>https://blog.psustevens.com/tags/esxi/</loc>
+    <lastmod>2023-02-23T19:14:04-05:00</lastmod>
+  </url><url>
+    <loc>https://blog.psustevens.com/2023/02/23/2023-02-24-how-to-update-esxi-7.0u3d_to_7.0u3k_using_vsphere_lifecycle_manager/</loc>
+    <lastmod>2023-02-23T19:14:04-05:00</lastmod>
+  </url><url>
+    <loc>https://blog.psustevens.com/categories/howto/</loc>
+    <lastmod>2023-02-23T19:14:04-05:00</lastmod>
+  </url><url>
+    <loc>https://blog.psustevens.com/tags/lifecycle-manager/</loc>
+    <lastmod>2023-02-23T19:14:04-05:00</lastmod>
+  </url><url>
+    <loc>https://blog.psustevens.com/tags/</loc>
+    <lastmod>2023-02-23T19:14:04-05:00</lastmod>
+  </url><url>
+    <loc>https://blog.psustevens.com/tags/update/</loc>
+    <lastmod>2023-02-23T19:14:04-05:00</lastmod>
+  </url><url>
+    <loc>https://blog.psustevens.com/tags/vcenter/</loc>
+    <lastmod>2023-02-23T19:14:04-05:00</lastmod>
+  </url><url>
+    <loc>https://blog.psustevens.com/tags/vmware/</loc>
+    <lastmod>2023-02-23T19:14:04-05:00</lastmod>
+  </url><url>
+    <loc>https://blog.psustevens.com/categories/vmware/</loc>
+    <lastmod>2023-02-23T19:14:04-05:00</lastmod>
+  </url><url>
+    <loc>https://blog.psustevens.com/tags/vsphere/</loc>
+    <lastmod>2023-02-23T19:14:04-05:00</lastmod>
   </url><url>
     <loc>https://blog.psustevens.com/tags/encrypt/</loc>
     <lastmod>2021-10-19T06:50:26-04:00</lastmod>
@@ -21,9 +51,6 @@
     <lastmod>2021-10-19T06:50:26-04:00</lastmod>
   </url><url>
     <loc>https://blog.psustevens.com/2021/10/19/2021-10-19-how-to-encrypt-a-vm-using-vsphere-encryption/</loc>
-    <lastmod>2021-10-19T06:50:26-04:00</lastmod>
-  </url><url>
-    <loc>https://blog.psustevens.com/categories/howto/</loc>
     <lastmod>2021-10-19T06:50:26-04:00</lastmod>
   </url><url>
     <loc>https://blog.psustevens.com/categories/hytrust/</loc>
@@ -42,15 +69,6 @@
     <lastmod>2021-10-19T06:50:26-04:00</lastmod>
   </url><url>
     <loc>https://blog.psustevens.com/tags/kms/</loc>
-    <lastmod>2021-10-19T06:50:26-04:00</lastmod>
-  </url><url>
-    <loc>https://blog.psustevens.com/tags/</loc>
-    <lastmod>2021-10-19T06:50:26-04:00</lastmod>
-  </url><url>
-    <loc>https://blog.psustevens.com/tags/vcenter/</loc>
-    <lastmod>2021-10-19T06:50:26-04:00</lastmod>
-  </url><url>
-    <loc>https://blog.psustevens.com/categories/vmware/</loc>
     <lastmod>2021-10-19T06:50:26-04:00</lastmod>
   </url><url>
     <loc>https://blog.psustevens.com/2021/10/12/2021-10-12-how-to-add-keycontrol-as-a-key-provider-in-vsphere7/</loc>
@@ -143,6 +161,6 @@
     <loc>https://blog.psustevens.com/about/</loc>
     <lastmod>2019-09-09T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://blog.psustevens.com/contact/_index.de/</loc>
+    <loc>https://blog.psustevens.com/contact/</loc>
   </url>
 </urlset>

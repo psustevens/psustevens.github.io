@@ -7,14 +7,13 @@
 
 
 
-  <meta name="generator" content="Hugo 0.88.1" />
+  <meta name="generator" content="Hugo 0.110.0">
   <meta itemprop="name" content="HowTo">
 <meta itemprop="description" content="">
   <meta property="og:title" content="HowTo" />
 <meta property="og:description" content="" />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="https://blog.psustevens.com/categories/howto/" />
-
 
   <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="HowTo"/>
@@ -137,12 +136,6 @@ if (!doNotTrack) {
         </a>
   
 
-  
-    <a href="//www.reddit.com/submit?url=https%3a%2f%2fblog.psustevens.com%2fcategories%2fhowto%2f&amp;title=HowTo" target="_blank" rel="noopener" class="share-btn reddit">
-          <i class="fab fa-reddit-alien"></i><p>&nbsp;Reddit</p>
-        </a>
-  
-
 
     </menu>
   
@@ -177,7 +170,7 @@ if (!doNotTrack) {
 
 
 <li><a href="//linkedin.com/in/davidlstevens" target="_blank" rel="noopener" title="LinkedIn" class="fab fa-linkedin"></a></li>
-<li><a href="//linkedin.com/company/236893" target="_blank" rel="noopener" title="LinkedIn Company" class="fab fa-linkedin"></a></li>
+<li><a href="//linkedin.com/company/entrust" target="_blank" rel="noopener" title="LinkedIn Company" class="fab fa-linkedin"></a></li>
 
 
 
@@ -213,6 +206,91 @@ if (!doNotTrack) {
       <main id="site-main">
         <h1>HowTo</h1>
         
+        
+            <article class="post">
+  <header>
+  <div class="title">
+    
+        <h2><a href="/2021/10/08/2021-10-08-how-to-add-another-security-admin-from-ad/">How to Add Another KeyControl Security Admin From Active Directory</a></h2>
+    
+    
+        <p>This post will show how to add another Security Admin to Entrust KeyControl from Active Directory.</p>
+    
+</div>
+  <div class="meta">
+    <time class="published" datetime="2021-10-08 08:08:04 -0400 EDT">
+      October 8, 2021
+    </time>
+    <span class="author">PSUStevens</span>
+    
+      <p>3 minutes read</p>
+    
+  </div>
+</header>
+
+  
+  <a href="/2021/10/08/2021-10-08-how-to-add-another-security-admin-from-ad/" class="image featured">
+    <img src="/img/2021/10/ETKC.png" alt="KeyControl graphic">
+  </a>
+
+
+  
+  <p>To get started here is what you will need to complete the steps in this post:</p>
+  <footer>
+    <a href="/2021/10/08/2021-10-08-how-to-add-another-security-admin-from-ad/" class="button big">Read more</a>
+    <ul class="stats">
+  
+    
+    
+      <li class="categories">
+        <ul>
+          
+            
+            <li><a class="article-category-link" href="https://blog.psustevens.com/categories/entrust">Entrust</a></li>
+          
+            
+            <li><a class="article-category-link" href="https://blog.psustevens.com/categories/hytrust">HyTrust</a></li>
+          
+            
+            <li><a class="article-category-link" href="https://blog.psustevens.com/categories/vmware">VMware</a></li>
+          
+            
+            <li><a class="article-category-link" href="https://blog.psustevens.com/categories/howto">HowTo</a></li>
+          
+        </ul>
+      </li>
+    
+  
+  
+    
+    
+      <li class="tags">
+        <ul>
+          
+            
+            <li><a class="article-category-link" href="https://blog.psustevens.com/tags/keycontrol">KeyControl</a></li>
+          
+            
+            <li><a class="article-category-link" href="https://blog.psustevens.com/tags/kms">KMS</a></li>
+          
+            
+            <li><a class="article-category-link" href="https://blog.psustevens.com/tags/key-management-server">Key Management Server</a></li>
+          
+            
+            <li><a class="article-category-link" href="https://blog.psustevens.com/tags/active-directory">Active Directory</a></li>
+          
+            
+            <li><a class="article-category-link" href="https://blog.psustevens.com/tags/security-admin">Security Admin</a></li>
+          
+        </ul>
+      </li>
+    
+  
+</ul>
+
+  </footer>
+</article>
+
         
             <article class="post">
   <header>
@@ -381,82 +459,6 @@ if (!doNotTrack) {
 </article>
 
         
-            <article class="post">
-  <header>
-  <div class="title">
-    
-        <h2><a href="/2020/11/04/add-a-hytrust-kms-to-vcenter-v7/">Add a HyTrust KMS to vCenter v7 as a Key Provider</a></h2>
-    
-    
-        <p>In vCenter 7 VMware moved away from the term KMS (Key Management Server) to Key Provider.  This post will explain how to add HyTrust KeyControl as a Key Provider in vCenter 7.</p>
-    
-</div>
-  <div class="meta">
-    <time class="published" datetime="2020-11-04 08:07:16 -0500 EST">
-      November 4, 2020
-    </time>
-    <span class="author">PSUStevens</span>
-    
-      <p>4 minutes read</p>
-    
-  </div>
-</header>
-
-  
-  <a href="/2020/11/04/add-a-hytrust-kms-to-vcenter-v7/" class="image featured">
-    <img src="/img/2020/11/vCenter-KeyProvider.png" alt="vCenter Key Provider (KMS)">
-  </a>
-
-
-  
-  <p>In my <a href="/2020/10/31/how-to-deploy-a-hytrust-keycontrol-2-node-cluster/">How to Deploy a HyTrust KeyControl 2-node Cluster post</a> I walked through the steps for deploying and configuring a 2-node <a href="https://www.hytrust.com/products/keycontrol/">HyTrust KeyControl</a> cluster.  Now that you have it deployed, let&rsquo;s start using it.  But before we can do that, we need to add it vCenter as a Key Provider.  Let&rsquo;s go!!</p>
-  <footer>
-    <a href="/2020/11/04/add-a-hytrust-kms-to-vcenter-v7/" class="button big">Read more</a>
-    <ul class="stats">
-  
-    
-    
-      <li class="categories">
-        <ul>
-          
-            
-            <li><a class="article-category-link" href="https://blog.psustevens.com/categories/hytrust">HyTrust</a></li>
-          
-            
-            <li><a class="article-category-link" href="https://blog.psustevens.com/categories/vmware">VMware</a></li>
-          
-            
-            <li><a class="article-category-link" href="https://blog.psustevens.com/categories/howto">HowTo</a></li>
-          
-        </ul>
-      </li>
-    
-  
-  
-    
-    
-      <li class="tags">
-        <ul>
-          
-            
-            <li><a class="article-category-link" href="https://blog.psustevens.com/tags/kms">KMS</a></li>
-          
-            
-            <li><a class="article-category-link" href="https://blog.psustevens.com/tags/key-management-server">Key Management Server</a></li>
-          
-            
-            <li><a class="article-category-link" href="https://blog.psustevens.com/tags/vcenter">vCenter</a></li>
-          
-        </ul>
-      </li>
-    
-  
-</ul>
-
-  </footer>
-</article>
-
-        
         
 <div class="pagination">
   
@@ -474,6 +476,21 @@ if (!doNotTrack) {
       <header>
         <h1>Recent posts</h1>
       </header>
+      
+      <article class="mini-post">
+        <section>
+          
+  <a href="/2023/02/23/2023-02-24-how-to-update-esxi-7.0u3d_to_7.0u3k_using_vsphere_lifecycle_manager/" class="image featured">
+    <img src="/img/2023/02/vSphere_LCM.png" alt="vSphere Lifecycle Manager">
+  </a>
+
+
+        </section>
+        <header>
+          <h1><a href="/2023/02/23/2023-02-24-how-to-update-esxi-7.0u3d_to_7.0u3k_using_vsphere_lifecycle_manager/">How to Update Esxi 7.0u3d to 7.0u3k using vSphere Lifecycle_Manager</a></h1>
+          <time class="published" datetime="">February 23, 2023</time>
+        </header>
+      </article>
       
       <article class="mini-post">
         <section>
@@ -505,21 +522,6 @@ if (!doNotTrack) {
         </header>
       </article>
       
-      <article class="mini-post">
-        <section>
-          
-  <a href="/2021/10/08/2021-10-08-how-to-add-another-security-admin-from-ad/" class="image featured">
-    <img src="/img/2021/10/ETKC.png" alt="KeyControl graphic">
-  </a>
-
-
-        </section>
-        <header>
-          <h1><a href="/2021/10/08/2021-10-08-how-to-add-another-security-admin-from-ad/">How to Add Another KeyControl Security Admin From Active Directory</a></h1>
-          <time class="published" datetime="">October 8, 2021</time>
-        </header>
-      </article>
-      
       
         <a href="/blog/" class="button">See more</a>
       
@@ -539,12 +541,12 @@ if (!doNotTrack) {
           
           <li>
             
-              <a href="/categories/vmware/">vmware<span class="count">9</span></a>
+              <a href="/categories/vmware/">vmware<span class="count">10</span></a>
             
           
           <li>
             
-              <a href="/categories/howto/">howto<span class="count">8</span></a>
+              <a href="/categories/howto/">howto<span class="count">9</span></a>
             
           
           <li>
@@ -609,7 +611,7 @@ if (!doNotTrack) {
 
 
 <li><a href="//linkedin.com/in/davidlstevens" target="_blank" rel="noopener" title="LinkedIn" class="fab fa-linkedin"></a></li>
-<li><a href="//linkedin.com/company/236893" target="_blank" rel="noopener" title="LinkedIn Company" class="fab fa-linkedin"></a></li>
+<li><a href="//linkedin.com/company/entrust" target="_blank" rel="noopener" title="LinkedIn Company" class="fab fa-linkedin"></a></li>
 
 
 
@@ -641,12 +643,12 @@ if (!doNotTrack) {
   
   <p class="copyright">
     
-      &copy; 2021
+      &copy; 2023
       
         @PSUStevens Blog
       
     . <br>
-    Theme: <a href='https://github.com/pacollins/hugo-future-imperfect-slim' target='_blank' rel='noopener'>Hugo Future Imperfect Slim</a><br>A <a href='https://html5up.net/future-imperfect' target='_blank' rel='noopener'>HTML5 UP port</a> | Powered by <a href='https://gohugo.io/' title='0.88.1' target='_blank' rel='noopener'>Hugo</a>
+    Theme: <a href='https://github.com/pacollins/hugo-future-imperfect-slim' target='_blank' rel='noopener'>Hugo Future Imperfect Slim</a><br>A <a href='https://html5up.net/future-imperfect' target='_blank' rel='noopener'>HTML5 UP port</a> | Powered by <a href='https://gohugo.io/' title='0.110.0' target='_blank' rel='noopener'>Hugo</a>
   </p>
 </footer>
 <a id="back-to-top" href="#" class="fas fa-arrow-up fa-2x"></a>

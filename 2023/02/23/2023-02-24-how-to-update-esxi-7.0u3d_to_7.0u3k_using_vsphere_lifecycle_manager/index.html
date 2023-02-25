@@ -1,0 +1,617 @@
+<!doctype html>
+<html lang="en">
+  <head>
+  <meta charset="utf-8">
+<title>How to Update Esxi 7.0u3d to 7.0u3k using vSphere Lifecycle_Manager - @PSUStevens Blog</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+
+  <meta name="generator" content="Hugo 0.110.0">
+  <meta itemprop="name" content="How to Update Esxi 7.0u3d to 7.0u3k using vSphere Lifecycle_Manager">
+<meta itemprop="description" content="This post will cover how to update an ESXi host to 7.0u3k from 7.0u3 using vSphere Lifecycle Manager."><meta itemprop="datePublished" content="2023-02-23T19:14:04-05:00" />
+<meta itemprop="dateModified" content="2023-02-23T19:14:04-05:00" />
+<meta itemprop="wordCount" content="513">
+<meta itemprop="keywords" content="VMware,vCenter,vSphere,ESXi,Update,Lifecycle Manager," />
+  <meta property="og:title" content="How to Update Esxi 7.0u3d to 7.0u3k using vSphere Lifecycle_Manager" />
+<meta property="og:description" content="This post will cover how to update an ESXi host to 7.0u3k from 7.0u3 using vSphere Lifecycle Manager." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://blog.psustevens.com/2023/02/23/2023-02-24-how-to-update-esxi-7.0u3d_to_7.0u3k_using_vsphere_lifecycle_manager/" /><meta property="article:section" content="blog" />
+<meta property="article:published_time" content="2023-02-23T19:14:04-05:00" />
+<meta property="article:modified_time" content="2023-02-23T19:14:04-05:00" />
+
+  <meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="How to Update Esxi 7.0u3d to 7.0u3k using vSphere Lifecycle_Manager"/>
+<meta name="twitter:description" content="This post will cover how to update an ESXi host to 7.0u3k from 7.0u3 using vSphere Lifecycle Manager."/>
+<meta name="twitter:site" content="@PSUStevens"/>
+
+  
+  
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+	ga('create', 'UA-149142929-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+
+  <link rel="stylesheet"
+      href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/styles/github.min.css">
+  
+    
+      <link rel="stylesheet" href="/css/normalize.css">
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway:400,800,900|Source+Sans+Pro:400,700">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/academicons/1.8.6/css/academicons.min.css">
+      <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.9.0/css/all.css" integrity="sha384-i1LQnF23gykqWXg6jxC2ZbCbUMxyw5gLZY6UiUS98LYV5unm8GWmfkIS6jqJfb4E" crossorigin="anonymous">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.3.5/jquery.fancybox.min.css" />
+      
+      
+      <link rel="stylesheet" href="/css/main.min.0a64f3eede6e78edc2d8b2ca7051e4d9a6379f472dac76b1168733b88d27146a.css" integrity="sha256-CmTz7t5ueO3C2LLKcFHk2aY3n0ctrHaxFoczuI0nFGo=">
+      <link rel="stylesheet" href="/css/add-on.css">
+    
+  
+  
+  
+  
+</head>
+
+  <body>
+    
+<header id="site-header">
+  <nav id="site-nav">
+    <h1 class="nav-title">
+      <a href="/">
+        
+          
+            Blog
+          
+        
+      </a>
+    </h1>
+    <menu id="site-nav-menu" class="flyout-menu">
+      
+        
+          
+          
+            <a href="/" class="link"><i class='fa fa-home'></i> Home</a>
+          
+        
+      
+        
+          
+          
+            <a href="/about/" class="link"><i class='far fa-id-card'></i> About</a>
+          
+        
+      
+        
+          
+          
+            <a href="/blog/" class="link"><i class='far fa-newspaper'></i> Blog</a>
+          
+        
+      
+        
+          
+          
+            <a href="/categories/" class="link"><i class='fas fa-sitemap'></i> Categories</a>
+          
+        
+      
+      <a href="#share-menu" class="share-toggle"><i class="fas fa-share-alt">&nbsp;</i>Share</a>
+      
+
+    </menu>
+    
+
+    <a href="#share-menu" class="share-toggle"><i class="fas fa-share-alt fa-2x">&nbsp;</i></a>
+    
+    <a href="#site-nav" class="nav-toggle"><i class="fas fa-bars fa-2x"></i></a>
+  </nav>
+  
+  
+    <menu id="share-menu" class="flyout-menu">
+      <h1>Share Post</h1>
+      
+
+
+
+
+  
+    
+    <a href="//twitter.com/share?text=How%20to%20Update%20Esxi%207.0u3d%20to%207.0u3k%20using%20vSphere%20Lifecycle_Manager&amp;url=https%3a%2f%2fblog.psustevens.com%2f2023%2f02%2f23%2f2023-02-24-how-to-update-esxi-7.0u3d_to_7.0u3k_using_vsphere_lifecycle_manager%2f" target="_blank" rel="noopener" class="share-btn twitter">
+        <i class="fab fa-twitter"></i><p>&nbsp;Twitter</p>
+      </a>
+  
+
+  
+        <a href="//www.linkedin.com/shareArticle?url=https%3a%2f%2fblog.psustevens.com%2f2023%2f02%2f23%2f2023-02-24-how-to-update-esxi-7.0u3d_to_7.0u3k_using_vsphere_lifecycle_manager%2f&amp;title=How%20to%20Update%20Esxi%207.0u3d%20to%207.0u3k%20using%20vSphere%20Lifecycle_Manager" target="_blank" rel="noopener" class="share-btn linkedin">
+            <i class="fab fa-linkedin"></i><p>&nbsp;LinkedIn</p>
+          </a>
+  
+
+  
+        <a href="mailto:?subject=Check out this post by %7b%20%20%20%20%20%20%20%20map%5b%5d%7d&amp;body=https%3a%2f%2fblog.psustevens.com%2f2023%2f02%2f23%2f2023-02-24-how-to-update-esxi-7.0u3d_to_7.0u3k_using_vsphere_lifecycle_manager%2f" target="_blank" class="share-btn email" data-proofer-ignore>
+          <i class="fas fa-envelope"></i><p>&nbsp;Email</p>
+        </a>
+  
+
+
+    </menu>
+  
+</header>
+
+    <div id="wrapper">
+      <section id="site-intro">
+  <a href="/"><img src="/img/main/logo.jpg" class="circle" width="" alt="@PSUStevens headshot" /></a>
+  <header>
+    <h1>@PSUStevens blog</h1>
+  </header>
+  <main>
+    <p>You are reading the blog of <a href='https://twitter.com/PSUStevens'>@PSUStevens</a>.  </br>You can reach me through one of the social accounts below.</p>
+  </main>
+  
+    <footer>
+      <ul class="socnet-icons">
+        
+
+        <li><a href="//github.com/psustevens" target="_blank" rel="noopener" title="GitHub" class="fab fa-github"></a></li>
+
+
+
+
+
+
+
+
+
+
+
+<li><a href="//linkedin.com/in/davidlstevens" target="_blank" rel="noopener" title="LinkedIn" class="fab fa-linkedin"></a></li>
+<li><a href="//linkedin.com/company/entrust" target="_blank" rel="noopener" title="LinkedIn Company" class="fab fa-linkedin"></a></li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<li><a href="//twitter.com/PSUStevens" target="_blank" rel="noopener" title="Twitter" class="fab fa-twitter"></a></li>
+
+
+
+
+
+
+
+
+
+
+
+
+      </ul>
+    </footer>
+  
+</section>
+
+      <main id="site-main">
+        <article class="post">
+  <header>
+  <div class="title">
+    
+        <h2><a href="/2023/02/23/2023-02-24-how-to-update-esxi-7.0u3d_to_7.0u3k_using_vsphere_lifecycle_manager/">How to Update Esxi 7.0u3d to 7.0u3k using vSphere Lifecycle_Manager</a></h2>
+    
+    
+        <p>This post will cover how to update an ESXi host to 7.0u3k from 7.0u3 using vSphere Lifecycle Manager.</p>
+    
+</div>
+  <div class="meta">
+    <time class="published" datetime="2023-02-23 19:14:04 -0500 EST">
+      February 23, 2023
+    </time>
+    <span class="author">PSUStevens</span>
+    
+      <p>3 minutes read</p>
+    
+  </div>
+</header>
+
+  <section id="socnet-share">
+    
+
+
+
+
+  
+    
+    <a href="//twitter.com/share?text=How%20to%20Update%20Esxi%207.0u3d%20to%207.0u3k%20using%20vSphere%20Lifecycle_Manager&amp;url=https%3a%2f%2fblog.psustevens.com%2f2023%2f02%2f23%2f2023-02-24-how-to-update-esxi-7.0u3d_to_7.0u3k_using_vsphere_lifecycle_manager%2f" target="_blank" rel="noopener" class="share-btn twitter">
+        <i class="fab fa-twitter"></i><p>&nbsp;Twitter</p>
+      </a>
+  
+
+  
+        <a href="//www.linkedin.com/shareArticle?url=https%3a%2f%2fblog.psustevens.com%2f2023%2f02%2f23%2f2023-02-24-how-to-update-esxi-7.0u3d_to_7.0u3k_using_vsphere_lifecycle_manager%2f&amp;title=How%20to%20Update%20Esxi%207.0u3d%20to%207.0u3k%20using%20vSphere%20Lifecycle_Manager" target="_blank" rel="noopener" class="share-btn linkedin">
+            <i class="fab fa-linkedin"></i><p>&nbsp;LinkedIn</p>
+          </a>
+  
+
+  
+        <a href="mailto:?subject=Check out this post by %7b%20%20%20%20%20%20%20%20map%5b%5d%7d&amp;body=https%3a%2f%2fblog.psustevens.com%2f2023%2f02%2f23%2f2023-02-24-how-to-update-esxi-7.0u3d_to_7.0u3k_using_vsphere_lifecycle_manager%2f" target="_blank" class="share-btn email" data-proofer-ignore>
+          <i class="fas fa-envelope"></i><p>&nbsp;Email</p>
+        </a>
+  
+
+
+  </section>
+  
+  <a href="/2023/02/23/2023-02-24-how-to-update-esxi-7.0u3d_to_7.0u3k_using_vsphere_lifecycle_manager/" class="image featured">
+    <img src="/img/2023/02/vSphere_LCM.png" alt="vSphere Lifecycle Manager">
+  </a>
+
+
+  <div class="content">
+    <p>Recently, I ran into an issue where I really needed to get my vSphere homelab upgraded to version 7.0U3k.  More on why this was so urgent in a future post.  However, I was still back on 7.0U3d.  To get to 7.0U3 I used vSphere Lifecycle Manager (vLCM).  In case you missed it, vSphere Lifecycle Manager is built into vSphere 7.</p>
+<p>If you aren&rsquo;t familiar with vLCM, then you can read more about vSphere Lifecycle Manager over here:  <a href="https://blogs.vmware.com/vsphere/2020/04/vsphere-7-patching-lifecycle-management.html">https://blogs.vmware.com/vsphere/2020/04/vsphere-7-patching-lifecycle-management.html</a></p>
+<p>The great thing about vLCM is that it is an easy way to update ESX hosts in an automated fashion.  Continue reading to see how I made this super simple for myself.</p>
+<hr>
+<h2 id="lets-get-started">Let&rsquo;s get started!</h2>
+<p>To begin, login to vCenter.  Once you have logged in select Lifecycle Manager from the left-hand admin panel.</p>
+<figure><img src="/img/2023/02/24/vLCM_001.jpg"
+         alt="vSphere Lifecycle Manager menu option"/><figcaption>
+            <h4>vSphere Lifecycle Manager menu option</h4>
+        </figcaption>
+</figure>
+
+<p>This brings you to the vLCM interface.   You can see all of the updates which vLCM knows about.  The image below shows that I have selected ESXi 7.0U3k.  Details about the image are displayed to the right of the selected image along with the <a href="https://docs.vmware.com/en/VMware-vSphere/7.0/rn/vsphere-esxi-70u3k-release-notes.html">Release Notes.</a></p>
+<figure><img src="/img/2023/02/24/vLCM_002.jpg"
+         alt="7.0U3k update image"/><figcaption>
+            <h4>7.0U3k update image</h4>
+        </figcaption>
+</figure>
+
+<p>Now that you have determined the update image is available you can now move to the ESX host you want to update.</p>
+<p>Select your ESX host, click &ldquo;Update&rdquo; and then select &ldquo;Baselines&rdquo; if it isn&rsquo;t automatically selected.</p>
+<figure><img src="/img/2023/02/24/vLCM_003.jpg"
+         alt="ESX host update baselines"/><figcaption>
+            <h4>ESX host update baselines</h4>
+        </figcaption>
+</figure>
+
+<p>Scroll down the page and you will see the attached baselines.  You will see from the image below that I have 3 baselines attached to my selected host.  Before I began the update the ESX 7.0U3d baseline was the only attached baseline.  I created this baseline quite a while ago.  If this is the first time you have used vLCM then you may not have any baselines or you have the top two baselines in the list, but the status is not showing as &ldquo;Compliant.&rdquo;</p>
+<figure><img src="/img/2023/02/24/vLCM_004.jpg"
+         alt="Available baselines"/><figcaption>
+            <h4>Available baselines</h4>
+        </figcaption>
+</figure>
+
+<p>Next select the top two baselines then click Attach, then &ldquo;Attach Baseline or Baseline Group&rdquo;</p>
+<figure><img src="/img/2023/02/24/vLCM_005.jpg"
+         alt="Attach Baseline"/><figcaption>
+            <h4>Attach Baseline</h4>
+        </figcaption>
+</figure>
+
+<p>Select the baselines I show in the image below and click the Attach button.  You will now have the following baselines attached to your ESXi host.</p>
+<ul>
+<li>Host Security Patches (Predefined)</li>
+<li>Critical Host Patches (Predefined)</li>
+</ul>
+<figure><img src="/img/2023/02/24/vLCM_006.jpg"
+         alt="Attach Baseline"/><figcaption>
+            <h4>Attach Baseline</h4>
+        </figcaption>
+</figure>
+
+<p>Now all you have to do is select the baselines you just attached to your host.  Then click &ldquo;Remediate.&rdquo;</p>
+<figure><img src="/img/2023/02/24/vLCM_007.jpg"
+         alt="Attach Baseline"/><figcaption>
+            <h4>Attach Baseline</h4>
+        </figcaption>
+</figure>
+
+<p>Wait several minutes for the process to complete and you will then have an updated host.</p>
+<p><em><strong>NOTE:  When you click Remediate you will have the option to move all VMs, including powered-off VMs, off the host.  This is assuming you have <a href="https://www.vmware.com/products/vsphere/drs-dpm.html">DRS</a> enabled in your cluster.</strong></em></p>
+<p>This is what your host should look like once the remediation completes.  Obvisously, you won&rsquo;t have the third baseline attached to your host.</p>
+<figure><img src="/img/2023/02/24/vLCM_004.jpg"
+         alt="Compliant host"/><figcaption>
+            <h4>Compliant host</h4>
+        </figcaption>
+</figure>
+
+<p>I hope this post has helped you.</p>
+<h2 id="related-posts">Related Posts</h2>
+<p>Here is a link to an alternative update process from my vCommunity buddy <a href="https://twitter.com/al_rasheed">Al Rasheed</a></p>
+<ul>
+<li><a href="https://alarasheedblog.wordpress.com/2023/02/22/how-to-update-to-vmware-esxi-7-0-3-update-3k-build-21313628/">How to update to vSphere 7.0U3k using the ESXi Host Client</a></li>
+</ul>
+<p>If there is something you think I&rsquo;m missing and feel should be added, <a href="http://twitter.com/PSUStevens">please let me know.</a></p>
+<p>Thanks for reading!</p>
+
+  </div>
+  <footer>
+    <ul class="stats">
+  
+    
+    
+      <li class="categories">
+        <ul>
+          
+            
+            <li><a class="article-category-link" href="https://blog.psustevens.com/categories/vmware">VMware</a></li>
+          
+            
+            <li><a class="article-category-link" href="https://blog.psustevens.com/categories/howto">HowTo</a></li>
+          
+        </ul>
+      </li>
+    
+  
+  
+    
+    
+      <li class="tags">
+        <ul>
+          
+            
+            <li><a class="article-category-link" href="https://blog.psustevens.com/tags/vmware">VMware</a></li>
+          
+            
+            <li><a class="article-category-link" href="https://blog.psustevens.com/tags/vcenter">vCenter</a></li>
+          
+            
+            <li><a class="article-category-link" href="https://blog.psustevens.com/tags/vsphere">vSphere</a></li>
+          
+            
+            <li><a class="article-category-link" href="https://blog.psustevens.com/tags/esxi">ESXi</a></li>
+          
+            
+            <li><a class="article-category-link" href="https://blog.psustevens.com/tags/update">Update</a></li>
+          
+            
+            <li><a class="article-category-link" href="https://blog.psustevens.com/tags/lifecycle-manager">Lifecycle Manager</a></li>
+          
+        </ul>
+      </li>
+    
+  
+</ul>
+
+  </footer>
+</article>
+
+
+<div class="pagination">
+  
+    <a href="/2021/10/19/2021-10-19-how-to-encrypt-a-vm-using-vsphere-encryption/" class="button big previous"><i class="fas fa-angle-left"></i> How to Encrypt a VM Using vSphere Encryption</a>
+  
+  
+</div>
+
+
+      </main>
+      <section id="site-sidebar">
+  
+    <section id="recent-posts">
+      <header>
+        <h1>Recent posts</h1>
+      </header>
+      
+      <article class="mini-post">
+        <section>
+          
+  <a href="/2023/02/23/2023-02-24-how-to-update-esxi-7.0u3d_to_7.0u3k_using_vsphere_lifecycle_manager/" class="image featured">
+    <img src="/img/2023/02/vSphere_LCM.png" alt="vSphere Lifecycle Manager">
+  </a>
+
+
+        </section>
+        <header>
+          <h1><a href="/2023/02/23/2023-02-24-how-to-update-esxi-7.0u3d_to_7.0u3k_using_vsphere_lifecycle_manager/">How to Update Esxi 7.0u3d to 7.0u3k using vSphere Lifecycle_Manager</a></h1>
+          <time class="published" datetime="">February 23, 2023</time>
+        </header>
+      </article>
+      
+      <article class="mini-post">
+        <section>
+          
+  <a href="/2021/10/19/2021-10-19-how-to-encrypt-a-vm-using-vsphere-encryption/" class="image featured">
+    <img src="/img/2021/10/ETKC-graphic.png" alt="VMware Encryption">
+  </a>
+
+
+        </section>
+        <header>
+          <h1><a href="/2021/10/19/2021-10-19-how-to-encrypt-a-vm-using-vsphere-encryption/">How to Encrypt a VM Using vSphere Encryption</a></h1>
+          <time class="published" datetime="">October 19, 2021</time>
+        </header>
+      </article>
+      
+      <article class="mini-post">
+        <section>
+          
+  <a href="/2021/10/12/2021-10-12-how-to-add-keycontrol-as-a-key-provider-in-vsphere7/" class="image featured">
+    <img src="/img/2021/10/vCenter-KeyProvider-v2.png" alt="Key Management (KMS) and vCenter Key Provider">
+  </a>
+
+
+        </section>
+        <header>
+          <h1><a href="/2021/10/12/2021-10-12-how-to-add-keycontrol-as-a-key-provider-in-vsphere7/">How to Add KeyControl v5.4 as a Key Provider in VSphere 7</a></h1>
+          <time class="published" datetime="">October 12, 2021</time>
+        </header>
+      </article>
+      
+      
+        <a href="/blog/" class="button">See more</a>
+      
+    </section>
+  
+
+  
+    
+      <section id="categories">
+        <header>
+          <h1><a href="/categories">Categories</a></h1>
+        </header>
+        <ul>
+          
+            
+          
+          
+          <li>
+            
+              <a href="/categories/vmware/">vmware<span class="count">10</span></a>
+            
+          
+          <li>
+            
+              <a href="/categories/howto/">howto<span class="count">9</span></a>
+            
+          
+          <li>
+            
+              <a href="/categories/hytrust/">hytrust<span class="count">7</span></a>
+            
+          
+          <li>
+            
+              <a href="/categories/blogging/">blogging<span class="count">6</span></a>
+            
+          
+          <li>
+            
+              <a href="/categories/entrust/">entrust<span class="count">5</span></a>
+            
+          
+          <li>
+            
+              <a href="/categories/career/">career<span class="count">2</span></a>
+            
+          
+          <li>
+            
+              <a href="/categories/psustevens/">psustevens<span class="count">1</span></a>
+            
+          
+          </li>
+        </ul>
+      </section>
+    
+  
+
+  <section id="mini-bio">
+    <header>
+      <h1>About</h1>
+    </header>
+    <p>This is my personal blog about technical topics including virtualization, storage, networking, backups, and some random IT stuff that strikes my fancy.</p>
+    <footer>
+      <a href="/about" class="button">Learn More</a>
+    </footer>
+  </section>
+</section>
+
+      <footer id="site-footer">
+  
+      <ul class="socnet-icons">
+        
+
+        <li><a href="//github.com/psustevens" target="_blank" rel="noopener" title="GitHub" class="fab fa-github"></a></li>
+
+
+
+
+
+
+
+
+
+
+
+<li><a href="//linkedin.com/in/davidlstevens" target="_blank" rel="noopener" title="LinkedIn" class="fab fa-linkedin"></a></li>
+<li><a href="//linkedin.com/company/entrust" target="_blank" rel="noopener" title="LinkedIn Company" class="fab fa-linkedin"></a></li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<li><a href="//twitter.com/PSUStevens" target="_blank" rel="noopener" title="Twitter" class="fab fa-twitter"></a></li>
+
+
+
+
+
+
+
+
+
+
+
+
+      </ul>
+  
+  <p class="copyright">
+    
+      &copy; 2023
+      
+        @PSUStevens Blog
+      
+    . <br>
+    Theme: <a href='https://github.com/pacollins/hugo-future-imperfect-slim' target='_blank' rel='noopener'>Hugo Future Imperfect Slim</a><br>A <a href='https://html5up.net/future-imperfect' target='_blank' rel='noopener'>HTML5 UP port</a> | Powered by <a href='https://gohugo.io/' title='0.110.0' target='_blank' rel='noopener'>Hugo</a>
+  </p>
+</footer>
+<a id="back-to-top" href="#" class="fas fa-arrow-up fa-2x"></a>
+
+      
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/highlight.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/languages/html.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/languages/css.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/languages/js.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/languages/toml.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/languages/PowerShell.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/languages/markdown.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/languages/plaintext.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script>
+
+
+  
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/skel/3.0.1/skel.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.3.5/jquery.fancybox.min.js"></script>
+  <script src=/js/util.js></script>
+  <script src=/js/main.js></script>
+  <script src=/js/add-on.js></script>
+  
+
+
+
+
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-149142929-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+
+    </div>
+  </body>
+</html>

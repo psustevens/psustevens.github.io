@@ -7,7 +7,7 @@
 
 
 
-  <meta name="generator" content="Hugo 0.88.1" />
+  <meta name="generator" content="Hugo 0.110.0">
   <meta itemprop="name" content="How to Add KeyControl v5.4 as a Key Provider in VSphere 7">
 <meta itemprop="description" content="This post will walk you through the steps to add Entrust KeyControl v5.4 as a Key Provider in vCenter v7.x.  **Updated 10-15-2021**"><meta itemprop="datePublished" content="2021-10-12T08:15:28-04:00" />
 <meta itemprop="dateModified" content="2021-10-12T08:15:28-04:00" />
@@ -19,7 +19,6 @@
 <meta property="og:url" content="https://blog.psustevens.com/2021/10/12/2021-10-12-how-to-add-keycontrol-as-a-key-provider-in-vsphere7/" /><meta property="article:section" content="blog" />
 <meta property="article:published_time" content="2021-10-12T08:15:28-04:00" />
 <meta property="article:modified_time" content="2021-10-12T08:15:28-04:00" />
-
 
   <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="How to Add KeyControl v5.4 as a Key Provider in VSphere 7"/>
@@ -142,12 +141,6 @@ if (!doNotTrack) {
         </a>
   
 
-  
-    <a href="//www.reddit.com/submit?url=https%3a%2f%2fblog.psustevens.com%2f2021%2f10%2f12%2f2021-10-12-how-to-add-keycontrol-as-a-key-provider-in-vsphere7%2f&amp;title=How%20to%20Add%20KeyControl%20v5.4%20as%20a%20Key%20Provider%20in%20VSphere%207" target="_blank" rel="noopener" class="share-btn reddit">
-          <i class="fab fa-reddit-alien"></i><p>&nbsp;Reddit</p>
-        </a>
-  
-
 
     </menu>
   
@@ -180,7 +173,7 @@ if (!doNotTrack) {
 
 
 <li><a href="//linkedin.com/in/davidlstevens" target="_blank" rel="noopener" title="LinkedIn" class="fab fa-linkedin"></a></li>
-<li><a href="//linkedin.com/company/236893" target="_blank" rel="noopener" title="LinkedIn Company" class="fab fa-linkedin"></a></li>
+<li><a href="//linkedin.com/company/entrust" target="_blank" rel="noopener" title="LinkedIn Company" class="fab fa-linkedin"></a></li>
 
 
 
@@ -260,12 +253,6 @@ if (!doNotTrack) {
         </a>
   
 
-  
-    <a href="//www.reddit.com/submit?url=https%3a%2f%2fblog.psustevens.com%2f2021%2f10%2f12%2f2021-10-12-how-to-add-keycontrol-as-a-key-provider-in-vsphere7%2f&amp;title=How%20to%20Add%20KeyControl%20v5.4%20as%20a%20Key%20Provider%20in%20VSphere%207" target="_blank" rel="noopener" class="share-btn reddit">
-          <i class="fab fa-reddit-alien"></i><p>&nbsp;Reddit</p>
-        </a>
-  
-
 
   </section>
   
@@ -287,10 +274,10 @@ if (!doNotTrack) {
 <li>
 <p>Log in to the deployed Entrust KeyControl cluster and click the <strong>KMIP</strong> menu item.</p>
 <figure><img src="/img/2021/10/12/ETKC-vCenter01.png"
-         alt="Create User"/><figcaption>
-            <h4>KMIP menu item</h4>
-        </figcaption>
-</figure>
+            alt="Create User"/><figcaption>
+               <h4>KMIP menu item</h4>
+           </figcaption>
+   </figure>
 
 </li>
 </ol>
@@ -307,10 +294,10 @@ if (!doNotTrack) {
 </ol>
 <p>VMware supports <strong>KMIP version 1.1</strong> for Key Providers.</p>
 <figure><img src="/img/2021/10/12/ETKC-vCenter02.png"
-         alt="Create User"/><figcaption>
-            <h4>Configured KMIP options</h4>
-        </figcaption>
-</figure>
+            alt="Create User"/><figcaption>
+               <h4>Configured KMIP options</h4>
+           </figcaption>
+   </figure>
 
 <p>After you have made these two changes click the <strong>Apply</strong> button.  You will be presented with a dialog to <em>&ldquo;Overwrite all existing KMIP Server settings&rdquo;</em>.  Click <strong>Proceed</strong>.</p>
 <hr>
@@ -320,10 +307,10 @@ if (!doNotTrack) {
 <li>
 <p>Next to the blue <em>Actions</em> button, you will see the text, <strong>Client Certificates</strong>.  Click this text, then click the blue <strong>Actions</strong> button and select <strong>Create Certificate</strong>.</p>
 <figure><img src="/img/2021/10/12/ETKC-vCenter03.png"
-         alt="Create Certificate"/><figcaption>
-            <h4>Create Certificate</h4>
-        </figcaption>
-</figure>
+            alt="Create Certificate"/><figcaption>
+               <h4>Create Certificate</h4>
+           </figcaption>
+   </figure>
 
 </li>
 <li>
@@ -337,19 +324,19 @@ if (!doNotTrack) {
 <p><strong>Some of you probably use a password manager which has the ability to automatically fill in passwords in dialogs like the one below.  If this is you, then make sure you clear the password fields that your password manager automatically filled in for you BEFORE you click the Create button.</strong></p>
 </blockquote>
 <figure><img src="/img/2021/10/12/ETKC-vCenter04.png"
-         alt="Create New Client Certificate screen"/><figcaption>
-            <h4>Create New Client Certificate screen</h4>
-        </figcaption>
-</figure>
+            alt="Create New Client Certificate screen"/><figcaption>
+               <h4>Create New Client Certificate screen</h4>
+           </figcaption>
+   </figure>
 
 <ol start="3">
 <li>
 <p>You will see the new certificate in the WebUI.  Click the certificate, then click the blue <strong>Action</strong> button and select <strong>Download Certificate</strong>.  This will result in a zip file being downloaded to your system.  Unzip the contents of the file.  You will need the unzipped contents later.</p>
 <figure><img src="/img/2021/10/12/ETKC-vCenter05.png"
-         alt="Download Certificate"/><figcaption>
-            <h4>Download Certificate</h4>
-        </figcaption>
-</figure>
+            alt="Download Certificate"/><figcaption>
+               <h4>Download Certificate</h4>
+           </figcaption>
+   </figure>
 
 </li>
 </ol>
@@ -369,10 +356,10 @@ if (!doNotTrack) {
 <li>
 <p>Click <strong>Add Standard Key Provider</strong></p>
 <figure><img src="/img/2020/11/04/KMIP-Trust06.png"
-         alt="Add Standard Key Provider"/><figcaption>
-            <h4>Add Standard Key Provider</h4>
-        </figcaption>
-</figure>
+            alt="Add Standard Key Provider"/><figcaption>
+               <h4>Add Standard Key Provider</h4>
+           </figcaption>
+   </figure>
 
 </li>
 <li>
@@ -393,30 +380,30 @@ if (!doNotTrack) {
 <p><strong>To resolve this issue remove the Key Provider and run through the steps in this section.  Just make sure to remove the password BEFORE you click the &ldquo;Add Key Provider&rdquo; button.</strong></p>
 </blockquote>
 <figure><img src="/img/2020/11/04/KMIP-Trust07.png"
-         alt="Standard Key Provider Details screen"/><figcaption>
-            <h4>Standard Key Provider Details screen</h4>
-        </figcaption>
-</figure>
+            alt="Standard Key Provider Details screen"/><figcaption>
+               <h4>Standard Key Provider Details screen</h4>
+           </figcaption>
+   </figure>
 
 <p>The certificate details for each node will be displayed.</p>
 <ol start="8">
 <li>
 <p>Click the <strong>Trust</strong> button.</p>
 <figure><img src="/img/2020/11/04/KMIP-Trust08.png"
-         alt="KMS Node Certificate Details"/><figcaption>
-            <h4>KMS Node Certificate Details</h4>
-        </figcaption>
-</figure>
+            alt="KMS Node Certificate Details"/><figcaption>
+               <h4>KMS Node Certificate Details</h4>
+           </figcaption>
+   </figure>
 
 <p>The newly added <em>Key Provider</em> will be displayed.</p>
 </li>
 <li>
 <p>Check the radio button next to the Key Provider.  This will list the Key Management Servers at the bottom of the window.  Yes, I know the image below still refers to HyTrust KeyControl.  Habits are hard to break.  HaHa!!</p>
 <figure><img src="/img/2020/11/04/KMIP-Trust09.png"
-         alt="Key Provider list and KMS Servers"/><figcaption>
-            <h4>Key Provider list and KMS Servers</h4>
-        </figcaption>
-</figure>
+            alt="Key Provider list and KMS Servers"/><figcaption>
+               <h4>Key Provider list and KMS Servers</h4>
+           </figcaption>
+   </figure>
 
 </li>
 </ol>
@@ -426,19 +413,19 @@ if (!doNotTrack) {
 <li>
 <p>Click one of the KMS servers, then click <strong>Establish Trust</strong>.  Select <strong>Make KMS trust vCenter</strong>.</p>
 <figure><img src="/img/2020/11/04/KMIP-Trust10.png"
-         alt="Make KMS trust vCenter"/><figcaption>
-            <h4>Make KMS trust vCenter</h4>
-        </figcaption>
-</figure>
+            alt="Make KMS trust vCenter"/><figcaption>
+               <h4>Make KMS trust vCenter</h4>
+           </figcaption>
+   </figure>
 
 </li>
 <li>
 <p>Click <strong>KMS certificate and private key</strong>, then click <strong>Next</strong>.</p>
 <figure><img src="/img/2020/11/04/KMIP-Trust11.png"
-         alt="Choose a Trust Method"/><figcaption>
-            <h4>Choose a Trust Method</h4>
-        </figcaption>
-</figure>
+            alt="Choose a Trust Method"/><figcaption>
+               <h4>Choose a Trust Method</h4>
+           </figcaption>
+   </figure>
 
 <p>This is the point in the process where the <em>client certificate</em> is needed.</p>
 </li>
@@ -448,28 +435,28 @@ if (!doNotTrack) {
 <li>
 <p>Repeat the last step for the <em>KMS Private Key</em>, then click <strong>Establish Trust</strong></p>
 <figure><img src="/img/2020/11/04/KMIP-Trust13.png"
-         alt="Upload KMS Credentials"/><figcaption>
-            <h4>Upload KMS Credentials</h4>
-        </figcaption>
-</figure>
+            alt="Upload KMS Credentials"/><figcaption>
+               <h4>Upload KMS Credentials</h4>
+           </figcaption>
+   </figure>
 
 </li>
 <li>
 <p>At this point, all of the yellowish triangles from the previous step should now be green circles with checkmarks in them.</p>
 <figure><img src="/img/2020/11/04/KMIP-Trust14.png"
-         alt="Trusted KMS Servers"/><figcaption>
-            <h4>Trusted KMS Servers</h4>
-        </figcaption>
-</figure>
+            alt="Trusted KMS Servers"/><figcaption>
+               <h4>Trusted KMS Servers</h4>
+           </figcaption>
+   </figure>
 
 </li>
 </ol>
 <p>If you want a bit more detail, expand one of the KMS Server entries.</p>
 <figure><img src="/img/2020/11/04/KMIP-Trust15.png"
-         alt="KMS Server Trust Detailss"/><figcaption>
-            <h4>KMS Server Trust Details</h4>
-        </figcaption>
-</figure>
+            alt="KMS Server Trust Detailss"/><figcaption>
+               <h4>KMS Server Trust Details</h4>
+           </figcaption>
+   </figure>
 
 <p>Congratulations!!  You are finished.  You are ready to begin encrypting VMs or enabling encryption for vSAN.</p>
 <hr>
@@ -575,6 +562,21 @@ if (!doNotTrack) {
       <article class="mini-post">
         <section>
           
+  <a href="/2023/02/23/2023-02-24-how-to-update-esxi-7.0u3d_to_7.0u3k_using_vsphere_lifecycle_manager/" class="image featured">
+    <img src="/img/2023/02/vSphere_LCM.png" alt="vSphere Lifecycle Manager">
+  </a>
+
+
+        </section>
+        <header>
+          <h1><a href="/2023/02/23/2023-02-24-how-to-update-esxi-7.0u3d_to_7.0u3k_using_vsphere_lifecycle_manager/">How to Update Esxi 7.0u3d to 7.0u3k using vSphere Lifecycle_Manager</a></h1>
+          <time class="published" datetime="">February 23, 2023</time>
+        </header>
+      </article>
+      
+      <article class="mini-post">
+        <section>
+          
   <a href="/2021/10/19/2021-10-19-how-to-encrypt-a-vm-using-vsphere-encryption/" class="image featured">
     <img src="/img/2021/10/ETKC-graphic.png" alt="VMware Encryption">
   </a>
@@ -602,21 +604,6 @@ if (!doNotTrack) {
         </header>
       </article>
       
-      <article class="mini-post">
-        <section>
-          
-  <a href="/2021/10/08/2021-10-08-how-to-add-another-security-admin-from-ad/" class="image featured">
-    <img src="/img/2021/10/ETKC.png" alt="KeyControl graphic">
-  </a>
-
-
-        </section>
-        <header>
-          <h1><a href="/2021/10/08/2021-10-08-how-to-add-another-security-admin-from-ad/">How to Add Another KeyControl Security Admin From Active Directory</a></h1>
-          <time class="published" datetime="">October 8, 2021</time>
-        </header>
-      </article>
-      
       
         <a href="/blog/" class="button">See more</a>
       
@@ -636,12 +623,12 @@ if (!doNotTrack) {
           
           <li>
             
-              <a href="/categories/vmware/">vmware<span class="count">9</span></a>
+              <a href="/categories/vmware/">vmware<span class="count">10</span></a>
             
           
           <li>
             
-              <a href="/categories/howto/">howto<span class="count">8</span></a>
+              <a href="/categories/howto/">howto<span class="count">9</span></a>
             
           
           <li>
@@ -704,7 +691,7 @@ if (!doNotTrack) {
 
 
 <li><a href="//linkedin.com/in/davidlstevens" target="_blank" rel="noopener" title="LinkedIn" class="fab fa-linkedin"></a></li>
-<li><a href="//linkedin.com/company/236893" target="_blank" rel="noopener" title="LinkedIn Company" class="fab fa-linkedin"></a></li>
+<li><a href="//linkedin.com/company/entrust" target="_blank" rel="noopener" title="LinkedIn Company" class="fab fa-linkedin"></a></li>
 
 
 
@@ -736,12 +723,12 @@ if (!doNotTrack) {
   
   <p class="copyright">
     
-      &copy; 2021
+      &copy; 2023
       
         @PSUStevens Blog
       
     . <br>
-    Theme: <a href='https://github.com/pacollins/hugo-future-imperfect-slim' target='_blank' rel='noopener'>Hugo Future Imperfect Slim</a><br>A <a href='https://html5up.net/future-imperfect' target='_blank' rel='noopener'>HTML5 UP port</a> | Powered by <a href='https://gohugo.io/' title='0.88.1' target='_blank' rel='noopener'>Hugo</a>
+    Theme: <a href='https://github.com/pacollins/hugo-future-imperfect-slim' target='_blank' rel='noopener'>Hugo Future Imperfect Slim</a><br>A <a href='https://html5up.net/future-imperfect' target='_blank' rel='noopener'>HTML5 UP port</a> | Powered by <a href='https://gohugo.io/' title='0.110.0' target='_blank' rel='noopener'>Hugo</a>
   </p>
 </footer>
 <a id="back-to-top" href="#" class="fas fa-arrow-up fa-2x"></a>
