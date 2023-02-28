@@ -3,43 +3,52 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://blog.psustevens.com/</loc>
-    <lastmod>2023-02-23T19:14:04-05:00</lastmod>
+    <lastmod>2023-02-27T15:38:16-05:00</lastmod>
   </url><url>
     <loc>https://blog.psustevens.com/blog/</loc>
-    <lastmod>2023-02-23T19:14:04-05:00</lastmod>
+    <lastmod>2023-02-27T15:38:16-05:00</lastmod>
   </url><url>
     <loc>https://blog.psustevens.com/categories/</loc>
-    <lastmod>2023-02-23T19:14:04-05:00</lastmod>
-  </url><url>
-    <loc>https://blog.psustevens.com/tags/esxi/</loc>
-    <lastmod>2023-02-23T19:14:04-05:00</lastmod>
-  </url><url>
-    <loc>https://blog.psustevens.com/2023/02/23/2023-02-24-how-to-update-esxi-7.0u3d_to_7.0u3k_using_vsphere_lifecycle_manager/</loc>
-    <lastmod>2023-02-23T19:14:04-05:00</lastmod>
+    <lastmod>2023-02-27T15:38:16-05:00</lastmod>
   </url><url>
     <loc>https://blog.psustevens.com/categories/howto/</loc>
-    <lastmod>2023-02-23T19:14:04-05:00</lastmod>
+    <lastmod>2023-02-27T15:38:16-05:00</lastmod>
   </url><url>
-    <loc>https://blog.psustevens.com/tags/lifecycle-manager/</loc>
-    <lastmod>2023-02-23T19:14:04-05:00</lastmod>
+    <loc>https://blog.psustevens.com/tags/remote-mount/</loc>
+    <lastmod>2023-02-27T15:38:16-05:00</lastmod>
+  </url><url>
+    <loc>https://blog.psustevens.com/categories/synology/</loc>
+    <lastmod>2023-02-27T15:38:16-05:00</lastmod>
+  </url><url>
+    <loc>https://blog.psustevens.com/2023/02/27/2023-02-27-synology-creating-a-remote-mount/</loc>
+    <lastmod>2023-02-27T15:38:16-05:00</lastmod>
   </url><url>
     <loc>https://blog.psustevens.com/tags/</loc>
-    <lastmod>2023-02-23T19:14:04-05:00</lastmod>
+    <lastmod>2023-02-27T15:38:16-05:00</lastmod>
+  </url><url>
+    <loc>https://blog.psustevens.com/tags/esxi/</loc>
+    <lastmod>2023-02-24T19:14:04-05:00</lastmod>
+  </url><url>
+    <loc>https://blog.psustevens.com/2023/02/24/2023-02-24-how-to-update-esxi-7.0u3d_to_7.0u3k_using_vsphere_lifecycle_manager/</loc>
+    <lastmod>2023-02-24T19:14:04-05:00</lastmod>
+  </url><url>
+    <loc>https://blog.psustevens.com/tags/lifecycle-manager/</loc>
+    <lastmod>2023-02-24T19:14:04-05:00</lastmod>
   </url><url>
     <loc>https://blog.psustevens.com/tags/update/</loc>
-    <lastmod>2023-02-23T19:14:04-05:00</lastmod>
+    <lastmod>2023-02-24T19:14:04-05:00</lastmod>
   </url><url>
     <loc>https://blog.psustevens.com/tags/vcenter/</loc>
-    <lastmod>2023-02-23T19:14:04-05:00</lastmod>
+    <lastmod>2023-02-24T19:14:04-05:00</lastmod>
   </url><url>
     <loc>https://blog.psustevens.com/tags/vmware/</loc>
-    <lastmod>2023-02-23T19:14:04-05:00</lastmod>
+    <lastmod>2023-02-24T19:14:04-05:00</lastmod>
   </url><url>
     <loc>https://blog.psustevens.com/categories/vmware/</loc>
-    <lastmod>2023-02-23T19:14:04-05:00</lastmod>
+    <lastmod>2023-02-24T19:14:04-05:00</lastmod>
   </url><url>
     <loc>https://blog.psustevens.com/tags/vsphere/</loc>
-    <lastmod>2023-02-23T19:14:04-05:00</lastmod>
+    <lastmod>2023-02-24T19:14:04-05:00</lastmod>
   </url><url>
     <loc>https://blog.psustevens.com/tags/encrypt/</loc>
     <lastmod>2021-10-19T06:50:26-04:00</lastmod>

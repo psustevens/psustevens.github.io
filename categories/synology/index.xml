@@ -6,13 +6,13 @@
     <description>Recent content in Synology on @PSUStevens Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Sat, 25 Feb 2023 15:38:16 -0500</lastBuildDate><atom:link href="https://blog.psustevens.com/categories/synology/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 27 Feb 2023 15:38:16 -0500</lastBuildDate><atom:link href="https://blog.psustevens.com/categories/synology/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Synology: Creating a Remote Mount between two Synology units</title>
-      <link>https://blog.psustevens.com/2023/02/25/2023-02-27-synology-creating-a-remote-mount/</link>
-      <pubDate>Sat, 25 Feb 2023 15:38:16 -0500</pubDate>
+      <title>Synology: Creating a Remote Mount between two Synology NAS arrays</title>
+      <link>https://blog.psustevens.com/2023/02/27/2023-02-27-synology-creating-a-remote-mount/</link>
+      <pubDate>Mon, 27 Feb 2023 15:38:16 -0500</pubDate>
       
-      <guid>https://blog.psustevens.com/2023/02/25/2023-02-27-synology-creating-a-remote-mount/</guid>
+      <guid>https://blog.psustevens.com/2023/02/27/2023-02-27-synology-creating-a-remote-mount/</guid>
       <description>Introduction It&amp;rsquo;s no mystery that I run a homelab for personal and work purposes. I&amp;rsquo;m also lucky to own two Synology NAS arrays. My first NAS unit is a DS414. It&amp;rsquo;s a bit old, but it continues to hum along nicely. I need to make some time to upgrade the firmware on it. It&amp;rsquo;s still back on the 6.x firmware. As of the time I&amp;rsquo;m writing this post the latest firmware is 7.</description>
     </item>
     

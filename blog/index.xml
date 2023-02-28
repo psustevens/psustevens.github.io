@@ -6,13 +6,22 @@
     <description>Recent content in Blog on @PSUStevens Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Thu, 23 Feb 2023 19:14:04 -0500</lastBuildDate><atom:link href="https://blog.psustevens.com/blog/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 27 Feb 2023 15:38:16 -0500</lastBuildDate><atom:link href="https://blog.psustevens.com/blog/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Synology: Creating a Remote Mount between two Synology NAS arrays</title>
+      <link>https://blog.psustevens.com/2023/02/27/2023-02-27-synology-creating-a-remote-mount/</link>
+      <pubDate>Mon, 27 Feb 2023 15:38:16 -0500</pubDate>
+      
+      <guid>https://blog.psustevens.com/2023/02/27/2023-02-27-synology-creating-a-remote-mount/</guid>
+      <description>Introduction It&amp;rsquo;s no mystery that I run a homelab for personal and work purposes. I&amp;rsquo;m also lucky to own two Synology NAS arrays. My first NAS unit is a DS414. It&amp;rsquo;s a bit old, but it continues to hum along nicely. I need to make some time to upgrade the firmware on it. It&amp;rsquo;s still back on the 6.x firmware. As of the time I&amp;rsquo;m writing this post the latest firmware is 7.</description>
+    </item>
+    
     <item>
       <title>How to Update Esxi 7.0u3d to 7.0u3k using vSphere Lifecycle_Manager</title>
-      <link>https://blog.psustevens.com/2023/02/23/2023-02-24-how-to-update-esxi-7.0u3d_to_7.0u3k_using_vsphere_lifecycle_manager/</link>
-      <pubDate>Thu, 23 Feb 2023 19:14:04 -0500</pubDate>
+      <link>https://blog.psustevens.com/2023/02/24/2023-02-24-how-to-update-esxi-7.0u3d_to_7.0u3k_using_vsphere_lifecycle_manager/</link>
+      <pubDate>Fri, 24 Feb 2023 19:14:04 -0500</pubDate>
       
-      <guid>https://blog.psustevens.com/2023/02/23/2023-02-24-how-to-update-esxi-7.0u3d_to_7.0u3k_using_vsphere_lifecycle_manager/</guid>
+      <guid>https://blog.psustevens.com/2023/02/24/2023-02-24-how-to-update-esxi-7.0u3d_to_7.0u3k_using_vsphere_lifecycle_manager/</guid>
       <description>Recently, I ran into an issue where I really needed to get my vSphere homelab upgraded to version 7.0U3k. More on why this was so urgent in a future post. However, I was still back on 7.0U3d. To get to 7.0U3 I used vSphere Lifecycle Manager (vLCM). In case you missed it, vSphere Lifecycle Manager is built into vSphere 7.
 If you aren&amp;rsquo;t familiar with vLCM, then you can read more about vSphere Lifecycle Manager over here: https://blogs.</description>
     </item>

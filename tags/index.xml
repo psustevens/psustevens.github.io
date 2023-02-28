@@ -6,11 +6,20 @@
     <description>Recent content in Tags on @PSUStevens Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Thu, 23 Feb 2023 19:14:04 -0500</lastBuildDate><atom:link href="https://blog.psustevens.com/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 27 Feb 2023 15:38:16 -0500</lastBuildDate><atom:link href="https://blog.psustevens.com/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Remote Mount</title>
+      <link>https://blog.psustevens.com/tags/remote-mount/</link>
+      <pubDate>Mon, 27 Feb 2023 15:38:16 -0500</pubDate>
+      
+      <guid>https://blog.psustevens.com/tags/remote-mount/</guid>
+      <description></description>
+    </item>
+    
     <item>
       <title>ESXi</title>
       <link>https://blog.psustevens.com/tags/esxi/</link>
-      <pubDate>Thu, 23 Feb 2023 19:14:04 -0500</pubDate>
+      <pubDate>Fri, 24 Feb 2023 19:14:04 -0500</pubDate>
       
       <guid>https://blog.psustevens.com/tags/esxi/</guid>
       <description></description>
@@ -19,7 +28,7 @@
     <item>
       <title>Lifecycle Manager</title>
       <link>https://blog.psustevens.com/tags/lifecycle-manager/</link>
-      <pubDate>Thu, 23 Feb 2023 19:14:04 -0500</pubDate>
+      <pubDate>Fri, 24 Feb 2023 19:14:04 -0500</pubDate>
       
       <guid>https://blog.psustevens.com/tags/lifecycle-manager/</guid>
       <description></description>
@@ -28,7 +37,7 @@
     <item>
       <title>Update</title>
       <link>https://blog.psustevens.com/tags/update/</link>
-      <pubDate>Thu, 23 Feb 2023 19:14:04 -0500</pubDate>
+      <pubDate>Fri, 24 Feb 2023 19:14:04 -0500</pubDate>
       
       <guid>https://blog.psustevens.com/tags/update/</guid>
       <description></description>
@@ -37,7 +46,7 @@
     <item>
       <title>vCenter</title>
       <link>https://blog.psustevens.com/tags/vcenter/</link>
-      <pubDate>Thu, 23 Feb 2023 19:14:04 -0500</pubDate>
+      <pubDate>Fri, 24 Feb 2023 19:14:04 -0500</pubDate>
       
       <guid>https://blog.psustevens.com/tags/vcenter/</guid>
       <description></description>
@@ -46,7 +55,7 @@
     <item>
       <title>VMware</title>
       <link>https://blog.psustevens.com/tags/vmware/</link>
-      <pubDate>Thu, 23 Feb 2023 19:14:04 -0500</pubDate>
+      <pubDate>Fri, 24 Feb 2023 19:14:04 -0500</pubDate>
       
       <guid>https://blog.psustevens.com/tags/vmware/</guid>
       <description></description>
@@ -55,7 +64,7 @@
     <item>
       <title>vSphere</title>
       <link>https://blog.psustevens.com/tags/vsphere/</link>
-      <pubDate>Thu, 23 Feb 2023 19:14:04 -0500</pubDate>
+      <pubDate>Fri, 24 Feb 2023 19:14:04 -0500</pubDate>
       
       <guid>https://blog.psustevens.com/tags/vsphere/</guid>
       <description></description>
