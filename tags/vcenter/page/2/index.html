@@ -211,6 +211,94 @@ if (!doNotTrack) {
   <header>
   <div class="title">
     
+        <h2><a href="/2021/10/12/2021-10-12-how-to-add-keycontrol-as-a-key-provider-in-vsphere7/">How to Add KeyControl v5.4 as a Key Provider in VSphere 7</a></h2>
+    
+    
+        <p>This post will walk you through the steps to add Entrust KeyControl v5.4 as a Key Provider in vCenter v7.x.  **Updated 10-15-2021**</p>
+    
+</div>
+  <div class="meta">
+    <time class="published" datetime="2021-10-12 08:15:28 -0400 EDT">
+      October 12, 2021
+    </time>
+    <span class="author">PSUStevens</span>
+    
+      <p>6 minutes read</p>
+    
+  </div>
+</header>
+
+  
+  <a href="/2021/10/12/2021-10-12-how-to-add-keycontrol-as-a-key-provider-in-vsphere7/" class="image featured">
+    <img src="/img/2021/10/vCenter-KeyProvider-v2.png" alt="Key Management (KMS) and vCenter Key Provider">
+  </a>
+
+
+  
+  <p>To get started here is what you will need to complete the steps in this post:</p>
+  <footer>
+    <a href="/2021/10/12/2021-10-12-how-to-add-keycontrol-as-a-key-provider-in-vsphere7/" class="button big">Read more</a>
+    <ul class="stats">
+  
+    
+    
+      <li class="categories">
+        <ul>
+          
+            
+            <li><a class="article-category-link" href="https://blog.psustevens.com/categories/entrust">Entrust</a></li>
+          
+            
+            <li><a class="article-category-link" href="https://blog.psustevens.com/categories/hytrust">HyTrust</a></li>
+          
+            
+            <li><a class="article-category-link" href="https://blog.psustevens.com/categories/vmware">VMware</a></li>
+          
+            
+            <li><a class="article-category-link" href="https://blog.psustevens.com/categories/howto">HowTo</a></li>
+          
+        </ul>
+      </li>
+    
+  
+  
+    
+    
+      <li class="tags">
+        <ul>
+          
+            
+            <li><a class="article-category-link" href="https://blog.psustevens.com/tags/keycontrol">KeyControl</a></li>
+          
+            
+            <li><a class="article-category-link" href="https://blog.psustevens.com/tags/keycontrol-v5.4">KeyControl v5.4</a></li>
+          
+            
+            <li><a class="article-category-link" href="https://blog.psustevens.com/tags/kms">KMS</a></li>
+          
+            
+            <li><a class="article-category-link" href="https://blog.psustevens.com/tags/key-management-server">Key Management Server</a></li>
+          
+            
+            <li><a class="article-category-link" href="https://blog.psustevens.com/tags/vcenter">vCenter</a></li>
+          
+            
+            <li><a class="article-category-link" href="https://blog.psustevens.com/tags/key-provider">Key Provider</a></li>
+          
+        </ul>
+      </li>
+    
+  
+</ul>
+
+  </footer>
+</article>
+
+        
+            <article class="post">
+  <header>
+  <div class="title">
+    
         <h2><a href="/2021/10/05/2021-10-05-how-to-connect-keycontrol-5.4-to-activedirectory/">How to Connect KeyControl 5.4 to Active Directory</a></h2>
     
     
@@ -374,82 +462,6 @@ if (!doNotTrack) {
 </article>
 
         
-            <article class="post">
-  <header>
-  <div class="title">
-    
-        <h2><a href="/2020/11/04/add-a-hytrust-kms-to-vcenter-v7/">Add a HyTrust KMS to vCenter v7 as a Key Provider</a></h2>
-    
-    
-        <p>In vCenter 7 VMware moved away from the term KMS (Key Management Server) to Key Provider.  This post will explain how to add HyTrust KeyControl as a Key Provider in vCenter 7.</p>
-    
-</div>
-  <div class="meta">
-    <time class="published" datetime="2020-11-04 08:07:16 -0500 EST">
-      November 4, 2020
-    </time>
-    <span class="author">PSUStevens</span>
-    
-      <p>4 minutes read</p>
-    
-  </div>
-</header>
-
-  
-  <a href="/2020/11/04/add-a-hytrust-kms-to-vcenter-v7/" class="image featured">
-    <img src="/img/2020/11/vCenter-KeyProvider.png" alt="vCenter Key Provider (KMS)">
-  </a>
-
-
-  
-  <p>In my <a href="/2020/10/31/how-to-deploy-a-hytrust-keycontrol-2-node-cluster/">How to Deploy a HyTrust KeyControl 2-node Cluster post</a> I walked through the steps for deploying and configuring a 2-node <a href="https://www.hytrust.com/products/keycontrol/">HyTrust KeyControl</a> cluster.  Now that you have it deployed, let&rsquo;s start using it.  But before we can do that, we need to add it vCenter as a Key Provider.  Let&rsquo;s go!!</p>
-  <footer>
-    <a href="/2020/11/04/add-a-hytrust-kms-to-vcenter-v7/" class="button big">Read more</a>
-    <ul class="stats">
-  
-    
-    
-      <li class="categories">
-        <ul>
-          
-            
-            <li><a class="article-category-link" href="https://blog.psustevens.com/categories/hytrust">HyTrust</a></li>
-          
-            
-            <li><a class="article-category-link" href="https://blog.psustevens.com/categories/vmware">VMware</a></li>
-          
-            
-            <li><a class="article-category-link" href="https://blog.psustevens.com/categories/howto">HowTo</a></li>
-          
-        </ul>
-      </li>
-    
-  
-  
-    
-    
-      <li class="tags">
-        <ul>
-          
-            
-            <li><a class="article-category-link" href="https://blog.psustevens.com/tags/kms">KMS</a></li>
-          
-            
-            <li><a class="article-category-link" href="https://blog.psustevens.com/tags/key-management-server">Key Management Server</a></li>
-          
-            
-            <li><a class="article-category-link" href="https://blog.psustevens.com/tags/vcenter">vCenter</a></li>
-          
-        </ul>
-      </li>
-    
-  
-</ul>
-
-  </footer>
-</article>
-
-        
         
 <div class="pagination">
   
@@ -467,6 +479,21 @@ if (!doNotTrack) {
       <header>
         <h1>Recent posts</h1>
       </header>
+      
+      <article class="mini-post">
+        <section>
+          
+  <a href="/2023/03/30/2023-03-30-did_you_know_about_vcenter_api-commands/" class="image featured">
+    <img src="/img/2023/03/API-image.png" alt="">
+  </a>
+
+
+        </section>
+        <header>
+          <h1><a href="/2023/03/30/2023-03-30-did_you_know_about_vcenter_api-commands/">Did you know about vCenter API Commands?</a></h1>
+          <time class="published" datetime="">March 30, 2023</time>
+        </header>
+      </article>
       
       <article class="mini-post">
         <section>
@@ -498,21 +525,6 @@ if (!doNotTrack) {
         </header>
       </article>
       
-      <article class="mini-post">
-        <section>
-          
-  <a href="/2021/10/19/2021-10-19-how-to-encrypt-a-vm-using-vsphere-encryption/" class="image featured">
-    <img src="/img/2021/10/ETKC-graphic.png" alt="VMware Encryption">
-  </a>
-
-
-        </section>
-        <header>
-          <h1><a href="/2021/10/19/2021-10-19-how-to-encrypt-a-vm-using-vsphere-encryption/">How to Encrypt a VM Using vSphere Encryption</a></h1>
-          <time class="published" datetime="">October 19, 2021</time>
-        </header>
-      </article>
-      
       
         <a href="/blog/" class="button">See more</a>
       
@@ -532,12 +544,12 @@ if (!doNotTrack) {
           
           <li>
             
-              <a href="/categories/howto/">howto<span class="count">10</span></a>
+              <a href="/categories/vmware/">vmware<span class="count">11</span></a>
             
           
           <li>
             
-              <a href="/categories/vmware/">vmware<span class="count">10</span></a>
+              <a href="/categories/howto/">howto<span class="count">10</span></a>
             
           
           <li>
@@ -558,6 +570,11 @@ if (!doNotTrack) {
           <li>
             
               <a href="/categories/career/">career<span class="count">2</span></a>
+            
+          
+          <li>
+            
+              <a href="/categories/api/">api<span class="count">1</span></a>
             
           
           <li>

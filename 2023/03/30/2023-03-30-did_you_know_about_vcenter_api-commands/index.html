@@ -1,0 +1,659 @@
+<!doctype html>
+<html lang="en">
+  <head>
+  <meta charset="utf-8">
+<title>Did you know about vCenter API Commands? - @PSUStevens Blog</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+
+  <meta name="generator" content="Hugo 0.110.0">
+  <meta itemprop="name" content="Did you know about vCenter API Commands?">
+<meta itemprop="description" content="In this post I&#39;m going to cover the vCenter API Commands.  These API Commands are accessible from the vCenter CLI.  Intrigued?  Read on..."><meta itemprop="datePublished" content="2023-03-30T20:10:36-05:00" />
+<meta itemprop="dateModified" content="2023-03-30T20:10:36-05:00" />
+<meta itemprop="wordCount" content="973">
+<meta itemprop="keywords" content="vCenter," />
+  <meta property="og:title" content="Did you know about vCenter API Commands?" />
+<meta property="og:description" content="In this post I&#39;m going to cover the vCenter API Commands.  These API Commands are accessible from the vCenter CLI.  Intrigued?  Read on..." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://blog.psustevens.com/2023/03/30/2023-03-30-did_you_know_about_vcenter_api-commands/" /><meta property="article:section" content="blog" />
+<meta property="article:published_time" content="2023-03-30T20:10:36-05:00" />
+<meta property="article:modified_time" content="2023-03-30T20:10:36-05:00" />
+
+  <meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Did you know about vCenter API Commands?"/>
+<meta name="twitter:description" content="In this post I&#39;m going to cover the vCenter API Commands.  These API Commands are accessible from the vCenter CLI.  Intrigued?  Read on..."/>
+<meta name="twitter:site" content="@PSUStevens"/>
+
+  
+  
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+	ga('create', 'UA-149142929-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+
+  <link rel="stylesheet"
+      href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/styles/github.min.css">
+  
+    
+      <link rel="stylesheet" href="/css/normalize.css">
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway:400,800,900|Source+Sans+Pro:400,700">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/academicons/1.8.6/css/academicons.min.css">
+      <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.9.0/css/all.css" integrity="sha384-i1LQnF23gykqWXg6jxC2ZbCbUMxyw5gLZY6UiUS98LYV5unm8GWmfkIS6jqJfb4E" crossorigin="anonymous">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.3.5/jquery.fancybox.min.css" />
+      
+      
+      <link rel="stylesheet" href="/css/main.min.0a64f3eede6e78edc2d8b2ca7051e4d9a6379f472dac76b1168733b88d27146a.css" integrity="sha256-CmTz7t5ueO3C2LLKcFHk2aY3n0ctrHaxFoczuI0nFGo=">
+      <link rel="stylesheet" href="/css/add-on.css">
+    
+  
+  
+  
+  
+</head>
+
+  <body>
+    
+<header id="site-header">
+  <nav id="site-nav">
+    <h1 class="nav-title">
+      <a href="/">
+        
+          
+            Blog
+          
+        
+      </a>
+    </h1>
+    <menu id="site-nav-menu" class="flyout-menu">
+      
+        
+          
+          
+            <a href="/" class="link"><i class='fa fa-home'></i> Home</a>
+          
+        
+      
+        
+          
+          
+            <a href="/about/" class="link"><i class='far fa-id-card'></i> About</a>
+          
+        
+      
+        
+          
+          
+            <a href="/blog/" class="link"><i class='far fa-newspaper'></i> Blog</a>
+          
+        
+      
+        
+          
+          
+            <a href="/categories/" class="link"><i class='fas fa-sitemap'></i> Categories</a>
+          
+        
+      
+      <a href="#share-menu" class="share-toggle"><i class="fas fa-share-alt">&nbsp;</i>Share</a>
+      
+
+    </menu>
+    
+
+    <a href="#share-menu" class="share-toggle"><i class="fas fa-share-alt fa-2x">&nbsp;</i></a>
+    
+    <a href="#site-nav" class="nav-toggle"><i class="fas fa-bars fa-2x"></i></a>
+  </nav>
+  
+  
+    <menu id="share-menu" class="flyout-menu">
+      <h1>Share Post</h1>
+      
+
+
+
+
+  
+    
+    <a href="//twitter.com/share?text=Did%20you%20know%20about%20vCenter%20API%20Commands%3f&amp;url=https%3a%2f%2fblog.psustevens.com%2f2023%2f03%2f30%2f2023-03-30-did_you_know_about_vcenter_api-commands%2f" target="_blank" rel="noopener" class="share-btn twitter">
+        <i class="fab fa-twitter"></i><p>&nbsp;Twitter</p>
+      </a>
+  
+
+  
+        <a href="//www.linkedin.com/shareArticle?url=https%3a%2f%2fblog.psustevens.com%2f2023%2f03%2f30%2f2023-03-30-did_you_know_about_vcenter_api-commands%2f&amp;title=Did%20you%20know%20about%20vCenter%20API%20Commands%3f" target="_blank" rel="noopener" class="share-btn linkedin">
+            <i class="fab fa-linkedin"></i><p>&nbsp;LinkedIn</p>
+          </a>
+  
+
+  
+        <a href="mailto:?subject=Check out this post by %7b%20%20%20%20%20%20%20%20map%5b%5d%7d&amp;body=https%3a%2f%2fblog.psustevens.com%2f2023%2f03%2f30%2f2023-03-30-did_you_know_about_vcenter_api-commands%2f" target="_blank" class="share-btn email" data-proofer-ignore>
+          <i class="fas fa-envelope"></i><p>&nbsp;Email</p>
+        </a>
+  
+
+
+    </menu>
+  
+</header>
+
+    <div id="wrapper">
+      <section id="site-intro">
+  <a href="/"><img src="/img/main/logo.jpg" class="circle" width="" alt="@PSUStevens headshot" /></a>
+  <header>
+    <h1>@PSUStevens blog</h1>
+  </header>
+  <main>
+    <p>You are reading the blog of <a href='https://twitter.com/PSUStevens'>@PSUStevens</a>.  </br>You can reach me through one of the social accounts below.</p>
+  </main>
+  
+    <footer>
+      <ul class="socnet-icons">
+        
+
+        <li><a href="//github.com/psustevens" target="_blank" rel="noopener" title="GitHub" class="fab fa-github"></a></li>
+
+
+
+
+
+
+
+
+
+
+
+<li><a href="//linkedin.com/in/davidlstevens" target="_blank" rel="noopener" title="LinkedIn" class="fab fa-linkedin"></a></li>
+<li><a href="//linkedin.com/company/entrust" target="_blank" rel="noopener" title="LinkedIn Company" class="fab fa-linkedin"></a></li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<li><a href="//twitter.com/PSUStevens" target="_blank" rel="noopener" title="Twitter" class="fab fa-twitter"></a></li>
+
+
+
+
+
+
+
+
+
+
+
+
+      </ul>
+    </footer>
+  
+</section>
+
+      <main id="site-main">
+        <article class="post">
+  <header>
+  <div class="title">
+    
+        <h2><a href="/2023/03/30/2023-03-30-did_you_know_about_vcenter_api-commands/">Did you know about vCenter API Commands?</a></h2>
+    
+    
+        <p>In this post I&#39;m going to cover the vCenter API Commands.  These API Commands are accessible from the vCenter CLI.  Intrigued?  Read on...</p>
+    
+</div>
+  <div class="meta">
+    <time class="published" datetime="2023-03-30 20:10:36 -0500 -0500">
+      March 30, 2023
+    </time>
+    <span class="author">PSUStevens</span>
+    
+      <p>5 minutes read</p>
+    
+  </div>
+</header>
+
+  <section id="socnet-share">
+    
+
+
+
+
+  
+    
+    <a href="//twitter.com/share?text=Did%20you%20know%20about%20vCenter%20API%20Commands%3f&amp;url=https%3a%2f%2fblog.psustevens.com%2f2023%2f03%2f30%2f2023-03-30-did_you_know_about_vcenter_api-commands%2f" target="_blank" rel="noopener" class="share-btn twitter">
+        <i class="fab fa-twitter"></i><p>&nbsp;Twitter</p>
+      </a>
+  
+
+  
+        <a href="//www.linkedin.com/shareArticle?url=https%3a%2f%2fblog.psustevens.com%2f2023%2f03%2f30%2f2023-03-30-did_you_know_about_vcenter_api-commands%2f&amp;title=Did%20you%20know%20about%20vCenter%20API%20Commands%3f" target="_blank" rel="noopener" class="share-btn linkedin">
+            <i class="fab fa-linkedin"></i><p>&nbsp;LinkedIn</p>
+          </a>
+  
+
+  
+        <a href="mailto:?subject=Check out this post by %7b%20%20%20%20%20%20%20%20map%5b%5d%7d&amp;body=https%3a%2f%2fblog.psustevens.com%2f2023%2f03%2f30%2f2023-03-30-did_you_know_about_vcenter_api-commands%2f" target="_blank" class="share-btn email" data-proofer-ignore>
+          <i class="fas fa-envelope"></i><p>&nbsp;Email</p>
+        </a>
+  
+
+
+  </section>
+  
+  <a href="/2023/03/30/2023-03-30-did_you_know_about_vcenter_api-commands/" class="image featured">
+    <img src="/img/2023/03/API-image.png" alt="">
+  </a>
+
+
+  <div class="content">
+    <p>I recently wrote about a little issue where I had to quickly get my lab hosts and vCenter upgraded to vSphere 7.0U3k luckily vSphere Lifecycle Manager saved me.  During that process I discovered in vCenter there are a bunch of API calls you can make directly from the CLI once you SSH into vCenter.</p>
+<p>When you SSH into vCenter you are prompted with serveral help commands:</p>
+<ul>
+<li>List APIs: &ldquo;help api list&rdquo;</li>
+<li>List Plugins: &ldquo;help pi list&rdquo;</li>
+<li>Launch BASH: &ldquo;shell&rdquo;</li>
+</ul>
+<p>Generally, I breeze right by this and type &ldquo;shell&rdquo; and move on to the task at hand.</p>
+<p>During my recent debacle I decided to investigate the &ldquo;APIs.&rdquo;  You see, I was unable to make certain changes to vCenter because of a weird issue that miraculously fixed itself during the upgrade.  I&rsquo;ll write about how I got around the issue in a separate post.  For now, let&rsquo;s stay focused on the &ldquo;APIs&rdquo; in the text menu after logging into vCenter.</p>
+<p>Before I continue, I want to refer you to descriptions about all the API commands for both vCenter 7 and 8.  Click on the URLs below for your version of vCenter to learn more.</p>
+<p><a href="https://docs.vmware.com/en/VMware-vSphere/7.0/com.vmware.vsphere.vcenter.configuration.doc/GUID-CCC172CB-7CCB-41E4-B46A-0B5876E24EF5.html">vCenter 7.0 API Commands</a></p>
+<p><a href="https://docs.vmware.com/en/VMware-vSphere/7.0/com.vmware.vsphere.vcenter.configuration.doc/GUID-CCC172CB-7CCB-41E4-B46A-0B5876E24EF5.html">https://docs.vmware.com/en/VMware-vSphere/7.0/com.vmware.vsphere.vcenter.configuration.doc/GUID-CCC172CB-7CCB-41E4-B46A-0B5876E24EF5.html</a></p>
+<p><a href="https://docs.vmware.com/en/VMware-vSphere/8.0/vsphere-vcenter-configuration/GUID-CCC172CB-7CCB-41E4-B46A-0B5876E24EF5.html">vCenter 8.0 API Commands</a></p>
+<p><a href="https://docs.vmware.com/en/VMware-vSphere/8.0/vsphere-vcenter-configuration/GUID-CCC172CB-7CCB-41E4-B46A-0B5876E24EF5.html">https://docs.vmware.com/en/VMware-vSphere/8.0/vsphere-vcenter-configuration/GUID-CCC172CB-7CCB-41E4-B46A-0B5876E24EF5.html</a></p>
+<p>Let&rsquo;s get back to it.  After logging into vCenter using SSH type the following command:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-plaintext" data-lang="plaintext"><span style="display:flex;"><span>help api list
+</span></span></code></pre></div><p>You will see a very long list of API commands in table format.  I have included a very abbreviated version of the table below:</p>
+<table>
+<thead>
+<tr>
+<th>API Command</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>com.vmware.appliance.health.applmgmt.get</td>
+<td>Get the health of the applmgmt service.</td>
+</tr>
+<tr>
+<td>com.vmware.appliance.health.databasestorage.get</td>
+<td>Get the health of the database storage.</td>
+</tr>
+<tr>
+<td>com.vmware.appliance.health.load.get</td>
+<td>Get the CPU load health.</td>
+</tr>
+<tr>
+<td>.</td>
+<td>.</td>
+</tr>
+<tr>
+<td>.</td>
+<td>.</td>
+</tr>
+<tr>
+<td>com.vmware.appliance.version1.system.version.get</td>
+<td>Get the version of the appliance.</td>
+</tr>
+<tr>
+<td>com.vmware.appliance.version1.timesync.get</td>
+<td>Get the time synchronization configuration.</td>
+</tr>
+<tr>
+<td>com.vmware.appliance.version1.timesync.set</td>
+<td>Set the time synchronization configuration.</td>
+</tr>
+</tbody>
+</table>
+<p>By now your probably thinking, so what?  How do I use this information to my advantage?  Great question!
+Enter the following command on the command line:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-plaintext" data-lang="plaintext"><span style="display:flex;"><span>api com.vmware.appliance.version1.networking.dns.servers.get
+</span></span></code></pre></div><p>You should see something similar to the following output:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-plaintext" data-lang="plaintext"><span style="display:flex;"><span>Config: 
+</span></span><span style="display:flex;"><span>   Mode: static
+</span></span><span style="display:flex;"><span>   Servers: 192.168.124.31 192.168.124.32
+</span></span></code></pre></div><p>This API command retrieves or gets (note the term &ldquo;get&rdquo; at the end of the call) the DNS servers you have configured for the vCenter appliance.</p>
+<p>Try another API call.<br>
+Let&rsquo;s get the version of code running in the appliance.  Enter the following command on the command line:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-plaintext" data-lang="plaintext"><span style="display:flex;"><span>api com.vmware.appliance.version1.system.version.get
+</span></span></code></pre></div><p>Here is what my output looks like:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-plaintext" data-lang="plaintext"><span style="display:flex;"><span>Version:
+</span></span><span style="display:flex;"><span>   Version: 7.0.3.01200
+</span></span><span style="display:flex;"><span>   Product: VMware vCenter Server
+</span></span><span style="display:flex;"><span>   Build: 20990077
+</span></span><span style="display:flex;"><span>   Type: vCenter Server with an embedded Platform Services Controller
+</span></span><span style="display:flex;"><span>   Summary: Patch for VMware vCenter Server 7.0
+</span></span><span style="display:flex;"><span>   Releasedate: December 22, 2022
+</span></span><span style="display:flex;"><span>   Installtime: 2023-02-22T00:09:11.184Z
+</span></span></code></pre></div><p>You can see I am running 7.0U3j. At the time of this post there is no 7.0U3k update for vCenter, just ESXi.  How did I glean that version number from the cryptic information returned by the API call?  Go here to map the vCenter build number to the version number:</p>
+<p><a href="https://kb.vmware.com/s/article/2143838?lang=en_US">Build numbers and versions of VMware vCenter Server (2143838)</a></p>
+<p>You can use this link to figure out the same thing for ESXi:</p>
+<p><a href="https://kb.vmware.com/s/article/2143832?lang=en_US">Build numbers and versions of VMware ESXi/ESX (2143832)</a></p>
+<p>One last link.  Here is a link for several other VMware products:</p>
+<p><a href="https://kb.vmware.com/s/article/1014508?lang=en_US">Correlating build numbers and versions of VMware products (1014508)</a></p>
+<p>Apologies for digressing about build numbers and versions of VMware products.</p>
+<p>API calls for retrieving or &ldquo;get&quot;ting information is nice.  But what if you want to change a setting?  It&rsquo;s pretty simple find a call with the word &ldquo;set&rdquo; at the end of it.  Let&rsquo;s go change or set the DNS server settings for vCenter.</p>
+<p>Look through the list of calls and find this API call:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-plaintext" data-lang="plaintext"><span style="display:flex;"><span>com.vmware.appliance.version1.networking.dns.servers.set
+</span></span></code></pre></div><p>For &ldquo;set&rdquo; API calls you will need to supply some information. Run the following command to figure what information is required.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-plaintext" data-lang="plaintext"><span style="display:flex;"><span>help api com.vmware.appliance.version1.networking.dns.servers.set
+</span></span></code></pre></div><p>The output from the call will look like this:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-plaintext" data-lang="plaintext"><span style="display:flex;"><span>Usage:
+</span></span><span style="display:flex;"><span>         com.vmware.appliance.version1.networking.dns.servers.set
+</span></span><span style="display:flex;"><span>         [--help/-h] --mode ENUM --servers STR
+</span></span><span style="display:flex;"><span>Description:
+</span></span><span style="display:flex;"><span>         Set the DNS server configuration. If you set the mode
+</span></span><span style="display:flex;"><span>         argument to &#34;DHCP&#34;, a DHCP refresh is forced.
+</span></span><span style="display:flex;"><span>Input Arguments:
+</span></span><span style="display:flex;"><span> --mode ENUM
+</span></span><span style="display:flex;"><span>         Define how to determine the DNS servers. Leave the servers
+</span></span><span style="display:flex;"><span>         argument empty if the mode argument is &#34;DHCP&#34;. Set the
+</span></span><span style="display:flex;"><span>         servers argument to a comma-separated list of DNS servers if
+</span></span><span style="display:flex;"><span>         the mode argument is &#34;static&#34;. The DNS server are assigned
+</span></span><span style="display:flex;"><span>         from the specified list. &#39;static&#39;: &#39; DNS address is static.
+</span></span><span style="display:flex;"><span>         &#39;, &#39;dhcp&#39;: &#39; DNS address is automatically assigned by a DHCP
+</span></span><span style="display:flex;"><span>         server. &#39;
+</span></span><span style="display:flex;"><span> --servers STR
+</span></span><span style="display:flex;"><span>         List of the currently used DNS servers.
+</span></span></code></pre></div><p>I know my DNS server setting is static because this information was returned when I retrieved the DNS server setting.  This means for the ENUM argument I&rsquo;ll use &lsquo;static&rsquo; and the list of servers I want to use are, &ldquo;192.168.124.31&rdquo;</p>
+<p>The command looks like this:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-plaintext" data-lang="plaintext"><span style="display:flex;"><span>api com.vmware.appliance.version1.networking.dns.servers.set --mode static --servers &#34;192.168.124.31&#34;
+</span></span></code></pre></div><p>If I had mistyped any of the arguments or misformatted the arguments I would have received an error.  Let&rsquo;s confirm the new setting.  Run the DNS get command I issued at the beginning of this post for comparison.  You will see I&rsquo;m now short a DNS server.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-plaintext" data-lang="plaintext"><span style="display:flex;"><span>Config:
+</span></span><span style="display:flex;"><span>   Mode: static
+</span></span><span style="display:flex;"><span>   Servers: 192.168.124.31
+</span></span></code></pre></div><p>If I want to add the second DNS server I don&rsquo;t need to use the ADD command.  I can run the following command:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-plaintext" data-lang="plaintext"><span style="display:flex;"><span>api com.vmware.appliance.version1.networking.dns.servers.add --server &#34;192.168.124.32&#34;
+</span></span></code></pre></div><p>Voila!  I am back to where I started.  I can run the DNS Servers get command to confirm this is true.</p>
+<p>The entire point of this article was to introduce you, at a very basic level of how to use APIs and how you as a non-programmer/non-DevOps person can use them for getting and setting configuration changes in vCenter.  This is also easier than trying to figure out how to change the DNS server in some mystery file under the covers or when the vCenter GUI isn&rsquo;t cooperating with you.</p>
+<p>I hope this post has helped you.</p>
+<p>If there is something you think I&rsquo;m missing and feel should be added, <a href="http://twitter.com/PSUStevens">please let me know.</a></p>
+<p>Thanks for reading!</p>
+
+  </div>
+  <footer>
+    <ul class="stats">
+  
+    
+    
+      <li class="categories">
+        <ul>
+          
+            
+            <li><a class="article-category-link" href="https://blog.psustevens.com/categories/vmware">VMware</a></li>
+          
+            
+            <li><a class="article-category-link" href="https://blog.psustevens.com/categories/api">API</a></li>
+          
+        </ul>
+      </li>
+    
+  
+  
+    
+    
+      <li class="tags">
+        <ul>
+          
+            
+            <li><a class="article-category-link" href="https://blog.psustevens.com/tags/vcenter">vCenter</a></li>
+          
+        </ul>
+      </li>
+    
+  
+</ul>
+
+  </footer>
+</article>
+
+
+<div class="pagination">
+  
+    <a href="/2023/02/27/2023-02-27-synology-creating-a-remote-mount/" class="button big previous"><i class="fas fa-angle-left"></i> Synology: Creating a Remote Mount between two Synology NAS arrays</a>
+  
+  
+</div>
+
+
+      </main>
+      <section id="site-sidebar">
+  
+    <section id="recent-posts">
+      <header>
+        <h1>Recent posts</h1>
+      </header>
+      
+      <article class="mini-post">
+        <section>
+          
+  <a href="/2023/03/30/2023-03-30-did_you_know_about_vcenter_api-commands/" class="image featured">
+    <img src="/img/2023/03/API-image.png" alt="">
+  </a>
+
+
+        </section>
+        <header>
+          <h1><a href="/2023/03/30/2023-03-30-did_you_know_about_vcenter_api-commands/">Did you know about vCenter API Commands?</a></h1>
+          <time class="published" datetime="">March 30, 2023</time>
+        </header>
+      </article>
+      
+      <article class="mini-post">
+        <section>
+          
+  <a href="/2023/02/27/2023-02-27-synology-creating-a-remote-mount/" class="image featured">
+    <img src="/img/2023/02/synology_logo.png" alt="Synology Logo">
+  </a>
+
+
+        </section>
+        <header>
+          <h1><a href="/2023/02/27/2023-02-27-synology-creating-a-remote-mount/">Synology: Creating a Remote Mount between two Synology NAS arrays</a></h1>
+          <time class="published" datetime="">February 27, 2023</time>
+        </header>
+      </article>
+      
+      <article class="mini-post">
+        <section>
+          
+  <a href="/2023/02/24/2023-02-24-how-to-update-esxi-7.0u3d_to_7.0u3k_using_vsphere_lifecycle_manager/" class="image featured">
+    <img src="/img/2023/02/vSphere_LCM.png" alt="vSphere Lifecycle Manager">
+  </a>
+
+
+        </section>
+        <header>
+          <h1><a href="/2023/02/24/2023-02-24-how-to-update-esxi-7.0u3d_to_7.0u3k_using_vsphere_lifecycle_manager/">How to Update Esxi 7.0u3d to 7.0u3k using vSphere Lifecycle_Manager</a></h1>
+          <time class="published" datetime="">February 24, 2023</time>
+        </header>
+      </article>
+      
+      
+        <a href="/blog/" class="button">See more</a>
+      
+    </section>
+  
+
+  
+    
+      <section id="categories">
+        <header>
+          <h1><a href="/categories">Categories</a></h1>
+        </header>
+        <ul>
+          
+            
+          
+          
+          <li>
+            
+              <a href="/categories/vmware/">vmware<span class="count">11</span></a>
+            
+          
+          <li>
+            
+              <a href="/categories/howto/">howto<span class="count">10</span></a>
+            
+          
+          <li>
+            
+              <a href="/categories/hytrust/">hytrust<span class="count">7</span></a>
+            
+          
+          <li>
+            
+              <a href="/categories/blogging/">blogging<span class="count">6</span></a>
+            
+          
+          <li>
+            
+              <a href="/categories/entrust/">entrust<span class="count">5</span></a>
+            
+          
+          <li>
+            
+              <a href="/categories/career/">career<span class="count">2</span></a>
+            
+          
+          <li>
+            
+              <a href="/categories/api/">api<span class="count">1</span></a>
+            
+          
+          <li>
+            
+              <a href="/categories/psustevens/">psustevens<span class="count">1</span></a>
+            
+          
+          <li>
+            
+              <a href="/categories/synology/">synology<span class="count">1</span></a>
+            
+          
+          </li>
+        </ul>
+      </section>
+    
+  
+
+  <section id="mini-bio">
+    <header>
+      <h1>About</h1>
+    </header>
+    <p>This is my personal blog about technical topics including virtualization, storage, networking, backups, and some random IT stuff that strikes my fancy.</p>
+    <footer>
+      <a href="/about" class="button">Learn More</a>
+    </footer>
+  </section>
+</section>
+
+      <footer id="site-footer">
+  
+      <ul class="socnet-icons">
+        
+
+        <li><a href="//github.com/psustevens" target="_blank" rel="noopener" title="GitHub" class="fab fa-github"></a></li>
+
+
+
+
+
+
+
+
+
+
+
+<li><a href="//linkedin.com/in/davidlstevens" target="_blank" rel="noopener" title="LinkedIn" class="fab fa-linkedin"></a></li>
+<li><a href="//linkedin.com/company/entrust" target="_blank" rel="noopener" title="LinkedIn Company" class="fab fa-linkedin"></a></li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<li><a href="//twitter.com/PSUStevens" target="_blank" rel="noopener" title="Twitter" class="fab fa-twitter"></a></li>
+
+
+
+
+
+
+
+
+
+
+
+
+      </ul>
+  
+  <p class="copyright">
+    
+      &copy; 2023
+      
+        @PSUStevens Blog
+      
+    . <br>
+    Theme: <a href='https://github.com/pacollins/hugo-future-imperfect-slim' target='_blank' rel='noopener'>Hugo Future Imperfect Slim</a><br>A <a href='https://html5up.net/future-imperfect' target='_blank' rel='noopener'>HTML5 UP port</a> | Powered by <a href='https://gohugo.io/' title='0.110.0' target='_blank' rel='noopener'>Hugo</a>
+  </p>
+</footer>
+<a id="back-to-top" href="#" class="fas fa-arrow-up fa-2x"></a>
+
+      
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/highlight.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/languages/html.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/languages/css.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/languages/js.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/languages/toml.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/languages/PowerShell.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/languages/markdown.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/languages/plaintext.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script>
+
+
+  
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/skel/3.0.1/skel.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.3.5/jquery.fancybox.min.js"></script>
+  <script src=/js/util.js></script>
+  <script src=/js/main.js></script>
+  <script src=/js/add-on.js></script>
+  
+
+
+
+
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-149142929-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+
+    </div>
+  </body>
+</html>

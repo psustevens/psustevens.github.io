@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>API on @PSUStevens Blog</title>
+    <link>https://blog.psustevens.com/categories/api/</link>
+    <description>Recent content in API on @PSUStevens Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Thu, 30 Mar 2023 20:10:36 -0500</lastBuildDate><atom:link href="https://blog.psustevens.com/categories/api/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Did you know about vCenter API Commands?</title>
+      <link>https://blog.psustevens.com/2023/03/30/2023-03-30-did_you_know_about_vcenter_api-commands/</link>
+      <pubDate>Thu, 30 Mar 2023 20:10:36 -0500</pubDate>
+      
+      <guid>https://blog.psustevens.com/2023/03/30/2023-03-30-did_you_know_about_vcenter_api-commands/</guid>
+      <description>I recently wrote about a little issue where I had to quickly get my lab hosts and vCenter upgraded to vSphere 7.0U3k luckily vSphere Lifecycle Manager saved me. During that process I discovered in vCenter there are a bunch of API calls you can make directly from the CLI once you SSH into vCenter.
+When you SSH into vCenter you are prompted with serveral help commands:
+List APIs: &amp;ldquo;help api list&amp;rdquo; List Plugins: &amp;ldquo;help pi list&amp;rdquo; Launch BASH: &amp;ldquo;shell&amp;rdquo; Generally, I breeze right by this and type &amp;ldquo;shell&amp;rdquo; and move on to the task at hand.</description>
+    </item>
+    
+  </channel>
+</rss>
