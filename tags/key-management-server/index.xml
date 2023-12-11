@@ -6,82 +6,66 @@
     <description>Recent content in Key Management Server on @PSUStevens Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Tue, 19 Oct 2021 06:50:26 -0400</lastBuildDate><atom:link href="https://blog.psustevens.com/tags/key-management-server/index.xml" rel="self" type="application/rss+xml" />
+    <copyright>© 2024 David Stevens</copyright>
+    <lastBuildDate>Tue, 19 Oct 2021 06:50:26 -0400</lastBuildDate>
+    <atom:link href="https://blog.psustevens.com/tags/key-management-server/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>How to Encrypt a VM Using vSphere Encryption</title>
       <link>https://blog.psustevens.com/2021/10/19/2021-10-19-how-to-encrypt-a-vm-using-vsphere-encryption/</link>
       <pubDate>Tue, 19 Oct 2021 06:50:26 -0400</pubDate>
-      
       <guid>https://blog.psustevens.com/2021/10/19/2021-10-19-how-to-encrypt-a-vm-using-vsphere-encryption/</guid>
       <description>To get started here is what you will need to complete the steps in this post:
-A deployed Entrust KeyControl v5.4 cluster (Click this sentence to learn how to do this) vCenter and ESXi Host(s) running vSphere 7.x or higher Trusted connection between Entrust KeyControl and vCenter (Click this sentence to learn how to do this) Powered-off VM Now, let&amp;rsquo;s get started&amp;hellip;
-Select a VM to Encrypt Right click a VM and select VM Policies, Edit VM Storage Policies</description>
+A deployed Entrust KeyControl v5.4 cluster (Click this sentence to learn how to do this) vCenter and ESXi Host(s) running vSphere 7.x or higher Trusted connection between Entrust KeyControl and vCenter (Click this sentence to learn how to do this) Powered-off VM Now, let&amp;rsquo;s get started&amp;hellip;</description>
     </item>
-    
     <item>
       <title>How to Add KeyControl v5.4 as a Key Provider in VSphere 7</title>
       <link>https://blog.psustevens.com/2021/10/12/2021-10-12-how-to-add-keycontrol-as-a-key-provider-in-vsphere7/</link>
       <pubDate>Tue, 12 Oct 2021 08:15:28 -0400</pubDate>
-      
       <guid>https://blog.psustevens.com/2021/10/12/2021-10-12-how-to-add-keycontrol-as-a-key-provider-in-vsphere7/</guid>
       <description>To get started here is what you will need to complete the steps in this post:
 A deployed Entrust KeyControl v5.4 cluster (Click this sentence to learn how to do this) vCenter and ESXi Host(s) running vSphere 7.x Now, let&amp;rsquo;s get started&amp;hellip;
-Enable the KMIP Server in KeyControl Log in to the deployed Entrust KeyControl cluster and click the KMIP menu item.
-KMIP menu item KMIP Server Settings This is the screen where you will enable and make changes to the KMIP server settings.</description>
+Enable the KMIP Server in KeyControl Log in to the deployed Entrust KeyControl cluster and click the KMIP menu item.</description>
     </item>
-    
     <item>
       <title>How to Add Another KeyControl Security Admin From Active Directory</title>
       <link>https://blog.psustevens.com/2021/10/08/2021-10-08-how-to-add-another-security-admin-from-ad/</link>
       <pubDate>Fri, 08 Oct 2021 08:08:04 -0400</pubDate>
-      
       <guid>https://blog.psustevens.com/2021/10/08/2021-10-08-how-to-add-another-security-admin-from-ad/</guid>
       <description>To get started here is what you will need to complete the steps in this post:
 A deployed Entrust KeyControl v5.4 cluster connected to Active Directory (Click this sentence to learn how to do this) Active Directory account info to be added Now, let&amp;rsquo;s get started&amp;hellip;
 Add a Second KeyControl Security Administrator from Active Directory Click Security from the menu bar then click the blue Actions button and select Create User</description>
     </item>
-    
     <item>
       <title>How to Connect KeyControl 5.4 to Active Directory</title>
       <link>https://blog.psustevens.com/2021/10/05/2021-10-05-how-to-connect-keycontrol-5.4-to-activedirectory/</link>
       <pubDate>Tue, 05 Oct 2021 08:08:40 -0400</pubDate>
-      
       <guid>https://blog.psustevens.com/2021/10/05/2021-10-05-how-to-connect-keycontrol-5.4-to-activedirectory/</guid>
       <description>To get started here is what you will need to complete the steps in this post:
 A deployed Entrust KeyControl v5.4 cluster (Click this sentence to learn how to do this) Active Directory service account Now, let&amp;rsquo;s get started&amp;hellip;
-Connect KeyControl to Active Directory Log in to the deployed Entrust KeyControl cluster. Once logged in:
-Click the Settings menu item Under the &amp;ldquo;General Settings&amp;rdquo; group click Authentication Settings &amp;gt; Authentication Click the Type drop-down box and select LDAP from the list.</description>
+Connect KeyControl to Active Directory Log in to the deployed Entrust KeyControl cluster.</description>
     </item>
-    
     <item>
       <title>How to Deploy Entrust KeyControl 5.4</title>
       <link>https://blog.psustevens.com/2021/10/01/how-to-deploy-entrust-keycontrol-5.4/</link>
       <pubDate>Fri, 01 Oct 2021 09:45:33 -0400</pubDate>
-      
       <guid>https://blog.psustevens.com/2021/10/01/how-to-deploy-entrust-keycontrol-5.4/</guid>
       <description>Around this time last year I wrote about how to deploy a 2-node HyTrust KeyControl cluster. That post covered KeyControl version 5.2.1. You can find that blog post over here.
-This post is very similar. The difference between it and the last post is that I will cover Entrust KeyControl version 5.4.. Are you scratching your head about the name change? Head over to this post I wrote about changes that occurred in January of this year where I talk about HyTrust being acquired by Entrust.</description>
+This post is very similar. The difference between it and the last post is that I will cover Entrust KeyControl version 5.</description>
     </item>
-    
     <item>
       <title>Add a HyTrust KMS to vCenter v7 as a Key Provider</title>
       <link>https://blog.psustevens.com/2020/11/04/add-a-hytrust-kms-to-vcenter-v7/</link>
       <pubDate>Wed, 04 Nov 2020 08:07:16 -0500</pubDate>
-      
       <guid>https://blog.psustevens.com/2020/11/04/add-a-hytrust-kms-to-vcenter-v7/</guid>
-      <description>Introduction In my How to Deploy a HyTrust KeyControl 2-node Cluster post I walked through the steps for deploying and configuring a 2-node HyTrust KeyControl cluster. Now that you have it deployed, let&amp;rsquo;s start using it. But before we can do that, we need to add it vCenter as a Key Provider. Let&amp;rsquo;s go!!
-Before Starting Before starting, I want to clear up some terminology. If you are familiar with using encryption in vCenter 6.</description>
+      <description>Introduction In my How to Deploy a HyTrust KeyControl 2-node Cluster post I walked through the steps for deploying and configuring a 2-node HyTrust KeyControl cluster. Now that you have it deployed, let&amp;rsquo;s start using it. But before we can do that, we need to add it vCenter as a Key Provider.</description>
     </item>
-    
     <item>
       <title>How to Deploy a HyTrust KeyControl v5.2.1, 2-Node Cluster</title>
       <link>https://blog.psustevens.com/2020/10/31/how-to-deploy-a-hytrust-keycontrol-2-node-cluster/</link>
       <pubDate>Sat, 31 Oct 2020 14:04:12 -0400</pubDate>
-      
       <guid>https://blog.psustevens.com/2020/10/31/how-to-deploy-a-hytrust-keycontrol-2-node-cluster/</guid>
       <description>To get started here is what you will need to complete the steps in this post:
 KeyControl OVA v5.2.1 vCenter and ESX host at least version 6.5 or greater 2 vCPU, 8GB RAM, 60GB disk per KeyControl node Network address information such as: IP address (one per node) Subnet mask Gateway address DNS server information DNS registered hostname for each node Deploy the First HyTrust KeyControl Appliance Log in to the Virtual Center Appliance (VCSA).</description>
     </item>
-    
   </channel>
 </rss>
