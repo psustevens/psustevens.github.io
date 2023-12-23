@@ -7,8 +7,15 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>© 2024 David Stevens</copyright>
-    <lastBuildDate>Thu, 30 Mar 2023 20:10:36 -0500</lastBuildDate>
+    <lastBuildDate>Tue, 12 Dec 2023 16:19:30 -0500</lastBuildDate>
     <atom:link href="https://blog.psustevens.com/categories/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Career</title>
+      <link>https://blog.psustevens.com/categories/career/</link>
+      <pubDate>Tue, 12 Dec 2023 16:19:30 -0500</pubDate>
+      <guid>https://blog.psustevens.com/categories/career/</guid>
+      <description></description>
+    </item>
     <item>
       <title>API</title>
       <link>https://blog.psustevens.com/categories/api/</link>
@@ -49,13 +56,6 @@
       <link>https://blog.psustevens.com/categories/hytrust/</link>
       <pubDate>Tue, 19 Oct 2021 06:50:26 -0400</pubDate>
       <guid>https://blog.psustevens.com/categories/hytrust/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Career</title>
-      <link>https://blog.psustevens.com/categories/career/</link>
-      <pubDate>Sun, 14 Feb 2021 11:45:19 -0500</pubDate>
-      <guid>https://blog.psustevens.com/categories/career/</guid>
       <description></description>
     </item>
     <item>
