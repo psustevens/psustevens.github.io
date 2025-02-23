@@ -2,185 +2,220 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://blog.psustevens.com/</loc>
+    <loc>http://localhost:1313/</loc>
+    <lastmod>2025-02-22T10:35:43-05:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/blog/</loc>
+    <lastmod>2025-02-22T10:35:43-05:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/categories/broadcom/</loc>
+    <lastmod>2025-02-22T10:35:43-05:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/categories/</loc>
+    <lastmod>2025-02-22T10:35:43-05:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/live-site-recovery/</loc>
+    <lastmod>2025-02-22T10:35:43-05:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/lsr/</loc>
+    <lastmod>2025-02-22T10:35:43-05:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/2025/02/22/no-storage-replication-adapters-installed/</loc>
+    <lastmod>2025-02-22T10:35:43-05:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/site-recovery-manager/</loc>
+    <lastmod>2025-02-22T10:35:43-05:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/srm/</loc>
+    <lastmod>2025-02-22T10:35:43-05:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/</loc>
+    <lastmod>2025-02-22T10:35:43-05:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/categories/vmware/</loc>
+    <lastmod>2025-02-22T10:35:43-05:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/categories/github/</loc>
+    <lastmod>2025-01-17T00:12:59-05:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/categories/howto/</loc>
+    <lastmod>2025-01-17T00:12:59-05:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/2025/01/17/my-first-pull-request/</loc>
+    <lastmod>2025-01-17T00:12:59-05:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/pull-request/</loc>
+    <lastmod>2025-01-17T00:12:59-05:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/2023/12/12/a-quick-fork-in-the-job-road/</loc>
     <lastmod>2023-12-12T16:19:30-05:00</lastmod>
   </url><url>
-    <loc>https://blog.psustevens.com/2023/12/12/a-quick-fork-in-the-job-road/</loc>
+    <loc>http://localhost:1313/categories/career/</loc>
     <lastmod>2023-12-12T16:19:30-05:00</lastmod>
   </url><url>
-    <loc>https://blog.psustevens.com/blog/</loc>
+    <loc>http://localhost:1313/tags/self-improvement/</loc>
     <lastmod>2023-12-12T16:19:30-05:00</lastmod>
   </url><url>
-    <loc>https://blog.psustevens.com/categories/career/</loc>
-    <lastmod>2023-12-12T16:19:30-05:00</lastmod>
-  </url><url>
-    <loc>https://blog.psustevens.com/categories/</loc>
-    <lastmod>2023-12-12T16:19:30-05:00</lastmod>
-  </url><url>
-    <loc>https://blog.psustevens.com/tags/self-improvement/</loc>
-    <lastmod>2023-12-12T16:19:30-05:00</lastmod>
-  </url><url>
-    <loc>https://blog.psustevens.com/tags/</loc>
-    <lastmod>2023-12-12T16:19:30-05:00</lastmod>
-  </url><url>
-    <loc>https://blog.psustevens.com/about/</loc>
+    <loc>http://localhost:1313/about/</loc>
     <lastmod>2023-12-12T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://blog.psustevens.com/categories/api/</loc>
+    <loc>http://localhost:1313/categories/api/</loc>
     <lastmod>2023-03-30T20:10:36-05:00</lastmod>
   </url><url>
-    <loc>https://blog.psustevens.com/2023/03/30/2023-03-30-did_you_know_about_vcenter_api-commands/</loc>
+    <loc>http://localhost:1313/2023/03/30/2023-03-30-did_you_know_about_vcenter_api-commands/</loc>
     <lastmod>2023-03-30T20:10:36-05:00</lastmod>
   </url><url>
-    <loc>https://blog.psustevens.com/tags/vcenter/</loc>
+    <loc>http://localhost:1313/tags/vcenter/</loc>
     <lastmod>2023-03-30T20:10:36-05:00</lastmod>
   </url><url>
-    <loc>https://blog.psustevens.com/categories/vmware/</loc>
-    <lastmod>2023-03-30T20:10:36-05:00</lastmod>
-  </url><url>
-    <loc>https://blog.psustevens.com/categories/howto/</loc>
+    <loc>http://localhost:1313/tags/remote-mount/</loc>
     <lastmod>2023-02-27T15:38:16-05:00</lastmod>
   </url><url>
-    <loc>https://blog.psustevens.com/tags/remote-mount/</loc>
+    <loc>http://localhost:1313/categories/synology/</loc>
     <lastmod>2023-02-27T15:38:16-05:00</lastmod>
   </url><url>
-    <loc>https://blog.psustevens.com/categories/synology/</loc>
+    <loc>http://localhost:1313/2023/02/27/2023-02-27-synology-creating-a-remote-mount/</loc>
     <lastmod>2023-02-27T15:38:16-05:00</lastmod>
   </url><url>
-    <loc>https://blog.psustevens.com/2023/02/27/2023-02-27-synology-creating-a-remote-mount/</loc>
-    <lastmod>2023-02-27T15:38:16-05:00</lastmod>
-  </url><url>
-    <loc>https://blog.psustevens.com/tags/esxi/</loc>
+    <loc>http://localhost:1313/tags/esxi/</loc>
     <lastmod>2023-02-24T19:14:04-05:00</lastmod>
   </url><url>
-    <loc>https://blog.psustevens.com/2023/02/24/2023-02-24-how-to-update-esxi-7.0u3d_to_7.0u3k_using_vsphere_lifecycle_manager/</loc>
+    <loc>http://localhost:1313/2023/02/24/2023-02-24-how-to-update-esxi-7.0u3d_to_7.0u3k_using_vsphere_lifecycle_manager/</loc>
     <lastmod>2023-02-24T19:14:04-05:00</lastmod>
   </url><url>
-    <loc>https://blog.psustevens.com/tags/lifecycle-manager/</loc>
+    <loc>http://localhost:1313/tags/lifecycle-manager/</loc>
     <lastmod>2023-02-24T19:14:04-05:00</lastmod>
   </url><url>
-    <loc>https://blog.psustevens.com/tags/update/</loc>
+    <loc>http://localhost:1313/tags/update/</loc>
     <lastmod>2023-02-24T19:14:04-05:00</lastmod>
   </url><url>
-    <loc>https://blog.psustevens.com/tags/vmware/</loc>
+    <loc>http://localhost:1313/tags/vmware/</loc>
     <lastmod>2023-02-24T19:14:04-05:00</lastmod>
   </url><url>
-    <loc>https://blog.psustevens.com/tags/vsphere/</loc>
+    <loc>http://localhost:1313/tags/vsphere/</loc>
     <lastmod>2023-02-24T19:14:04-05:00</lastmod>
   </url><url>
-    <loc>https://blog.psustevens.com/tags/encrypt/</loc>
+    <loc>http://localhost:1313/tags/encrypt/</loc>
     <lastmod>2021-10-19T06:50:26-04:00</lastmod>
   </url><url>
-    <loc>https://blog.psustevens.com/tags/encryption/</loc>
+    <loc>http://localhost:1313/tags/encryption/</loc>
     <lastmod>2021-10-19T06:50:26-04:00</lastmod>
   </url><url>
-    <loc>https://blog.psustevens.com/categories/entrust/</loc>
+    <loc>http://localhost:1313/categories/entrust/</loc>
     <lastmod>2021-10-19T06:50:26-04:00</lastmod>
   </url><url>
-    <loc>https://blog.psustevens.com/2021/10/19/2021-10-19-how-to-encrypt-a-vm-using-vsphere-encryption/</loc>
+    <loc>http://localhost:1313/2021/10/19/2021-10-19-how-to-encrypt-a-vm-using-vsphere-encryption/</loc>
     <lastmod>2021-10-19T06:50:26-04:00</lastmod>
   </url><url>
-    <loc>https://blog.psustevens.com/categories/hytrust/</loc>
+    <loc>http://localhost:1313/categories/hytrust/</loc>
     <lastmod>2021-10-19T06:50:26-04:00</lastmod>
   </url><url>
-    <loc>https://blog.psustevens.com/tags/key-management-server/</loc>
+    <loc>http://localhost:1313/tags/key-management-server/</loc>
     <lastmod>2021-10-19T06:50:26-04:00</lastmod>
   </url><url>
-    <loc>https://blog.psustevens.com/tags/key-provider/</loc>
+    <loc>http://localhost:1313/tags/key-provider/</loc>
     <lastmod>2021-10-19T06:50:26-04:00</lastmod>
   </url><url>
-    <loc>https://blog.psustevens.com/tags/keycontrol/</loc>
+    <loc>http://localhost:1313/tags/keycontrol/</loc>
     <lastmod>2021-10-19T06:50:26-04:00</lastmod>
   </url><url>
-    <loc>https://blog.psustevens.com/tags/keycontrol-v5.4/</loc>
+    <loc>http://localhost:1313/tags/keycontrol-v5.4/</loc>
     <lastmod>2021-10-19T06:50:26-04:00</lastmod>
   </url><url>
-    <loc>https://blog.psustevens.com/tags/kms/</loc>
+    <loc>http://localhost:1313/tags/kms/</loc>
     <lastmod>2021-10-19T06:50:26-04:00</lastmod>
   </url><url>
-    <loc>https://blog.psustevens.com/2021/10/12/2021-10-12-how-to-add-keycontrol-as-a-key-provider-in-vsphere7/</loc>
+    <loc>http://localhost:1313/2021/10/12/2021-10-12-how-to-add-keycontrol-as-a-key-provider-in-vsphere7/</loc>
     <lastmod>2021-10-12T08:15:28-04:00</lastmod>
   </url><url>
-    <loc>https://blog.psustevens.com/tags/active-directory/</loc>
+    <loc>http://localhost:1313/tags/active-directory/</loc>
     <lastmod>2021-10-08T08:08:04-04:00</lastmod>
   </url><url>
-    <loc>https://blog.psustevens.com/2021/10/08/2021-10-08-how-to-add-another-security-admin-from-ad/</loc>
+    <loc>http://localhost:1313/2021/10/08/2021-10-08-how-to-add-another-security-admin-from-ad/</loc>
     <lastmod>2021-10-08T08:08:04-04:00</lastmod>
   </url><url>
-    <loc>https://blog.psustevens.com/tags/security-admin/</loc>
+    <loc>http://localhost:1313/tags/security-admin/</loc>
     <lastmod>2021-10-08T08:08:04-04:00</lastmod>
   </url><url>
-    <loc>https://blog.psustevens.com/2021/10/05/2021-10-05-how-to-connect-keycontrol-5.4-to-activedirectory/</loc>
+    <loc>http://localhost:1313/2021/10/05/2021-10-05-how-to-connect-keycontrol-5.4-to-activedirectory/</loc>
     <lastmod>2021-10-05T08:08:40-04:00</lastmod>
   </url><url>
-    <loc>https://blog.psustevens.com/2021/10/01/how-to-deploy-entrust-keycontrol-5.4/</loc>
+    <loc>http://localhost:1313/2021/10/01/how-to-deploy-entrust-keycontrol-5.4/</loc>
     <lastmod>2021-10-01T09:45:33-04:00</lastmod>
   </url><url>
-    <loc>https://blog.psustevens.com/2021/02/14/new-year-new-changes/</loc>
+    <loc>http://localhost:1313/2021/02/14/new-year-new-changes/</loc>
     <lastmod>2021-02-14T11:45:19-05:00</lastmod>
   </url><url>
-    <loc>https://blog.psustevens.com/2020/11/04/add-a-hytrust-kms-to-vcenter-v7/</loc>
+    <loc>http://localhost:1313/2020/11/04/add-a-hytrust-kms-to-vcenter-v7/</loc>
     <lastmod>2020-11-04T08:07:16-05:00</lastmod>
   </url><url>
-    <loc>https://blog.psustevens.com/2020/10/31/how-to-deploy-a-hytrust-keycontrol-2-node-cluster/</loc>
+    <loc>http://localhost:1313/2020/10/31/how-to-deploy-a-hytrust-keycontrol-2-node-cluster/</loc>
     <lastmod>2020-10-31T14:04:12-04:00</lastmod>
   </url><url>
-    <loc>https://blog.psustevens.com/tags/backup/</loc>
+    <loc>http://localhost:1313/tags/backup/</loc>
     <lastmod>2020-10-30T11:12:54-04:00</lastmod>
   </url><url>
-    <loc>https://blog.psustevens.com/2020/10/30/how-to-backup-vcenter-v7-using-smb/</loc>
+    <loc>http://localhost:1313/2020/10/30/how-to-backup-vcenter-v7-using-smb/</loc>
     <lastmod>2020-10-30T11:12:54-04:00</lastmod>
   </url><url>
-    <loc>https://blog.psustevens.com/2020/10/29/how-i-diyd-my-career-into-a-sales-engineer/</loc>
+    <loc>http://localhost:1313/2020/10/29/how-i-diyd-my-career-into-a-sales-engineer/</loc>
     <lastmod>2020-10-29T05:41:14-04:00</lastmod>
   </url><url>
-    <loc>https://blog.psustevens.com/categories/blogging/</loc>
+    <loc>http://localhost:1313/categories/blogging/</loc>
     <lastmod>2020-10-26T12:21:08-04:00</lastmod>
   </url><url>
-    <loc>https://blog.psustevens.com/2020/10/26/building-a-blog-with-hugo-part5/</loc>
+    <loc>http://localhost:1313/2020/10/26/building-a-blog-with-hugo-part5/</loc>
     <lastmod>2020-10-26T12:21:08-04:00</lastmod>
   </url><url>
-    <loc>https://blog.psustevens.com/tags/github/</loc>
+    <loc>http://localhost:1313/tags/github/</loc>
     <lastmod>2020-10-26T12:21:08-04:00</lastmod>
   </url><url>
-    <loc>https://blog.psustevens.com/tags/hugo/</loc>
+    <loc>http://localhost:1313/tags/hugo/</loc>
     <lastmod>2020-10-26T12:21:08-04:00</lastmod>
   </url><url>
-    <loc>https://blog.psustevens.com/tags/blogtober-2020/</loc>
+    <loc>http://localhost:1313/tags/blogtober-2020/</loc>
     <lastmod>2020-10-24T01:34:42-04:00</lastmod>
   </url><url>
-    <loc>https://blog.psustevens.com/2020/10/24/blogtober-tech-edition-2020/</loc>
+    <loc>http://localhost:1313/2020/10/24/blogtober-tech-edition-2020/</loc>
     <lastmod>2020-10-24T01:34:42-04:00</lastmod>
   </url><url>
-    <loc>https://blog.psustevens.com/2019/12/20/building-a-blog-with-hugo-part4/</loc>
+    <loc>http://localhost:1313/2019/12/20/building-a-blog-with-hugo-part4/</loc>
     <lastmod>2019-12-20T01:24:15-05:00</lastmod>
   </url><url>
-    <loc>https://blog.psustevens.com/tags/google-analytics/</loc>
+    <loc>http://localhost:1313/tags/google-analytics/</loc>
     <lastmod>2019-12-20T01:24:15-05:00</lastmod>
   </url><url>
-    <loc>https://blog.psustevens.com/2019/12/18/building-a-blog-with-hugo-part3/</loc>
+    <loc>http://localhost:1313/2019/12/18/building-a-blog-with-hugo-part3/</loc>
     <lastmod>2019-12-18T01:49:05-05:00</lastmod>
   </url><url>
-    <loc>https://blog.psustevens.com/2019/11/06/my-first-international-vmug/</loc>
+    <loc>http://localhost:1313/2019/11/06/my-first-international-vmug/</loc>
     <lastmod>2019-11-06T01:20:45-05:00</lastmod>
   </url><url>
-    <loc>https://blog.psustevens.com/tags/vmug/</loc>
+    <loc>http://localhost:1313/tags/vmug/</loc>
     <lastmod>2019-11-06T01:20:45-05:00</lastmod>
   </url><url>
-    <loc>https://blog.psustevens.com/2019/11/01/building-a-blog-with-hugo-part2/</loc>
+    <loc>http://localhost:1313/2019/11/01/building-a-blog-with-hugo-part2/</loc>
     <lastmod>2019-11-01T13:07:13-04:00</lastmod>
   </url><url>
-    <loc>https://blog.psustevens.com/2019/10/11/building-a-blog-with-hugo/</loc>
+    <loc>http://localhost:1313/2019/10/11/building-a-blog-with-hugo/</loc>
     <lastmod>2019-10-11T16:02:46-04:00</lastmod>
   </url><url>
-    <loc>https://blog.psustevens.com/2019/09/30/introducing-me/</loc>
+    <loc>http://localhost:1313/2019/09/30/introducing-me/</loc>
     <lastmod>2019-09-30T08:48:31-04:00</lastmod>
   </url><url>
-    <loc>https://blog.psustevens.com/categories/psustevens/</loc>
+    <loc>http://localhost:1313/categories/psustevens/</loc>
     <lastmod>2019-09-30T08:48:31-04:00</lastmod>
   </url><url>
-    <loc>https://blog.psustevens.com/contact/_index.de/</loc>
+    <loc>http://localhost:1313/contact/_index.fr/</loc>
   </url><url>
-    <loc>https://blog.psustevens.com/series/</loc>
+    <loc>http://localhost:1313/contact/</loc>
+  </url><url>
+    <loc>http://localhost:1313/contact/_index.pt/</loc>
+  </url><url>
+    <loc>http://localhost:1313/contact/_index.pl/</loc>
+  </url><url>
+    <loc>http://localhost:1313/contact/_index.de/</loc>
+  </url><url>
+    <loc>http://localhost:1313/series/</loc>
   </url>
 </urlset>

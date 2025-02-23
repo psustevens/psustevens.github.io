@@ -2,55 +2,53 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Blogging on @PSUStevens Blog</title>
-    <link>https://blog.psustevens.com/categories/blogging/</link>
+    <link>http://localhost:1313/categories/blogging/</link>
     <description>Recent content in Blogging on @PSUStevens Blog</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <generator>Hugo</generator>
     <language>en</language>
     <copyright>© 2025 David Stevens</copyright>
     <lastBuildDate>Mon, 26 Oct 2020 12:21:08 -0400</lastBuildDate>
-    <atom:link href="https://blog.psustevens.com/categories/blogging/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/categories/blogging/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Building a Blog With Hugo - Part 5</title>
-      <link>https://blog.psustevens.com/2020/10/26/building-a-blog-with-hugo-part5/</link>
+      <link>http://localhost:1313/2020/10/26/building-a-blog-with-hugo-part5/</link>
       <pubDate>Mon, 26 Oct 2020 12:21:08 -0400</pubDate>
-      <guid>https://blog.psustevens.com/2020/10/26/building-a-blog-with-hugo-part5/</guid>
-      <description>It&amp;rsquo;s been a long time since I last updated this series. I apologize to anyone who is following it and lost interest. I hope to be quicker in future series I write.
-Introduction In this post, I will walk through what I do to publish my blog to Github. I use private and public repositories and GitHub Desktop.</description>
+      <guid>http://localhost:1313/2020/10/26/building-a-blog-with-hugo-part5/</guid>
+      <description>It&amp;rsquo;s been a long time since I last updated this series. I apologize to anyone who is following it and lost interest. I hope to be quicker in future series I write.&#xA;Introduction In this post, I will walk through what I do to publish my blog to Github. I use private and public repositories and GitHub Desktop.</description>
     </item>
     <item>
       <title>Blogtober Tech Edition 2020</title>
-      <link>https://blog.psustevens.com/2020/10/24/blogtober-tech-edition-2020/</link>
+      <link>http://localhost:1313/2020/10/24/blogtober-tech-edition-2020/</link>
       <pubDate>Sat, 24 Oct 2020 01:34:42 -0400</pubDate>
-      <guid>https://blog.psustevens.com/2020/10/24/blogtober-tech-edition-2020/</guid>
+      <guid>http://localhost:1313/2020/10/24/blogtober-tech-edition-2020/</guid>
       <description>I hit my first anniversary of blogging this past September. As you may have noticed, I&amp;rsquo;ve been a bit lax over the main course of this year. I know, I know. With the whole COVID thing going on this year, you would have thought there would have been more time to blog.</description>
     </item>
     <item>
       <title>Building a Blog With Hugo - Part 4</title>
-      <link>https://blog.psustevens.com/2019/12/20/building-a-blog-with-hugo-part4/</link>
+      <link>http://localhost:1313/2019/12/20/building-a-blog-with-hugo-part4/</link>
       <pubDate>Fri, 20 Dec 2019 01:24:15 -0500</pubDate>
-      <guid>https://blog.psustevens.com/2019/12/20/building-a-blog-with-hugo-part4/</guid>
-      <description>In the previous post, I covered how to customize the theme for your Hugo site. I apologize if it was a bit long. This post is considerably shorter. In this post, I&amp;rsquo;m going to walk through how to configure Google Analytics for your site. Let&amp;rsquo;s get started.
-Before we get started&amp;hellip; If you are already familiar with Google Analytics, then this will be a short read for you.</description>
+      <guid>http://localhost:1313/2019/12/20/building-a-blog-with-hugo-part4/</guid>
+      <description>In the previous post, I covered how to customize the theme for your Hugo site. I apologize if it was a bit long. This post is considerably shorter. In this post, I&amp;rsquo;m going to walk through how to configure Google Analytics for your site. Let&amp;rsquo;s get started.&#xA;Before we get started&amp;hellip; If you are already familiar with Google Analytics, then this will be a short read for you.</description>
     </item>
     <item>
       <title>Building a Blog With Hugo - Part 3</title>
-      <link>https://blog.psustevens.com/2019/12/18/building-a-blog-with-hugo-part3/</link>
+      <link>http://localhost:1313/2019/12/18/building-a-blog-with-hugo-part3/</link>
       <pubDate>Wed, 18 Dec 2019 01:49:05 -0500</pubDate>
-      <guid>https://blog.psustevens.com/2019/12/18/building-a-blog-with-hugo-part3/</guid>
+      <guid>http://localhost:1313/2019/12/18/building-a-blog-with-hugo-part3/</guid>
       <description>In the previous post, I covered how to build your first Hugo site using the Hugo Future Imperfect Slim theme. I also walked through the process to create the first blog post for your new site. In this post, I&amp;rsquo;m going to walk through different customization options for the theme. The customizations aren&amp;rsquo;t exhaustive but are good enough for you to get started and possibly expand on.</description>
     </item>
     <item>
       <title>Building a Blog With Hugo - Part 2</title>
-      <link>https://blog.psustevens.com/2019/11/01/building-a-blog-with-hugo-part2/</link>
+      <link>http://localhost:1313/2019/11/01/building-a-blog-with-hugo-part2/</link>
       <pubDate>Fri, 01 Nov 2019 13:07:13 -0400</pubDate>
-      <guid>https://blog.psustevens.com/2019/11/01/building-a-blog-with-hugo-part2/</guid>
+      <guid>http://localhost:1313/2019/11/01/building-a-blog-with-hugo-part2/</guid>
       <description>In the first part of this series, I wrote about why I chose to use Hugo to develop this blog and GitHub Pages to host it. In this post, I&amp;rsquo;m going to walk through the steps to create a Hugo site, apply a theme, and create a very simple blog post.</description>
     </item>
     <item>
       <title>Building a Blog With Hugo</title>
-      <link>https://blog.psustevens.com/2019/10/11/building-a-blog-with-hugo/</link>
+      <link>http://localhost:1313/2019/10/11/building-a-blog-with-hugo/</link>
       <pubDate>Fri, 11 Oct 2019 16:02:46 -0400</pubDate>
-      <guid>https://blog.psustevens.com/2019/10/11/building-a-blog-with-hugo/</guid>
+      <guid>http://localhost:1313/2019/10/11/building-a-blog-with-hugo/</guid>
       <description>If you read my very first post, you would know that I&amp;rsquo;ve been thinking about writing a blog for years. I&amp;rsquo;ve been blogging for years for employers. But, just recently, I finally launched my first technical blog. The one you are reading right now. I also have a travel blog that only gets updated when I travel for vacation.</description>
     </item>
   </channel>

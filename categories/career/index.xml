@@ -2,34 +2,33 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Career on @PSUStevens Blog</title>
-    <link>https://blog.psustevens.com/categories/career/</link>
+    <link>http://localhost:1313/categories/career/</link>
     <description>Recent content in Career on @PSUStevens Blog</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <generator>Hugo</generator>
     <language>en</language>
     <copyright>© 2025 David Stevens</copyright>
     <lastBuildDate>Tue, 12 Dec 2023 16:19:30 -0500</lastBuildDate>
-    <atom:link href="https://blog.psustevens.com/categories/career/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/categories/career/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>A Quick Fork in the Job Road</title>
-      <link>https://blog.psustevens.com/2023/12/12/a-quick-fork-in-the-job-road/</link>
+      <link>http://localhost:1313/2023/12/12/a-quick-fork-in-the-job-road/</link>
       <pubDate>Tue, 12 Dec 2023 16:19:30 -0500</pubDate>
-      <guid>https://blog.psustevens.com/2023/12/12/a-quick-fork-in-the-job-road/</guid>
+      <guid>http://localhost:1313/2023/12/12/a-quick-fork-in-the-job-road/</guid>
       <description>Let&amp;rsquo;s put it this way. I wasn&amp;rsquo;t looking for a new job. But due to an unforeseen curveball, I now work for Pure Storage. This wasn&amp;rsquo;t a planned move, but looking back (6 months now). I have no complaints!! I wish all of my friends and colleagues at Entrust the best of luck and I know we will see each other at future trade shows or somewhere else along our travels.</description>
     </item>
     <item>
       <title>New Year, New Changes!</title>
-      <link>https://blog.psustevens.com/2021/02/14/new-year-new-changes/</link>
+      <link>http://localhost:1313/2021/02/14/new-year-new-changes/</link>
       <pubDate>Sun, 14 Feb 2021 11:45:19 -0500</pubDate>
-      <guid>https://blog.psustevens.com/2021/02/14/new-year-new-changes/</guid>
+      <guid>http://localhost:1313/2021/02/14/new-year-new-changes/</guid>
       <description>Most people post their New Years&amp;rsquo; blog posts within the first week of the new year. But, there have been some things brewing that I needed to wait to complete. This blog post isn&amp;rsquo;t like my other posts. It&amp;rsquo;s a brief look back at what transpired in 2020 and what I hope to accomplish this year.</description>
     </item>
     <item>
       <title>How I DIY&#39;d My Career Into a Sales Engineer</title>
-      <link>https://blog.psustevens.com/2020/10/29/how-i-diyd-my-career-into-a-sales-engineer/</link>
+      <link>http://localhost:1313/2020/10/29/how-i-diyd-my-career-into-a-sales-engineer/</link>
       <pubDate>Thu, 29 Oct 2020 05:41:14 -0400</pubDate>
-      <guid>https://blog.psustevens.com/2020/10/29/how-i-diyd-my-career-into-a-sales-engineer/</guid>
-      <description>This post is one of those times where I put tech aside. So, if you are only interested in tech-related blog posts, then you may want to skip this one. If I caught your interest (W00t!!), then please continue.
-&amp;ldquo;MacGyvering&amp;rdquo; My Career Path My career path didn&amp;rsquo;t follow a traditional plan or approach.</description>
+      <guid>http://localhost:1313/2020/10/29/how-i-diyd-my-career-into-a-sales-engineer/</guid>
+      <description>This post is one of those times where I put tech aside. So, if you are only interested in tech-related blog posts, then you may want to skip this one. If I caught your interest (W00t!!), then please continue.&#xA;&amp;ldquo;MacGyvering&amp;rdquo; My Career Path My career path didn&amp;rsquo;t follow a traditional plan or approach.</description>
     </item>
   </channel>
 </rss>

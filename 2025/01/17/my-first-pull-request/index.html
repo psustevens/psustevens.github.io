@@ -1,0 +1,650 @@
+<!doctype html>
+<html lang="en">
+  <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  <meta charset="utf-8">
+<title>My First Pull Request - @PSUStevens Blog</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+
+  <meta name="generator" content="Hugo 0.130.0">
+  
+  <meta itemprop="name" content="My First Pull Request">
+  <meta itemprop="description" content="In this blog post I&#39;m going to cover how to contribute to a project, hosted on Github by performing a pull request.">
+  <meta itemprop="datePublished" content="2025-01-17T00:12:59-05:00">
+  <meta itemprop="dateModified" content="2025-01-17T00:12:59-05:00">
+  <meta itemprop="wordCount" content="885">
+  <meta itemprop="image" content="http://localhost:1313/img/main/logo.jpg">
+  <meta itemprop="keywords" content="Pull Request">
+  <meta property="og:url" content="http://localhost:1313/2025/01/17/my-first-pull-request/">
+  <meta property="og:site_name" content="@PSUStevens Blog">
+  <meta property="og:title" content="My First Pull Request">
+  <meta property="og:description" content="In this blog post I&#39;m going to cover how to contribute to a project, hosted on Github by performing a pull request.">
+  <meta property="og:locale" content="en">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="blog">
+    <meta property="article:published_time" content="2025-01-17T00:12:59-05:00">
+    <meta property="article:modified_time" content="2025-01-17T00:12:59-05:00">
+    <meta property="article:tag" content="Pull Request">
+    <meta property="og:image" content="http://localhost:1313/img/main/logo.jpg">
+
+  
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="http://localhost:1313/img/main/logo.jpg">
+  <meta name="twitter:title" content="My First Pull Request">
+  <meta name="twitter:description" content="In this blog post I&#39;m going to cover how to contribute to a project, hosted on Github by performing a pull request.">
+      <meta name="twitter:site" content="@PSUStevens">
+
+  
+  
+    
+      <script async src="https://www.googletagmanager.com/gtag/js?id=G-GL096KPBB9"></script>
+      <script>
+        var doNotTrack = false;
+        if ( false ) {
+          var dnt = (navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack);
+          var doNotTrack = (dnt == "1" || dnt == "yes");
+        }
+        if (!doNotTrack) {
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', 'G-GL096KPBB9');
+        }
+      </script>
+    
+  
+
+
+
+  
+    <link rel="stylesheet"
+    href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/styles/github.min.css">
+  
+  
+    
+      <link rel="stylesheet" href="/css/normalize.css">
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway:400,800,900|Source+Sans+Pro:400,700">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/academicons/1.8.6/css/academicons.min.css">
+      
+      <link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.7.2/css/all.css" integrity="sha384-nRgPTkuX86pH8yjPJUAFuASXQSSl2/bBUiNV47vSYpKFxHJhbcrGnmlYpYJMeD7a" crossorigin="anonymous">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.3.5/jquery.fancybox.min.css" />
+      
+      
+      
+      
+      
+        <link rel="stylesheet" href="/css/main.min.cb6a3b646f6814df0826c8d8cf09f98c363dc5ac439e87240cd8066e3cd7cd68.css" integrity="sha256-y2o7ZG9oFN8IJsjYzwn5jDY9xaxDnockDNgGbjzXzWg=" crossorigin="anonymous"> -->
+        <link rel="stylesheet" href="/css/add-on.css">
+      
+    
+  
+  
+  
+  
+</head>
+
+  <body>
+    
+<header id="site-header">
+  <nav id="site-nav">
+    <h1 class="nav-title">
+      <a href="/">
+        
+          
+            Blog
+          
+        
+      </a>
+    </h1>
+    <menu id="site-nav-menu" class="flyout-menu">
+      
+        
+          
+          
+            <a href="/" class="link"><i class='fa fa-home'></i> Home</a>
+          
+        
+      
+        
+          
+          
+            <a href="/about/" class="link"><i class='far fa-id-card'></i> About</a>
+          
+        
+      
+        
+          
+          
+            <a href="/categories/" class="link"><i class='fas fa-sitemap'></i> Categories</a>
+          
+        
+      
+        
+          
+          
+            <a href="/tags/" class="link"><i class='fas fa-sitemap'></i> Tags</a>
+          
+        
+      
+      <a href="#share-menu" class="share-toggle"><i class="fas fa-share-alt">&nbsp;</i>Share</a>
+      
+
+    </menu>
+    
+
+    <a href="#share-menu" class="share-toggle"><i class="fas fa-share-alt fa-2x">&nbsp;</i></a>
+    
+    <a href="#site-nav" class="nav-toggle"><i class="fas fa-bars fa-2x"></i></a>
+  </nav>
+  
+  
+    <menu id="share-menu" class="flyout-menu">
+      <h1>Share Post</h1>
+      
+
+
+
+
+  
+    
+    <a href="//twitter.com/share?text=My%20First%20Pull%20Request&amp;url=http%3a%2f%2flocalhost%3a1313%2f2025%2f01%2f17%2fmy-first-pull-request%2f" target="_blank" rel="noopener" class="share-btn twitter">
+        <i class="fab fa-twitter"></i><p>&nbsp;Twitter</p>
+      </a>
+  
+
+  
+        <a href="//www.linkedin.com/shareArticle?url=http%3a%2f%2flocalhost%3a1313%2f2025%2f01%2f17%2fmy-first-pull-request%2f&amp;title=My%20First%20Pull%20Request" target="_blank" rel="noopener" class="share-btn linkedin">
+            <i class="fab fa-linkedin"></i><p>&nbsp;LinkedIn</p>
+          </a>
+  
+
+  
+        <a href="mailto:?subject=Check out this post by map%5bname%3a%40PSUStevens%5d&amp;body=http%3a%2f%2flocalhost%3a1313%2f2025%2f01%2f17%2fmy-first-pull-request%2f" target="_blank" class="share-btn email" data-proofer-ignore>
+          <i class="fas fa-envelope"></i><p>&nbsp;Email</p>
+        </a>
+  
+
+  
+        <a href="//bsky.app/intent/compose?text=My%20First%20Pull%20Request&nbsp;http%3a%2f%2flocalhost%3a1313%2f2025%2f01%2f17%2fmy-first-pull-request%2f" target="_blank" rel="noopener" class="share-btn bluesky">
+          <i class="fab fa-bluesky"></i><p>&nbsp;Bluesky</p>
+        </a>
+        
+  
+
+
+    </menu>
+  
+</header>
+
+    <div id="wrapper">
+      <section id="site-intro">
+  <a href="/"><img src="/img/main/logo.jpg" class="circle" width="" alt="@PSUStevens headshot" /></a>
+  <header>
+    <h1>@PSUStevens blog</h1>
+  </header>
+  <main>
+    <p>You are reading the blog of <a href='https://twitter.com/PSUStevens'>@PSUStevens</a>.  </br>You can reach me through one of the social accounts below.</p>
+  </main>
+  
+    <footer>
+      <ul class="socnet-icons">
+        
+
+        <li><a href="//github.com/psustevens" target="_blank" rel="noopener" title="GitHub" class="fab fa-github"></a></li>
+
+
+
+
+
+
+
+
+
+
+
+<li><a href="//linkedin.com/in/davidlstevens" target="_blank" rel="noopener" title="LinkedIn" class="fab fa-linkedin"></a></li>
+<li><a href="//linkedin.com/company/purestorage" target="_blank" rel="noopener" title="LinkedIn Company" class="fab fa-linkedin"></a></li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<li><a href="//twitter.com/PSUStevens" target="_blank" rel="noopener" title="Twitter" class="fab fa-twitter"></a></li>
+
+
+
+
+
+
+
+
+
+
+
+<li><a href="//bsky.app@psustevens.bsky.social" target="_blank" rel="noopener" title="bluesky" class="fab fa-bluesky"></a></li>
+
+      </ul>
+    </footer>
+  
+</section>
+
+      <main id="site-main">
+        <article class="post">
+  <header>
+  <div class="title">
+    
+        <h2><a href="/2025/01/17/my-first-pull-request/">My First Pull Request</a></h2>
+    
+    
+        <p>In this blog post I&#39;m going to cover how to contribute to a project, hosted on Github by performing a pull request.</p>
+    
+</div>
+  <div class="meta">
+    <time class="published" datetime="2025-01-17 00:12:59 -0500 EST">
+      January 17, 2025
+    </time>
+    <span class="author">PSUStevens</span>
+    
+      <p>5 minutes read</p>
+    
+  </div>
+</header>
+
+  <section id="socnet-share">
+    
+
+
+
+
+  
+    
+    <a href="//twitter.com/share?text=My%20First%20Pull%20Request&amp;url=http%3a%2f%2flocalhost%3a1313%2f2025%2f01%2f17%2fmy-first-pull-request%2f" target="_blank" rel="noopener" class="share-btn twitter">
+        <i class="fab fa-twitter"></i><p>&nbsp;Twitter</p>
+      </a>
+  
+
+  
+        <a href="//www.linkedin.com/shareArticle?url=http%3a%2f%2flocalhost%3a1313%2f2025%2f01%2f17%2fmy-first-pull-request%2f&amp;title=My%20First%20Pull%20Request" target="_blank" rel="noopener" class="share-btn linkedin">
+            <i class="fab fa-linkedin"></i><p>&nbsp;LinkedIn</p>
+          </a>
+  
+
+  
+        <a href="mailto:?subject=Check out this post by map%5bname%3a%40PSUStevens%5d&amp;body=http%3a%2f%2flocalhost%3a1313%2f2025%2f01%2f17%2fmy-first-pull-request%2f" target="_blank" class="share-btn email" data-proofer-ignore>
+          <i class="fas fa-envelope"></i><p>&nbsp;Email</p>
+        </a>
+  
+
+  
+        <a href="//bsky.app/intent/compose?text=My%20First%20Pull%20Request&nbsp;http%3a%2f%2flocalhost%3a1313%2f2025%2f01%2f17%2fmy-first-pull-request%2f" target="_blank" rel="noopener" class="share-btn bluesky">
+          <i class="fab fa-bluesky"></i><p>&nbsp;Bluesky</p>
+        </a>
+        
+  
+
+
+  </section>
+  
+  <a href="/2025/01/17/my-first-pull-request/" class="image featured">
+    <img src="/img/2025/01/PullRequest01.png" alt="A person sitting at a desk with a laptop on it pondering how to perform a git pull request.">
+  </a>
+
+
+  <div class="content">
+    <p>For those of you who know me and those of you who don&rsquo;t, it won&rsquo;t come as a surprise that I&rsquo;m not a developer and I will never claim to be one.  So, when I decided I wanted to learn how to contribute to a project on GitHub what better way to do this than to write a blog post about it.</p>
+<p>Now that I work for <a href="https://www.purestorage.com">Pure Storage</a> we have annual goals we need commit to at the beginning of the year.  One of my goals was to update a PowerShell script for checking storage best practices as they pertain to Pure Storage.  Well, this meant I would need to learn how to perform a GitHub pull request to a GitHub repository.  If you are curious about which repository and which script I&rsquo;m referring to click on the link to the Pure Storage <a href="https://github.com/PureStorage-OpenConnect/VMware-Scripts">VMware-Scripts repository</a> on GitHub.  As I mentioned earlier I planned to update the best practices checker script.  However, as I was about to start on updating it I realized what an undertaking that was going to be.  So, I chose to update the <a href="https://github.com/PureStorage-OpenConnect/VMware-Scripts/blob/master/VvolsReadinessCheckerV3.ps1">vVols checker script</a>.  Let&rsquo;s get started by learning about what is a pull request.</p>
+<h2 id="what-is-a-pull-request">What is a pull request</h2>
+<p>A pull request or PR is a way for developers, or anyone who is working with a version control/code management system like <a href="https://git-scm.com/">git</a> or <a href="https://www.github.com">GitHub</a>, to propose changes to a file or group of files in a repository.  When you create a pull request, you&rsquo;re asking for your changes to be reviewed and <em>hopefully</em> merged into a main branch or another target branch of the project.  To get started you first need to find a project you want to contribute to.</p>
+<h2 id="find-a-project">Find a project</h2>
+<p>Finding a project or repository isn&rsquo;t too difficult.  Open your browser and head over to <a href="https://www.github.com">GitHub</a>.  In the upper right corner of the window there will be a search field.  Enter a project or repository you may be familiar with and click <em>Search all of GitHub</em>.  For this post enter &ldquo;vmware-scripts&rdquo; and scroll down until you find the <a href="https://github.com/PureStorage-OpenConnect/VMware-Scripts">PureStorage-OpenConnect/VMware-Scripts respository</a> and click on it.</p>
+<figure><a href="https://github.com/search?q=vmware-scripts&amp;type=repositories"><img src="/img/2025/01/17/pull-request-01.png"
+    alt="PureStorage VMware-Scripts repository"></a><figcaption>
+      <h4>VMware-Scripts repository</h4>
+    </figcaption>
+</figure>
+
+<h2 id="fork-the-project">Fork the project</h2>
+<p>Now that you have found a project or repository to work on, let&rsquo;s create a fork of the project.  When you fork a project you are making a copy of the repository on your local machine and inheriting all of the settings from the &ldquo;parent&rdquo; or &ldquo;upstream&rdquo; respository.  To create a fork, simply click on the <em>Fork</em> button in the upper right of the respository code window.</p>
+<figure><img src="/img/2025/01/17/pull-request-02.png"
+    alt="Fork button on the repository code window"><figcaption>
+      <h4>Fork button</h4>
+    </figcaption>
+</figure>
+
+<p>This gives you the ability to test out your ideas or changes locally before proposing your changes back to the upstream repository.  Now that you have created a fork of the repository let&rsquo;s get to work.</p>
+<p>This confirms you have successfully created a fork.</p>
+<figure><img src="/img/2025/01/17/pull-request-03.png"
+    alt="Forked version of the VMware-Scripts repository">
+</figure>
+
+<h2 id="create-a-working-branch">Create a working branch</h2>
+<p>Before you get to work, I recommend creating a new branch for all of your suggestions.  This way you have the ability to test your ideas in a branch separate from the main branch.  If something goes horribly wrong, then you have the ability to &ldquo;reset&rdquo; back to a time before you made your changes.</p>
+<p>Change to the directory where you are storing the local copy of your fork and issue the command:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>git checkout -b your-branch-here
+</span></span></code></pre></div><p>Substitute your own name for <em>your-branch-here</em></p>
+<h3 id="edit-the-file">Edit the file</h3>
+<p>Now that you have a new branch.  You can get started on all of your suggestions/changes.  Make &ldquo;git commits&rdquo; when necessary.  Test out your changes locally. Push your changes up to GitHub.  When you are satisfied with your changes and ready to suggest them back to the repository owner it&rsquo;s time to create a pull request.</p>
+<h2 id="submit-a-pull-request">Submit a pull request</h2>
+<p>Click the Contribute button then click the green &ldquo;Open Pull Request&rdquo; button as shown in the screen snippet below:</p>
+<figure><img src="/img/2025/01/17/pull-request-04.png"
+    alt="Prepare to open a pull request">
+</figure>
+
+<p>Next, enter a title and description for your pull request.</p>
+<figure><img src="/img/2025/01/17/pull-request-05.png"
+    alt="Enter information for the pull request">
+</figure>
+
+<p>When you are satisfied with what you have entered for your pull request click the green &ldquo;Create Pull Request&rdquo; button at the bottom of the window.  In the screen snippet I clicked the down-arrow to indicate there are multiple options.</p>
+<figure><img src="/img/2025/01/17/pull-request-06.png"
+    alt="Create the pull request">
+</figure>
+
+<p>After submitting your pull request you are presented with a summary of it.  If you look at the top of the screen snippet you will see the pull request is open and the suggested merge request:</p>
+<blockquote>
+<p>psustevens wants to merge 13 commits into PureStorage-OpenConnect:master from psustevens:master</p>
+</blockquote>
+<p>At this point it&rsquo;s a waiting game for the owner of the project to review and merge your pull request into the upstream/parent repository. The owner can also reply to you with suggestions to make before they will accept your request.</p>
+<figure><img src="/img/2025/01/17/pull-request-07.png"
+    alt="Pull request details"><figcaption>
+      <h4>Pull request details</h4>
+    </figcaption>
+</figure>
+
+<p>After the repository owner has merged your pull request you should be notified.  Going back into GitHub and looking at your pull request you will see it has been merged into the upstream/parent respository.  You just completed your first pull request and had your changes accepted!</p>
+<blockquote>
+<p>mikenelson-io merged 13 commits into PureStorage-OpenConnect:master from psustevens:master</p>
+</blockquote>
+<figure><img src="/img/2025/01/17/pull-request-09.png"
+    alt="Pull request has been accepted and merged"><figcaption>
+      <h4>Merged pull request</h4>
+    </figcaption>
+</figure>
+
+<hr>
+<h2 id="summary">Summary</h2>
+<p>Hopefully, this post has helped you.  I know it helped me get past my fears of using pull requests in my work on GitHub.
+If there is something you think I&rsquo;m missing and feel should be modified or added, <a href="http://x.com/PSUStevens">please let me know.</a></p>
+<p>Thanks for reading!</p>
+
+  </div>
+  <footer>
+    <ul class="stats">
+  
+    
+    
+      <li class="categories">
+        <ul>
+          
+            
+            <li><a class="article-category-link" href="http://localhost:1313/categories/howto">HowTo</a></li>
+          
+            
+            <li><a class="article-category-link" href="http://localhost:1313/categories/github">GitHub</a></li>
+          
+        </ul>
+      </li>
+    
+  
+  
+    
+    
+      <li class="tags">
+        <ul>
+          
+            
+            <li><a class="article-category-link" href="http://localhost:1313/tags/pull-request">pull request</a></li>
+          
+        </ul>
+      </li>
+    
+  
+</ul>
+
+  </footer>
+</article>
+
+
+<div class="pagination">
+  
+    <a href="/2023/12/12/a-quick-fork-in-the-job-road/" class="button big previous"><i class="fas fa-angle-left"></i> A Quick Fork in the Job Road</a>
+  
+  
+    <a href="/2025/02/22/no-storage-replication-adapters-installed/" class="button big next">No Storage Replication Adapters Installed <i class="fas fa-angle-right"></i></a>
+  
+</div>
+
+
+      </main>
+      <section id="site-sidebar">
+  
+    <section id="recent-posts">
+      <header>
+        <h1>Recent posts</h1>
+      </header>
+      
+      <article class="mini-post">
+        <section>
+          
+  <a href="/2025/02/22/no-storage-replication-adapters-installed/" class="image featured">
+    <img src="/img/2025/02/frustrated-IT-guy.jpg" alt="A frustrated IT guy kneeling on both knees in his office">
+  </a>
+
+
+        </section>
+        <header>
+          <h1><a href="/2025/02/22/no-storage-replication-adapters-installed/">No Storage Replication Adapters Installed</a></h1>
+          <time class="published" datetime="">February 22, 2025</time>
+        </header>
+      </article>
+      
+      <article class="mini-post">
+        <section>
+          
+  <a href="/2025/01/17/my-first-pull-request/" class="image featured">
+    <img src="/img/2025/01/PullRequest01.png" alt="A person sitting at a desk with a laptop on it pondering how to perform a git pull request.">
+  </a>
+
+
+        </section>
+        <header>
+          <h1><a href="/2025/01/17/my-first-pull-request/">My First Pull Request</a></h1>
+          <time class="published" datetime="">January 17, 2025</time>
+        </header>
+      </article>
+      
+      <article class="mini-post">
+        <section>
+          
+  <a href="/2023/12/12/a-quick-fork-in-the-job-road/" class="image featured">
+    
+      <img src="/img/2023/12/New-Job.jpg" alt="">
+    
+  </a>
+
+
+        </section>
+        <header>
+          <h1><a href="/2023/12/12/a-quick-fork-in-the-job-road/">A Quick Fork in the Job Road</a></h1>
+          <time class="published" datetime="">December 12, 2023</time>
+        </header>
+      </article>
+      
+      
+        <a href="/blog/" class="button">See more</a>
+      
+    </section>
+  
+
+  
+    
+      <section id="categories">
+        <header>
+          <h1><a href="/categories">Categories</a></h1>
+        </header>
+        <ul>
+          
+            
+          
+          
+          <li>
+            
+              <a href="/categories/vmware/">vmware<span class="count">12</span></a>
+            
+          
+          <li>
+            
+              <a href="/categories/howto/">howto<span class="count">11</span></a>
+            
+          
+          <li>
+            
+              <a href="/categories/hytrust/">hytrust<span class="count">7</span></a>
+            
+          
+          <li>
+            
+              <a href="/categories/blogging/">blogging<span class="count">6</span></a>
+            
+          
+          <li>
+            
+              <a href="/categories/entrust/">entrust<span class="count">5</span></a>
+            
+          
+          <li>
+            
+              <a href="/categories/career/">career<span class="count">3</span></a>
+            
+          
+          <li>
+            
+              <a href="/categories/api/">api<span class="count">1</span></a>
+            
+          
+          <li>
+            
+              <a href="/categories/broadcom/">broadcom<span class="count">1</span></a>
+            
+          
+          <li>
+            
+              <a href="/categories/github/">github<span class="count">1</span></a>
+            
+          
+          <li>
+            
+              <a href="/categories/psustevens/">psustevens<span class="count">1</span></a>
+            
+          
+          <li>
+            
+              <a href="/categories/synology/">synology<span class="count">1</span></a>
+            
+          
+          </li>
+        </ul>
+      </section>
+    
+  
+
+  <section id="mini-bio">
+    <header>
+      <h1>About</h1>
+    </header>
+    <p>This is my personal blog about technical topics including virtualization, storage, networking, backups, and some random IT stuff that strikes my fancy.</p>
+    <footer>
+      <a href="/about" class="button">Learn More</a>
+    </footer>
+  </section>
+</section>
+
+      <footer id="site-footer">
+  
+      <ul class="socnet-icons">
+        
+
+        <li><a href="//github.com/psustevens" target="_blank" rel="noopener" title="GitHub" class="fab fa-github"></a></li>
+
+
+
+
+
+
+
+
+
+
+
+<li><a href="//linkedin.com/in/davidlstevens" target="_blank" rel="noopener" title="LinkedIn" class="fab fa-linkedin"></a></li>
+<li><a href="//linkedin.com/company/purestorage" target="_blank" rel="noopener" title="LinkedIn Company" class="fab fa-linkedin"></a></li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<li><a href="//twitter.com/PSUStevens" target="_blank" rel="noopener" title="Twitter" class="fab fa-twitter"></a></li>
+
+
+
+
+
+
+
+
+
+
+
+<li><a href="//bsky.app@psustevens.bsky.social" target="_blank" rel="noopener" title="bluesky" class="fab fa-bluesky"></a></li>
+
+      </ul>
+  
+  <p class="copyright">
+    
+      © 2025 David Stevens
+    . <br>
+    Theme: <a href='https://github.com/pacollins/hugo-future-imperfect-slim' target='_blank' rel='noopener'>Hugo Future Imperfect Slim</a><br>A <a href='https://html5up.net/future-imperfect' target='_blank' rel='noopener'>HTML5 UP port</a> | Powered by <a href='https://gohugo.io/' title='0.130.0' target='_blank' rel='noopener'>Hugo</a>
+  </p>
+</footer>
+<a id="back-to-top" href="#" class="fas fa-arrow-up fa-2x"></a>
+
+      
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/highlight.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/languages/html.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/languages/css.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/languages/js.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/languages/toml.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/languages/PowerShell.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/languages/markdown.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/languages/plaintext.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script>
+
+
+  
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/skel/3.0.1/skel.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.3.5/jquery.fancybox.min.js"></script>
+  <script src=/js/util.js></script>
+  <script src=/js/main.js></script>
+  <script src=/js/add-on.js></script>
+  
+
+
+
+
+    </div>
+  </body>
+</html>

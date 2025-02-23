@@ -1,0 +1,644 @@
+<!doctype html>
+<html lang="en">
+  <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  <meta charset="utf-8">
+<title>No Storage Replication Adapters Installed - @PSUStevens Blog</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+
+  <meta name="generator" content="Hugo 0.130.0">
+  
+  <meta itemprop="name" content="No Storage Replication Adapters Installed">
+  <meta itemprop="description" content="In this blog post I&#39;m going to cover a puzzling VMware Site Recovery Manager error that was more challenging to fix than I expected">
+  <meta itemprop="datePublished" content="2025-02-22T10:35:43-05:00">
+  <meta itemprop="dateModified" content="2025-02-22T10:35:43-05:00">
+  <meta itemprop="wordCount" content="1009">
+  <meta itemprop="image" content="http://localhost:1313/img/main/logo.jpg">
+  <meta itemprop="keywords" content="Site Recovery Manager,Live Site Recovery,SRM,LSR">
+  <meta property="og:url" content="http://localhost:1313/2025/02/22/no-storage-replication-adapters-installed/">
+  <meta property="og:site_name" content="@PSUStevens Blog">
+  <meta property="og:title" content="No Storage Replication Adapters Installed">
+  <meta property="og:description" content="In this blog post I&#39;m going to cover a puzzling VMware Site Recovery Manager error that was more challenging to fix than I expected">
+  <meta property="og:locale" content="en">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="blog">
+    <meta property="article:published_time" content="2025-02-22T10:35:43-05:00">
+    <meta property="article:modified_time" content="2025-02-22T10:35:43-05:00">
+    <meta property="article:tag" content="Site Recovery Manager">
+    <meta property="article:tag" content="Live Site Recovery">
+    <meta property="article:tag" content="SRM">
+    <meta property="article:tag" content="LSR">
+    <meta property="og:image" content="http://localhost:1313/img/main/logo.jpg">
+
+  
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="http://localhost:1313/img/main/logo.jpg">
+  <meta name="twitter:title" content="No Storage Replication Adapters Installed">
+  <meta name="twitter:description" content="In this blog post I&#39;m going to cover a puzzling VMware Site Recovery Manager error that was more challenging to fix than I expected">
+      <meta name="twitter:site" content="@PSUStevens">
+
+  
+  
+    
+      <script async src="https://www.googletagmanager.com/gtag/js?id=G-GL096KPBB9"></script>
+      <script>
+        var doNotTrack = false;
+        if ( false ) {
+          var dnt = (navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack);
+          var doNotTrack = (dnt == "1" || dnt == "yes");
+        }
+        if (!doNotTrack) {
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', 'G-GL096KPBB9');
+        }
+      </script>
+    
+  
+
+
+
+  
+    <link rel="stylesheet"
+    href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/styles/github.min.css">
+  
+  
+    
+      <link rel="stylesheet" href="/css/normalize.css">
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway:400,800,900|Source+Sans+Pro:400,700">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/academicons/1.8.6/css/academicons.min.css">
+      
+      <link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.7.2/css/all.css" integrity="sha384-nRgPTkuX86pH8yjPJUAFuASXQSSl2/bBUiNV47vSYpKFxHJhbcrGnmlYpYJMeD7a" crossorigin="anonymous">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.3.5/jquery.fancybox.min.css" />
+      
+      
+      
+      
+      
+        <link rel="stylesheet" href="/css/main.min.cb6a3b646f6814df0826c8d8cf09f98c363dc5ac439e87240cd8066e3cd7cd68.css" integrity="sha256-y2o7ZG9oFN8IJsjYzwn5jDY9xaxDnockDNgGbjzXzWg=" crossorigin="anonymous"> -->
+        <link rel="stylesheet" href="/css/add-on.css">
+      
+    
+  
+  
+  
+  
+</head>
+
+  <body>
+    
+<header id="site-header">
+  <nav id="site-nav">
+    <h1 class="nav-title">
+      <a href="/">
+        
+          
+            Blog
+          
+        
+      </a>
+    </h1>
+    <menu id="site-nav-menu" class="flyout-menu">
+      
+        
+          
+          
+            <a href="/" class="link"><i class='fa fa-home'></i> Home</a>
+          
+        
+      
+        
+          
+          
+            <a href="/about/" class="link"><i class='far fa-id-card'></i> About</a>
+          
+        
+      
+        
+          
+          
+            <a href="/categories/" class="link"><i class='fas fa-sitemap'></i> Categories</a>
+          
+        
+      
+        
+          
+          
+            <a href="/tags/" class="link"><i class='fas fa-sitemap'></i> Tags</a>
+          
+        
+      
+      <a href="#share-menu" class="share-toggle"><i class="fas fa-share-alt">&nbsp;</i>Share</a>
+      
+
+    </menu>
+    
+
+    <a href="#share-menu" class="share-toggle"><i class="fas fa-share-alt fa-2x">&nbsp;</i></a>
+    
+    <a href="#site-nav" class="nav-toggle"><i class="fas fa-bars fa-2x"></i></a>
+  </nav>
+  
+  
+    <menu id="share-menu" class="flyout-menu">
+      <h1>Share Post</h1>
+      
+
+
+
+
+  
+    
+    <a href="//twitter.com/share?text=No%20Storage%20Replication%20Adapters%20Installed&amp;url=http%3a%2f%2flocalhost%3a1313%2f2025%2f02%2f22%2fno-storage-replication-adapters-installed%2f" target="_blank" rel="noopener" class="share-btn twitter">
+        <i class="fab fa-twitter"></i><p>&nbsp;Twitter</p>
+      </a>
+  
+
+  
+        <a href="//www.linkedin.com/shareArticle?url=http%3a%2f%2flocalhost%3a1313%2f2025%2f02%2f22%2fno-storage-replication-adapters-installed%2f&amp;title=No%20Storage%20Replication%20Adapters%20Installed" target="_blank" rel="noopener" class="share-btn linkedin">
+            <i class="fab fa-linkedin"></i><p>&nbsp;LinkedIn</p>
+          </a>
+  
+
+  
+        <a href="mailto:?subject=Check out this post by map%5bname%3a%40PSUStevens%5d&amp;body=http%3a%2f%2flocalhost%3a1313%2f2025%2f02%2f22%2fno-storage-replication-adapters-installed%2f" target="_blank" class="share-btn email" data-proofer-ignore>
+          <i class="fas fa-envelope"></i><p>&nbsp;Email</p>
+        </a>
+  
+
+  
+        <a href="//bsky.app/intent/compose?text=No%20Storage%20Replication%20Adapters%20Installed&nbsp;http%3a%2f%2flocalhost%3a1313%2f2025%2f02%2f22%2fno-storage-replication-adapters-installed%2f" target="_blank" rel="noopener" class="share-btn bluesky">
+          <i class="fab fa-bluesky"></i><p>&nbsp;Bluesky</p>
+        </a>
+        
+  
+
+
+    </menu>
+  
+</header>
+
+    <div id="wrapper">
+      <section id="site-intro">
+  <a href="/"><img src="/img/main/logo.jpg" class="circle" width="" alt="@PSUStevens headshot" /></a>
+  <header>
+    <h1>@PSUStevens blog</h1>
+  </header>
+  <main>
+    <p>You are reading the blog of <a href='https://twitter.com/PSUStevens'>@PSUStevens</a>.  </br>You can reach me through one of the social accounts below.</p>
+  </main>
+  
+    <footer>
+      <ul class="socnet-icons">
+        
+
+        <li><a href="//github.com/psustevens" target="_blank" rel="noopener" title="GitHub" class="fab fa-github"></a></li>
+
+
+
+
+
+
+
+
+
+
+
+<li><a href="//linkedin.com/in/davidlstevens" target="_blank" rel="noopener" title="LinkedIn" class="fab fa-linkedin"></a></li>
+<li><a href="//linkedin.com/company/purestorage" target="_blank" rel="noopener" title="LinkedIn Company" class="fab fa-linkedin"></a></li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<li><a href="//twitter.com/PSUStevens" target="_blank" rel="noopener" title="Twitter" class="fab fa-twitter"></a></li>
+
+
+
+
+
+
+
+
+
+
+
+<li><a href="//bsky.app@psustevens.bsky.social" target="_blank" rel="noopener" title="bluesky" class="fab fa-bluesky"></a></li>
+
+      </ul>
+    </footer>
+  
+</section>
+
+      <main id="site-main">
+        <article class="post">
+  <header>
+  <div class="title">
+    
+        <h2><a href="/2025/02/22/no-storage-replication-adapters-installed/">No Storage Replication Adapters Installed</a></h2>
+    
+    
+        <p>In this blog post I&#39;m going to cover a puzzling VMware Site Recovery Manager error that was more challenging to fix than I expected</p>
+    
+</div>
+  <div class="meta">
+    <time class="published" datetime="2025-02-22 10:35:43 -0500 EST">
+      February 22, 2025
+    </time>
+    <span class="author">PSUStevens</span>
+    
+      <p>5 minutes read</p>
+    
+  </div>
+</header>
+
+  <section id="socnet-share">
+    
+
+
+
+
+  
+    
+    <a href="//twitter.com/share?text=No%20Storage%20Replication%20Adapters%20Installed&amp;url=http%3a%2f%2flocalhost%3a1313%2f2025%2f02%2f22%2fno-storage-replication-adapters-installed%2f" target="_blank" rel="noopener" class="share-btn twitter">
+        <i class="fab fa-twitter"></i><p>&nbsp;Twitter</p>
+      </a>
+  
+
+  
+        <a href="//www.linkedin.com/shareArticle?url=http%3a%2f%2flocalhost%3a1313%2f2025%2f02%2f22%2fno-storage-replication-adapters-installed%2f&amp;title=No%20Storage%20Replication%20Adapters%20Installed" target="_blank" rel="noopener" class="share-btn linkedin">
+            <i class="fab fa-linkedin"></i><p>&nbsp;LinkedIn</p>
+          </a>
+  
+
+  
+        <a href="mailto:?subject=Check out this post by map%5bname%3a%40PSUStevens%5d&amp;body=http%3a%2f%2flocalhost%3a1313%2f2025%2f02%2f22%2fno-storage-replication-adapters-installed%2f" target="_blank" class="share-btn email" data-proofer-ignore>
+          <i class="fas fa-envelope"></i><p>&nbsp;Email</p>
+        </a>
+  
+
+  
+        <a href="//bsky.app/intent/compose?text=No%20Storage%20Replication%20Adapters%20Installed&nbsp;http%3a%2f%2flocalhost%3a1313%2f2025%2f02%2f22%2fno-storage-replication-adapters-installed%2f" target="_blank" rel="noopener" class="share-btn bluesky">
+          <i class="fab fa-bluesky"></i><p>&nbsp;Bluesky</p>
+        </a>
+        
+  
+
+
+  </section>
+  
+  <a href="/2025/02/22/no-storage-replication-adapters-installed/" class="image featured">
+    <img src="/img/2025/02/frustrated-IT-guy.jpg" alt="A frustrated IT guy kneeling on both knees in his office">
+  </a>
+
+
+  <div class="content">
+    <p>As part of my job, I regularly demonstrate <a href="https://www.purestorage.com">Pure Storage</a> features and how <a href="https://www.vmware.com">VMware</a> solutions integrate seamlessly with our <a href="https://www.purestorage.com/pure-advantage/platform.html">storage platform.</a>  Before a demo, I usually will confirm the software I intend to use is in good working order, but this isn&rsquo;t always the case.  The demo lab is used by many of my colleagues.  This means that during their use of the lab something could have stopped working or is in a wonky state.  So, Murphy&rsquo;s Law could rear its ugly head at the most inconvenient time if I cannot confirm all is well beforehand.</p>
+<h2 id="hello-murphy">Hello Murphy!</h2>
+<p>Recently, I was scheduled to demo the integration of <a href="https://www.purestorage.com/demos/platform/protecting-your-data/pure-storage-data-replication/6365922756112.html">Pure Storage replication</a> features with <a href="https://www.vmware.com/products/cloud-infrastructure/live-recovery#site-recovery">VMware Live Site Recovery (LSR).</a>  For those who are unfamiliar with LSR, it orchestrates the ability to failover VMs for testing purposes to another site, physical or virtual, or when an actual DR failover is required.  Live Site Recovery was previously known as Site Recovery Manager (SRM).</p>
+<p>A few days prior to my scheduled customer meeting, I performed a test failover to confirm that there were no issues.  On demo day, I logged into the lab and the LSR virtual appliance and clicked the &ldquo;Test&rdquo; button to show how the integration works.  WHAM!  It failed!  No matter what I did to save my demo, it wouldn&rsquo;t work.  I profusely apologized to the customer and the account team.  I shamelessly had to reschedule for another day.</p>
+<h2 id="time-to-investigate">Time to Investigate</h2>
+<p>When the failure occurred, there was a strange error about &ldquo;No space left on device.&rdquo;  See a snippet of the error below:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-plaintext" data-lang="plaintext"><span style="display:flex;"><span>Failed to create snapshots of replica devices. 
+</span></span><span style="display:flex;"><span>SRA command &#39;testFailoverStart&#39; failed. 
+</span></span><span style="display:flex;"><span>Internal error: Unhandled exception. 
+</span></span><span style="display:flex;"><span>System.IO.IOException: No space left on device : &#39;/srm/sra/log/testFailoverStart_2025-02-09-18-04-27-1254563-b6a5c7f8-d576-429e-a363-b0498c6cb701.log&#39; at System.IO.RandomAccess...
+</span></span></code></pre></div><p>So, the following day, I started investigating.  None of our storage arrays were anywhere near full, so I could take this off the list of issues to investigate.  I logged into both of the SRM appliances and noticed this error on SRM02, the &ldquo;Production Site.&rdquo;</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-plaintext" data-lang="plaintext"><span style="display:flex;"><span>Unable to find SRA at the paired site
+</span></span></code></pre></div><p>I saw this error on SRM03, the &ldquo;DR Site.&rdquo;</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-plaintext" data-lang="plaintext"><span style="display:flex;"><span>No storage replication adapters installed
+</span></span></code></pre></div><p>I logged into SRM03 and began poking around.</p>
+<p>I clicked the option to &ldquo;Rescan Adapters,&rdquo; but that failed every time.  I SSH&rsquo;d into the appliance and looked for the directory mentioned in the error message.  I couldn&rsquo;t find that directory anywhere on the appliance.  Next, I logged into the administrative interface of the appliance on port 5480.  I rescanned the adapter again without success.  Then, I deleted the SRA and reinstalled it.  No change.</p>
+<p>I was really annoyed at this point.  Next, I  thought there might be an issue with the SRA needing to communicate with vCenter.  So, I changed some passwords on the vCenter appliances.  I went back to SRM03 and rescanned the adapter.</p>
+<p>Success!!!</p>
+<p>I quickly ran a failover test.  Failure!!!  Ahhh, Come on!!</p>
+<p>At this point, I had been working on this for several hours over the weekend and decided to take a break and try again the following day with a clear mind.</p>
+<h2 id="the-next-day">The Next Day</h2>
+<p>The next day, I picked up where I left off.  Except this time, I decided to do another round of web searches to see if I missed a result during one of my previous searches.</p>
+<p>That&rsquo;s when the following link showed up in my search:</p>
+<blockquote>
+<p><a href="https://knowledge.broadcom.com/external/article/313050">VLSR - SRM services stop due to unmanaged SRA log files</a>
+<a href="https://knowledge.broadcom.com/external/article/313050">https://knowledge.broadcom.com/external/article/313050</a></p>
+</blockquote>
+<p>It turns out this was the answer.  Here&rsquo;s a summary of that article:</p>
+<p>When you install a new SRA, it is stored in a directory on a dedicated &ldquo;support&rdquo; partition on the SRM appliance.  Within the SRA directory are SRA logs when a failover or failover test is performed.  If the SRA isn&rsquo;t cleaning up after itself, the support partition can fill up.  This isn&rsquo;t surprising in our demo lab.  I will do several test failovers in demos.  So, I can understand when the SRA can&rsquo;t keep up cleaning up after itself.</p>
+<p>I SSH&rsquo;d into the SRM03 and ran the <code>df -h</code> command to confirm this is the case:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>root@srm <span style="color:#f92672">[</span> ~ <span style="color:#f92672">]</span><span style="color:#75715e"># df -h</span>
+</span></span><span style="display:flex;"><span>Filesystem                      Size  Used Avail Use% Mounted on
+</span></span><span style="display:flex;"><span>devtmpfs                        4.0M     <span style="color:#ae81ff">0</span>  4.0M   0% /dev
+</span></span><span style="display:flex;"><span>tmpfs                           4.9G   44K  4.9G   1% /dev/shm
+</span></span><span style="display:flex;"><span>tmpfs                           2.0G  856K  2.0G   1% /run
+</span></span><span style="display:flex;"><span>tmpfs                           4.0M     <span style="color:#ae81ff">0</span>  4.0M   0% /sys/fs/cgroup
+</span></span><span style="display:flex;"><span>/dev/sda4                        14G  5.5G  7.4G  43% /
+</span></span><span style="display:flex;"><span>tmpfs                           4.9G  488K  4.9G   1% /tmp
+</span></span><span style="display:flex;"><span>/dev/sda2                       238M   36M  190M  16% /boot
+</span></span><span style="display:flex;"><span>/dev/mapper/support_vg-support  3.9G  555M  3.2G  15% /opt/vmware/support
+</span></span><span style="display:flex;"><span>/dev/loop0                      378M  358M     <span style="color:#ae81ff">0</span> 100% /opt/vmware/support/logs/srm/SRAs
+</span></span></code></pre></div><p>The last line in the output says it all.  The support partition was full.  I also now knew where the SRA logs were stored on the appliance.</p>
+<h2 id="the-answer">The Answer</h2>
+<ol>
+<li>SSH into the appliance as admin using the proper password.</li>
+<li>Once logged in escalate to the root user. <code>su root</code></li>
+<li>After doing that change to the <code>/opt/vmware/support/logs/srm/SRAs</code> directory.</li>
+<li>You will find at least one directory starting with <code>sha256_</code> followed by a bunch of characters.  This is the folder where the SRA logs are stored.  You may find other <code>sha256_</code> directories.  These are log directories for previous SRAs.</li>
+<li>Next, go through the directory and clean up old log files.  I deleted a ton of old log files and reduced the support partition to 25% used.</li>
+<li>Finally, login to the administrative interface of the appliance and rescan adapters.  This should succeed.</li>
+</ol>
+<p>I confirmed SRM02 could see the SRA from SRM03 and vice versa.  I ran a test failover, which worked as expected.  Problem solved!</p>
+<hr>
+<h2 id="additional-info">Additional Info</h2>
+<p>The KB link I discovered on how to fix this problem suggests implementing a CRON job to ensure the logs are regularly cleaned up.  If this was a production environment, then I would have implemented that CRON job suggestion.  I decided not to do this because I will be installing a newer version of SRM, err, Live Site Recovery (LSR), in the near future.</p>
+<hr>
+<h2 id="summary">Summary</h2>
+<p>In this post, I covered an annoying SRM issue that wasn&rsquo;t obvious on how to resolve and the steps I took to fix it.  Hopefully, you found this post helpful.</p>
+<p>Thanks for following along.</p>
+
+  </div>
+  <footer>
+    <ul class="stats">
+  
+    
+    
+      <li class="categories">
+        <ul>
+          
+            
+            <li><a class="article-category-link" href="http://localhost:1313/categories/vmware">vmware</a></li>
+          
+            
+            <li><a class="article-category-link" href="http://localhost:1313/categories/broadcom">broadcom</a></li>
+          
+        </ul>
+      </li>
+    
+  
+  
+    
+    
+      <li class="tags">
+        <ul>
+          
+            
+            <li><a class="article-category-link" href="http://localhost:1313/tags/site-recovery-manager">Site Recovery Manager</a></li>
+          
+            
+            <li><a class="article-category-link" href="http://localhost:1313/tags/live-site-recovery">Live Site Recovery</a></li>
+          
+            
+            <li><a class="article-category-link" href="http://localhost:1313/tags/srm">SRM</a></li>
+          
+            
+            <li><a class="article-category-link" href="http://localhost:1313/tags/lsr">LSR</a></li>
+          
+        </ul>
+      </li>
+    
+  
+</ul>
+
+  </footer>
+</article>
+
+
+<div class="pagination">
+  
+    <a href="/2025/01/17/my-first-pull-request/" class="button big previous"><i class="fas fa-angle-left"></i> My First Pull Request</a>
+  
+  
+</div>
+
+
+      </main>
+      <section id="site-sidebar">
+  
+    <section id="recent-posts">
+      <header>
+        <h1>Recent posts</h1>
+      </header>
+      
+      <article class="mini-post">
+        <section>
+          
+  <a href="/2025/02/22/no-storage-replication-adapters-installed/" class="image featured">
+    <img src="/img/2025/02/frustrated-IT-guy.jpg" alt="A frustrated IT guy kneeling on both knees in his office">
+  </a>
+
+
+        </section>
+        <header>
+          <h1><a href="/2025/02/22/no-storage-replication-adapters-installed/">No Storage Replication Adapters Installed</a></h1>
+          <time class="published" datetime="">February 22, 2025</time>
+        </header>
+      </article>
+      
+      <article class="mini-post">
+        <section>
+          
+  <a href="/2025/01/17/my-first-pull-request/" class="image featured">
+    <img src="/img/2025/01/PullRequest01.png" alt="A person sitting at a desk with a laptop on it pondering how to perform a git pull request.">
+  </a>
+
+
+        </section>
+        <header>
+          <h1><a href="/2025/01/17/my-first-pull-request/">My First Pull Request</a></h1>
+          <time class="published" datetime="">January 17, 2025</time>
+        </header>
+      </article>
+      
+      <article class="mini-post">
+        <section>
+          
+  <a href="/2023/12/12/a-quick-fork-in-the-job-road/" class="image featured">
+    
+      <img src="/img/2023/12/New-Job.jpg" alt="">
+    
+  </a>
+
+
+        </section>
+        <header>
+          <h1><a href="/2023/12/12/a-quick-fork-in-the-job-road/">A Quick Fork in the Job Road</a></h1>
+          <time class="published" datetime="">December 12, 2023</time>
+        </header>
+      </article>
+      
+      
+        <a href="/blog/" class="button">See more</a>
+      
+    </section>
+  
+
+  
+    
+      <section id="categories">
+        <header>
+          <h1><a href="/categories">Categories</a></h1>
+        </header>
+        <ul>
+          
+            
+          
+          
+          <li>
+            
+              <a href="/categories/vmware/">vmware<span class="count">12</span></a>
+            
+          
+          <li>
+            
+              <a href="/categories/howto/">howto<span class="count">11</span></a>
+            
+          
+          <li>
+            
+              <a href="/categories/hytrust/">hytrust<span class="count">7</span></a>
+            
+          
+          <li>
+            
+              <a href="/categories/blogging/">blogging<span class="count">6</span></a>
+            
+          
+          <li>
+            
+              <a href="/categories/entrust/">entrust<span class="count">5</span></a>
+            
+          
+          <li>
+            
+              <a href="/categories/career/">career<span class="count">3</span></a>
+            
+          
+          <li>
+            
+              <a href="/categories/api/">api<span class="count">1</span></a>
+            
+          
+          <li>
+            
+              <a href="/categories/broadcom/">broadcom<span class="count">1</span></a>
+            
+          
+          <li>
+            
+              <a href="/categories/github/">github<span class="count">1</span></a>
+            
+          
+          <li>
+            
+              <a href="/categories/psustevens/">psustevens<span class="count">1</span></a>
+            
+          
+          <li>
+            
+              <a href="/categories/synology/">synology<span class="count">1</span></a>
+            
+          
+          </li>
+        </ul>
+      </section>
+    
+  
+
+  <section id="mini-bio">
+    <header>
+      <h1>About</h1>
+    </header>
+    <p>This is my personal blog about technical topics including virtualization, storage, networking, backups, and some random IT stuff that strikes my fancy.</p>
+    <footer>
+      <a href="/about" class="button">Learn More</a>
+    </footer>
+  </section>
+</section>
+
+      <footer id="site-footer">
+  
+      <ul class="socnet-icons">
+        
+
+        <li><a href="//github.com/psustevens" target="_blank" rel="noopener" title="GitHub" class="fab fa-github"></a></li>
+
+
+
+
+
+
+
+
+
+
+
+<li><a href="//linkedin.com/in/davidlstevens" target="_blank" rel="noopener" title="LinkedIn" class="fab fa-linkedin"></a></li>
+<li><a href="//linkedin.com/company/purestorage" target="_blank" rel="noopener" title="LinkedIn Company" class="fab fa-linkedin"></a></li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<li><a href="//twitter.com/PSUStevens" target="_blank" rel="noopener" title="Twitter" class="fab fa-twitter"></a></li>
+
+
+
+
+
+
+
+
+
+
+
+<li><a href="//bsky.app@psustevens.bsky.social" target="_blank" rel="noopener" title="bluesky" class="fab fa-bluesky"></a></li>
+
+      </ul>
+  
+  <p class="copyright">
+    
+      © 2025 David Stevens
+    . <br>
+    Theme: <a href='https://github.com/pacollins/hugo-future-imperfect-slim' target='_blank' rel='noopener'>Hugo Future Imperfect Slim</a><br>A <a href='https://html5up.net/future-imperfect' target='_blank' rel='noopener'>HTML5 UP port</a> | Powered by <a href='https://gohugo.io/' title='0.130.0' target='_blank' rel='noopener'>Hugo</a>
+  </p>
+</footer>
+<a id="back-to-top" href="#" class="fas fa-arrow-up fa-2x"></a>
+
+      
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/highlight.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/languages/html.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/languages/css.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/languages/js.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/languages/toml.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/languages/PowerShell.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/languages/markdown.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/languages/plaintext.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script>
+
+
+  
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/skel/3.0.1/skel.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.3.5/jquery.fancybox.min.js"></script>
+  <script src=/js/util.js></script>
+  <script src=/js/main.js></script>
+  <script src=/js/add-on.js></script>
+  
+
+
+
+
+    </div>
+  </body>
+</html>
