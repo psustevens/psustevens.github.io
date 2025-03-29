@@ -7,8 +7,15 @@
     <generator>Hugo</generator>
     <language>en</language>
     <copyright>© 2025 David Stevens</copyright>
-    <lastBuildDate>Sat, 22 Feb 2025 10:35:43 -0500</lastBuildDate>
+    <lastBuildDate>Sat, 29 Mar 2025 16:19:59 -0400</lastBuildDate>
     <atom:link href="http://localhost:1313/blog/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>2025 vExpert Renewal</title>
+      <link>http://localhost:1313/2025/03/29/2025-vexpert-renewal/</link>
+      <pubDate>Sat, 29 Mar 2025 16:19:59 -0400</pubDate>
+      <guid>http://localhost:1313/2025/03/29/2025-vexpert-renewal/</guid>
+      <description>I&amp;rsquo;m a bit late on posting this. But, better late than never. I&amp;rsquo;ve been renewed again as a VMware vExpert for 2025. This is my seventh consecutive year since I first applied. Woohoo!!&#xA;7x VMware vExpert If you haven&amp;rsquo;t met me, then you should know the image for this post is not how I look at all.</description>
+    </item>
     <item>
       <title>No Storage Replication Adapters Installed</title>
       <link>http://localhost:1313/2025/02/22/no-storage-replication-adapters-installed/</link>

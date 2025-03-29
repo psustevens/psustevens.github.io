@@ -3,16 +3,28 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>http://localhost:1313/</loc>
-    <lastmod>2025-02-22T10:35:43-05:00</lastmod>
+    <lastmod>2025-03-29T16:19:59-04:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/2025/03/29/2025-vexpert-renewal/</loc>
+    <lastmod>2025-03-29T16:19:59-04:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/blog/</loc>
-    <lastmod>2025-02-22T10:35:43-05:00</lastmod>
+    <lastmod>2025-03-29T16:19:59-04:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/categories/broadcom/</loc>
-    <lastmod>2025-02-22T10:35:43-05:00</lastmod>
+    <lastmod>2025-03-29T16:19:59-04:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/categories/</loc>
-    <lastmod>2025-02-22T10:35:43-05:00</lastmod>
+    <lastmod>2025-03-29T16:19:59-04:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/</loc>
+    <lastmod>2025-03-29T16:19:59-04:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/vexpert/</loc>
+    <lastmod>2025-03-29T16:19:59-04:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/categories/vmware/</loc>
+    <lastmod>2025-03-29T16:19:59-04:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/tags/live-site-recovery/</loc>
     <lastmod>2025-02-22T10:35:43-05:00</lastmod>
@@ -27,12 +39,6 @@
     <lastmod>2025-02-22T10:35:43-05:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/tags/srm/</loc>
-    <lastmod>2025-02-22T10:35:43-05:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/tags/</loc>
-    <lastmod>2025-02-22T10:35:43-05:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/categories/vmware/</loc>
     <lastmod>2025-02-22T10:35:43-05:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/categories/github/</loc>
