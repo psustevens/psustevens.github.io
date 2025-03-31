@@ -1,22 +1,22 @@
 <!doctype html>
 <html lang="en">
-  <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  <head>
   <meta charset="utf-8">
 <title>How to Add KeyControl v5.4 as a Key Provider in VSphere 7 - @PSUStevens Blog</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
 
 
-  <meta name="generator" content="Hugo 0.130.0">
+  <meta name="generator" content="Hugo 0.145.0">
   
   <meta itemprop="name" content="How to Add KeyControl v5.4 as a Key Provider in VSphere 7">
   <meta itemprop="description" content="This post will walk you through the steps to add Entrust KeyControl v5.4 as a Key Provider in vCenter v7.x.  **Updated 10-15-2021**">
   <meta itemprop="datePublished" content="2021-10-12T08:15:28-04:00">
   <meta itemprop="dateModified" content="2021-10-12T08:15:28-04:00">
   <meta itemprop="wordCount" content="1101">
-  <meta itemprop="image" content="http://localhost:1313/img/main/logo.jpg">
+  <meta itemprop="image" content="https://blog.psustevens.com/img/main/logo.jpg">
   <meta itemprop="keywords" content="KeyControl,KeyControl V5.4,KMS,Key Management Server,VCenter,Key Provider">
-  <meta property="og:url" content="http://localhost:1313/2021/10/12/2021-10-12-how-to-add-keycontrol-as-a-key-provider-in-vsphere7/">
+  <meta property="og:url" content="https://blog.psustevens.com/2021/10/12/2021-10-12-how-to-add-keycontrol-as-a-key-provider-in-vsphere7/">
   <meta property="og:site_name" content="@PSUStevens Blog">
   <meta property="og:title" content="How to Add KeyControl v5.4 as a Key Provider in VSphere 7">
   <meta property="og:description" content="This post will walk you through the steps to add Entrust KeyControl v5.4 as a Key Provider in vCenter v7.x.  **Updated 10-15-2021**">
@@ -31,18 +31,16 @@
     <meta property="article:tag" content="Key Management Server">
     <meta property="article:tag" content="VCenter">
     <meta property="article:tag" content="Key Provider">
-    <meta property="og:image" content="http://localhost:1313/img/main/logo.jpg">
+    <meta property="og:image" content="https://blog.psustevens.com/img/main/logo.jpg">
 
   
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:image" content="http://localhost:1313/img/main/logo.jpg">
+  <meta name="twitter:image" content="https://blog.psustevens.com/img/main/logo.jpg">
   <meta name="twitter:title" content="How to Add KeyControl v5.4 as a Key Provider in VSphere 7">
   <meta name="twitter:description" content="This post will walk you through the steps to add Entrust KeyControl v5.4 as a Key Provider in vCenter v7.x.  **Updated 10-15-2021**">
       <meta name="twitter:site" content="@PSUStevens">
 
   
-  
-    
       <script async src="https://www.googletagmanager.com/gtag/js?id=G-GL096KPBB9"></script>
       <script>
         var doNotTrack = false;
@@ -57,10 +55,6 @@
           gtag('config', 'G-GL096KPBB9');
         }
       </script>
-    
-  
-
-
 
   
     <link rel="stylesheet"
@@ -71,16 +65,16 @@
       <link rel="stylesheet" href="/css/normalize.css">
       <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway:400,800,900|Source+Sans+Pro:400,700">
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/academicons/1.8.6/css/academicons.min.css">
-      
       <link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.7.2/css/all.css" integrity="sha384-nRgPTkuX86pH8yjPJUAFuASXQSSl2/bBUiNV47vSYpKFxHJhbcrGnmlYpYJMeD7a" crossorigin="anonymous">
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.3.5/jquery.fancybox.min.css" />
       
-      
-      
-      
-      
-        <link rel="stylesheet" href="/css/main.min.cb6a3b646f6814df0826c8d8cf09f98c363dc5ac439e87240cd8066e3cd7cd68.css" integrity="sha256-y2o7ZG9oFN8IJsjYzwn5jDY9xaxDnockDNgGbjzXzWg=" crossorigin="anonymous"> -->
+       
+        
+          
+            <link rel="stylesheet" href="/css/main.min.cb6a3b646f6814df0826c8d8cf09f98c363dc5ac439e87240cd8066e3cd7cd68.css" integrity="sha256-y2o7ZG9oFN8IJsjYzwn5jDY9xaxDnockDNgGbjzXzWg=" crossorigin="anonymous">
+          
         <link rel="stylesheet" href="/css/add-on.css">
+          
       
     
   
@@ -153,25 +147,25 @@
 
   
     
-    <a href="//twitter.com/share?text=How%20to%20Add%20KeyControl%20v5.4%20as%20a%20Key%20Provider%20in%20VSphere%207&amp;url=http%3a%2f%2flocalhost%3a1313%2f2021%2f10%2f12%2f2021-10-12-how-to-add-keycontrol-as-a-key-provider-in-vsphere7%2f" target="_blank" rel="noopener" class="share-btn twitter">
+    <a href="//twitter.com/share?text=How%20to%20Add%20KeyControl%20v5.4%20as%20a%20Key%20Provider%20in%20VSphere%207&amp;url=https%3a%2f%2fblog.psustevens.com%2f2021%2f10%2f12%2f2021-10-12-how-to-add-keycontrol-as-a-key-provider-in-vsphere7%2f" target="_blank" rel="noopener" class="share-btn twitter">
         <i class="fab fa-twitter"></i><p>&nbsp;Twitter</p>
       </a>
   
 
   
-        <a href="//www.linkedin.com/shareArticle?url=http%3a%2f%2flocalhost%3a1313%2f2021%2f10%2f12%2f2021-10-12-how-to-add-keycontrol-as-a-key-provider-in-vsphere7%2f&amp;title=How%20to%20Add%20KeyControl%20v5.4%20as%20a%20Key%20Provider%20in%20VSphere%207" target="_blank" rel="noopener" class="share-btn linkedin">
+        <a href="//www.linkedin.com/shareArticle?url=https%3a%2f%2fblog.psustevens.com%2f2021%2f10%2f12%2f2021-10-12-how-to-add-keycontrol-as-a-key-provider-in-vsphere7%2f&amp;title=How%20to%20Add%20KeyControl%20v5.4%20as%20a%20Key%20Provider%20in%20VSphere%207" target="_blank" rel="noopener" class="share-btn linkedin">
             <i class="fab fa-linkedin"></i><p>&nbsp;LinkedIn</p>
           </a>
   
 
   
-        <a href="mailto:?subject=Check out this post by map%5bname%3a%40PSUStevens%5d&amp;body=http%3a%2f%2flocalhost%3a1313%2f2021%2f10%2f12%2f2021-10-12-how-to-add-keycontrol-as-a-key-provider-in-vsphere7%2f" target="_blank" class="share-btn email" data-proofer-ignore>
+        <a href="mailto:?subject=Check out this post by map%5bname%3a%40PSUStevens%5d&amp;body=https%3a%2f%2fblog.psustevens.com%2f2021%2f10%2f12%2f2021-10-12-how-to-add-keycontrol-as-a-key-provider-in-vsphere7%2f" target="_blank" class="share-btn email" data-proofer-ignore>
           <i class="fas fa-envelope"></i><p>&nbsp;Email</p>
         </a>
   
 
   
-        <a href="//bsky.app/intent/compose?text=How%20to%20Add%20KeyControl%20v5.4%20as%20a%20Key%20Provider%20in%20VSphere%207&nbsp;http%3a%2f%2flocalhost%3a1313%2f2021%2f10%2f12%2f2021-10-12-how-to-add-keycontrol-as-a-key-provider-in-vsphere7%2f" target="_blank" rel="noopener" class="share-btn bluesky">
+        <a href="//bsky.app/intent/compose?text=How%20to%20Add%20KeyControl%20v5.4%20as%20a%20Key%20Provider%20in%20VSphere%207&nbsp;https%3a%2f%2fblog.psustevens.com%2f2021%2f10%2f12%2f2021-10-12-how-to-add-keycontrol-as-a-key-provider-in-vsphere7%2f" target="_blank" rel="noopener" class="share-btn bluesky">
           <i class="fab fa-bluesky"></i><p>&nbsp;Bluesky</p>
         </a>
         
@@ -273,25 +267,25 @@
 
   
     
-    <a href="//twitter.com/share?text=How%20to%20Add%20KeyControl%20v5.4%20as%20a%20Key%20Provider%20in%20VSphere%207&amp;url=http%3a%2f%2flocalhost%3a1313%2f2021%2f10%2f12%2f2021-10-12-how-to-add-keycontrol-as-a-key-provider-in-vsphere7%2f" target="_blank" rel="noopener" class="share-btn twitter">
+    <a href="//twitter.com/share?text=How%20to%20Add%20KeyControl%20v5.4%20as%20a%20Key%20Provider%20in%20VSphere%207&amp;url=https%3a%2f%2fblog.psustevens.com%2f2021%2f10%2f12%2f2021-10-12-how-to-add-keycontrol-as-a-key-provider-in-vsphere7%2f" target="_blank" rel="noopener" class="share-btn twitter">
         <i class="fab fa-twitter"></i><p>&nbsp;Twitter</p>
       </a>
   
 
   
-        <a href="//www.linkedin.com/shareArticle?url=http%3a%2f%2flocalhost%3a1313%2f2021%2f10%2f12%2f2021-10-12-how-to-add-keycontrol-as-a-key-provider-in-vsphere7%2f&amp;title=How%20to%20Add%20KeyControl%20v5.4%20as%20a%20Key%20Provider%20in%20VSphere%207" target="_blank" rel="noopener" class="share-btn linkedin">
+        <a href="//www.linkedin.com/shareArticle?url=https%3a%2f%2fblog.psustevens.com%2f2021%2f10%2f12%2f2021-10-12-how-to-add-keycontrol-as-a-key-provider-in-vsphere7%2f&amp;title=How%20to%20Add%20KeyControl%20v5.4%20as%20a%20Key%20Provider%20in%20VSphere%207" target="_blank" rel="noopener" class="share-btn linkedin">
             <i class="fab fa-linkedin"></i><p>&nbsp;LinkedIn</p>
           </a>
   
 
   
-        <a href="mailto:?subject=Check out this post by map%5bname%3a%40PSUStevens%5d&amp;body=http%3a%2f%2flocalhost%3a1313%2f2021%2f10%2f12%2f2021-10-12-how-to-add-keycontrol-as-a-key-provider-in-vsphere7%2f" target="_blank" class="share-btn email" data-proofer-ignore>
+        <a href="mailto:?subject=Check out this post by map%5bname%3a%40PSUStevens%5d&amp;body=https%3a%2f%2fblog.psustevens.com%2f2021%2f10%2f12%2f2021-10-12-how-to-add-keycontrol-as-a-key-provider-in-vsphere7%2f" target="_blank" class="share-btn email" data-proofer-ignore>
           <i class="fas fa-envelope"></i><p>&nbsp;Email</p>
         </a>
   
 
   
-        <a href="//bsky.app/intent/compose?text=How%20to%20Add%20KeyControl%20v5.4%20as%20a%20Key%20Provider%20in%20VSphere%207&nbsp;http%3a%2f%2flocalhost%3a1313%2f2021%2f10%2f12%2f2021-10-12-how-to-add-keycontrol-as-a-key-provider-in-vsphere7%2f" target="_blank" rel="noopener" class="share-btn bluesky">
+        <a href="//bsky.app/intent/compose?text=How%20to%20Add%20KeyControl%20v5.4%20as%20a%20Key%20Provider%20in%20VSphere%207&nbsp;https%3a%2f%2fblog.psustevens.com%2f2021%2f10%2f12%2f2021-10-12-how-to-add-keycontrol-as-a-key-provider-in-vsphere7%2f" target="_blank" rel="noopener" class="share-btn bluesky">
           <i class="fab fa-bluesky"></i><p>&nbsp;Bluesky</p>
         </a>
         
@@ -365,8 +359,7 @@
 <h3 id="-please-read-this-">***** Please read this *****</h3>
 <p><strong>Even though I mention above that you should NOT enter a password in the dialog below I want to hammer this point home.  It was recently brought to my attention by one of my colleagues in our Support organization that some of you are inadvertantly entering passwords in this dialog box.</strong></p>
 <p><strong>I know you probably have raised eyebrows telling yourself &ldquo;What is he talking about?&rdquo; Keep reading.</strong></p>
-<p><strong>Some of you probably use a password manager which has the ability to automatically fill in passwords in dialogs like the one below.  If this is you, then make sure you clear the password fields that your password manager automatically filled in for you BEFORE you click the Create button.</strong></p>
-</blockquote>
+<p><strong>Some of you probably use a password manager which has the ability to automatically fill in passwords in dialogs like the one below.  If this is you, then make sure you clear the password fields that your password manager automatically filled in for you BEFORE you click the Create button.</strong></p></blockquote>
 <figure><img src="/img/2021/10/12/ETKC-vCenter04.png"
        alt="Create New Client Certificate screen"><figcaption>
          <h4>Create New Client Certificate screen</h4>
@@ -421,8 +414,7 @@
 <p><strong>Just like I mentioned above about inadvertantly having a password automatically entered for you by your password manager when creating the client certificate.  The same colleague of mine asked me to remind you that sometimes the same thing happens during this step in the process.</strong></p>
 <p><strong>So, make sure you expand the Password Protection section of the dialog below and confirm the fields are blank before clicking the &ldquo;Add Key Provider&rdquo; button.</strong></p>
 <p><strong>It will be apparent to you that you inadvertantly entered a password.  When you go to encrypt a VM, (which I cover in my next post) you will receive an error similar to &ldquo;KMIP Response: Operation Failed DENIED&rdquo;</strong></p>
-<p><strong>To resolve this issue remove the Key Provider and run through the steps in this section.  Just make sure to remove the password BEFORE you click the &ldquo;Add Key Provider&rdquo; button.</strong></p>
-</blockquote>
+<p><strong>To resolve this issue remove the Key Provider and run through the steps in this section.  Just make sure to remove the password BEFORE you click the &ldquo;Add Key Provider&rdquo; button.</strong></p></blockquote>
 <figure><img src="/img/2020/11/04/KMIP-Trust07.png"
        alt="Standard Key Provider Details screen"><figcaption>
          <h4>Standard Key Provider Details screen</h4>
@@ -536,16 +528,16 @@
         <ul>
           
             
-            <li><a class="article-category-link" href="http://localhost:1313/categories/entrust">Entrust</a></li>
+            <li><a class="article-category-link" href="https://blog.psustevens.com/categories/entrust">Entrust</a></li>
           
             
-            <li><a class="article-category-link" href="http://localhost:1313/categories/hytrust">HyTrust</a></li>
+            <li><a class="article-category-link" href="https://blog.psustevens.com/categories/hytrust">HyTrust</a></li>
           
             
-            <li><a class="article-category-link" href="http://localhost:1313/categories/vmware">VMware</a></li>
+            <li><a class="article-category-link" href="https://blog.psustevens.com/categories/vmware">VMware</a></li>
           
             
-            <li><a class="article-category-link" href="http://localhost:1313/categories/howto">HowTo</a></li>
+            <li><a class="article-category-link" href="https://blog.psustevens.com/categories/howto">HowTo</a></li>
           
         </ul>
       </li>
@@ -558,22 +550,22 @@
         <ul>
           
             
-            <li><a class="article-category-link" href="http://localhost:1313/tags/keycontrol">KeyControl</a></li>
+            <li><a class="article-category-link" href="https://blog.psustevens.com/tags/keycontrol">KeyControl</a></li>
           
             
-            <li><a class="article-category-link" href="http://localhost:1313/tags/keycontrol-v5.4">KeyControl v5.4</a></li>
+            <li><a class="article-category-link" href="https://blog.psustevens.com/tags/keycontrol-v5.4">KeyControl v5.4</a></li>
           
             
-            <li><a class="article-category-link" href="http://localhost:1313/tags/kms">KMS</a></li>
+            <li><a class="article-category-link" href="https://blog.psustevens.com/tags/kms">KMS</a></li>
           
             
-            <li><a class="article-category-link" href="http://localhost:1313/tags/key-management-server">Key Management Server</a></li>
+            <li><a class="article-category-link" href="https://blog.psustevens.com/tags/key-management-server">Key Management Server</a></li>
           
             
-            <li><a class="article-category-link" href="http://localhost:1313/tags/vcenter">vCenter</a></li>
+            <li><a class="article-category-link" href="https://blog.psustevens.com/tags/vcenter">vCenter</a></li>
           
             
-            <li><a class="article-category-link" href="http://localhost:1313/tags/key-provider">Key Provider</a></li>
+            <li><a class="article-category-link" href="https://blog.psustevens.com/tags/key-provider">Key Provider</a></li>
           
         </ul>
       </li>
@@ -790,7 +782,7 @@
     
       © 2025 David Stevens
     . <br>
-    Theme: <a href='https://github.com/pacollins/hugo-future-imperfect-slim' target='_blank' rel='noopener'>Hugo Future Imperfect Slim</a><br>A <a href='https://html5up.net/future-imperfect' target='_blank' rel='noopener'>HTML5 UP port</a> | Powered by <a href='https://gohugo.io/' title='0.130.0' target='_blank' rel='noopener'>Hugo</a>
+    Theme: <a href='https://github.com/pacollins/hugo-future-imperfect-slim' target='_blank' rel='noopener'>Hugo Future Imperfect Slim</a><br>A <a href='https://html5up.net/future-imperfect' target='_blank' rel='noopener'>HTML5 UP port</a> | Powered by <a href='https://gohugo.io/' title='0.145.0' target='_blank' rel='noopener'>Hugo</a>
   </p>
 </footer>
 <a id="back-to-top" href="#" class="fas fa-arrow-up fa-2x"></a>

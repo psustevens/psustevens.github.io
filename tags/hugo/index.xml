@@ -2,47 +2,47 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Hugo on @PSUStevens Blog</title>
-    <link>http://localhost:1313/tags/hugo/</link>
+    <link>https://blog.psustevens.com/tags/hugo/</link>
     <description>Recent content in Hugo on @PSUStevens Blog</description>
     <generator>Hugo</generator>
     <language>en</language>
     <copyright>© 2025 David Stevens</copyright>
     <lastBuildDate>Mon, 26 Oct 2020 12:21:08 -0400</lastBuildDate>
-    <atom:link href="http://localhost:1313/tags/hugo/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://blog.psustevens.com/tags/hugo/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Building a Blog With Hugo - Part 5</title>
-      <link>http://localhost:1313/2020/10/26/building-a-blog-with-hugo-part5/</link>
+      <link>https://blog.psustevens.com/2020/10/26/building-a-blog-with-hugo-part5/</link>
       <pubDate>Mon, 26 Oct 2020 12:21:08 -0400</pubDate>
-      <guid>http://localhost:1313/2020/10/26/building-a-blog-with-hugo-part5/</guid>
-      <description>It&amp;rsquo;s been a long time since I last updated this series. I apologize to anyone who is following it and lost interest. I hope to be quicker in future series I write.&#xA;Introduction In this post, I will walk through what I do to publish my blog to Github. I use private and public repositories and GitHub Desktop.</description>
+      <guid>https://blog.psustevens.com/2020/10/26/building-a-blog-with-hugo-part5/</guid>
+      <description>&lt;p&gt;It&amp;rsquo;s been a long time since I last updated this series.  I apologize to anyone who is following it and lost interest.  I hope to be quicker in future series I write.&lt;/p&gt;&#xA;&lt;hr&gt;&#xA;&lt;h2 id=&#34;introduction&#34;&gt;Introduction&lt;/h2&gt;&#xA;&lt;p&gt;In this post, I will walk through what I do to publish my blog to &lt;a href=&#34;https://github.com/psustevens/&#34;&gt;Github&lt;/a&gt;.  I use private and public repositories and &lt;a href=&#34;https://desktop.github.com/&#34;&gt;GitHub Desktop&lt;/a&gt;.  This way, I can do some testing in my private repo before pushing it to my public repo.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Building a Blog With Hugo - Part 4</title>
-      <link>http://localhost:1313/2019/12/20/building-a-blog-with-hugo-part4/</link>
+      <link>https://blog.psustevens.com/2019/12/20/building-a-blog-with-hugo-part4/</link>
       <pubDate>Fri, 20 Dec 2019 01:24:15 -0500</pubDate>
-      <guid>http://localhost:1313/2019/12/20/building-a-blog-with-hugo-part4/</guid>
-      <description>In the previous post, I covered how to customize the theme for your Hugo site. I apologize if it was a bit long. This post is considerably shorter. In this post, I&amp;rsquo;m going to walk through how to configure Google Analytics for your site. Let&amp;rsquo;s get started.&#xA;Before we get started&amp;hellip; If you are already familiar with Google Analytics, then this will be a short read for you.</description>
+      <guid>https://blog.psustevens.com/2019/12/20/building-a-blog-with-hugo-part4/</guid>
+      <description>&lt;p&gt;In the previous post, I covered how to customize the theme for your Hugo site.  I apologize if it was a bit long.  This post is considerably shorter.  In this post, I&amp;rsquo;m going to walk through how to configure &lt;a href=&#34;https://analytics.google.com&#34;&gt;Google Analytics&lt;/a&gt; for your site.  Let&amp;rsquo;s get started.&lt;/p&gt;&#xA;&lt;hr&gt;&#xA;&lt;h2 id=&#34;before-we-get-started&#34;&gt;Before we get started&amp;hellip;&lt;/h2&gt;&#xA;&lt;p&gt;If you are already familiar with &lt;a href=&#34;https://analytics.google.com&#34;&gt;Google Analytics&lt;/a&gt;, then this will be a short read for you.  All you need to do is:&lt;/p&gt;</description>
     </item>
     <item>
       <title>Building a Blog With Hugo - Part 3</title>
-      <link>http://localhost:1313/2019/12/18/building-a-blog-with-hugo-part3/</link>
+      <link>https://blog.psustevens.com/2019/12/18/building-a-blog-with-hugo-part3/</link>
       <pubDate>Wed, 18 Dec 2019 01:49:05 -0500</pubDate>
-      <guid>http://localhost:1313/2019/12/18/building-a-blog-with-hugo-part3/</guid>
-      <description>In the previous post, I covered how to build your first Hugo site using the Hugo Future Imperfect Slim theme. I also walked through the process to create the first blog post for your new site. In this post, I&amp;rsquo;m going to walk through different customization options for the theme. The customizations aren&amp;rsquo;t exhaustive but are good enough for you to get started and possibly expand on.</description>
+      <guid>https://blog.psustevens.com/2019/12/18/building-a-blog-with-hugo-part3/</guid>
+      <description>&lt;p&gt;In the previous post, I covered how to build your first Hugo site using the &lt;a href=&#34;https://themes.gohugo.io/hugo-future-imperfect-slim/&#34;&gt;Hugo Future Imperfect Slim theme&lt;/a&gt;.  I also walked through the process to create the first blog post for your new site.  In this post, I&amp;rsquo;m going to walk through different customization options for the theme.  The customizations aren&amp;rsquo;t exhaustive but are good enough for you to get started and possibly expand on.  Let&amp;rsquo;s get started.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Building a Blog With Hugo - Part 2</title>
-      <link>http://localhost:1313/2019/11/01/building-a-blog-with-hugo-part2/</link>
+      <link>https://blog.psustevens.com/2019/11/01/building-a-blog-with-hugo-part2/</link>
       <pubDate>Fri, 01 Nov 2019 13:07:13 -0400</pubDate>
-      <guid>http://localhost:1313/2019/11/01/building-a-blog-with-hugo-part2/</guid>
-      <description>In the first part of this series, I wrote about why I chose to use Hugo to develop this blog and GitHub Pages to host it. In this post, I&amp;rsquo;m going to walk through the steps to create a Hugo site, apply a theme, and create a very simple blog post.</description>
+      <guid>https://blog.psustevens.com/2019/11/01/building-a-blog-with-hugo-part2/</guid>
+      <description>&lt;p&gt;In the &lt;a href=&#34;https://blog.psustevens.com/2019/10/11/building-a-blog-with-hugo/&#34;&gt;first part&lt;/a&gt; of this series, I wrote about why I chose to use &lt;a href=&#34;https://github.com/gohugoio/hugo&#34;&gt;Hugo&lt;/a&gt; to develop this blog and &lt;a href=&#34;https://pages.github.com/&#34;&gt;GitHub Pages&lt;/a&gt; to host it.  In this post, I&amp;rsquo;m going to walk through the steps to create a Hugo site, apply a theme, and create a very simple blog post.  So, let&amp;rsquo;s get going!&lt;/p&gt;</description>
     </item>
     <item>
       <title>Building a Blog With Hugo</title>
-      <link>http://localhost:1313/2019/10/11/building-a-blog-with-hugo/</link>
+      <link>https://blog.psustevens.com/2019/10/11/building-a-blog-with-hugo/</link>
       <pubDate>Fri, 11 Oct 2019 16:02:46 -0400</pubDate>
-      <guid>http://localhost:1313/2019/10/11/building-a-blog-with-hugo/</guid>
-      <description>If you read my very first post, you would know that I&amp;rsquo;ve been thinking about writing a blog for years. I&amp;rsquo;ve been blogging for years for employers. But, just recently, I finally launched my first technical blog. The one you are reading right now. I also have a travel blog that only gets updated when I travel for vacation.</description>
+      <guid>https://blog.psustevens.com/2019/10/11/building-a-blog-with-hugo/</guid>
+      <description>&lt;p&gt;If you read my &lt;a href=&#34;https://blog.psustevens.com/2019/09/30/introducing-me/&#34;&gt;very first post&lt;/a&gt;, you would know that I&amp;rsquo;ve been thinking about writing a blog for years.  I&amp;rsquo;ve been blogging for years for employers.  But, just recently, I finally launched my first technical blog.  The one you are reading right now.  I also have a travel blog that only gets updated when I travel for vacation.  In this blog series, I&amp;rsquo;m going to talk about how I built my blog site using Hugo.  This post is part one of a five-part series.  Why Hugo?  Keep reading to find out.&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

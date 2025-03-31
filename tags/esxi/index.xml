@@ -2,19 +2,19 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>ESXi on @PSUStevens Blog</title>
-    <link>http://localhost:1313/tags/esxi/</link>
+    <link>https://blog.psustevens.com/tags/esxi/</link>
     <description>Recent content in ESXi on @PSUStevens Blog</description>
     <generator>Hugo</generator>
     <language>en</language>
     <copyright>© 2025 David Stevens</copyright>
     <lastBuildDate>Fri, 24 Feb 2023 19:14:04 -0500</lastBuildDate>
-    <atom:link href="http://localhost:1313/tags/esxi/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://blog.psustevens.com/tags/esxi/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>How to Update Esxi 7.0u3d to 7.0u3k using vSphere Lifecycle_Manager</title>
-      <link>http://localhost:1313/2023/02/24/2023-02-24-how-to-update-esxi-7.0u3d_to_7.0u3k_using_vsphere_lifecycle_manager/</link>
+      <link>https://blog.psustevens.com/2023/02/24/2023-02-24-how-to-update-esxi-7.0u3d_to_7.0u3k_using_vsphere_lifecycle_manager/</link>
       <pubDate>Fri, 24 Feb 2023 19:14:04 -0500</pubDate>
-      <guid>http://localhost:1313/2023/02/24/2023-02-24-how-to-update-esxi-7.0u3d_to_7.0u3k_using_vsphere_lifecycle_manager/</guid>
-      <description>Recently, I ran into an issue where I really needed to get my vSphere homelab upgraded to version 7.0U3k. More on why this was so urgent in a future post. However, I was still back on 7.0U3d. To get to 7.0U3 I used vSphere Lifecycle Manager (vLCM). In case you missed it, vSphere Lifecycle Manager is built into vSphere 7.</description>
+      <guid>https://blog.psustevens.com/2023/02/24/2023-02-24-how-to-update-esxi-7.0u3d_to_7.0u3k_using_vsphere_lifecycle_manager/</guid>
+      <description>&lt;p&gt;Recently, I ran into an issue where I really needed to get my vSphere homelab upgraded to version 7.0U3k.  More on why this was so urgent in a future post.  However, I was still back on 7.0U3d.  To get to 7.0U3 I used vSphere Lifecycle Manager (vLCM).  In case you missed it, vSphere Lifecycle Manager is built into vSphere 7.&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

@@ -2,88 +2,88 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Categories on @PSUStevens Blog</title>
-    <link>http://localhost:1313/categories/</link>
+    <link>https://blog.psustevens.com/categories/</link>
     <description>Recent content in Categories on @PSUStevens Blog</description>
     <generator>Hugo</generator>
     <language>en</language>
     <copyright>© 2025 David Stevens</copyright>
     <lastBuildDate>Sat, 29 Mar 2025 16:19:59 -0400</lastBuildDate>
-    <atom:link href="http://localhost:1313/categories/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://blog.psustevens.com/categories/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Broadcom</title>
-      <link>http://localhost:1313/categories/broadcom/</link>
+      <link>https://blog.psustevens.com/categories/broadcom/</link>
       <pubDate>Sat, 29 Mar 2025 16:19:59 -0400</pubDate>
-      <guid>http://localhost:1313/categories/broadcom/</guid>
+      <guid>https://blog.psustevens.com/categories/broadcom/</guid>
       <description></description>
     </item>
     <item>
       <title>Vmware</title>
-      <link>http://localhost:1313/categories/vmware/</link>
+      <link>https://blog.psustevens.com/categories/vmware/</link>
       <pubDate>Sat, 29 Mar 2025 16:19:59 -0400</pubDate>
-      <guid>http://localhost:1313/categories/vmware/</guid>
+      <guid>https://blog.psustevens.com/categories/vmware/</guid>
       <description></description>
     </item>
     <item>
       <title>GitHub</title>
-      <link>http://localhost:1313/categories/github/</link>
+      <link>https://blog.psustevens.com/categories/github/</link>
       <pubDate>Fri, 17 Jan 2025 00:12:59 -0500</pubDate>
-      <guid>http://localhost:1313/categories/github/</guid>
+      <guid>https://blog.psustevens.com/categories/github/</guid>
       <description></description>
     </item>
     <item>
       <title>HowTo</title>
-      <link>http://localhost:1313/categories/howto/</link>
+      <link>https://blog.psustevens.com/categories/howto/</link>
       <pubDate>Fri, 17 Jan 2025 00:12:59 -0500</pubDate>
-      <guid>http://localhost:1313/categories/howto/</guid>
+      <guid>https://blog.psustevens.com/categories/howto/</guid>
       <description></description>
     </item>
     <item>
       <title>Career</title>
-      <link>http://localhost:1313/categories/career/</link>
+      <link>https://blog.psustevens.com/categories/career/</link>
       <pubDate>Tue, 12 Dec 2023 16:19:30 -0500</pubDate>
-      <guid>http://localhost:1313/categories/career/</guid>
+      <guid>https://blog.psustevens.com/categories/career/</guid>
       <description></description>
     </item>
     <item>
       <title>API</title>
-      <link>http://localhost:1313/categories/api/</link>
+      <link>https://blog.psustevens.com/categories/api/</link>
       <pubDate>Thu, 30 Mar 2023 20:10:36 -0500</pubDate>
-      <guid>http://localhost:1313/categories/api/</guid>
+      <guid>https://blog.psustevens.com/categories/api/</guid>
       <description></description>
     </item>
     <item>
       <title>Synology</title>
-      <link>http://localhost:1313/categories/synology/</link>
+      <link>https://blog.psustevens.com/categories/synology/</link>
       <pubDate>Mon, 27 Feb 2023 15:38:16 -0500</pubDate>
-      <guid>http://localhost:1313/categories/synology/</guid>
+      <guid>https://blog.psustevens.com/categories/synology/</guid>
       <description></description>
     </item>
     <item>
       <title>Entrust</title>
-      <link>http://localhost:1313/categories/entrust/</link>
+      <link>https://blog.psustevens.com/categories/entrust/</link>
       <pubDate>Tue, 19 Oct 2021 06:50:26 -0400</pubDate>
-      <guid>http://localhost:1313/categories/entrust/</guid>
+      <guid>https://blog.psustevens.com/categories/entrust/</guid>
       <description></description>
     </item>
     <item>
       <title>HyTrust</title>
-      <link>http://localhost:1313/categories/hytrust/</link>
+      <link>https://blog.psustevens.com/categories/hytrust/</link>
       <pubDate>Tue, 19 Oct 2021 06:50:26 -0400</pubDate>
-      <guid>http://localhost:1313/categories/hytrust/</guid>
+      <guid>https://blog.psustevens.com/categories/hytrust/</guid>
       <description></description>
     </item>
     <item>
       <title>Blogging</title>
-      <link>http://localhost:1313/categories/blogging/</link>
+      <link>https://blog.psustevens.com/categories/blogging/</link>
       <pubDate>Mon, 26 Oct 2020 12:21:08 -0400</pubDate>
-      <guid>http://localhost:1313/categories/blogging/</guid>
+      <guid>https://blog.psustevens.com/categories/blogging/</guid>
       <description></description>
     </item>
     <item>
       <title>PSUStevens</title>
-      <link>http://localhost:1313/categories/psustevens/</link>
+      <link>https://blog.psustevens.com/categories/psustevens/</link>
       <pubDate>Mon, 30 Sep 2019 08:48:31 -0400</pubDate>
-      <guid>http://localhost:1313/categories/psustevens/</guid>
+      <guid>https://blog.psustevens.com/categories/psustevens/</guid>
       <description></description>
     </item>
   </channel>

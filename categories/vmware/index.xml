@@ -2,103 +2,103 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Vmware on @PSUStevens Blog</title>
-    <link>http://localhost:1313/categories/vmware/</link>
+    <link>https://blog.psustevens.com/categories/vmware/</link>
     <description>Recent content in Vmware on @PSUStevens Blog</description>
     <generator>Hugo</generator>
     <language>en</language>
     <copyright>© 2025 David Stevens</copyright>
     <lastBuildDate>Sat, 29 Mar 2025 16:19:59 -0400</lastBuildDate>
-    <atom:link href="http://localhost:1313/categories/vmware/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://blog.psustevens.com/categories/vmware/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>2025 vExpert Renewal</title>
-      <link>http://localhost:1313/2025/03/29/2025-vexpert-renewal/</link>
+      <link>https://blog.psustevens.com/2025/03/29/2025-vexpert-renewal/</link>
       <pubDate>Sat, 29 Mar 2025 16:19:59 -0400</pubDate>
-      <guid>http://localhost:1313/2025/03/29/2025-vexpert-renewal/</guid>
-      <description>I&amp;rsquo;m a bit late on posting this. But, better late than never. I&amp;rsquo;ve been renewed again as a VMware vExpert for 2025. This is my seventh consecutive year since I first applied. Woohoo!!&#xA;7x VMware vExpert If you haven&amp;rsquo;t met me, then you should know the image for this post is not how I look at all.</description>
+      <guid>https://blog.psustevens.com/2025/03/29/2025-vexpert-renewal/</guid>
+      <description>&lt;p&gt;I&amp;rsquo;m a bit late on posting this.  But, better late than never.  I&amp;rsquo;ve been renewed again as a VMware vExpert for 2025.  This is my seventh consecutive year since I first applied.  Woohoo!!&lt;/p&gt;&#xA;&lt;figure&gt;&lt;img src=&#34;https://blog.psustevens.com/img/about/VMware-vExpert-7yr-badge.png&#34;&#xA;    alt=&#34;7 times VMware vExpert badge&#34;&gt;&lt;figcaption&gt;&#xA;      &lt;h4&gt;7x VMware vExpert&lt;/h4&gt;&#xA;    &lt;/figcaption&gt;&#xA;&lt;/figure&gt;&#xA;&#xA;&lt;p&gt;If you haven&amp;rsquo;t met me, then you should know the image for this post is not how I look at all.  That guy is way better looking than me.  I also don&amp;rsquo;t have anywhere near that amount of hair.  I decided to create a generic IT guy holding a placard claiming to be a 7-time vExpert.  I used the AI image site, &lt;a href=&#34;https://creator.nightcafe.studio/&#34;&gt;NightCafe&lt;/a&gt;.  It has a paid tier for creating images, but I use the free tier.  Check it out sometime.&lt;/p&gt;</description>
     </item>
     <item>
       <title>No Storage Replication Adapters Installed</title>
-      <link>http://localhost:1313/2025/02/22/no-storage-replication-adapters-installed/</link>
+      <link>https://blog.psustevens.com/2025/02/22/no-storage-replication-adapters-installed/</link>
       <pubDate>Sat, 22 Feb 2025 10:35:43 -0500</pubDate>
-      <guid>http://localhost:1313/2025/02/22/no-storage-replication-adapters-installed/</guid>
-      <description>As part of my job, I regularly demonstrate Pure Storage features and how VMware solutions integrate seamlessly with our storage platform. Before a demo, I usually will confirm the software I intend to use is in good working order, but this isn&amp;rsquo;t always the case. The demo lab is used by many of my colleagues.</description>
+      <guid>https://blog.psustevens.com/2025/02/22/no-storage-replication-adapters-installed/</guid>
+      <description>&lt;p&gt;As part of my job, I regularly demonstrate &lt;a href=&#34;https://www.purestorage.com&#34;&gt;Pure Storage&lt;/a&gt; features and how &lt;a href=&#34;https://www.vmware.com&#34;&gt;VMware&lt;/a&gt; solutions integrate seamlessly with our &lt;a href=&#34;https://www.purestorage.com/pure-advantage/platform.html&#34;&gt;storage platform.&lt;/a&gt;  Before a demo, I usually will confirm the software I intend to use is in good working order, but this isn&amp;rsquo;t always the case.  The demo lab is used by many of my colleagues.  This means that during their use of the lab something could have stopped working or is in a wonky state.  So, Murphy&amp;rsquo;s Law could rear its ugly head at the most inconvenient time if I cannot confirm all is well beforehand.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Did you know about vCenter API Commands?</title>
-      <link>http://localhost:1313/2023/03/30/2023-03-30-did_you_know_about_vcenter_api-commands/</link>
+      <link>https://blog.psustevens.com/2023/03/30/2023-03-30-did_you_know_about_vcenter_api-commands/</link>
       <pubDate>Thu, 30 Mar 2023 20:10:36 -0500</pubDate>
-      <guid>http://localhost:1313/2023/03/30/2023-03-30-did_you_know_about_vcenter_api-commands/</guid>
-      <description>I recently wrote about a little issue where I had to quickly get my lab hosts and vCenter upgraded to vSphere 7.0U3k luckily vSphere Lifecycle Manager saved me. During that process I discovered in vCenter there are a bunch of API calls you can make directly from the CLI once you SSH into vCenter.</description>
+      <guid>https://blog.psustevens.com/2023/03/30/2023-03-30-did_you_know_about_vcenter_api-commands/</guid>
+      <description>&lt;p&gt;I recently wrote about a little issue where I had to quickly get my lab hosts and vCenter upgraded to vSphere 7.0U3k luckily vSphere Lifecycle Manager saved me.  During that process I discovered in vCenter there are a bunch of API calls you can make directly from the CLI once you SSH into vCenter.&lt;/p&gt;</description>
     </item>
     <item>
       <title>How to Update Esxi 7.0u3d to 7.0u3k using vSphere Lifecycle_Manager</title>
-      <link>http://localhost:1313/2023/02/24/2023-02-24-how-to-update-esxi-7.0u3d_to_7.0u3k_using_vsphere_lifecycle_manager/</link>
+      <link>https://blog.psustevens.com/2023/02/24/2023-02-24-how-to-update-esxi-7.0u3d_to_7.0u3k_using_vsphere_lifecycle_manager/</link>
       <pubDate>Fri, 24 Feb 2023 19:14:04 -0500</pubDate>
-      <guid>http://localhost:1313/2023/02/24/2023-02-24-how-to-update-esxi-7.0u3d_to_7.0u3k_using_vsphere_lifecycle_manager/</guid>
-      <description>Recently, I ran into an issue where I really needed to get my vSphere homelab upgraded to version 7.0U3k. More on why this was so urgent in a future post. However, I was still back on 7.0U3d. To get to 7.0U3 I used vSphere Lifecycle Manager (vLCM). In case you missed it, vSphere Lifecycle Manager is built into vSphere 7.</description>
+      <guid>https://blog.psustevens.com/2023/02/24/2023-02-24-how-to-update-esxi-7.0u3d_to_7.0u3k_using_vsphere_lifecycle_manager/</guid>
+      <description>&lt;p&gt;Recently, I ran into an issue where I really needed to get my vSphere homelab upgraded to version 7.0U3k.  More on why this was so urgent in a future post.  However, I was still back on 7.0U3d.  To get to 7.0U3 I used vSphere Lifecycle Manager (vLCM).  In case you missed it, vSphere Lifecycle Manager is built into vSphere 7.&lt;/p&gt;</description>
     </item>
     <item>
       <title>How to Encrypt a VM Using vSphere Encryption</title>
-      <link>http://localhost:1313/2021/10/19/2021-10-19-how-to-encrypt-a-vm-using-vsphere-encryption/</link>
+      <link>https://blog.psustevens.com/2021/10/19/2021-10-19-how-to-encrypt-a-vm-using-vsphere-encryption/</link>
       <pubDate>Tue, 19 Oct 2021 06:50:26 -0400</pubDate>
-      <guid>http://localhost:1313/2021/10/19/2021-10-19-how-to-encrypt-a-vm-using-vsphere-encryption/</guid>
-      <description>To get started here is what you will need to complete the steps in this post:&#xA;A deployed Entrust KeyControl v5.4 cluster (Click this sentence to learn how to do this) vCenter and ESXi Host(s) running vSphere 7.x or higher Trusted connection between Entrust KeyControl and vCenter (Click this sentence to learn how to do this) Powered-off VM Now, let&amp;rsquo;s get started&amp;hellip;</description>
+      <guid>https://blog.psustevens.com/2021/10/19/2021-10-19-how-to-encrypt-a-vm-using-vsphere-encryption/</guid>
+      <description>&lt;p&gt;To get started here is what you will need to complete the steps in this post:&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;A deployed &lt;a href=&#34;https://www.entrust.com/solutions/use-cases/key-management-control&#34;&gt;Entrust KeyControl&lt;/a&gt; v5.4 cluster &lt;a href=&#34;https://blog.psustevens.com/2021/10/01/how-to-deploy-entrust-keycontrol-5.4/&#34;&gt;(Click this sentence to learn how to do this)&lt;/a&gt;&lt;/li&gt;&#xA;&lt;li&gt;vCenter and ESXi Host(s) running vSphere 7.x or higher&lt;/li&gt;&#xA;&lt;li&gt;Trusted connection between &lt;a href=&#34;https://www.entrust.com/solutions/use-cases/key-management-control&#34;&gt;Entrust KeyControl&lt;/a&gt; and vCenter &lt;a href=&#34;https://blog.psustevens.com/2021/10/12/2021-10-12-how-to-add-keycontrol-as-a-key-provider-in-vsphere7/&#34;&gt;(Click this sentence to learn how to do this)&lt;/a&gt;&lt;/li&gt;&#xA;&lt;li&gt;Powered-off VM&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;Now, let&amp;rsquo;s get started&amp;hellip;&lt;/p&gt;</description>
     </item>
     <item>
       <title>How to Add KeyControl v5.4 as a Key Provider in VSphere 7</title>
-      <link>http://localhost:1313/2021/10/12/2021-10-12-how-to-add-keycontrol-as-a-key-provider-in-vsphere7/</link>
+      <link>https://blog.psustevens.com/2021/10/12/2021-10-12-how-to-add-keycontrol-as-a-key-provider-in-vsphere7/</link>
       <pubDate>Tue, 12 Oct 2021 08:15:28 -0400</pubDate>
-      <guid>http://localhost:1313/2021/10/12/2021-10-12-how-to-add-keycontrol-as-a-key-provider-in-vsphere7/</guid>
-      <description>To get started here is what you will need to complete the steps in this post:&#xA;A deployed Entrust KeyControl v5.4 cluster (Click this sentence to learn how to do this) vCenter and ESXi Host(s) running vSphere 7.x Now, let&amp;rsquo;s get started&amp;hellip;&#xA;Enable the KMIP Server in KeyControl Log in to the deployed Entrust KeyControl cluster and click the KMIP menu item.</description>
+      <guid>https://blog.psustevens.com/2021/10/12/2021-10-12-how-to-add-keycontrol-as-a-key-provider-in-vsphere7/</guid>
+      <description>&lt;p&gt;To get started here is what you will need to complete the steps in this post:&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;A deployed &lt;a href=&#34;https://www.entrust.com/solutions/use-cases/key-management-control&#34;&gt;Entrust KeyControl&lt;/a&gt; v5.4 cluster &lt;a href=&#34;https://blog.psustevens.com/2021/10/01/how-to-deploy-entrust-keycontrol-5.4/&#34;&gt;(Click this sentence to learn how to do this)&lt;/a&gt;&lt;/li&gt;&#xA;&lt;li&gt;vCenter and ESXi Host(s) running vSphere 7.x&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;Now, let&amp;rsquo;s get started&amp;hellip;&lt;/p&gt;&#xA;&lt;hr&gt;&#xA;&lt;h2 id=&#34;enable-the-kmip-server-in-keycontrol&#34;&gt;Enable the KMIP Server in KeyControl&lt;/h2&gt;&#xA;&lt;ol&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;Log in to the deployed Entrust KeyControl cluster and click the &lt;strong&gt;KMIP&lt;/strong&gt; menu item.&lt;/p&gt;</description>
     </item>
     <item>
       <title>How to Add Another KeyControl Security Admin From Active Directory</title>
-      <link>http://localhost:1313/2021/10/08/2021-10-08-how-to-add-another-security-admin-from-ad/</link>
+      <link>https://blog.psustevens.com/2021/10/08/2021-10-08-how-to-add-another-security-admin-from-ad/</link>
       <pubDate>Fri, 08 Oct 2021 08:08:04 -0400</pubDate>
-      <guid>http://localhost:1313/2021/10/08/2021-10-08-how-to-add-another-security-admin-from-ad/</guid>
-      <description>To get started here is what you will need to complete the steps in this post:&#xA;A deployed Entrust KeyControl v5.4 cluster connected to Active Directory (Click this sentence to learn how to do this) Active Directory account info to be added Now, let&amp;rsquo;s get started&amp;hellip;&#xA;Add a Second KeyControl Security Administrator from Active Directory Click Security from the menu bar then click the blue Actions button and select Create User</description>
+      <guid>https://blog.psustevens.com/2021/10/08/2021-10-08-how-to-add-another-security-admin-from-ad/</guid>
+      <description>&lt;p&gt;To get started here is what you will need to complete the steps in this post:&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;A deployed Entrust KeyControl v5.4 cluster connected to Active Directory &lt;a href=&#34;https://blog.psustevens.com/2021/10/05/2021-10-05-how-to-connect-keycontrol-5.4-to-activedirectory/&#34;&gt;(Click this sentence to learn how to do this)&lt;/a&gt;&lt;/li&gt;&#xA;&lt;li&gt;Active Directory account info to be added&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;Now, let&amp;rsquo;s get started&amp;hellip;&lt;/p&gt;&#xA;&lt;h2 id=&#34;add-a-second-keycontrol-security-administrator-from-active-directory&#34;&gt;Add a Second KeyControl Security Administrator from Active Directory&lt;/h2&gt;&#xA;&lt;ol&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;Click &lt;strong&gt;Security&lt;/strong&gt; from the menu bar then click the blue &lt;strong&gt;Actions&lt;/strong&gt; button and select &lt;strong&gt;Create User&lt;/strong&gt;&lt;/p&gt;</description>
     </item>
     <item>
       <title>How to Connect KeyControl 5.4 to Active Directory</title>
-      <link>http://localhost:1313/2021/10/05/2021-10-05-how-to-connect-keycontrol-5.4-to-activedirectory/</link>
+      <link>https://blog.psustevens.com/2021/10/05/2021-10-05-how-to-connect-keycontrol-5.4-to-activedirectory/</link>
       <pubDate>Tue, 05 Oct 2021 08:08:40 -0400</pubDate>
-      <guid>http://localhost:1313/2021/10/05/2021-10-05-how-to-connect-keycontrol-5.4-to-activedirectory/</guid>
-      <description>To get started here is what you will need to complete the steps in this post:&#xA;A deployed Entrust KeyControl v5.4 cluster (Click this sentence to learn how to do this) Active Directory service account Now, let&amp;rsquo;s get started&amp;hellip;&#xA;Connect KeyControl to Active Directory Log in to the deployed Entrust KeyControl cluster.</description>
+      <guid>https://blog.psustevens.com/2021/10/05/2021-10-05-how-to-connect-keycontrol-5.4-to-activedirectory/</guid>
+      <description>&lt;p&gt;To get started here is what you will need to complete the steps in this post:&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;A deployed Entrust KeyControl v5.4 cluster  &lt;a href=&#34;https://blog.psustevens.com/2021/10/01/how-to-deploy-entrust-keycontrol-5.4/&#34;&gt;(Click this sentence to learn how to do this)&lt;/a&gt;&lt;/li&gt;&#xA;&lt;li&gt;Active Directory service account&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;Now, let&amp;rsquo;s get started&amp;hellip;&lt;/p&gt;&#xA;&lt;h2 id=&#34;connect-keycontrol-to-active-directory&#34;&gt;Connect KeyControl to Active Directory&lt;/h2&gt;&#xA;&lt;ol&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;Log in to the deployed Entrust KeyControl cluster.  Once logged in:&lt;/p&gt;</description>
     </item>
     <item>
       <title>How to Deploy Entrust KeyControl 5.4</title>
-      <link>http://localhost:1313/2021/10/01/how-to-deploy-entrust-keycontrol-5.4/</link>
+      <link>https://blog.psustevens.com/2021/10/01/how-to-deploy-entrust-keycontrol-5.4/</link>
       <pubDate>Fri, 01 Oct 2021 09:45:33 -0400</pubDate>
-      <guid>http://localhost:1313/2021/10/01/how-to-deploy-entrust-keycontrol-5.4/</guid>
-      <description>Around this time last year I wrote about how to deploy a 2-node HyTrust KeyControl cluster. That post covered KeyControl version 5.2.1. You can find that blog post over here.&#xA;This post is very similar. The difference between it and the last post is that I will cover Entrust KeyControl version 5.</description>
+      <guid>https://blog.psustevens.com/2021/10/01/how-to-deploy-entrust-keycontrol-5.4/</guid>
+      <description>&lt;p&gt;Around this time last year I wrote about how to deploy a 2-node HyTrust KeyControl cluster.  That post covered KeyControl version 5.2.1. You can find that blog post over &lt;a href=&#34;2020/10/31/how-to-deploy-a-hytrust-keycontrol-2-node-cluster/&#34;&gt;here.&lt;/a&gt;&lt;/p&gt;&#xA;&lt;p&gt;This post is very similar.  The difference between it and the last post is that I will cover &lt;a href=&#34;https://www.entrust.com/solutions/use-cases/key-management-control&#34;&gt;Entrust KeyControl version 5.4.&lt;/a&gt;.  Are you scratching your head about the name change?  Head over to this post I wrote about changes that occurred in January of this year where I talk about HyTrust being acquired by &lt;a href=&#34;https://www.entrust.com&#34;&gt;Entrust&lt;/a&gt;.  The full press release can be found &lt;a href=&#34;https://www.entrust.com/newsroom/press-releases/2021/entrust-acquires-hytrust&#34;&gt;here.&lt;/a&gt;&lt;/p&gt;</description>
     </item>
     <item>
       <title>Add a HyTrust KMS to vCenter v7 as a Key Provider</title>
-      <link>http://localhost:1313/2020/11/04/add-a-hytrust-kms-to-vcenter-v7/</link>
+      <link>https://blog.psustevens.com/2020/11/04/add-a-hytrust-kms-to-vcenter-v7/</link>
       <pubDate>Wed, 04 Nov 2020 08:07:16 -0500</pubDate>
-      <guid>http://localhost:1313/2020/11/04/add-a-hytrust-kms-to-vcenter-v7/</guid>
-      <description>Introduction In my How to Deploy a HyTrust KeyControl 2-node Cluster post I walked through the steps for deploying and configuring a 2-node HyTrust KeyControl cluster. Now that you have it deployed, let&amp;rsquo;s start using it. But before we can do that, we need to add it vCenter as a Key Provider.</description>
+      <guid>https://blog.psustevens.com/2020/11/04/add-a-hytrust-kms-to-vcenter-v7/</guid>
+      <description>&lt;hr&gt;&#xA;&lt;h2 id=&#34;introduction&#34;&gt;Introduction&lt;/h2&gt;&#xA;&lt;p&gt;In my &lt;a href=&#34;https://blog.psustevens.com/2020/10/31/how-to-deploy-a-hytrust-keycontrol-2-node-cluster/&#34;&gt;How to Deploy a HyTrust KeyControl 2-node Cluster post&lt;/a&gt; I walked through the steps for deploying and configuring a 2-node &lt;a href=&#34;https://www.hytrust.com/products/keycontrol/&#34;&gt;HyTrust KeyControl&lt;/a&gt; cluster.  Now that you have it deployed, let&amp;rsquo;s start using it.  But before we can do that, we need to add it vCenter as a Key Provider.  Let&amp;rsquo;s go!!&lt;/p&gt;</description>
     </item>
     <item>
       <title>How to Deploy a HyTrust KeyControl v5.2.1, 2-Node Cluster</title>
-      <link>http://localhost:1313/2020/10/31/how-to-deploy-a-hytrust-keycontrol-2-node-cluster/</link>
+      <link>https://blog.psustevens.com/2020/10/31/how-to-deploy-a-hytrust-keycontrol-2-node-cluster/</link>
       <pubDate>Sat, 31 Oct 2020 14:04:12 -0400</pubDate>
-      <guid>http://localhost:1313/2020/10/31/how-to-deploy-a-hytrust-keycontrol-2-node-cluster/</guid>
-      <description>To get started here is what you will need to complete the steps in this post:&#xA;KeyControl OVA v5.2.1 vCenter and ESX host at least version 6.5 or greater 2 vCPU, 8GB RAM, 60GB disk per KeyControl node Network address information such as: IP address (one per node) Subnet mask Gateway address DNS server information DNS registered hostname for each node Deploy the First HyTrust KeyControl Appliance Log in to the Virtual Center Appliance (VCSA).</description>
+      <guid>https://blog.psustevens.com/2020/10/31/how-to-deploy-a-hytrust-keycontrol-2-node-cluster/</guid>
+      <description>&lt;p&gt;To get started here is what you will need to complete the steps in this post:&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;KeyControl OVA v5.2.1&lt;/li&gt;&#xA;&lt;li&gt;vCenter and ESX host at least version 6.5 or greater&lt;/li&gt;&#xA;&lt;li&gt;2 vCPU, 8GB RAM, 60GB disk per KeyControl node&lt;/li&gt;&#xA;&lt;li&gt;Network address information such as:&#xA;&lt;ul&gt;&#xA;&lt;li&gt;IP address (one per node)&lt;/li&gt;&#xA;&lt;li&gt;Subnet mask&lt;/li&gt;&#xA;&lt;li&gt;Gateway address&lt;/li&gt;&#xA;&lt;li&gt;DNS server information&lt;/li&gt;&#xA;&lt;li&gt;DNS registered hostname for each node&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h2 id=&#34;deploy-the-first-hytrust-keycontrol-appliance&#34;&gt;Deploy the First HyTrust KeyControl Appliance&lt;/h2&gt;&#xA;&lt;ol&gt;&#xA;&lt;li&gt;Log in to the Virtual Center Appliance (VCSA).  Once logged in, right-click and select &lt;strong&gt;Deploy OVF Template&amp;hellip;&lt;/strong&gt;&lt;/li&gt;&#xA;&lt;/ol&gt;&#xA;&lt;figure&gt;&lt;img src=&#34;https://blog.psustevens.com/img/2020/10/31/HTKCDeploy01.png&#34;&#xA;    alt=&#34;Deploy OVF Template&#34;&gt;&lt;figcaption&gt;&#xA;      &lt;h4&gt;Deploy OVF Template...&lt;/h4&gt;&#xA;    &lt;/figcaption&gt;&#xA;&lt;/figure&gt;&#xA;&#xA;&lt;ol start=&#34;2&#34;&gt;&#xA;&lt;li&gt;Click on &lt;strong&gt;Upload Files&lt;/strong&gt; and navigate to the directory where you placed the HyTrust KeyControl OVA, select it, then click &lt;strong&gt;Open.&lt;/strong&gt;&lt;/li&gt;&#xA;&lt;/ol&gt;&#xA;&lt;figure&gt;&lt;img src=&#34;https://blog.psustevens.com/img/2020/10/31/HTKCDeploy02.png&#34;&#xA;    alt=&#34;Select OVF Template step&#34;&gt;&lt;figcaption&gt;&#xA;      &lt;h4&gt;Select OVF Template&lt;/h4&gt;&#xA;    &lt;/figcaption&gt;&#xA;&lt;/figure&gt;&#xA;&#xA;&lt;ol start=&#34;3&#34;&gt;&#xA;&lt;li&gt;Now that you have the HyTrust KeyControl OVA selected, click on &lt;strong&gt;Next.&lt;/strong&gt;&lt;/li&gt;&#xA;&lt;/ol&gt;&#xA;&lt;figure&gt;&lt;img src=&#34;https://blog.psustevens.com/img/2020/10/31/HTKCDeploy03.png&#34;&#xA;    alt=&#34;Selected OVF Template&#34;&gt;&lt;figcaption&gt;&#xA;      &lt;h4&gt;Selected OVF Template&lt;/h4&gt;&#xA;    &lt;/figcaption&gt;&#xA;&lt;/figure&gt;&#xA;&#xA;&lt;ol start=&#34;4&#34;&gt;&#xA;&lt;li&gt;Provide a name for the HyTrust KeyControl appliance, select a deployment location, then click &lt;strong&gt;Next.&lt;/strong&gt;&lt;/li&gt;&#xA;&lt;/ol&gt;&#xA;&lt;figure&gt;&lt;img src=&#34;https://blog.psustevens.com/img/2020/10/31/HTKCDeploy04.png&#34;&#xA;    alt=&#34;Select a Name and Folder step&#34;&gt;&lt;figcaption&gt;&#xA;      &lt;h4&gt;Select a Name and Folder&lt;/h4&gt;&#xA;    &lt;/figcaption&gt;&#xA;&lt;/figure&gt;&#xA;&#xA;&lt;ol start=&#34;5&#34;&gt;&#xA;&lt;li&gt;Select the vSphere Cluster or host, then click &lt;strong&gt;Next.&lt;/strong&gt;&lt;/li&gt;&#xA;&lt;/ol&gt;&#xA;&lt;figure&gt;&lt;img src=&#34;https://blog.psustevens.com/img/2020/10/31/HTKCDeploy05.png&#34;&#xA;    alt=&#34;Select a Compute Resource step&#34;&gt;&lt;figcaption&gt;&#xA;      &lt;h4&gt;Select a Compute Resource&lt;/h4&gt;&#xA;    &lt;/figcaption&gt;&#xA;&lt;/figure&gt;&#xA;&#xA;&lt;ol start=&#34;6&#34;&gt;&#xA;&lt;li&gt;Review the details, then click &lt;strong&gt;Next.&lt;/strong&gt;&lt;/li&gt;&#xA;&lt;/ol&gt;&#xA;&lt;figure&gt;&lt;img src=&#34;https://blog.psustevens.com/img/2020/10/31/HTKCDeploy06.png&#34;&#xA;    alt=&#34;Review Details&#34;&gt;&lt;figcaption&gt;&#xA;      &lt;h4&gt;Review Details&lt;/h4&gt;&#xA;    &lt;/figcaption&gt;&#xA;&lt;/figure&gt;&#xA;&#xA;&lt;ol start=&#34;7&#34;&gt;&#xA;&lt;li&gt;Accept the license agreement, then click &lt;strong&gt;Next.&lt;/strong&gt;&lt;/li&gt;&#xA;&lt;/ol&gt;&#xA;&lt;figure&gt;&lt;img src=&#34;https://blog.psustevens.com/img/2020/10/31/HTKCDeploy07.png&#34;&#xA;    alt=&#34;License Agreement step&#34;&gt;&lt;figcaption&gt;&#xA;      &lt;h4&gt;License Agreement&lt;/h4&gt;&#xA;    &lt;/figcaption&gt;&#xA;&lt;/figure&gt;&#xA;&#xA;&lt;ol start=&#34;8&#34;&gt;&#xA;&lt;li&gt;Select the proper configuration from the list, then click &lt;strong&gt;Next.&lt;/strong&gt;&lt;/li&gt;&#xA;&lt;/ol&gt;&#xA;&lt;figure&gt;&lt;img src=&#34;https://blog.psustevens.com/img/2020/10/31/HTKCDeploy08.png&#34;&#xA;    alt=&#34;Deployment Size&#34;&gt;&lt;figcaption&gt;&#xA;      &lt;h4&gt;Deployment Size&lt;/h4&gt;&#xA;    &lt;/figcaption&gt;&#xA;&lt;/figure&gt;&#xA;&#xA;&lt;ol start=&#34;9&#34;&gt;&#xA;&lt;li&gt;Select the appropriate storage and disk format for the appliance, then click &lt;strong&gt;Next.&lt;/strong&gt;&lt;/li&gt;&#xA;&lt;/ol&gt;&#xA;&lt;figure&gt;&lt;img src=&#34;https://blog.psustevens.com/img/2020/10/31/HTKCDeploy09.png&#34;&#xA;    alt=&#34;Select Storage step&#34;&gt;&lt;figcaption&gt;&#xA;      &lt;h4&gt;Select Storage&lt;/h4&gt;&#xA;    &lt;/figcaption&gt;&#xA;&lt;/figure&gt;&#xA;&#xA;&lt;ol start=&#34;10&#34;&gt;&#xA;&lt;li&gt;Select the appropriate network, then click &lt;strong&gt;Next.&lt;/strong&gt;&lt;/li&gt;&#xA;&lt;/ol&gt;&#xA;&lt;figure&gt;&lt;img src=&#34;https://blog.psustevens.com/img/2020/10/31/HTKCDeploy10.png&#34;&#xA;    alt=&#34;Select Network step&#34;&gt;&lt;figcaption&gt;&#xA;      &lt;h4&gt;Select Network&lt;/h4&gt;&#xA;    &lt;/figcaption&gt;&#xA;&lt;/figure&gt;&#xA;&#xA;&lt;ol start=&#34;11&#34;&gt;&#xA;&lt;li&gt;Provide the required information, then click &lt;strong&gt;Next.&lt;/strong&gt;&lt;/li&gt;&#xA;&lt;/ol&gt;&#xA;&lt;figure&gt;&lt;img src=&#34;https://blog.psustevens.com/img/2020/10/31/HTKCDeploy11.png&#34;&#xA;    alt=&#34;Appliance Properties&#34;&gt;&lt;figcaption&gt;&#xA;      &lt;h4&gt;Appliance Properties&lt;/h4&gt;&#xA;    &lt;/figcaption&gt;&#xA;&lt;/figure&gt;&#xA;&#xA;&lt;ol start=&#34;12&#34;&gt;&#xA;&lt;li&gt;Review the summary screen. If everything is correct, click &lt;strong&gt;Finish.&lt;/strong&gt;&lt;/li&gt;&#xA;&lt;/ol&gt;&#xA;&lt;figure&gt;&lt;img src=&#34;https://blog.psustevens.com/img/2020/10/31/HTKCDeploy12.png&#34;&#xA;    alt=&#34;Review step&#34;&gt;&lt;figcaption&gt;&#xA;      &lt;h4&gt;Review Settings&lt;/h4&gt;&#xA;    &lt;/figcaption&gt;&#xA;&lt;/figure&gt;&#xA;&#xA;&lt;p&gt;You have successfully deployed the first HyTrust KeyControl node.&lt;/p&gt;</description>
     </item>
     <item>
       <title>How to Backup vCenter v7 using the SMB protocol</title>
-      <link>http://localhost:1313/2020/10/30/how-to-backup-vcenter-v7-using-smb/</link>
+      <link>https://blog.psustevens.com/2020/10/30/how-to-backup-vcenter-v7-using-smb/</link>
       <pubDate>Fri, 30 Oct 2020 11:12:54 -0400</pubDate>
-      <guid>http://localhost:1313/2020/10/30/how-to-backup-vcenter-v7-using-smb/</guid>
-      <description>Introduction In this post, I will write about using the file-based backup feature in vCenter v7.0. Surprisingly, this feature has been available since vCenter 6.5. But, until recently, I hadn&amp;rsquo;t heard much about it.&#xA;Before getting started, you should read through the list of considerations and limitations of using file-based backups for vCenter.</description>
+      <guid>https://blog.psustevens.com/2020/10/30/how-to-backup-vcenter-v7-using-smb/</guid>
+      <description>&lt;hr&gt;&#xA;&lt;h2 id=&#34;introduction&#34;&gt;Introduction&lt;/h2&gt;&#xA;&lt;p&gt;In this post, I will write about using the file-based backup feature in vCenter v7.0.  Surprisingly, this feature has been available since vCenter 6.5.  But, until recently, I hadn&amp;rsquo;t heard much about it.&lt;/p&gt;&#xA;&lt;p&gt;Before getting started, you should read through the &lt;a href=&#34;https://docs.vmware.com/en/VMware-vSphere/7.0/com.vmware.vcenter.install.doc/GUID-AFF34FA6-B7CF-4AE0-9C12-C674F160682C.html&#34;&gt;list of considerations and limitations&lt;/a&gt; of using file-based backups for vCenter.  You can find the entire list on &lt;a href=&#34;https://docs.vmware.com/en/VMware-vSphere/7.0/com.vmware.vcenter.install.doc/GUID-AFF34FA6-B7CF-4AE0-9C12-C674F160682C.html&#34;&gt;VMware&amp;rsquo;s documentation site.&lt;/a&gt;&lt;/p&gt;</description>
     </item>
     <item>
       <title>My First International VMUG</title>
-      <link>http://localhost:1313/2019/11/06/my-first-international-vmug/</link>
+      <link>https://blog.psustevens.com/2019/11/06/my-first-international-vmug/</link>
       <pubDate>Wed, 06 Nov 2019 01:20:45 -0500</pubDate>
-      <guid>http://localhost:1313/2019/11/06/my-first-international-vmug/</guid>
-      <description>This week I am attending my very first VMworld Europe in, of all places, beautiful, Barcelona, Spain. I&amp;rsquo;ll write a synopsis of VMworld after it&amp;rsquo;s over, and I&amp;rsquo;ll get back to my blogging series after VMworld is over. For this post, I want to cover my first very International VMUG event.</description>
+      <guid>https://blog.psustevens.com/2019/11/06/my-first-international-vmug/</guid>
+      <description>&lt;p&gt;This week I am attending my very first VMworld Europe in, of all places, beautiful, Barcelona, Spain.  I&amp;rsquo;ll write a synopsis of VMworld after it&amp;rsquo;s over, and I&amp;rsquo;ll get back to my blogging series after VMworld is over.  For this post, I want to cover my first very International VMUG event.  Continue reading for my viewpoint of the event.&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

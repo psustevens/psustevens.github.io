@@ -2,19 +2,19 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Github on @PSUStevens Blog</title>
-    <link>http://localhost:1313/tags/github/</link>
+    <link>https://blog.psustevens.com/tags/github/</link>
     <description>Recent content in Github on @PSUStevens Blog</description>
     <generator>Hugo</generator>
     <language>en</language>
     <copyright>© 2025 David Stevens</copyright>
     <lastBuildDate>Mon, 26 Oct 2020 12:21:08 -0400</lastBuildDate>
-    <atom:link href="http://localhost:1313/tags/github/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://blog.psustevens.com/tags/github/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Building a Blog With Hugo - Part 5</title>
-      <link>http://localhost:1313/2020/10/26/building-a-blog-with-hugo-part5/</link>
+      <link>https://blog.psustevens.com/2020/10/26/building-a-blog-with-hugo-part5/</link>
       <pubDate>Mon, 26 Oct 2020 12:21:08 -0400</pubDate>
-      <guid>http://localhost:1313/2020/10/26/building-a-blog-with-hugo-part5/</guid>
-      <description>It&amp;rsquo;s been a long time since I last updated this series. I apologize to anyone who is following it and lost interest. I hope to be quicker in future series I write.&#xA;Introduction In this post, I will walk through what I do to publish my blog to Github. I use private and public repositories and GitHub Desktop.</description>
+      <guid>https://blog.psustevens.com/2020/10/26/building-a-blog-with-hugo-part5/</guid>
+      <description>&lt;p&gt;It&amp;rsquo;s been a long time since I last updated this series.  I apologize to anyone who is following it and lost interest.  I hope to be quicker in future series I write.&lt;/p&gt;&#xA;&lt;hr&gt;&#xA;&lt;h2 id=&#34;introduction&#34;&gt;Introduction&lt;/h2&gt;&#xA;&lt;p&gt;In this post, I will walk through what I do to publish my blog to &lt;a href=&#34;https://github.com/psustevens/&#34;&gt;Github&lt;/a&gt;.  I use private and public repositories and &lt;a href=&#34;https://desktop.github.com/&#34;&gt;GitHub Desktop&lt;/a&gt;.  This way, I can do some testing in my private repo before pushing it to my public repo.&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

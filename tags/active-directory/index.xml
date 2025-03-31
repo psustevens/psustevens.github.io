@@ -2,26 +2,26 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Active Directory on @PSUStevens Blog</title>
-    <link>http://localhost:1313/tags/active-directory/</link>
+    <link>https://blog.psustevens.com/tags/active-directory/</link>
     <description>Recent content in Active Directory on @PSUStevens Blog</description>
     <generator>Hugo</generator>
     <language>en</language>
     <copyright>© 2025 David Stevens</copyright>
     <lastBuildDate>Fri, 08 Oct 2021 08:08:04 -0400</lastBuildDate>
-    <atom:link href="http://localhost:1313/tags/active-directory/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://blog.psustevens.com/tags/active-directory/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>How to Add Another KeyControl Security Admin From Active Directory</title>
-      <link>http://localhost:1313/2021/10/08/2021-10-08-how-to-add-another-security-admin-from-ad/</link>
+      <link>https://blog.psustevens.com/2021/10/08/2021-10-08-how-to-add-another-security-admin-from-ad/</link>
       <pubDate>Fri, 08 Oct 2021 08:08:04 -0400</pubDate>
-      <guid>http://localhost:1313/2021/10/08/2021-10-08-how-to-add-another-security-admin-from-ad/</guid>
-      <description>To get started here is what you will need to complete the steps in this post:&#xA;A deployed Entrust KeyControl v5.4 cluster connected to Active Directory (Click this sentence to learn how to do this) Active Directory account info to be added Now, let&amp;rsquo;s get started&amp;hellip;&#xA;Add a Second KeyControl Security Administrator from Active Directory Click Security from the menu bar then click the blue Actions button and select Create User</description>
+      <guid>https://blog.psustevens.com/2021/10/08/2021-10-08-how-to-add-another-security-admin-from-ad/</guid>
+      <description>&lt;p&gt;To get started here is what you will need to complete the steps in this post:&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;A deployed Entrust KeyControl v5.4 cluster connected to Active Directory &lt;a href=&#34;https://blog.psustevens.com/2021/10/05/2021-10-05-how-to-connect-keycontrol-5.4-to-activedirectory/&#34;&gt;(Click this sentence to learn how to do this)&lt;/a&gt;&lt;/li&gt;&#xA;&lt;li&gt;Active Directory account info to be added&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;Now, let&amp;rsquo;s get started&amp;hellip;&lt;/p&gt;&#xA;&lt;h2 id=&#34;add-a-second-keycontrol-security-administrator-from-active-directory&#34;&gt;Add a Second KeyControl Security Administrator from Active Directory&lt;/h2&gt;&#xA;&lt;ol&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;Click &lt;strong&gt;Security&lt;/strong&gt; from the menu bar then click the blue &lt;strong&gt;Actions&lt;/strong&gt; button and select &lt;strong&gt;Create User&lt;/strong&gt;&lt;/p&gt;</description>
     </item>
     <item>
       <title>How to Connect KeyControl 5.4 to Active Directory</title>
-      <link>http://localhost:1313/2021/10/05/2021-10-05-how-to-connect-keycontrol-5.4-to-activedirectory/</link>
+      <link>https://blog.psustevens.com/2021/10/05/2021-10-05-how-to-connect-keycontrol-5.4-to-activedirectory/</link>
       <pubDate>Tue, 05 Oct 2021 08:08:40 -0400</pubDate>
-      <guid>http://localhost:1313/2021/10/05/2021-10-05-how-to-connect-keycontrol-5.4-to-activedirectory/</guid>
-      <description>To get started here is what you will need to complete the steps in this post:&#xA;A deployed Entrust KeyControl v5.4 cluster (Click this sentence to learn how to do this) Active Directory service account Now, let&amp;rsquo;s get started&amp;hellip;&#xA;Connect KeyControl to Active Directory Log in to the deployed Entrust KeyControl cluster.</description>
+      <guid>https://blog.psustevens.com/2021/10/05/2021-10-05-how-to-connect-keycontrol-5.4-to-activedirectory/</guid>
+      <description>&lt;p&gt;To get started here is what you will need to complete the steps in this post:&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;A deployed Entrust KeyControl v5.4 cluster  &lt;a href=&#34;https://blog.psustevens.com/2021/10/01/how-to-deploy-entrust-keycontrol-5.4/&#34;&gt;(Click this sentence to learn how to do this)&lt;/a&gt;&lt;/li&gt;&#xA;&lt;li&gt;Active Directory service account&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;Now, let&amp;rsquo;s get started&amp;hellip;&lt;/p&gt;&#xA;&lt;h2 id=&#34;connect-keycontrol-to-active-directory&#34;&gt;Connect KeyControl to Active Directory&lt;/h2&gt;&#xA;&lt;ol&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;Log in to the deployed Entrust KeyControl cluster.  Once logged in:&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

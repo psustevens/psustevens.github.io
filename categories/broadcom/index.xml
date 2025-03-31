@@ -2,26 +2,26 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Broadcom on @PSUStevens Blog</title>
-    <link>http://localhost:1313/categories/broadcom/</link>
+    <link>https://blog.psustevens.com/categories/broadcom/</link>
     <description>Recent content in Broadcom on @PSUStevens Blog</description>
     <generator>Hugo</generator>
     <language>en</language>
     <copyright>© 2025 David Stevens</copyright>
     <lastBuildDate>Sat, 29 Mar 2025 16:19:59 -0400</lastBuildDate>
-    <atom:link href="http://localhost:1313/categories/broadcom/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://blog.psustevens.com/categories/broadcom/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>2025 vExpert Renewal</title>
-      <link>http://localhost:1313/2025/03/29/2025-vexpert-renewal/</link>
+      <link>https://blog.psustevens.com/2025/03/29/2025-vexpert-renewal/</link>
       <pubDate>Sat, 29 Mar 2025 16:19:59 -0400</pubDate>
-      <guid>http://localhost:1313/2025/03/29/2025-vexpert-renewal/</guid>
-      <description>I&amp;rsquo;m a bit late on posting this. But, better late than never. I&amp;rsquo;ve been renewed again as a VMware vExpert for 2025. This is my seventh consecutive year since I first applied. Woohoo!!&#xA;7x VMware vExpert If you haven&amp;rsquo;t met me, then you should know the image for this post is not how I look at all.</description>
+      <guid>https://blog.psustevens.com/2025/03/29/2025-vexpert-renewal/</guid>
+      <description>&lt;p&gt;I&amp;rsquo;m a bit late on posting this.  But, better late than never.  I&amp;rsquo;ve been renewed again as a VMware vExpert for 2025.  This is my seventh consecutive year since I first applied.  Woohoo!!&lt;/p&gt;&#xA;&lt;figure&gt;&lt;img src=&#34;https://blog.psustevens.com/img/about/VMware-vExpert-7yr-badge.png&#34;&#xA;    alt=&#34;7 times VMware vExpert badge&#34;&gt;&lt;figcaption&gt;&#xA;      &lt;h4&gt;7x VMware vExpert&lt;/h4&gt;&#xA;    &lt;/figcaption&gt;&#xA;&lt;/figure&gt;&#xA;&#xA;&lt;p&gt;If you haven&amp;rsquo;t met me, then you should know the image for this post is not how I look at all.  That guy is way better looking than me.  I also don&amp;rsquo;t have anywhere near that amount of hair.  I decided to create a generic IT guy holding a placard claiming to be a 7-time vExpert.  I used the AI image site, &lt;a href=&#34;https://creator.nightcafe.studio/&#34;&gt;NightCafe&lt;/a&gt;.  It has a paid tier for creating images, but I use the free tier.  Check it out sometime.&lt;/p&gt;</description>
     </item>
     <item>
       <title>No Storage Replication Adapters Installed</title>
-      <link>http://localhost:1313/2025/02/22/no-storage-replication-adapters-installed/</link>
+      <link>https://blog.psustevens.com/2025/02/22/no-storage-replication-adapters-installed/</link>
       <pubDate>Sat, 22 Feb 2025 10:35:43 -0500</pubDate>
-      <guid>http://localhost:1313/2025/02/22/no-storage-replication-adapters-installed/</guid>
-      <description>As part of my job, I regularly demonstrate Pure Storage features and how VMware solutions integrate seamlessly with our storage platform. Before a demo, I usually will confirm the software I intend to use is in good working order, but this isn&amp;rsquo;t always the case. The demo lab is used by many of my colleagues.</description>
+      <guid>https://blog.psustevens.com/2025/02/22/no-storage-replication-adapters-installed/</guid>
+      <description>&lt;p&gt;As part of my job, I regularly demonstrate &lt;a href=&#34;https://www.purestorage.com&#34;&gt;Pure Storage&lt;/a&gt; features and how &lt;a href=&#34;https://www.vmware.com&#34;&gt;VMware&lt;/a&gt; solutions integrate seamlessly with our &lt;a href=&#34;https://www.purestorage.com/pure-advantage/platform.html&#34;&gt;storage platform.&lt;/a&gt;  Before a demo, I usually will confirm the software I intend to use is in good working order, but this isn&amp;rsquo;t always the case.  The demo lab is used by many of my colleagues.  This means that during their use of the lab something could have stopped working or is in a wonky state.  So, Murphy&amp;rsquo;s Law could rear its ugly head at the most inconvenient time if I cannot confirm all is well beforehand.&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

@@ -2,26 +2,26 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>KeyControl V5.4 on @PSUStevens Blog</title>
-    <link>http://localhost:1313/tags/keycontrol-v5.4/</link>
+    <link>https://blog.psustevens.com/tags/keycontrol-v5.4/</link>
     <description>Recent content in KeyControl V5.4 on @PSUStevens Blog</description>
     <generator>Hugo</generator>
     <language>en</language>
     <copyright>© 2025 David Stevens</copyright>
     <lastBuildDate>Tue, 19 Oct 2021 06:50:26 -0400</lastBuildDate>
-    <atom:link href="http://localhost:1313/tags/keycontrol-v5.4/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://blog.psustevens.com/tags/keycontrol-v5.4/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>How to Encrypt a VM Using vSphere Encryption</title>
-      <link>http://localhost:1313/2021/10/19/2021-10-19-how-to-encrypt-a-vm-using-vsphere-encryption/</link>
+      <link>https://blog.psustevens.com/2021/10/19/2021-10-19-how-to-encrypt-a-vm-using-vsphere-encryption/</link>
       <pubDate>Tue, 19 Oct 2021 06:50:26 -0400</pubDate>
-      <guid>http://localhost:1313/2021/10/19/2021-10-19-how-to-encrypt-a-vm-using-vsphere-encryption/</guid>
-      <description>To get started here is what you will need to complete the steps in this post:&#xA;A deployed Entrust KeyControl v5.4 cluster (Click this sentence to learn how to do this) vCenter and ESXi Host(s) running vSphere 7.x or higher Trusted connection between Entrust KeyControl and vCenter (Click this sentence to learn how to do this) Powered-off VM Now, let&amp;rsquo;s get started&amp;hellip;</description>
+      <guid>https://blog.psustevens.com/2021/10/19/2021-10-19-how-to-encrypt-a-vm-using-vsphere-encryption/</guid>
+      <description>&lt;p&gt;To get started here is what you will need to complete the steps in this post:&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;A deployed &lt;a href=&#34;https://www.entrust.com/solutions/use-cases/key-management-control&#34;&gt;Entrust KeyControl&lt;/a&gt; v5.4 cluster &lt;a href=&#34;https://blog.psustevens.com/2021/10/01/how-to-deploy-entrust-keycontrol-5.4/&#34;&gt;(Click this sentence to learn how to do this)&lt;/a&gt;&lt;/li&gt;&#xA;&lt;li&gt;vCenter and ESXi Host(s) running vSphere 7.x or higher&lt;/li&gt;&#xA;&lt;li&gt;Trusted connection between &lt;a href=&#34;https://www.entrust.com/solutions/use-cases/key-management-control&#34;&gt;Entrust KeyControl&lt;/a&gt; and vCenter &lt;a href=&#34;https://blog.psustevens.com/2021/10/12/2021-10-12-how-to-add-keycontrol-as-a-key-provider-in-vsphere7/&#34;&gt;(Click this sentence to learn how to do this)&lt;/a&gt;&lt;/li&gt;&#xA;&lt;li&gt;Powered-off VM&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;Now, let&amp;rsquo;s get started&amp;hellip;&lt;/p&gt;</description>
     </item>
     <item>
       <title>How to Add KeyControl v5.4 as a Key Provider in VSphere 7</title>
-      <link>http://localhost:1313/2021/10/12/2021-10-12-how-to-add-keycontrol-as-a-key-provider-in-vsphere7/</link>
+      <link>https://blog.psustevens.com/2021/10/12/2021-10-12-how-to-add-keycontrol-as-a-key-provider-in-vsphere7/</link>
       <pubDate>Tue, 12 Oct 2021 08:15:28 -0400</pubDate>
-      <guid>http://localhost:1313/2021/10/12/2021-10-12-how-to-add-keycontrol-as-a-key-provider-in-vsphere7/</guid>
-      <description>To get started here is what you will need to complete the steps in this post:&#xA;A deployed Entrust KeyControl v5.4 cluster (Click this sentence to learn how to do this) vCenter and ESXi Host(s) running vSphere 7.x Now, let&amp;rsquo;s get started&amp;hellip;&#xA;Enable the KMIP Server in KeyControl Log in to the deployed Entrust KeyControl cluster and click the KMIP menu item.</description>
+      <guid>https://blog.psustevens.com/2021/10/12/2021-10-12-how-to-add-keycontrol-as-a-key-provider-in-vsphere7/</guid>
+      <description>&lt;p&gt;To get started here is what you will need to complete the steps in this post:&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;A deployed &lt;a href=&#34;https://www.entrust.com/solutions/use-cases/key-management-control&#34;&gt;Entrust KeyControl&lt;/a&gt; v5.4 cluster &lt;a href=&#34;https://blog.psustevens.com/2021/10/01/how-to-deploy-entrust-keycontrol-5.4/&#34;&gt;(Click this sentence to learn how to do this)&lt;/a&gt;&lt;/li&gt;&#xA;&lt;li&gt;vCenter and ESXi Host(s) running vSphere 7.x&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;Now, let&amp;rsquo;s get started&amp;hellip;&lt;/p&gt;&#xA;&lt;hr&gt;&#xA;&lt;h2 id=&#34;enable-the-kmip-server-in-keycontrol&#34;&gt;Enable the KMIP Server in KeyControl&lt;/h2&gt;&#xA;&lt;ol&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;Log in to the deployed Entrust KeyControl cluster and click the &lt;strong&gt;KMIP&lt;/strong&gt; menu item.&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

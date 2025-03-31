@@ -2,19 +2,19 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Synology on @PSUStevens Blog</title>
-    <link>http://localhost:1313/categories/synology/</link>
+    <link>https://blog.psustevens.com/categories/synology/</link>
     <description>Recent content in Synology on @PSUStevens Blog</description>
     <generator>Hugo</generator>
     <language>en</language>
     <copyright>© 2025 David Stevens</copyright>
     <lastBuildDate>Mon, 27 Feb 2023 15:38:16 -0500</lastBuildDate>
-    <atom:link href="http://localhost:1313/categories/synology/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://blog.psustevens.com/categories/synology/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Synology: Creating a Remote Mount between two Synology NAS arrays</title>
-      <link>http://localhost:1313/2023/02/27/2023-02-27-synology-creating-a-remote-mount/</link>
+      <link>https://blog.psustevens.com/2023/02/27/2023-02-27-synology-creating-a-remote-mount/</link>
       <pubDate>Mon, 27 Feb 2023 15:38:16 -0500</pubDate>
-      <guid>http://localhost:1313/2023/02/27/2023-02-27-synology-creating-a-remote-mount/</guid>
-      <description>Introduction It&amp;rsquo;s no mystery that I run a homelab for personal and work purposes. I&amp;rsquo;m also lucky to own two Synology NAS arrays. My first NAS unit is a DS414. It&amp;rsquo;s a bit old, but it continues to hum along nicely. I need to make some time to upgrade the firmware on it.</description>
+      <guid>https://blog.psustevens.com/2023/02/27/2023-02-27-synology-creating-a-remote-mount/</guid>
+      <description>&lt;h2 id=&#34;introduction&#34;&gt;Introduction&lt;/h2&gt;&#xA;&lt;p&gt;It&amp;rsquo;s no mystery that I run a homelab for personal and work purposes.  I&amp;rsquo;m also lucky to own two &lt;a href=&#34;https://www.synology.com&#34;&gt;Synology NAS&lt;/a&gt; arrays.  My first NAS unit is a DS414.  It&amp;rsquo;s a bit old, but it continues to hum along nicely.  I need to make some time to upgrade the firmware on it.  It&amp;rsquo;s still back on the 6.x firmware.  As of the time I&amp;rsquo;m writing this post the latest firmware is 7.1.x.  Stay tuned for post on how to do the upgrade.  My other NAS unit is a &lt;a href=&#34;https://www.synology.com/en-global/products/DS1821+&#34;&gt;DS1821+&lt;/a&gt;  This unit is great.  This unit is running the latest firmware.  It has eight drive bays and supports adding an external expansion unit.  This means the maximum volume size supported is a whopping 108 TB!!  I don&amp;rsquo;t see myself ever expanding to that size.  But it&amp;rsquo;s nice to know I can.&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

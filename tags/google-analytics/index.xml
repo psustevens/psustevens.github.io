@@ -2,19 +2,19 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Google Analytics on @PSUStevens Blog</title>
-    <link>http://localhost:1313/tags/google-analytics/</link>
+    <link>https://blog.psustevens.com/tags/google-analytics/</link>
     <description>Recent content in Google Analytics on @PSUStevens Blog</description>
     <generator>Hugo</generator>
     <language>en</language>
     <copyright>© 2025 David Stevens</copyright>
     <lastBuildDate>Fri, 20 Dec 2019 01:24:15 -0500</lastBuildDate>
-    <atom:link href="http://localhost:1313/tags/google-analytics/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://blog.psustevens.com/tags/google-analytics/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Building a Blog With Hugo - Part 4</title>
-      <link>http://localhost:1313/2019/12/20/building-a-blog-with-hugo-part4/</link>
+      <link>https://blog.psustevens.com/2019/12/20/building-a-blog-with-hugo-part4/</link>
       <pubDate>Fri, 20 Dec 2019 01:24:15 -0500</pubDate>
-      <guid>http://localhost:1313/2019/12/20/building-a-blog-with-hugo-part4/</guid>
-      <description>In the previous post, I covered how to customize the theme for your Hugo site. I apologize if it was a bit long. This post is considerably shorter. In this post, I&amp;rsquo;m going to walk through how to configure Google Analytics for your site. Let&amp;rsquo;s get started.&#xA;Before we get started&amp;hellip; If you are already familiar with Google Analytics, then this will be a short read for you.</description>
+      <guid>https://blog.psustevens.com/2019/12/20/building-a-blog-with-hugo-part4/</guid>
+      <description>&lt;p&gt;In the previous post, I covered how to customize the theme for your Hugo site.  I apologize if it was a bit long.  This post is considerably shorter.  In this post, I&amp;rsquo;m going to walk through how to configure &lt;a href=&#34;https://analytics.google.com&#34;&gt;Google Analytics&lt;/a&gt; for your site.  Let&amp;rsquo;s get started.&lt;/p&gt;&#xA;&lt;hr&gt;&#xA;&lt;h2 id=&#34;before-we-get-started&#34;&gt;Before we get started&amp;hellip;&lt;/h2&gt;&#xA;&lt;p&gt;If you are already familiar with &lt;a href=&#34;https://analytics.google.com&#34;&gt;Google Analytics&lt;/a&gt;, then this will be a short read for you.  All you need to do is:&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

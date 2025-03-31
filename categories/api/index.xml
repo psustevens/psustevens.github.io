@@ -2,19 +2,19 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>API on @PSUStevens Blog</title>
-    <link>http://localhost:1313/categories/api/</link>
+    <link>https://blog.psustevens.com/categories/api/</link>
     <description>Recent content in API on @PSUStevens Blog</description>
     <generator>Hugo</generator>
     <language>en</language>
     <copyright>© 2025 David Stevens</copyright>
     <lastBuildDate>Thu, 30 Mar 2023 20:10:36 -0500</lastBuildDate>
-    <atom:link href="http://localhost:1313/categories/api/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://blog.psustevens.com/categories/api/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Did you know about vCenter API Commands?</title>
-      <link>http://localhost:1313/2023/03/30/2023-03-30-did_you_know_about_vcenter_api-commands/</link>
+      <link>https://blog.psustevens.com/2023/03/30/2023-03-30-did_you_know_about_vcenter_api-commands/</link>
       <pubDate>Thu, 30 Mar 2023 20:10:36 -0500</pubDate>
-      <guid>http://localhost:1313/2023/03/30/2023-03-30-did_you_know_about_vcenter_api-commands/</guid>
-      <description>I recently wrote about a little issue where I had to quickly get my lab hosts and vCenter upgraded to vSphere 7.0U3k luckily vSphere Lifecycle Manager saved me. During that process I discovered in vCenter there are a bunch of API calls you can make directly from the CLI once you SSH into vCenter.</description>
+      <guid>https://blog.psustevens.com/2023/03/30/2023-03-30-did_you_know_about_vcenter_api-commands/</guid>
+      <description>&lt;p&gt;I recently wrote about a little issue where I had to quickly get my lab hosts and vCenter upgraded to vSphere 7.0U3k luckily vSphere Lifecycle Manager saved me.  During that process I discovered in vCenter there are a bunch of API calls you can make directly from the CLI once you SSH into vCenter.&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

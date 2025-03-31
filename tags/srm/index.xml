@@ -2,19 +2,19 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>SRM on @PSUStevens Blog</title>
-    <link>http://localhost:1313/tags/srm/</link>
+    <link>https://blog.psustevens.com/tags/srm/</link>
     <description>Recent content in SRM on @PSUStevens Blog</description>
     <generator>Hugo</generator>
     <language>en</language>
     <copyright>© 2025 David Stevens</copyright>
     <lastBuildDate>Sat, 22 Feb 2025 10:35:43 -0500</lastBuildDate>
-    <atom:link href="http://localhost:1313/tags/srm/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://blog.psustevens.com/tags/srm/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>No Storage Replication Adapters Installed</title>
-      <link>http://localhost:1313/2025/02/22/no-storage-replication-adapters-installed/</link>
+      <link>https://blog.psustevens.com/2025/02/22/no-storage-replication-adapters-installed/</link>
       <pubDate>Sat, 22 Feb 2025 10:35:43 -0500</pubDate>
-      <guid>http://localhost:1313/2025/02/22/no-storage-replication-adapters-installed/</guid>
-      <description>As part of my job, I regularly demonstrate Pure Storage features and how VMware solutions integrate seamlessly with our storage platform. Before a demo, I usually will confirm the software I intend to use is in good working order, but this isn&amp;rsquo;t always the case. The demo lab is used by many of my colleagues.</description>
+      <guid>https://blog.psustevens.com/2025/02/22/no-storage-replication-adapters-installed/</guid>
+      <description>&lt;p&gt;As part of my job, I regularly demonstrate &lt;a href=&#34;https://www.purestorage.com&#34;&gt;Pure Storage&lt;/a&gt; features and how &lt;a href=&#34;https://www.vmware.com&#34;&gt;VMware&lt;/a&gt; solutions integrate seamlessly with our &lt;a href=&#34;https://www.purestorage.com/pure-advantage/platform.html&#34;&gt;storage platform.&lt;/a&gt;  Before a demo, I usually will confirm the software I intend to use is in good working order, but this isn&amp;rsquo;t always the case.  The demo lab is used by many of my colleagues.  This means that during their use of the lab something could have stopped working or is in a wonky state.  So, Murphy&amp;rsquo;s Law could rear its ugly head at the most inconvenient time if I cannot confirm all is well beforehand.&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

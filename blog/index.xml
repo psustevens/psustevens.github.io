@@ -2,187 +2,187 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Blog on @PSUStevens Blog</title>
-    <link>http://localhost:1313/blog/</link>
+    <link>https://blog.psustevens.com/blog/</link>
     <description>Recent content in Blog on @PSUStevens Blog</description>
     <generator>Hugo</generator>
     <language>en</language>
     <copyright>© 2025 David Stevens</copyright>
     <lastBuildDate>Sat, 29 Mar 2025 16:19:59 -0400</lastBuildDate>
-    <atom:link href="http://localhost:1313/blog/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://blog.psustevens.com/blog/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>2025 vExpert Renewal</title>
-      <link>http://localhost:1313/2025/03/29/2025-vexpert-renewal/</link>
+      <link>https://blog.psustevens.com/2025/03/29/2025-vexpert-renewal/</link>
       <pubDate>Sat, 29 Mar 2025 16:19:59 -0400</pubDate>
-      <guid>http://localhost:1313/2025/03/29/2025-vexpert-renewal/</guid>
-      <description>I&amp;rsquo;m a bit late on posting this. But, better late than never. I&amp;rsquo;ve been renewed again as a VMware vExpert for 2025. This is my seventh consecutive year since I first applied. Woohoo!!&#xA;7x VMware vExpert If you haven&amp;rsquo;t met me, then you should know the image for this post is not how I look at all.</description>
+      <guid>https://blog.psustevens.com/2025/03/29/2025-vexpert-renewal/</guid>
+      <description>&lt;p&gt;I&amp;rsquo;m a bit late on posting this.  But, better late than never.  I&amp;rsquo;ve been renewed again as a VMware vExpert for 2025.  This is my seventh consecutive year since I first applied.  Woohoo!!&lt;/p&gt;&#xA;&lt;figure&gt;&lt;img src=&#34;https://blog.psustevens.com/img/about/VMware-vExpert-7yr-badge.png&#34;&#xA;    alt=&#34;7 times VMware vExpert badge&#34;&gt;&lt;figcaption&gt;&#xA;      &lt;h4&gt;7x VMware vExpert&lt;/h4&gt;&#xA;    &lt;/figcaption&gt;&#xA;&lt;/figure&gt;&#xA;&#xA;&lt;p&gt;If you haven&amp;rsquo;t met me, then you should know the image for this post is not how I look at all.  That guy is way better looking than me.  I also don&amp;rsquo;t have anywhere near that amount of hair.  I decided to create a generic IT guy holding a placard claiming to be a 7-time vExpert.  I used the AI image site, &lt;a href=&#34;https://creator.nightcafe.studio/&#34;&gt;NightCafe&lt;/a&gt;.  It has a paid tier for creating images, but I use the free tier.  Check it out sometime.&lt;/p&gt;</description>
     </item>
     <item>
       <title>No Storage Replication Adapters Installed</title>
-      <link>http://localhost:1313/2025/02/22/no-storage-replication-adapters-installed/</link>
+      <link>https://blog.psustevens.com/2025/02/22/no-storage-replication-adapters-installed/</link>
       <pubDate>Sat, 22 Feb 2025 10:35:43 -0500</pubDate>
-      <guid>http://localhost:1313/2025/02/22/no-storage-replication-adapters-installed/</guid>
-      <description>As part of my job, I regularly demonstrate Pure Storage features and how VMware solutions integrate seamlessly with our storage platform. Before a demo, I usually will confirm the software I intend to use is in good working order, but this isn&amp;rsquo;t always the case. The demo lab is used by many of my colleagues.</description>
+      <guid>https://blog.psustevens.com/2025/02/22/no-storage-replication-adapters-installed/</guid>
+      <description>&lt;p&gt;As part of my job, I regularly demonstrate &lt;a href=&#34;https://www.purestorage.com&#34;&gt;Pure Storage&lt;/a&gt; features and how &lt;a href=&#34;https://www.vmware.com&#34;&gt;VMware&lt;/a&gt; solutions integrate seamlessly with our &lt;a href=&#34;https://www.purestorage.com/pure-advantage/platform.html&#34;&gt;storage platform.&lt;/a&gt;  Before a demo, I usually will confirm the software I intend to use is in good working order, but this isn&amp;rsquo;t always the case.  The demo lab is used by many of my colleagues.  This means that during their use of the lab something could have stopped working or is in a wonky state.  So, Murphy&amp;rsquo;s Law could rear its ugly head at the most inconvenient time if I cannot confirm all is well beforehand.&lt;/p&gt;</description>
     </item>
     <item>
       <title>My First Pull Request</title>
-      <link>http://localhost:1313/2025/01/17/my-first-pull-request/</link>
+      <link>https://blog.psustevens.com/2025/01/17/my-first-pull-request/</link>
       <pubDate>Fri, 17 Jan 2025 00:12:59 -0500</pubDate>
-      <guid>http://localhost:1313/2025/01/17/my-first-pull-request/</guid>
-      <description>For those of you who know me and those of you who don&amp;rsquo;t, it won&amp;rsquo;t come as a surprise that I&amp;rsquo;m not a developer and I will never claim to be one. So, when I decided I wanted to learn how to contribute to a project on GitHub what better way to do this than to write a blog post about it.</description>
+      <guid>https://blog.psustevens.com/2025/01/17/my-first-pull-request/</guid>
+      <description>&lt;p&gt;For those of you who know me and those of you who don&amp;rsquo;t, it won&amp;rsquo;t come as a surprise that I&amp;rsquo;m not a developer and I will never claim to be one.  So, when I decided I wanted to learn how to contribute to a project on GitHub what better way to do this than to write a blog post about it.&lt;/p&gt;</description>
     </item>
     <item>
       <title>A Quick Fork in the Job Road</title>
-      <link>http://localhost:1313/2023/12/12/a-quick-fork-in-the-job-road/</link>
+      <link>https://blog.psustevens.com/2023/12/12/a-quick-fork-in-the-job-road/</link>
       <pubDate>Tue, 12 Dec 2023 16:19:30 -0500</pubDate>
-      <guid>http://localhost:1313/2023/12/12/a-quick-fork-in-the-job-road/</guid>
-      <description>Let&amp;rsquo;s put it this way. I wasn&amp;rsquo;t looking for a new job. But due to an unforeseen curveball, I now work for Pure Storage. This wasn&amp;rsquo;t a planned move, but looking back (6 months now). I have no complaints!! I wish all of my friends and colleagues at Entrust the best of luck and I know we will see each other at future trade shows or somewhere else along our travels.</description>
+      <guid>https://blog.psustevens.com/2023/12/12/a-quick-fork-in-the-job-road/</guid>
+      <description>&lt;p&gt;Let&amp;rsquo;s put it this way.  I wasn&amp;rsquo;t looking for a new job.  But due to an unforeseen curveball, I now work for &lt;a href=&#34;https://www.purestorage.com/&#34;&gt;Pure Storage&lt;/a&gt;.  This wasn&amp;rsquo;t a planned move, but looking back (6 months now).  I have no complaints!!  I wish all of my friends and colleagues at &lt;a href=&#34;https://www.entrust.com/&#34;&gt;Entrust&lt;/a&gt; the best of luck and I know we will see each other at future trade shows or somewhere else along our travels.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Did you know about vCenter API Commands?</title>
-      <link>http://localhost:1313/2023/03/30/2023-03-30-did_you_know_about_vcenter_api-commands/</link>
+      <link>https://blog.psustevens.com/2023/03/30/2023-03-30-did_you_know_about_vcenter_api-commands/</link>
       <pubDate>Thu, 30 Mar 2023 20:10:36 -0500</pubDate>
-      <guid>http://localhost:1313/2023/03/30/2023-03-30-did_you_know_about_vcenter_api-commands/</guid>
-      <description>I recently wrote about a little issue where I had to quickly get my lab hosts and vCenter upgraded to vSphere 7.0U3k luckily vSphere Lifecycle Manager saved me. During that process I discovered in vCenter there are a bunch of API calls you can make directly from the CLI once you SSH into vCenter.</description>
+      <guid>https://blog.psustevens.com/2023/03/30/2023-03-30-did_you_know_about_vcenter_api-commands/</guid>
+      <description>&lt;p&gt;I recently wrote about a little issue where I had to quickly get my lab hosts and vCenter upgraded to vSphere 7.0U3k luckily vSphere Lifecycle Manager saved me.  During that process I discovered in vCenter there are a bunch of API calls you can make directly from the CLI once you SSH into vCenter.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Synology: Creating a Remote Mount between two Synology NAS arrays</title>
-      <link>http://localhost:1313/2023/02/27/2023-02-27-synology-creating-a-remote-mount/</link>
+      <link>https://blog.psustevens.com/2023/02/27/2023-02-27-synology-creating-a-remote-mount/</link>
       <pubDate>Mon, 27 Feb 2023 15:38:16 -0500</pubDate>
-      <guid>http://localhost:1313/2023/02/27/2023-02-27-synology-creating-a-remote-mount/</guid>
-      <description>Introduction It&amp;rsquo;s no mystery that I run a homelab for personal and work purposes. I&amp;rsquo;m also lucky to own two Synology NAS arrays. My first NAS unit is a DS414. It&amp;rsquo;s a bit old, but it continues to hum along nicely. I need to make some time to upgrade the firmware on it.</description>
+      <guid>https://blog.psustevens.com/2023/02/27/2023-02-27-synology-creating-a-remote-mount/</guid>
+      <description>&lt;h2 id=&#34;introduction&#34;&gt;Introduction&lt;/h2&gt;&#xA;&lt;p&gt;It&amp;rsquo;s no mystery that I run a homelab for personal and work purposes.  I&amp;rsquo;m also lucky to own two &lt;a href=&#34;https://www.synology.com&#34;&gt;Synology NAS&lt;/a&gt; arrays.  My first NAS unit is a DS414.  It&amp;rsquo;s a bit old, but it continues to hum along nicely.  I need to make some time to upgrade the firmware on it.  It&amp;rsquo;s still back on the 6.x firmware.  As of the time I&amp;rsquo;m writing this post the latest firmware is 7.1.x.  Stay tuned for post on how to do the upgrade.  My other NAS unit is a &lt;a href=&#34;https://www.synology.com/en-global/products/DS1821+&#34;&gt;DS1821+&lt;/a&gt;  This unit is great.  This unit is running the latest firmware.  It has eight drive bays and supports adding an external expansion unit.  This means the maximum volume size supported is a whopping 108 TB!!  I don&amp;rsquo;t see myself ever expanding to that size.  But it&amp;rsquo;s nice to know I can.&lt;/p&gt;</description>
     </item>
     <item>
       <title>How to Update Esxi 7.0u3d to 7.0u3k using vSphere Lifecycle_Manager</title>
-      <link>http://localhost:1313/2023/02/24/2023-02-24-how-to-update-esxi-7.0u3d_to_7.0u3k_using_vsphere_lifecycle_manager/</link>
+      <link>https://blog.psustevens.com/2023/02/24/2023-02-24-how-to-update-esxi-7.0u3d_to_7.0u3k_using_vsphere_lifecycle_manager/</link>
       <pubDate>Fri, 24 Feb 2023 19:14:04 -0500</pubDate>
-      <guid>http://localhost:1313/2023/02/24/2023-02-24-how-to-update-esxi-7.0u3d_to_7.0u3k_using_vsphere_lifecycle_manager/</guid>
-      <description>Recently, I ran into an issue where I really needed to get my vSphere homelab upgraded to version 7.0U3k. More on why this was so urgent in a future post. However, I was still back on 7.0U3d. To get to 7.0U3 I used vSphere Lifecycle Manager (vLCM). In case you missed it, vSphere Lifecycle Manager is built into vSphere 7.</description>
+      <guid>https://blog.psustevens.com/2023/02/24/2023-02-24-how-to-update-esxi-7.0u3d_to_7.0u3k_using_vsphere_lifecycle_manager/</guid>
+      <description>&lt;p&gt;Recently, I ran into an issue where I really needed to get my vSphere homelab upgraded to version 7.0U3k.  More on why this was so urgent in a future post.  However, I was still back on 7.0U3d.  To get to 7.0U3 I used vSphere Lifecycle Manager (vLCM).  In case you missed it, vSphere Lifecycle Manager is built into vSphere 7.&lt;/p&gt;</description>
     </item>
     <item>
       <title>How to Encrypt a VM Using vSphere Encryption</title>
-      <link>http://localhost:1313/2021/10/19/2021-10-19-how-to-encrypt-a-vm-using-vsphere-encryption/</link>
+      <link>https://blog.psustevens.com/2021/10/19/2021-10-19-how-to-encrypt-a-vm-using-vsphere-encryption/</link>
       <pubDate>Tue, 19 Oct 2021 06:50:26 -0400</pubDate>
-      <guid>http://localhost:1313/2021/10/19/2021-10-19-how-to-encrypt-a-vm-using-vsphere-encryption/</guid>
-      <description>To get started here is what you will need to complete the steps in this post:&#xA;A deployed Entrust KeyControl v5.4 cluster (Click this sentence to learn how to do this) vCenter and ESXi Host(s) running vSphere 7.x or higher Trusted connection between Entrust KeyControl and vCenter (Click this sentence to learn how to do this) Powered-off VM Now, let&amp;rsquo;s get started&amp;hellip;</description>
+      <guid>https://blog.psustevens.com/2021/10/19/2021-10-19-how-to-encrypt-a-vm-using-vsphere-encryption/</guid>
+      <description>&lt;p&gt;To get started here is what you will need to complete the steps in this post:&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;A deployed &lt;a href=&#34;https://www.entrust.com/solutions/use-cases/key-management-control&#34;&gt;Entrust KeyControl&lt;/a&gt; v5.4 cluster &lt;a href=&#34;https://blog.psustevens.com/2021/10/01/how-to-deploy-entrust-keycontrol-5.4/&#34;&gt;(Click this sentence to learn how to do this)&lt;/a&gt;&lt;/li&gt;&#xA;&lt;li&gt;vCenter and ESXi Host(s) running vSphere 7.x or higher&lt;/li&gt;&#xA;&lt;li&gt;Trusted connection between &lt;a href=&#34;https://www.entrust.com/solutions/use-cases/key-management-control&#34;&gt;Entrust KeyControl&lt;/a&gt; and vCenter &lt;a href=&#34;https://blog.psustevens.com/2021/10/12/2021-10-12-how-to-add-keycontrol-as-a-key-provider-in-vsphere7/&#34;&gt;(Click this sentence to learn how to do this)&lt;/a&gt;&lt;/li&gt;&#xA;&lt;li&gt;Powered-off VM&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;Now, let&amp;rsquo;s get started&amp;hellip;&lt;/p&gt;</description>
     </item>
     <item>
       <title>How to Add KeyControl v5.4 as a Key Provider in VSphere 7</title>
-      <link>http://localhost:1313/2021/10/12/2021-10-12-how-to-add-keycontrol-as-a-key-provider-in-vsphere7/</link>
+      <link>https://blog.psustevens.com/2021/10/12/2021-10-12-how-to-add-keycontrol-as-a-key-provider-in-vsphere7/</link>
       <pubDate>Tue, 12 Oct 2021 08:15:28 -0400</pubDate>
-      <guid>http://localhost:1313/2021/10/12/2021-10-12-how-to-add-keycontrol-as-a-key-provider-in-vsphere7/</guid>
-      <description>To get started here is what you will need to complete the steps in this post:&#xA;A deployed Entrust KeyControl v5.4 cluster (Click this sentence to learn how to do this) vCenter and ESXi Host(s) running vSphere 7.x Now, let&amp;rsquo;s get started&amp;hellip;&#xA;Enable the KMIP Server in KeyControl Log in to the deployed Entrust KeyControl cluster and click the KMIP menu item.</description>
+      <guid>https://blog.psustevens.com/2021/10/12/2021-10-12-how-to-add-keycontrol-as-a-key-provider-in-vsphere7/</guid>
+      <description>&lt;p&gt;To get started here is what you will need to complete the steps in this post:&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;A deployed &lt;a href=&#34;https://www.entrust.com/solutions/use-cases/key-management-control&#34;&gt;Entrust KeyControl&lt;/a&gt; v5.4 cluster &lt;a href=&#34;https://blog.psustevens.com/2021/10/01/how-to-deploy-entrust-keycontrol-5.4/&#34;&gt;(Click this sentence to learn how to do this)&lt;/a&gt;&lt;/li&gt;&#xA;&lt;li&gt;vCenter and ESXi Host(s) running vSphere 7.x&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;Now, let&amp;rsquo;s get started&amp;hellip;&lt;/p&gt;&#xA;&lt;hr&gt;&#xA;&lt;h2 id=&#34;enable-the-kmip-server-in-keycontrol&#34;&gt;Enable the KMIP Server in KeyControl&lt;/h2&gt;&#xA;&lt;ol&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;Log in to the deployed Entrust KeyControl cluster and click the &lt;strong&gt;KMIP&lt;/strong&gt; menu item.&lt;/p&gt;</description>
     </item>
     <item>
       <title>How to Add Another KeyControl Security Admin From Active Directory</title>
-      <link>http://localhost:1313/2021/10/08/2021-10-08-how-to-add-another-security-admin-from-ad/</link>
+      <link>https://blog.psustevens.com/2021/10/08/2021-10-08-how-to-add-another-security-admin-from-ad/</link>
       <pubDate>Fri, 08 Oct 2021 08:08:04 -0400</pubDate>
-      <guid>http://localhost:1313/2021/10/08/2021-10-08-how-to-add-another-security-admin-from-ad/</guid>
-      <description>To get started here is what you will need to complete the steps in this post:&#xA;A deployed Entrust KeyControl v5.4 cluster connected to Active Directory (Click this sentence to learn how to do this) Active Directory account info to be added Now, let&amp;rsquo;s get started&amp;hellip;&#xA;Add a Second KeyControl Security Administrator from Active Directory Click Security from the menu bar then click the blue Actions button and select Create User</description>
+      <guid>https://blog.psustevens.com/2021/10/08/2021-10-08-how-to-add-another-security-admin-from-ad/</guid>
+      <description>&lt;p&gt;To get started here is what you will need to complete the steps in this post:&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;A deployed Entrust KeyControl v5.4 cluster connected to Active Directory &lt;a href=&#34;https://blog.psustevens.com/2021/10/05/2021-10-05-how-to-connect-keycontrol-5.4-to-activedirectory/&#34;&gt;(Click this sentence to learn how to do this)&lt;/a&gt;&lt;/li&gt;&#xA;&lt;li&gt;Active Directory account info to be added&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;Now, let&amp;rsquo;s get started&amp;hellip;&lt;/p&gt;&#xA;&lt;h2 id=&#34;add-a-second-keycontrol-security-administrator-from-active-directory&#34;&gt;Add a Second KeyControl Security Administrator from Active Directory&lt;/h2&gt;&#xA;&lt;ol&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;Click &lt;strong&gt;Security&lt;/strong&gt; from the menu bar then click the blue &lt;strong&gt;Actions&lt;/strong&gt; button and select &lt;strong&gt;Create User&lt;/strong&gt;&lt;/p&gt;</description>
     </item>
     <item>
       <title>How to Connect KeyControl 5.4 to Active Directory</title>
-      <link>http://localhost:1313/2021/10/05/2021-10-05-how-to-connect-keycontrol-5.4-to-activedirectory/</link>
+      <link>https://blog.psustevens.com/2021/10/05/2021-10-05-how-to-connect-keycontrol-5.4-to-activedirectory/</link>
       <pubDate>Tue, 05 Oct 2021 08:08:40 -0400</pubDate>
-      <guid>http://localhost:1313/2021/10/05/2021-10-05-how-to-connect-keycontrol-5.4-to-activedirectory/</guid>
-      <description>To get started here is what you will need to complete the steps in this post:&#xA;A deployed Entrust KeyControl v5.4 cluster (Click this sentence to learn how to do this) Active Directory service account Now, let&amp;rsquo;s get started&amp;hellip;&#xA;Connect KeyControl to Active Directory Log in to the deployed Entrust KeyControl cluster.</description>
+      <guid>https://blog.psustevens.com/2021/10/05/2021-10-05-how-to-connect-keycontrol-5.4-to-activedirectory/</guid>
+      <description>&lt;p&gt;To get started here is what you will need to complete the steps in this post:&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;A deployed Entrust KeyControl v5.4 cluster  &lt;a href=&#34;https://blog.psustevens.com/2021/10/01/how-to-deploy-entrust-keycontrol-5.4/&#34;&gt;(Click this sentence to learn how to do this)&lt;/a&gt;&lt;/li&gt;&#xA;&lt;li&gt;Active Directory service account&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;Now, let&amp;rsquo;s get started&amp;hellip;&lt;/p&gt;&#xA;&lt;h2 id=&#34;connect-keycontrol-to-active-directory&#34;&gt;Connect KeyControl to Active Directory&lt;/h2&gt;&#xA;&lt;ol&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;Log in to the deployed Entrust KeyControl cluster.  Once logged in:&lt;/p&gt;</description>
     </item>
     <item>
       <title>How to Deploy Entrust KeyControl 5.4</title>
-      <link>http://localhost:1313/2021/10/01/how-to-deploy-entrust-keycontrol-5.4/</link>
+      <link>https://blog.psustevens.com/2021/10/01/how-to-deploy-entrust-keycontrol-5.4/</link>
       <pubDate>Fri, 01 Oct 2021 09:45:33 -0400</pubDate>
-      <guid>http://localhost:1313/2021/10/01/how-to-deploy-entrust-keycontrol-5.4/</guid>
-      <description>Around this time last year I wrote about how to deploy a 2-node HyTrust KeyControl cluster. That post covered KeyControl version 5.2.1. You can find that blog post over here.&#xA;This post is very similar. The difference between it and the last post is that I will cover Entrust KeyControl version 5.</description>
+      <guid>https://blog.psustevens.com/2021/10/01/how-to-deploy-entrust-keycontrol-5.4/</guid>
+      <description>&lt;p&gt;Around this time last year I wrote about how to deploy a 2-node HyTrust KeyControl cluster.  That post covered KeyControl version 5.2.1. You can find that blog post over &lt;a href=&#34;2020/10/31/how-to-deploy-a-hytrust-keycontrol-2-node-cluster/&#34;&gt;here.&lt;/a&gt;&lt;/p&gt;&#xA;&lt;p&gt;This post is very similar.  The difference between it and the last post is that I will cover &lt;a href=&#34;https://www.entrust.com/solutions/use-cases/key-management-control&#34;&gt;Entrust KeyControl version 5.4.&lt;/a&gt;.  Are you scratching your head about the name change?  Head over to this post I wrote about changes that occurred in January of this year where I talk about HyTrust being acquired by &lt;a href=&#34;https://www.entrust.com&#34;&gt;Entrust&lt;/a&gt;.  The full press release can be found &lt;a href=&#34;https://www.entrust.com/newsroom/press-releases/2021/entrust-acquires-hytrust&#34;&gt;here.&lt;/a&gt;&lt;/p&gt;</description>
     </item>
     <item>
       <title>New Year, New Changes!</title>
-      <link>http://localhost:1313/2021/02/14/new-year-new-changes/</link>
+      <link>https://blog.psustevens.com/2021/02/14/new-year-new-changes/</link>
       <pubDate>Sun, 14 Feb 2021 11:45:19 -0500</pubDate>
-      <guid>http://localhost:1313/2021/02/14/new-year-new-changes/</guid>
-      <description>Most people post their New Years&amp;rsquo; blog posts within the first week of the new year. But, there have been some things brewing that I needed to wait to complete. This blog post isn&amp;rsquo;t like my other posts. It&amp;rsquo;s a brief look back at what transpired in 2020 and what I hope to accomplish this year.</description>
+      <guid>https://blog.psustevens.com/2021/02/14/new-year-new-changes/</guid>
+      <description>&lt;p&gt;Most people post their New Years&amp;rsquo; blog posts within the first week of the new year.  But, there have been some things brewing that I needed to wait to complete.  This blog post isn&amp;rsquo;t like my other posts.  It&amp;rsquo;s a brief look back at what transpired in 2020 and what I hope to accomplish this year. I also have an announcement about some exciting new changes that have been brewing since late last year.  Before I forget, Happy New Year!!&lt;/p&gt;</description>
     </item>
     <item>
       <title>Add a HyTrust KMS to vCenter v7 as a Key Provider</title>
-      <link>http://localhost:1313/2020/11/04/add-a-hytrust-kms-to-vcenter-v7/</link>
+      <link>https://blog.psustevens.com/2020/11/04/add-a-hytrust-kms-to-vcenter-v7/</link>
       <pubDate>Wed, 04 Nov 2020 08:07:16 -0500</pubDate>
-      <guid>http://localhost:1313/2020/11/04/add-a-hytrust-kms-to-vcenter-v7/</guid>
-      <description>Introduction In my How to Deploy a HyTrust KeyControl 2-node Cluster post I walked through the steps for deploying and configuring a 2-node HyTrust KeyControl cluster. Now that you have it deployed, let&amp;rsquo;s start using it. But before we can do that, we need to add it vCenter as a Key Provider.</description>
+      <guid>https://blog.psustevens.com/2020/11/04/add-a-hytrust-kms-to-vcenter-v7/</guid>
+      <description>&lt;hr&gt;&#xA;&lt;h2 id=&#34;introduction&#34;&gt;Introduction&lt;/h2&gt;&#xA;&lt;p&gt;In my &lt;a href=&#34;https://blog.psustevens.com/2020/10/31/how-to-deploy-a-hytrust-keycontrol-2-node-cluster/&#34;&gt;How to Deploy a HyTrust KeyControl 2-node Cluster post&lt;/a&gt; I walked through the steps for deploying and configuring a 2-node &lt;a href=&#34;https://www.hytrust.com/products/keycontrol/&#34;&gt;HyTrust KeyControl&lt;/a&gt; cluster.  Now that you have it deployed, let&amp;rsquo;s start using it.  But before we can do that, we need to add it vCenter as a Key Provider.  Let&amp;rsquo;s go!!&lt;/p&gt;</description>
     </item>
     <item>
       <title>How to Deploy a HyTrust KeyControl v5.2.1, 2-Node Cluster</title>
-      <link>http://localhost:1313/2020/10/31/how-to-deploy-a-hytrust-keycontrol-2-node-cluster/</link>
+      <link>https://blog.psustevens.com/2020/10/31/how-to-deploy-a-hytrust-keycontrol-2-node-cluster/</link>
       <pubDate>Sat, 31 Oct 2020 14:04:12 -0400</pubDate>
-      <guid>http://localhost:1313/2020/10/31/how-to-deploy-a-hytrust-keycontrol-2-node-cluster/</guid>
-      <description>To get started here is what you will need to complete the steps in this post:&#xA;KeyControl OVA v5.2.1 vCenter and ESX host at least version 6.5 or greater 2 vCPU, 8GB RAM, 60GB disk per KeyControl node Network address information such as: IP address (one per node) Subnet mask Gateway address DNS server information DNS registered hostname for each node Deploy the First HyTrust KeyControl Appliance Log in to the Virtual Center Appliance (VCSA).</description>
+      <guid>https://blog.psustevens.com/2020/10/31/how-to-deploy-a-hytrust-keycontrol-2-node-cluster/</guid>
+      <description>&lt;p&gt;To get started here is what you will need to complete the steps in this post:&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;KeyControl OVA v5.2.1&lt;/li&gt;&#xA;&lt;li&gt;vCenter and ESX host at least version 6.5 or greater&lt;/li&gt;&#xA;&lt;li&gt;2 vCPU, 8GB RAM, 60GB disk per KeyControl node&lt;/li&gt;&#xA;&lt;li&gt;Network address information such as:&#xA;&lt;ul&gt;&#xA;&lt;li&gt;IP address (one per node)&lt;/li&gt;&#xA;&lt;li&gt;Subnet mask&lt;/li&gt;&#xA;&lt;li&gt;Gateway address&lt;/li&gt;&#xA;&lt;li&gt;DNS server information&lt;/li&gt;&#xA;&lt;li&gt;DNS registered hostname for each node&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h2 id=&#34;deploy-the-first-hytrust-keycontrol-appliance&#34;&gt;Deploy the First HyTrust KeyControl Appliance&lt;/h2&gt;&#xA;&lt;ol&gt;&#xA;&lt;li&gt;Log in to the Virtual Center Appliance (VCSA).  Once logged in, right-click and select &lt;strong&gt;Deploy OVF Template&amp;hellip;&lt;/strong&gt;&lt;/li&gt;&#xA;&lt;/ol&gt;&#xA;&lt;figure&gt;&lt;img src=&#34;https://blog.psustevens.com/img/2020/10/31/HTKCDeploy01.png&#34;&#xA;    alt=&#34;Deploy OVF Template&#34;&gt;&lt;figcaption&gt;&#xA;      &lt;h4&gt;Deploy OVF Template...&lt;/h4&gt;&#xA;    &lt;/figcaption&gt;&#xA;&lt;/figure&gt;&#xA;&#xA;&lt;ol start=&#34;2&#34;&gt;&#xA;&lt;li&gt;Click on &lt;strong&gt;Upload Files&lt;/strong&gt; and navigate to the directory where you placed the HyTrust KeyControl OVA, select it, then click &lt;strong&gt;Open.&lt;/strong&gt;&lt;/li&gt;&#xA;&lt;/ol&gt;&#xA;&lt;figure&gt;&lt;img src=&#34;https://blog.psustevens.com/img/2020/10/31/HTKCDeploy02.png&#34;&#xA;    alt=&#34;Select OVF Template step&#34;&gt;&lt;figcaption&gt;&#xA;      &lt;h4&gt;Select OVF Template&lt;/h4&gt;&#xA;    &lt;/figcaption&gt;&#xA;&lt;/figure&gt;&#xA;&#xA;&lt;ol start=&#34;3&#34;&gt;&#xA;&lt;li&gt;Now that you have the HyTrust KeyControl OVA selected, click on &lt;strong&gt;Next.&lt;/strong&gt;&lt;/li&gt;&#xA;&lt;/ol&gt;&#xA;&lt;figure&gt;&lt;img src=&#34;https://blog.psustevens.com/img/2020/10/31/HTKCDeploy03.png&#34;&#xA;    alt=&#34;Selected OVF Template&#34;&gt;&lt;figcaption&gt;&#xA;      &lt;h4&gt;Selected OVF Template&lt;/h4&gt;&#xA;    &lt;/figcaption&gt;&#xA;&lt;/figure&gt;&#xA;&#xA;&lt;ol start=&#34;4&#34;&gt;&#xA;&lt;li&gt;Provide a name for the HyTrust KeyControl appliance, select a deployment location, then click &lt;strong&gt;Next.&lt;/strong&gt;&lt;/li&gt;&#xA;&lt;/ol&gt;&#xA;&lt;figure&gt;&lt;img src=&#34;https://blog.psustevens.com/img/2020/10/31/HTKCDeploy04.png&#34;&#xA;    alt=&#34;Select a Name and Folder step&#34;&gt;&lt;figcaption&gt;&#xA;      &lt;h4&gt;Select a Name and Folder&lt;/h4&gt;&#xA;    &lt;/figcaption&gt;&#xA;&lt;/figure&gt;&#xA;&#xA;&lt;ol start=&#34;5&#34;&gt;&#xA;&lt;li&gt;Select the vSphere Cluster or host, then click &lt;strong&gt;Next.&lt;/strong&gt;&lt;/li&gt;&#xA;&lt;/ol&gt;&#xA;&lt;figure&gt;&lt;img src=&#34;https://blog.psustevens.com/img/2020/10/31/HTKCDeploy05.png&#34;&#xA;    alt=&#34;Select a Compute Resource step&#34;&gt;&lt;figcaption&gt;&#xA;      &lt;h4&gt;Select a Compute Resource&lt;/h4&gt;&#xA;    &lt;/figcaption&gt;&#xA;&lt;/figure&gt;&#xA;&#xA;&lt;ol start=&#34;6&#34;&gt;&#xA;&lt;li&gt;Review the details, then click &lt;strong&gt;Next.&lt;/strong&gt;&lt;/li&gt;&#xA;&lt;/ol&gt;&#xA;&lt;figure&gt;&lt;img src=&#34;https://blog.psustevens.com/img/2020/10/31/HTKCDeploy06.png&#34;&#xA;    alt=&#34;Review Details&#34;&gt;&lt;figcaption&gt;&#xA;      &lt;h4&gt;Review Details&lt;/h4&gt;&#xA;    &lt;/figcaption&gt;&#xA;&lt;/figure&gt;&#xA;&#xA;&lt;ol start=&#34;7&#34;&gt;&#xA;&lt;li&gt;Accept the license agreement, then click &lt;strong&gt;Next.&lt;/strong&gt;&lt;/li&gt;&#xA;&lt;/ol&gt;&#xA;&lt;figure&gt;&lt;img src=&#34;https://blog.psustevens.com/img/2020/10/31/HTKCDeploy07.png&#34;&#xA;    alt=&#34;License Agreement step&#34;&gt;&lt;figcaption&gt;&#xA;      &lt;h4&gt;License Agreement&lt;/h4&gt;&#xA;    &lt;/figcaption&gt;&#xA;&lt;/figure&gt;&#xA;&#xA;&lt;ol start=&#34;8&#34;&gt;&#xA;&lt;li&gt;Select the proper configuration from the list, then click &lt;strong&gt;Next.&lt;/strong&gt;&lt;/li&gt;&#xA;&lt;/ol&gt;&#xA;&lt;figure&gt;&lt;img src=&#34;https://blog.psustevens.com/img/2020/10/31/HTKCDeploy08.png&#34;&#xA;    alt=&#34;Deployment Size&#34;&gt;&lt;figcaption&gt;&#xA;      &lt;h4&gt;Deployment Size&lt;/h4&gt;&#xA;    &lt;/figcaption&gt;&#xA;&lt;/figure&gt;&#xA;&#xA;&lt;ol start=&#34;9&#34;&gt;&#xA;&lt;li&gt;Select the appropriate storage and disk format for the appliance, then click &lt;strong&gt;Next.&lt;/strong&gt;&lt;/li&gt;&#xA;&lt;/ol&gt;&#xA;&lt;figure&gt;&lt;img src=&#34;https://blog.psustevens.com/img/2020/10/31/HTKCDeploy09.png&#34;&#xA;    alt=&#34;Select Storage step&#34;&gt;&lt;figcaption&gt;&#xA;      &lt;h4&gt;Select Storage&lt;/h4&gt;&#xA;    &lt;/figcaption&gt;&#xA;&lt;/figure&gt;&#xA;&#xA;&lt;ol start=&#34;10&#34;&gt;&#xA;&lt;li&gt;Select the appropriate network, then click &lt;strong&gt;Next.&lt;/strong&gt;&lt;/li&gt;&#xA;&lt;/ol&gt;&#xA;&lt;figure&gt;&lt;img src=&#34;https://blog.psustevens.com/img/2020/10/31/HTKCDeploy10.png&#34;&#xA;    alt=&#34;Select Network step&#34;&gt;&lt;figcaption&gt;&#xA;      &lt;h4&gt;Select Network&lt;/h4&gt;&#xA;    &lt;/figcaption&gt;&#xA;&lt;/figure&gt;&#xA;&#xA;&lt;ol start=&#34;11&#34;&gt;&#xA;&lt;li&gt;Provide the required information, then click &lt;strong&gt;Next.&lt;/strong&gt;&lt;/li&gt;&#xA;&lt;/ol&gt;&#xA;&lt;figure&gt;&lt;img src=&#34;https://blog.psustevens.com/img/2020/10/31/HTKCDeploy11.png&#34;&#xA;    alt=&#34;Appliance Properties&#34;&gt;&lt;figcaption&gt;&#xA;      &lt;h4&gt;Appliance Properties&lt;/h4&gt;&#xA;    &lt;/figcaption&gt;&#xA;&lt;/figure&gt;&#xA;&#xA;&lt;ol start=&#34;12&#34;&gt;&#xA;&lt;li&gt;Review the summary screen. If everything is correct, click &lt;strong&gt;Finish.&lt;/strong&gt;&lt;/li&gt;&#xA;&lt;/ol&gt;&#xA;&lt;figure&gt;&lt;img src=&#34;https://blog.psustevens.com/img/2020/10/31/HTKCDeploy12.png&#34;&#xA;    alt=&#34;Review step&#34;&gt;&lt;figcaption&gt;&#xA;      &lt;h4&gt;Review Settings&lt;/h4&gt;&#xA;    &lt;/figcaption&gt;&#xA;&lt;/figure&gt;&#xA;&#xA;&lt;p&gt;You have successfully deployed the first HyTrust KeyControl node.&lt;/p&gt;</description>
     </item>
     <item>
       <title>How to Backup vCenter v7 using the SMB protocol</title>
-      <link>http://localhost:1313/2020/10/30/how-to-backup-vcenter-v7-using-smb/</link>
+      <link>https://blog.psustevens.com/2020/10/30/how-to-backup-vcenter-v7-using-smb/</link>
       <pubDate>Fri, 30 Oct 2020 11:12:54 -0400</pubDate>
-      <guid>http://localhost:1313/2020/10/30/how-to-backup-vcenter-v7-using-smb/</guid>
-      <description>Introduction In this post, I will write about using the file-based backup feature in vCenter v7.0. Surprisingly, this feature has been available since vCenter 6.5. But, until recently, I hadn&amp;rsquo;t heard much about it.&#xA;Before getting started, you should read through the list of considerations and limitations of using file-based backups for vCenter.</description>
+      <guid>https://blog.psustevens.com/2020/10/30/how-to-backup-vcenter-v7-using-smb/</guid>
+      <description>&lt;hr&gt;&#xA;&lt;h2 id=&#34;introduction&#34;&gt;Introduction&lt;/h2&gt;&#xA;&lt;p&gt;In this post, I will write about using the file-based backup feature in vCenter v7.0.  Surprisingly, this feature has been available since vCenter 6.5.  But, until recently, I hadn&amp;rsquo;t heard much about it.&lt;/p&gt;&#xA;&lt;p&gt;Before getting started, you should read through the &lt;a href=&#34;https://docs.vmware.com/en/VMware-vSphere/7.0/com.vmware.vcenter.install.doc/GUID-AFF34FA6-B7CF-4AE0-9C12-C674F160682C.html&#34;&gt;list of considerations and limitations&lt;/a&gt; of using file-based backups for vCenter.  You can find the entire list on &lt;a href=&#34;https://docs.vmware.com/en/VMware-vSphere/7.0/com.vmware.vcenter.install.doc/GUID-AFF34FA6-B7CF-4AE0-9C12-C674F160682C.html&#34;&gt;VMware&amp;rsquo;s documentation site.&lt;/a&gt;&lt;/p&gt;</description>
     </item>
     <item>
       <title>How I DIY&#39;d My Career Into a Sales Engineer</title>
-      <link>http://localhost:1313/2020/10/29/how-i-diyd-my-career-into-a-sales-engineer/</link>
+      <link>https://blog.psustevens.com/2020/10/29/how-i-diyd-my-career-into-a-sales-engineer/</link>
       <pubDate>Thu, 29 Oct 2020 05:41:14 -0400</pubDate>
-      <guid>http://localhost:1313/2020/10/29/how-i-diyd-my-career-into-a-sales-engineer/</guid>
-      <description>This post is one of those times where I put tech aside. So, if you are only interested in tech-related blog posts, then you may want to skip this one. If I caught your interest (W00t!!), then please continue.&#xA;&amp;ldquo;MacGyvering&amp;rdquo; My Career Path My career path didn&amp;rsquo;t follow a traditional plan or approach.</description>
+      <guid>https://blog.psustevens.com/2020/10/29/how-i-diyd-my-career-into-a-sales-engineer/</guid>
+      <description>&lt;p&gt;This post is one of those times where I put tech aside.  So, if you are only interested in tech-related blog posts, then you may want to skip this one.  If I caught your interest (W00t!!), then please continue.&lt;/p&gt;&#xA;&lt;hr&gt;&#xA;&lt;h2 id=&#34;macgyvering-my-career-path&#34;&gt;&amp;ldquo;MacGyvering&amp;rdquo; My Career Path&lt;/h2&gt;&#xA;&lt;p&gt;My career path didn&amp;rsquo;t follow a traditional plan or approach.  But, then again, does that really happen to anyone?  If you can say yes, then good for you.  When I was growing up, I always wanted to be a garbage man.  Yes, I know that isn&amp;rsquo;t politically correct today, but this is my blog.  At one point, I also considered being a fireman.  I think, as a little boy, many of us had these grandiose plans.  Oh, to be seven years old again!!&lt;/p&gt;</description>
     </item>
     <item>
       <title>Building a Blog With Hugo - Part 5</title>
-      <link>http://localhost:1313/2020/10/26/building-a-blog-with-hugo-part5/</link>
+      <link>https://blog.psustevens.com/2020/10/26/building-a-blog-with-hugo-part5/</link>
       <pubDate>Mon, 26 Oct 2020 12:21:08 -0400</pubDate>
-      <guid>http://localhost:1313/2020/10/26/building-a-blog-with-hugo-part5/</guid>
-      <description>It&amp;rsquo;s been a long time since I last updated this series. I apologize to anyone who is following it and lost interest. I hope to be quicker in future series I write.&#xA;Introduction In this post, I will walk through what I do to publish my blog to Github. I use private and public repositories and GitHub Desktop.</description>
+      <guid>https://blog.psustevens.com/2020/10/26/building-a-blog-with-hugo-part5/</guid>
+      <description>&lt;p&gt;It&amp;rsquo;s been a long time since I last updated this series.  I apologize to anyone who is following it and lost interest.  I hope to be quicker in future series I write.&lt;/p&gt;&#xA;&lt;hr&gt;&#xA;&lt;h2 id=&#34;introduction&#34;&gt;Introduction&lt;/h2&gt;&#xA;&lt;p&gt;In this post, I will walk through what I do to publish my blog to &lt;a href=&#34;https://github.com/psustevens/&#34;&gt;Github&lt;/a&gt;.  I use private and public repositories and &lt;a href=&#34;https://desktop.github.com/&#34;&gt;GitHub Desktop&lt;/a&gt;.  This way, I can do some testing in my private repo before pushing it to my public repo.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Blogtober Tech Edition 2020</title>
-      <link>http://localhost:1313/2020/10/24/blogtober-tech-edition-2020/</link>
+      <link>https://blog.psustevens.com/2020/10/24/blogtober-tech-edition-2020/</link>
       <pubDate>Sat, 24 Oct 2020 01:34:42 -0400</pubDate>
-      <guid>http://localhost:1313/2020/10/24/blogtober-tech-edition-2020/</guid>
-      <description>I hit my first anniversary of blogging this past September. As you may have noticed, I&amp;rsquo;ve been a bit lax over the main course of this year. I know, I know. With the whole COVID thing going on this year, you would have thought there would have been more time to blog.</description>
+      <guid>https://blog.psustevens.com/2020/10/24/blogtober-tech-edition-2020/</guid>
+      <description>&lt;p&gt;I hit my first anniversary of blogging this past September.  As you may have noticed, I&amp;rsquo;ve been a bit lax over the main course of this year.  I know, I know.  With the whole COVID thing going on this year, you would have thought there would have been more time to blog.  After sheltering in place and being forced to work from home, I got busier.  At the height of the pandemic, I was on six or more conference calls a  day.  It was exhausting.  I think that folks (including me) were being drained, both mentally and physically, from being on so many calls.  Eventually, things calmed down.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Building a Blog With Hugo - Part 4</title>
-      <link>http://localhost:1313/2019/12/20/building-a-blog-with-hugo-part4/</link>
+      <link>https://blog.psustevens.com/2019/12/20/building-a-blog-with-hugo-part4/</link>
       <pubDate>Fri, 20 Dec 2019 01:24:15 -0500</pubDate>
-      <guid>http://localhost:1313/2019/12/20/building-a-blog-with-hugo-part4/</guid>
-      <description>In the previous post, I covered how to customize the theme for your Hugo site. I apologize if it was a bit long. This post is considerably shorter. In this post, I&amp;rsquo;m going to walk through how to configure Google Analytics for your site. Let&amp;rsquo;s get started.&#xA;Before we get started&amp;hellip; If you are already familiar with Google Analytics, then this will be a short read for you.</description>
+      <guid>https://blog.psustevens.com/2019/12/20/building-a-blog-with-hugo-part4/</guid>
+      <description>&lt;p&gt;In the previous post, I covered how to customize the theme for your Hugo site.  I apologize if it was a bit long.  This post is considerably shorter.  In this post, I&amp;rsquo;m going to walk through how to configure &lt;a href=&#34;https://analytics.google.com&#34;&gt;Google Analytics&lt;/a&gt; for your site.  Let&amp;rsquo;s get started.&lt;/p&gt;&#xA;&lt;hr&gt;&#xA;&lt;h2 id=&#34;before-we-get-started&#34;&gt;Before we get started&amp;hellip;&lt;/h2&gt;&#xA;&lt;p&gt;If you are already familiar with &lt;a href=&#34;https://analytics.google.com&#34;&gt;Google Analytics&lt;/a&gt;, then this will be a short read for you.  All you need to do is:&lt;/p&gt;</description>
     </item>
     <item>
       <title>Building a Blog With Hugo - Part 3</title>
-      <link>http://localhost:1313/2019/12/18/building-a-blog-with-hugo-part3/</link>
+      <link>https://blog.psustevens.com/2019/12/18/building-a-blog-with-hugo-part3/</link>
       <pubDate>Wed, 18 Dec 2019 01:49:05 -0500</pubDate>
-      <guid>http://localhost:1313/2019/12/18/building-a-blog-with-hugo-part3/</guid>
-      <description>In the previous post, I covered how to build your first Hugo site using the Hugo Future Imperfect Slim theme. I also walked through the process to create the first blog post for your new site. In this post, I&amp;rsquo;m going to walk through different customization options for the theme. The customizations aren&amp;rsquo;t exhaustive but are good enough for you to get started and possibly expand on.</description>
+      <guid>https://blog.psustevens.com/2019/12/18/building-a-blog-with-hugo-part3/</guid>
+      <description>&lt;p&gt;In the previous post, I covered how to build your first Hugo site using the &lt;a href=&#34;https://themes.gohugo.io/hugo-future-imperfect-slim/&#34;&gt;Hugo Future Imperfect Slim theme&lt;/a&gt;.  I also walked through the process to create the first blog post for your new site.  In this post, I&amp;rsquo;m going to walk through different customization options for the theme.  The customizations aren&amp;rsquo;t exhaustive but are good enough for you to get started and possibly expand on.  Let&amp;rsquo;s get started.&lt;/p&gt;</description>
     </item>
     <item>
       <title>My First International VMUG</title>
-      <link>http://localhost:1313/2019/11/06/my-first-international-vmug/</link>
+      <link>https://blog.psustevens.com/2019/11/06/my-first-international-vmug/</link>
       <pubDate>Wed, 06 Nov 2019 01:20:45 -0500</pubDate>
-      <guid>http://localhost:1313/2019/11/06/my-first-international-vmug/</guid>
-      <description>This week I am attending my very first VMworld Europe in, of all places, beautiful, Barcelona, Spain. I&amp;rsquo;ll write a synopsis of VMworld after it&amp;rsquo;s over, and I&amp;rsquo;ll get back to my blogging series after VMworld is over. For this post, I want to cover my first very International VMUG event.</description>
+      <guid>https://blog.psustevens.com/2019/11/06/my-first-international-vmug/</guid>
+      <description>&lt;p&gt;This week I am attending my very first VMworld Europe in, of all places, beautiful, Barcelona, Spain.  I&amp;rsquo;ll write a synopsis of VMworld after it&amp;rsquo;s over, and I&amp;rsquo;ll get back to my blogging series after VMworld is over.  For this post, I want to cover my first very International VMUG event.  Continue reading for my viewpoint of the event.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Building a Blog With Hugo - Part 2</title>
-      <link>http://localhost:1313/2019/11/01/building-a-blog-with-hugo-part2/</link>
+      <link>https://blog.psustevens.com/2019/11/01/building-a-blog-with-hugo-part2/</link>
       <pubDate>Fri, 01 Nov 2019 13:07:13 -0400</pubDate>
-      <guid>http://localhost:1313/2019/11/01/building-a-blog-with-hugo-part2/</guid>
-      <description>In the first part of this series, I wrote about why I chose to use Hugo to develop this blog and GitHub Pages to host it. In this post, I&amp;rsquo;m going to walk through the steps to create a Hugo site, apply a theme, and create a very simple blog post.</description>
+      <guid>https://blog.psustevens.com/2019/11/01/building-a-blog-with-hugo-part2/</guid>
+      <description>&lt;p&gt;In the &lt;a href=&#34;https://blog.psustevens.com/2019/10/11/building-a-blog-with-hugo/&#34;&gt;first part&lt;/a&gt; of this series, I wrote about why I chose to use &lt;a href=&#34;https://github.com/gohugoio/hugo&#34;&gt;Hugo&lt;/a&gt; to develop this blog and &lt;a href=&#34;https://pages.github.com/&#34;&gt;GitHub Pages&lt;/a&gt; to host it.  In this post, I&amp;rsquo;m going to walk through the steps to create a Hugo site, apply a theme, and create a very simple blog post.  So, let&amp;rsquo;s get going!&lt;/p&gt;</description>
     </item>
     <item>
       <title>Building a Blog With Hugo</title>
-      <link>http://localhost:1313/2019/10/11/building-a-blog-with-hugo/</link>
+      <link>https://blog.psustevens.com/2019/10/11/building-a-blog-with-hugo/</link>
       <pubDate>Fri, 11 Oct 2019 16:02:46 -0400</pubDate>
-      <guid>http://localhost:1313/2019/10/11/building-a-blog-with-hugo/</guid>
-      <description>If you read my very first post, you would know that I&amp;rsquo;ve been thinking about writing a blog for years. I&amp;rsquo;ve been blogging for years for employers. But, just recently, I finally launched my first technical blog. The one you are reading right now. I also have a travel blog that only gets updated when I travel for vacation.</description>
+      <guid>https://blog.psustevens.com/2019/10/11/building-a-blog-with-hugo/</guid>
+      <description>&lt;p&gt;If you read my &lt;a href=&#34;https://blog.psustevens.com/2019/09/30/introducing-me/&#34;&gt;very first post&lt;/a&gt;, you would know that I&amp;rsquo;ve been thinking about writing a blog for years.  I&amp;rsquo;ve been blogging for years for employers.  But, just recently, I finally launched my first technical blog.  The one you are reading right now.  I also have a travel blog that only gets updated when I travel for vacation.  In this blog series, I&amp;rsquo;m going to talk about how I built my blog site using Hugo.  This post is part one of a five-part series.  Why Hugo?  Keep reading to find out.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Introducing... Me</title>
-      <link>http://localhost:1313/2019/09/30/introducing-me/</link>
+      <link>https://blog.psustevens.com/2019/09/30/introducing-me/</link>
       <pubDate>Mon, 30 Sep 2019 08:48:31 -0400</pubDate>
-      <guid>http://localhost:1313/2019/09/30/introducing-me/</guid>
-      <description>Welcome to the first post of my technical blog where I will write about virtualization technologies such as VMware and Microsoft, desktop and server technologies from Microsoft and the occasional script based on PowerShell.&#xA;A bit about me I hail from Pittsburgh, PA, but now live in New Hampshire. My wife and I have lived in New England for many years.</description>
+      <guid>https://blog.psustevens.com/2019/09/30/introducing-me/</guid>
+      <description>&lt;p&gt;Welcome to the first post of my technical blog where I will write about virtualization technologies such as VMware and Microsoft, desktop and server technologies from Microsoft and the occasional script based on PowerShell.&lt;/p&gt;&#xA;&lt;hr&gt;&#xA;&lt;h2 id=&#34;a-bit-about-me&#34;&gt;A bit about me&lt;/h2&gt;&#xA;&lt;p&gt;I hail from Pittsburgh, PA, but now live in New Hampshire.  My wife and I have lived in New England for many years.  We moved up here so I could work for Dell as a technical marketing engineer in their storage group.   I supported the EqualLogic and Compellent SAN products and their NAS front-end for both of those systems by the name of Fluid File System.  After a few years, I moved to a startup by the  name of DataGravity where I was also a technical marketing engineer.  After a few years at DataGravity, HyTrust came along and scooped us up.&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

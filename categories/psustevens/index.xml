@@ -2,19 +2,19 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>PSUStevens on @PSUStevens Blog</title>
-    <link>http://localhost:1313/categories/psustevens/</link>
+    <link>https://blog.psustevens.com/categories/psustevens/</link>
     <description>Recent content in PSUStevens on @PSUStevens Blog</description>
     <generator>Hugo</generator>
     <language>en</language>
     <copyright>© 2025 David Stevens</copyright>
     <lastBuildDate>Mon, 30 Sep 2019 08:48:31 -0400</lastBuildDate>
-    <atom:link href="http://localhost:1313/categories/psustevens/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://blog.psustevens.com/categories/psustevens/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Introducing... Me</title>
-      <link>http://localhost:1313/2019/09/30/introducing-me/</link>
+      <link>https://blog.psustevens.com/2019/09/30/introducing-me/</link>
       <pubDate>Mon, 30 Sep 2019 08:48:31 -0400</pubDate>
-      <guid>http://localhost:1313/2019/09/30/introducing-me/</guid>
-      <description>Welcome to the first post of my technical blog where I will write about virtualization technologies such as VMware and Microsoft, desktop and server technologies from Microsoft and the occasional script based on PowerShell.&#xA;A bit about me I hail from Pittsburgh, PA, but now live in New Hampshire. My wife and I have lived in New England for many years.</description>
+      <guid>https://blog.psustevens.com/2019/09/30/introducing-me/</guid>
+      <description>&lt;p&gt;Welcome to the first post of my technical blog where I will write about virtualization technologies such as VMware and Microsoft, desktop and server technologies from Microsoft and the occasional script based on PowerShell.&lt;/p&gt;&#xA;&lt;hr&gt;&#xA;&lt;h2 id=&#34;a-bit-about-me&#34;&gt;A bit about me&lt;/h2&gt;&#xA;&lt;p&gt;I hail from Pittsburgh, PA, but now live in New Hampshire.  My wife and I have lived in New England for many years.  We moved up here so I could work for Dell as a technical marketing engineer in their storage group.   I supported the EqualLogic and Compellent SAN products and their NAS front-end for both of those systems by the name of Fluid File System.  After a few years, I moved to a startup by the  name of DataGravity where I was also a technical marketing engineer.  After a few years at DataGravity, HyTrust came along and scooped us up.&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

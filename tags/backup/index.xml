@@ -2,19 +2,19 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Backup on @PSUStevens Blog</title>
-    <link>http://localhost:1313/tags/backup/</link>
+    <link>https://blog.psustevens.com/tags/backup/</link>
     <description>Recent content in Backup on @PSUStevens Blog</description>
     <generator>Hugo</generator>
     <language>en</language>
     <copyright>© 2025 David Stevens</copyright>
     <lastBuildDate>Fri, 30 Oct 2020 11:12:54 -0400</lastBuildDate>
-    <atom:link href="http://localhost:1313/tags/backup/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://blog.psustevens.com/tags/backup/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>How to Backup vCenter v7 using the SMB protocol</title>
-      <link>http://localhost:1313/2020/10/30/how-to-backup-vcenter-v7-using-smb/</link>
+      <link>https://blog.psustevens.com/2020/10/30/how-to-backup-vcenter-v7-using-smb/</link>
       <pubDate>Fri, 30 Oct 2020 11:12:54 -0400</pubDate>
-      <guid>http://localhost:1313/2020/10/30/how-to-backup-vcenter-v7-using-smb/</guid>
-      <description>Introduction In this post, I will write about using the file-based backup feature in vCenter v7.0. Surprisingly, this feature has been available since vCenter 6.5. But, until recently, I hadn&amp;rsquo;t heard much about it.&#xA;Before getting started, you should read through the list of considerations and limitations of using file-based backups for vCenter.</description>
+      <guid>https://blog.psustevens.com/2020/10/30/how-to-backup-vcenter-v7-using-smb/</guid>
+      <description>&lt;hr&gt;&#xA;&lt;h2 id=&#34;introduction&#34;&gt;Introduction&lt;/h2&gt;&#xA;&lt;p&gt;In this post, I will write about using the file-based backup feature in vCenter v7.0.  Surprisingly, this feature has been available since vCenter 6.5.  But, until recently, I hadn&amp;rsquo;t heard much about it.&lt;/p&gt;&#xA;&lt;p&gt;Before getting started, you should read through the &lt;a href=&#34;https://docs.vmware.com/en/VMware-vSphere/7.0/com.vmware.vcenter.install.doc/GUID-AFF34FA6-B7CF-4AE0-9C12-C674F160682C.html&#34;&gt;list of considerations and limitations&lt;/a&gt; of using file-based backups for vCenter.  You can find the entire list on &lt;a href=&#34;https://docs.vmware.com/en/VMware-vSphere/7.0/com.vmware.vcenter.install.doc/GUID-AFF34FA6-B7CF-4AE0-9C12-C674F160682C.html&#34;&gt;VMware&amp;rsquo;s documentation site.&lt;/a&gt;&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>
