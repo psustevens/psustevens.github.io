@@ -2,21 +2,21 @@
 <html lang="en">
   <head>
   <meta charset="utf-8">
-<title>Vmware - @PSUStevens Blog</title>
+<title>VMware - @PSUStevens Blog</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
 
 
   <meta name="generator" content="Hugo 0.145.0">
   
-  <meta itemprop="name" content="Vmware">
+  <meta itemprop="name" content="VMware">
   <meta itemprop="description" content="The blog of @PSUStevens on Twitter and davidlstevens on LinkedIn.">
-  <meta itemprop="datePublished" content="2025-03-29T16:19:59-04:00">
-  <meta itemprop="dateModified" content="2025-03-29T16:19:59-04:00">
+  <meta itemprop="datePublished" content="2025-11-25T13:10:38-04:00">
+  <meta itemprop="dateModified" content="2025-11-25T13:10:38-04:00">
   <meta itemprop="image" content="https://blog.psustevens.com/img/main/logo.jpg">
   <meta property="og:url" content="https://blog.psustevens.com/categories/vmware/">
   <meta property="og:site_name" content="@PSUStevens Blog">
-  <meta property="og:title" content="Vmware">
+  <meta property="og:title" content="VMware">
   <meta property="og:description" content="The blog of @PSUStevens on Twitter and davidlstevens on LinkedIn.">
   <meta property="og:locale" content="en">
   <meta property="og:type" content="website">
@@ -25,7 +25,7 @@
   
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:image" content="https://blog.psustevens.com/img/main/logo.jpg">
-  <meta name="twitter:title" content="Vmware">
+  <meta name="twitter:title" content="VMware">
   <meta name="twitter:description" content="The blog of @PSUStevens on Twitter and davidlstevens on LinkedIn.">
       <meta name="twitter:site" content="@PSUStevens">
 
@@ -136,13 +136,13 @@
 
   
     
-    <a href="//twitter.com/share?text=Vmware&amp;url=https%3a%2f%2fblog.psustevens.com%2fcategories%2fvmware%2f" target="_blank" rel="noopener" class="share-btn twitter">
+    <a href="//twitter.com/share?text=VMware&amp;url=https%3a%2f%2fblog.psustevens.com%2fcategories%2fvmware%2f" target="_blank" rel="noopener" class="share-btn twitter">
         <i class="fab fa-twitter"></i><p>&nbsp;Twitter</p>
       </a>
   
 
   
-        <a href="//www.linkedin.com/shareArticle?url=https%3a%2f%2fblog.psustevens.com%2fcategories%2fvmware%2f&amp;title=Vmware" target="_blank" rel="noopener" class="share-btn linkedin">
+        <a href="//www.linkedin.com/shareArticle?url=https%3a%2f%2fblog.psustevens.com%2fcategories%2fvmware%2f&amp;title=VMware" target="_blank" rel="noopener" class="share-btn linkedin">
             <i class="fab fa-linkedin"></i><p>&nbsp;LinkedIn</p>
           </a>
   
@@ -154,7 +154,7 @@
   
 
   
-        <a href="//bsky.app/intent/compose?text=Vmware&nbsp;https%3a%2f%2fblog.psustevens.com%2fcategories%2fvmware%2f" target="_blank" rel="noopener" class="share-btn bluesky">
+        <a href="//bsky.app/intent/compose?text=VMware&nbsp;https%3a%2f%2fblog.psustevens.com%2fcategories%2fvmware%2f" target="_blank" rel="noopener" class="share-btn bluesky">
           <i class="fab fa-bluesky"></i><p>&nbsp;Bluesky</p>
         </a>
         
@@ -229,8 +229,88 @@
 </section>
 
       <main id="site-main">
-        <h1>Vmware</h1>
+        <h1>VMware</h1>
         
+        
+            <article class="post">
+  <header>
+  <div class="title">
+    
+        <h2><a href="/2025/11/25/resolve-untrusted-ova-certificate/">How to resolve an untrusted OVA Certificate in vCenter</a></h2>
+    
+    
+        <p>In this blog post I&#39;m going to cover the steps to resolve an untrusted or invalid certificate of an OVA when deploying a new virtual appliance in vCenter.</p>
+    
+</div>
+  <div class="meta">
+    <time class="published" datetime="2025-11-25 13:10:38 -0400 -0400">
+      November 25, 2025
+    </time>
+    <span class="author">PSUStevens</span>
+    
+      <p>5 minutes read</p>
+    
+  </div>
+</header>
+
+  
+  <a href="/2025/11/25/resolve-untrusted-ova-certificate/" class="image featured">
+    <img src="/img/2025/11/suspicious-ITguy.jpg" alt="An IT guy suspiciously staring at a computer screen">
+  </a>
+
+
+  
+  
+  
+  <p>When deploying an OVA in vSphere 8, it is not uncommon for the workflow to flag the OVA publisher certificate as untrusted.  This can be a significant issue for organizations that prioritize security.  In this blog post, I will cover how to overcome this issue.</p>
+<h2 id="the-problem">The Problem</h2>
+<p>Deploying an OVF Template/OVA is a common operation for a VMware Administrator.  You right-click on the ESX Cluster or an ESX host in the inventory browser and click Deploy OVF Template.  This action initiates the Deploy OVF Template workflow.  Typically, there are ten steps to this workflow.  The first three steps ask for:</p>
+  <footer>
+    <a href="/2025/11/25/resolve-untrusted-ova-certificate/" class="button big">Read more</a>
+    <ul class="stats">
+  
+    
+    
+      <li class="categories">
+        <ul>
+          
+            
+            <li><a class="article-category-link" href="https://blog.psustevens.com/categories/howto">HowTo</a></li>
+          
+            
+            <li><a class="article-category-link" href="https://blog.psustevens.com/categories/pure-storage">Pure Storage</a></li>
+          
+            
+            <li><a class="article-category-link" href="https://blog.psustevens.com/categories/vmware">VMware</a></li>
+          
+            
+            <li><a class="article-category-link" href="https://blog.psustevens.com/categories/broadcom">Broadcom</a></li>
+          
+        </ul>
+      </li>
+    
+  
+  
+    
+    
+      <li class="tags">
+        <ul>
+          
+            
+            <li><a class="article-category-link" href="https://blog.psustevens.com/tags/certificates">certificates</a></li>
+          
+            
+            <li><a class="article-category-link" href="https://blog.psustevens.com/tags/vcenter">vCenter</a></li>
+          
+        </ul>
+      </li>
+    
+  
+</ul>
+
+  </footer>
+</article>
+
         
             <article class="post">
   <header>
@@ -386,75 +466,6 @@
 </article>
 
         
-            <article class="post">
-  <header>
-  <div class="title">
-    
-        <h2><a href="/2023/03/30/2023-03-30-did_you_know_about_vcenter_api-commands/">Did you know about vCenter API Commands?</a></h2>
-    
-    
-        <p>In this post I&#39;m going to cover the vCenter API Commands.  These API Commands are accessible from the vCenter CLI.  Intrigued?  Read on...</p>
-    
-</div>
-  <div class="meta">
-    <time class="published" datetime="2023-03-30 20:10:36 -0500 -0500">
-      March 30, 2023
-    </time>
-    <span class="author">PSUStevens</span>
-    
-      <p>5 minutes read</p>
-    
-  </div>
-</header>
-
-  
-  <a href="/2023/03/30/2023-03-30-did_you_know_about_vcenter_api-commands/" class="image featured">
-    <img src="/img/2023/03/API-image.png" alt="">
-  </a>
-
-
-  
-  
-  
-  <p>I recently wrote about a little issue where I had to quickly get my lab hosts and vCenter upgraded to vSphere 7.0U3k luckily vSphere Lifecycle Manager saved me.  During that process I discovered in vCenter there are a bunch of API calls you can make directly from the CLI once you SSH into vCenter.</p>
-  <footer>
-    <a href="/2023/03/30/2023-03-30-did_you_know_about_vcenter_api-commands/" class="button big">Read more</a>
-    <ul class="stats">
-  
-    
-    
-      <li class="categories">
-        <ul>
-          
-            
-            <li><a class="article-category-link" href="https://blog.psustevens.com/categories/vmware">VMware</a></li>
-          
-            
-            <li><a class="article-category-link" href="https://blog.psustevens.com/categories/api">API</a></li>
-          
-        </ul>
-      </li>
-    
-  
-  
-    
-    
-      <li class="tags">
-        <ul>
-          
-            
-            <li><a class="article-category-link" href="https://blog.psustevens.com/tags/vcenter">vCenter</a></li>
-          
-        </ul>
-      </li>
-    
-  
-</ul>
-
-  </footer>
-</article>
-
-        
         
 <div class="pagination">
   
@@ -472,6 +483,21 @@
       <header>
         <h1>Recent posts</h1>
       </header>
+      
+      <article class="mini-post">
+        <section>
+          
+  <a href="/2025/11/25/resolve-untrusted-ova-certificate/" class="image featured">
+    <img src="/img/2025/11/suspicious-ITguy.jpg" alt="An IT guy suspiciously staring at a computer screen">
+  </a>
+
+
+        </section>
+        <header>
+          <h1><a href="/2025/11/25/resolve-untrusted-ova-certificate/">How to resolve an untrusted OVA Certificate in vCenter</a></h1>
+          <time class="published" datetime="">November 25, 2025</time>
+        </header>
+      </article>
       
       <article class="mini-post">
         <section>
@@ -503,21 +529,6 @@
         </header>
       </article>
       
-      <article class="mini-post">
-        <section>
-          
-  <a href="/2025/01/17/my-first-pull-request/" class="image featured">
-    <img src="/img/2025/01/PullRequest01.png" alt="A person sitting at a desk with a laptop on it pondering how to perform a git pull request.">
-  </a>
-
-
-        </section>
-        <header>
-          <h1><a href="/2025/01/17/my-first-pull-request/">My First Pull Request</a></h1>
-          <time class="published" datetime="">January 17, 2025</time>
-        </header>
-      </article>
-      
       
         <a href="/blog/" class="button">See more</a>
       
@@ -537,12 +548,12 @@
           
           <li>
             
-              <a href="/categories/vmware/">vmware<span class="count">13</span></a>
+              <a href="/categories/vmware/">vmware<span class="count">14</span></a>
             
           
           <li>
             
-              <a href="/categories/howto/">howto<span class="count">11</span></a>
+              <a href="/categories/howto/">howto<span class="count">12</span></a>
             
           
           <li>
@@ -562,12 +573,12 @@
           
           <li>
             
-              <a href="/categories/career/">career<span class="count">3</span></a>
+              <a href="/categories/broadcom/">broadcom<span class="count">3</span></a>
             
           
           <li>
             
-              <a href="/categories/broadcom/">broadcom<span class="count">2</span></a>
+              <a href="/categories/career/">career<span class="count">3</span></a>
             
           
           <li>
@@ -583,6 +594,11 @@
           <li>
             
               <a href="/categories/psustevens/">psustevens<span class="count">1</span></a>
+            
+          
+          <li>
+            
+              <a href="/categories/pure-storage/">pure storage<span class="count">1</span></a>
             
           
           <li>

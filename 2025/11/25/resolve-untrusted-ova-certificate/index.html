@@ -1,0 +1,679 @@
+<!doctype html>
+<html lang="en">
+  <head>
+  <meta charset="utf-8">
+<title>How to resolve an untrusted OVA Certificate in vCenter - @PSUStevens Blog</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+
+  <meta name="generator" content="Hugo 0.145.0">
+  
+  <meta itemprop="name" content="How to resolve an untrusted OVA Certificate in vCenter">
+  <meta itemprop="description" content="In this blog post I&#39;m going to cover the steps to resolve an untrusted or invalid certificate of an OVA when deploying a new virtual appliance in vCenter.">
+  <meta itemprop="datePublished" content="2025-11-25T13:10:38-04:00">
+  <meta itemprop="dateModified" content="2025-11-25T13:10:38-04:00">
+  <meta itemprop="wordCount" content="1022">
+  <meta itemprop="image" content="https://blog.psustevens.com/img/main/logo.jpg">
+  <meta itemprop="keywords" content="Certificates,VCenter">
+  <meta property="og:url" content="https://blog.psustevens.com/2025/11/25/resolve-untrusted-ova-certificate/">
+  <meta property="og:site_name" content="@PSUStevens Blog">
+  <meta property="og:title" content="How to resolve an untrusted OVA Certificate in vCenter">
+  <meta property="og:description" content="In this blog post I&#39;m going to cover the steps to resolve an untrusted or invalid certificate of an OVA when deploying a new virtual appliance in vCenter.">
+  <meta property="og:locale" content="en">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="blog">
+    <meta property="article:published_time" content="2025-11-25T13:10:38-04:00">
+    <meta property="article:modified_time" content="2025-11-25T13:10:38-04:00">
+    <meta property="article:tag" content="Certificates">
+    <meta property="article:tag" content="VCenter">
+    <meta property="og:image" content="https://blog.psustevens.com/img/main/logo.jpg">
+
+  
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="https://blog.psustevens.com/img/main/logo.jpg">
+  <meta name="twitter:title" content="How to resolve an untrusted OVA Certificate in vCenter">
+  <meta name="twitter:description" content="In this blog post I&#39;m going to cover the steps to resolve an untrusted or invalid certificate of an OVA when deploying a new virtual appliance in vCenter.">
+      <meta name="twitter:site" content="@PSUStevens">
+
+  
+      <script async src="https://www.googletagmanager.com/gtag/js?id=G-GL096KPBB9"></script>
+      <script>
+        var doNotTrack = false;
+        if ( false ) {
+          var dnt = (navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack);
+          var doNotTrack = (dnt == "1" || dnt == "yes");
+        }
+        if (!doNotTrack) {
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', 'G-GL096KPBB9');
+        }
+      </script>
+
+  
+    <link rel="stylesheet"
+    href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/styles/github.min.css">
+  
+  
+    
+      <link rel="stylesheet" href="/css/normalize.css">
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway:400,800,900|Source+Sans+Pro:400,700">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/academicons/1.8.6/css/academicons.min.css">
+      <link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.7.2/css/all.css" integrity="sha384-nRgPTkuX86pH8yjPJUAFuASXQSSl2/bBUiNV47vSYpKFxHJhbcrGnmlYpYJMeD7a" crossorigin="anonymous">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.3.5/jquery.fancybox.min.css" />
+      
+       
+        
+          
+            <link rel="stylesheet" href="/css/main.min.cb6a3b646f6814df0826c8d8cf09f98c363dc5ac439e87240cd8066e3cd7cd68.css" integrity="sha256-y2o7ZG9oFN8IJsjYzwn5jDY9xaxDnockDNgGbjzXzWg=" crossorigin="anonymous">
+          
+        <link rel="stylesheet" href="/css/add-on.css">
+          
+      
+    
+  
+  
+  
+  
+</head>
+
+  <body>
+    
+<header id="site-header">
+  <nav id="site-nav">
+    <h1 class="nav-title">
+      <a href="/">
+        
+          
+            Blog
+          
+        
+      </a>
+    </h1>
+    <menu id="site-nav-menu" class="flyout-menu">
+      
+        
+          
+          
+            <a href="/" class="link"><i class='fa fa-home'></i> Home</a>
+          
+        
+      
+        
+          
+          
+            <a href="/about/" class="link"><i class='far fa-id-card'></i> About</a>
+          
+        
+      
+        
+          
+          
+            <a href="/categories/" class="link"><i class='fas fa-sitemap'></i> Categories</a>
+          
+        
+      
+        
+          
+          
+            <a href="/tags/" class="link"><i class='fas fa-sitemap'></i> Tags</a>
+          
+        
+      
+      <a href="#share-menu" class="share-toggle"><i class="fas fa-share-alt">&nbsp;</i>Share</a>
+      
+
+    </menu>
+    
+
+    <a href="#share-menu" class="share-toggle"><i class="fas fa-share-alt fa-2x">&nbsp;</i></a>
+    
+    <a href="#site-nav" class="nav-toggle"><i class="fas fa-bars fa-2x"></i></a>
+  </nav>
+  
+  
+    <menu id="share-menu" class="flyout-menu">
+      <h1>Share Post</h1>
+      
+
+
+
+
+  
+    
+    <a href="//twitter.com/share?text=How%20to%20resolve%20an%20untrusted%20OVA%20Certificate%20in%20vCenter&amp;url=https%3a%2f%2fblog.psustevens.com%2f2025%2f11%2f25%2fresolve-untrusted-ova-certificate%2f" target="_blank" rel="noopener" class="share-btn twitter">
+        <i class="fab fa-twitter"></i><p>&nbsp;Twitter</p>
+      </a>
+  
+
+  
+        <a href="//www.linkedin.com/shareArticle?url=https%3a%2f%2fblog.psustevens.com%2f2025%2f11%2f25%2fresolve-untrusted-ova-certificate%2f&amp;title=How%20to%20resolve%20an%20untrusted%20OVA%20Certificate%20in%20vCenter" target="_blank" rel="noopener" class="share-btn linkedin">
+            <i class="fab fa-linkedin"></i><p>&nbsp;LinkedIn</p>
+          </a>
+  
+
+  
+        <a href="mailto:?subject=Check out this post by map%5bname%3a%40PSUStevens%5d&amp;body=https%3a%2f%2fblog.psustevens.com%2f2025%2f11%2f25%2fresolve-untrusted-ova-certificate%2f" target="_blank" class="share-btn email" data-proofer-ignore>
+          <i class="fas fa-envelope"></i><p>&nbsp;Email</p>
+        </a>
+  
+
+  
+        <a href="//bsky.app/intent/compose?text=How%20to%20resolve%20an%20untrusted%20OVA%20Certificate%20in%20vCenter&nbsp;https%3a%2f%2fblog.psustevens.com%2f2025%2f11%2f25%2fresolve-untrusted-ova-certificate%2f" target="_blank" rel="noopener" class="share-btn bluesky">
+          <i class="fab fa-bluesky"></i><p>&nbsp;Bluesky</p>
+        </a>
+        
+  
+
+
+    </menu>
+  
+</header>
+
+    <div id="wrapper">
+      <section id="site-intro">
+  <a href="/"><img src="/img/main/logo.jpg" class="circle" width="" alt="@PSUStevens headshot" /></a>
+  <header>
+    <h1>@PSUStevens blog</h1>
+  </header>
+  <main>
+    <p>You are reading the blog of <a href='https://twitter.com/PSUStevens'>@PSUStevens</a>.  </br>You can reach me through one of the social accounts below.</p>
+  </main>
+  
+    <footer>
+      <ul class="socnet-icons">
+        
+
+        <li><a href="//github.com/psustevens" target="_blank" rel="noopener" title="GitHub" class="fab fa-github"></a></li>
+
+
+
+
+
+
+
+
+
+
+
+<li><a href="//linkedin.com/in/davidlstevens" target="_blank" rel="noopener" title="LinkedIn" class="fab fa-linkedin"></a></li>
+<li><a href="//linkedin.com/company/purestorage" target="_blank" rel="noopener" title="LinkedIn Company" class="fab fa-linkedin"></a></li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<li><a href="//twitter.com/PSUStevens" target="_blank" rel="noopener" title="Twitter" class="fab fa-twitter"></a></li>
+
+
+
+
+
+
+
+
+
+
+
+<li><a href="//bsky.app@psustevens.bsky.social" target="_blank" rel="noopener" title="bluesky" class="fab fa-bluesky"></a></li>
+
+      </ul>
+    </footer>
+  
+</section>
+
+      <main id="site-main">
+        <article class="post">
+  <header>
+  <div class="title">
+    
+        <h2><a href="/2025/11/25/resolve-untrusted-ova-certificate/">How to resolve an untrusted OVA Certificate in vCenter</a></h2>
+    
+    
+        <p>In this blog post I&#39;m going to cover the steps to resolve an untrusted or invalid certificate of an OVA when deploying a new virtual appliance in vCenter.</p>
+    
+</div>
+  <div class="meta">
+    <time class="published" datetime="2025-11-25 13:10:38 -0400 -0400">
+      November 25, 2025
+    </time>
+    <span class="author">PSUStevens</span>
+    
+      <p>5 minutes read</p>
+    
+  </div>
+</header>
+
+  <section id="socnet-share">
+    
+
+
+
+
+  
+    
+    <a href="//twitter.com/share?text=How%20to%20resolve%20an%20untrusted%20OVA%20Certificate%20in%20vCenter&amp;url=https%3a%2f%2fblog.psustevens.com%2f2025%2f11%2f25%2fresolve-untrusted-ova-certificate%2f" target="_blank" rel="noopener" class="share-btn twitter">
+        <i class="fab fa-twitter"></i><p>&nbsp;Twitter</p>
+      </a>
+  
+
+  
+        <a href="//www.linkedin.com/shareArticle?url=https%3a%2f%2fblog.psustevens.com%2f2025%2f11%2f25%2fresolve-untrusted-ova-certificate%2f&amp;title=How%20to%20resolve%20an%20untrusted%20OVA%20Certificate%20in%20vCenter" target="_blank" rel="noopener" class="share-btn linkedin">
+            <i class="fab fa-linkedin"></i><p>&nbsp;LinkedIn</p>
+          </a>
+  
+
+  
+        <a href="mailto:?subject=Check out this post by map%5bname%3a%40PSUStevens%5d&amp;body=https%3a%2f%2fblog.psustevens.com%2f2025%2f11%2f25%2fresolve-untrusted-ova-certificate%2f" target="_blank" class="share-btn email" data-proofer-ignore>
+          <i class="fas fa-envelope"></i><p>&nbsp;Email</p>
+        </a>
+  
+
+  
+        <a href="//bsky.app/intent/compose?text=How%20to%20resolve%20an%20untrusted%20OVA%20Certificate%20in%20vCenter&nbsp;https%3a%2f%2fblog.psustevens.com%2f2025%2f11%2f25%2fresolve-untrusted-ova-certificate%2f" target="_blank" rel="noopener" class="share-btn bluesky">
+          <i class="fab fa-bluesky"></i><p>&nbsp;Bluesky</p>
+        </a>
+        
+  
+
+
+  </section>
+  
+  <a href="/2025/11/25/resolve-untrusted-ova-certificate/" class="image featured">
+    <img src="/img/2025/11/suspicious-ITguy.jpg" alt="An IT guy suspiciously staring at a computer screen">
+  </a>
+
+
+  <div class="content">
+    <p>When deploying an OVA in vSphere 8, it is not uncommon for the workflow to flag the OVA publisher certificate as untrusted.  This can be a significant issue for organizations that prioritize security.  In this blog post, I will cover how to overcome this issue.</p>
+<h2 id="the-problem">The Problem</h2>
+<p>Deploying an OVF Template/OVA is a common operation for a VMware Administrator.  You right-click on the ESX Cluster or an ESX host in the inventory browser and click Deploy OVF Template.  This action initiates the Deploy OVF Template workflow.  Typically, there are ten steps to this workflow.  The first three steps ask for:</p>
+<ol>
+<li>The path to the OVF/OVA</li>
+<li>The name of the virtual appliance and a vCenter folder to store it</li>
+<li>The name of a compute resource, such as an ESX host or ESX Cluster</li>
+</ol>
+<p>The fourth step involves reviewing the details of the OVF/OVA package, which may pose a security risk to the virtual environment.</p>
+<p>One of the items the user should review is the Publisher information.</p>
+<figure><img src="/img/2025/11/25/highlighted-untrusted-cert.png"
+    alt="Invalid certificate for the OVA being deployed"><figcaption>
+      <h4>Invalid/untrusted Publisher certificate</h4>
+    </figcaption>
+</figure>
+
+<p>Often, the certificate used by the Publisher to sign the OVF/OVA appears to be invalid.  This issue occurs because vCenter is unable to verify the root certificate and the intermediate certificate used by the Publisher to sign the OVA.  The certificate chain is missing from the VMware Endpoint Certificate Store (VECS) in vCenter.  There are multiple ways to fix this issue so vCenter can validate the certificate used to sign the OVA.</p>
+<p>If you don&rsquo;t care about the invalid certificate then you can simply click the ignore link.<br>
+<a href="https://knowledge.broadcom.com/external/article/336085/deploying-ova-shows-invalid-certificate.html">https://knowledge.broadcom.com/external/article/336085/deploying-ova-shows-invalid-certificate.html</a></p>
+<h2 id="quick-fix">Quick Fix</h2>
+<p>The quickest way to resolve this issue is to click the certificate name presented in the Publisher field.  In the image above this refers to the blue highlighted link in the above image: <strong>GlobalSign GCC R45 CodeSigning CA 2020</strong>.  When you click the link the certificate will be downloaded to your computer.  It will have the name: GlobalSign GCC R45 CodeSigning CA 2020.cer
+You can view the entire certificate chain by double-clicking the downloaded file.  On Windows click the <strong>Certification Path</strong> tab to view the certificate chain.</p>
+<figure><img src="/img/2025/11/25/pure-ova-certificate-chain.png"
+    alt="Certification Path tab which shows the Certicate chain for the signed Pure OVA"><figcaption>
+      <h4>Certificate chain for the signed Pure OVA</h4>
+    </figcaption>
+</figure>
+
+<p>With this information in hand we can do a web search for <strong>GlobalSign Intermediate Certificates</strong>.  The first returned link should be what we want.  Click the link. You should be taken to a web page where you will find all of the GlobalSign intermediate certificates.  If you get lost click on this URL:  <a href="https://support.globalsign.com/ca-certificates/intermediate-certificates">https://support.globalsign.com/ca-certificates/intermediate-certificates</a></p>
+<p>Scroll down the page until you find the square named <strong>Code Signing (Standard &amp; EV) Intermediate Certificates</strong> and click the button to
+go to the web page listing all of the code signing intermediate certificates.  If you get lost you can click on this URL:<br>
+<a href="https://support.globalsign.com/ca-certificates/intermediate-certificates/code-signing-standard-ev-intermediate-certificates">https://support.globalsign.com/ca-certificates/intermediate-certificates/code-signing-standard-ev-intermediate-certificates</a></p>
+<p>Once on this page scroll down until you see the following:</p>
+<figure><img src="/img/2025/11/25/GlobalSign-GCC-R45-CodeSigningCA2020.png"
+    alt="Details tab which shows the GlobalSign Code Signing Root certificate"><figcaption>
+      <h4>GlobalSign Code Signing Intermediate certificate download link</h4>
+    </figcaption>
+</figure>
+
+<p>Click the button <strong>Download Certificate (Binary/DER Encoded)</strong> to download the certificate in Binary/DER Encoded format to your computer.  Next, click the downloaded file:  <strong>gsgccr45codesignca2020.crt</strong> and click the <strong>Certification Path</strong> tab.</p>
+<figure><img src="/img/2025/11/25/globalsign-codesigningintermediate-cert.png"
+    alt="Details tab which shows the GlobalSign Code Signing Intermediate certificate"><figcaption>
+      <h4>GlobalSign Code Signing Intermediate certificate</h4>
+    </figcaption>
+</figure>
+
+<p>This file contains the missing certificate chain without the certificate that signed the OVA.  If you really want to ensure this is the same root and intermediate certificates used by <a href="https://www.purestorage.com">Pure Storage</a> to sign the OVA you can click on each certificate and confirm the serial numbers and/or the thumbprints match.</p>
+<h2 id="converting-the-certificate">Converting the Certificate</h2>
+<p>At this point you have the certificate chain you need, but it is in the wrong format.  vCenter only accepts certificates in <strong>PEM format</strong>.  PEM format is a text representation of the certificate in base64 format.  The DER format is a binary representation of the certificate.  So, you need to convert the certificate using a tool like OpenSSL.  If you are on Windows I recommend going to the following URL and choosing an option for Windows: <a href="https://github.com/openssl/openssl/wiki/Binaries">https://github.com/openssl/openssl/wiki/Binaries</a><br>
+If you are on a Mac, then you don&rsquo;t have anything to worry about.  OpenSSL is already there.</p>
+<div style="background-color: #f9f9f9; border-left: 4px solid #ff8c00; padding: 10px;">
+<strong>NOTE:</strong> Alternatively, you could have clicked the <strong>View in Base64</strong> button to view the same certificate in PEM format.  However, I have found when copying and pasting the text if the carriage returns aren't kept when you paste the text in a new file the certificate may not be accepted by vCenter.  This is the reason I am documenting the process to convert the binary version of the certificate using openSSL.
+</div>
+<p>Once you are ready you can run the following command to convert the certificate to PEM format.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>openssl x509 -inform der -in gsgccr45codesignca2020.crt -out gsgccr45codesignca2020.pem
+</span></span></code></pre></div><p>If you would like to confirm the certificate has been converted simply open the <strong>gsgccr45codesignca2020.pem</strong> file in your favorite text editor.  It will look identical to what you would have seen had you clicked on the <strong>View in Base64</strong> button.  You can also run the following OpenSSL command:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>openssl x509 -in gsgccr45codesignca2020.pem -text -noout
+</span></span></code></pre></div><h2 id="importing-the-converted-certificate-into-vcenter">Importing the Converted Certificate into vCenter</h2>
+<p>Now it&rsquo;s time to import the newly converted certificate into the VMware Endpoint Certificate Store (VECS) in vCenter.</p>
+<ol>
+<li>Login to vCenter and click the hamburger icon in the upper left-corner of the window</li>
+<li>Click Administration</li>
+<li>Click Certificate Management</li>
+<li>Click on the <strong>Trusted Root</strong> tab to view all of the trusted root certificates in the VMware Endpoint Certificate Store (VECS).</li>
+</ol>
+<figure><img src="/img/2025/11/25/Administration-CertificateManagement.png"
+    alt="An image showing the steps outlined above"><figcaption>
+      <h4>Administration --&gt; Certificate Management</h4>
+    </figcaption>
+</figure>
+
+<p>Next, click on the <strong>Add Trusted Root Certificate</strong> link and work through the process to add the certificate to the VECS.
+After adding it to the VECS you should see the following in the list:</p>
+<figure><img src="/img/2025/11/25/GlobalSign-cert-installed.png"
+    alt="A view of the Trusted Root store in vCenter after adding the certificate"><figcaption>
+      <h4>Newly added certificate</h4>
+    </figcaption>
+</figure>
+
+<h2 id="trusted-ova">Trusted OVA!</h2>
+<p>Now that the certificate has been uploaded to the VECS you can deploy the OVA again.  This time you will notice the publisher certificate is now trusted as shown in the image below.</p>
+<figure><img src="/img/2025/11/25/ova-trusted-cert.png"
+    alt="An image showing the OVA is now trusted by vCenter"><figcaption>
+      <h4>Trusted certificate</h4>
+    </figcaption>
+</figure>
+
+<p>At this point you are done!</p>
+<h2 id="summary">Summary</h2>
+<p>Let&rsquo;s summarize what we covered in this post:</p>
+<ul>
+<li>The Publisher for the Pure Storage OVA was untrusted</li>
+<li>We downloaded the certificate chain from GlobalSign and converted it to PEM format</li>
+<li>We added the certificate to vCenter</li>
+<li>We redeployed the OVA and now the certificate is trusted</li>
+</ul>
+<hr>
+<p>If there is something you think I&rsquo;m missing and feel should be added, please let me know.<br>
+Thanks for reading!</p>
+
+  </div>
+  <footer>
+    <ul class="stats">
+  
+    
+    
+      <li class="categories">
+        <ul>
+          
+            
+            <li><a class="article-category-link" href="https://blog.psustevens.com/categories/howto">HowTo</a></li>
+          
+            
+            <li><a class="article-category-link" href="https://blog.psustevens.com/categories/pure-storage">Pure Storage</a></li>
+          
+            
+            <li><a class="article-category-link" href="https://blog.psustevens.com/categories/vmware">VMware</a></li>
+          
+            
+            <li><a class="article-category-link" href="https://blog.psustevens.com/categories/broadcom">Broadcom</a></li>
+          
+        </ul>
+      </li>
+    
+  
+  
+    
+    
+      <li class="tags">
+        <ul>
+          
+            
+            <li><a class="article-category-link" href="https://blog.psustevens.com/tags/certificates">certificates</a></li>
+          
+            
+            <li><a class="article-category-link" href="https://blog.psustevens.com/tags/vcenter">vCenter</a></li>
+          
+        </ul>
+      </li>
+    
+  
+</ul>
+
+  </footer>
+</article>
+
+
+<div class="pagination">
+  
+    <a href="/2025/03/29/2025-vexpert-renewal/" class="button big previous"><i class="fas fa-angle-left"></i> 2025 vExpert Renewal</a>
+  
+  
+</div>
+
+
+      </main>
+      <section id="site-sidebar">
+  
+    <section id="recent-posts">
+      <header>
+        <h1>Recent posts</h1>
+      </header>
+      
+      <article class="mini-post">
+        <section>
+          
+  <a href="/2025/11/25/resolve-untrusted-ova-certificate/" class="image featured">
+    <img src="/img/2025/11/suspicious-ITguy.jpg" alt="An IT guy suspiciously staring at a computer screen">
+  </a>
+
+
+        </section>
+        <header>
+          <h1><a href="/2025/11/25/resolve-untrusted-ova-certificate/">How to resolve an untrusted OVA Certificate in vCenter</a></h1>
+          <time class="published" datetime="">November 25, 2025</time>
+        </header>
+      </article>
+      
+      <article class="mini-post">
+        <section>
+          
+  <a href="/2025/03/29/2025-vexpert-renewal/" class="image featured">
+    <img src="/img/2025/03/IT-guy-holding-7x-vExpert-placard.jpg" alt="IT guy holding 7x vExpert placard">
+  </a>
+
+
+        </section>
+        <header>
+          <h1><a href="/2025/03/29/2025-vexpert-renewal/">2025 vExpert Renewal</a></h1>
+          <time class="published" datetime="">March 29, 2025</time>
+        </header>
+      </article>
+      
+      <article class="mini-post">
+        <section>
+          
+  <a href="/2025/02/22/no-storage-replication-adapters-installed/" class="image featured">
+    <img src="/img/2025/02/frustrated-IT-guy.jpg" alt="A frustrated IT guy kneeling on both knees in his office">
+  </a>
+
+
+        </section>
+        <header>
+          <h1><a href="/2025/02/22/no-storage-replication-adapters-installed/">No Storage Replication Adapters Installed</a></h1>
+          <time class="published" datetime="">February 22, 2025</time>
+        </header>
+      </article>
+      
+      
+        <a href="/blog/" class="button">See more</a>
+      
+    </section>
+  
+
+  
+    
+      <section id="categories">
+        <header>
+          <h1><a href="/categories">Categories</a></h1>
+        </header>
+        <ul>
+          
+            
+          
+          
+          <li>
+            
+              <a href="/categories/vmware/">vmware<span class="count">14</span></a>
+            
+          
+          <li>
+            
+              <a href="/categories/howto/">howto<span class="count">12</span></a>
+            
+          
+          <li>
+            
+              <a href="/categories/hytrust/">hytrust<span class="count">7</span></a>
+            
+          
+          <li>
+            
+              <a href="/categories/blogging/">blogging<span class="count">6</span></a>
+            
+          
+          <li>
+            
+              <a href="/categories/entrust/">entrust<span class="count">5</span></a>
+            
+          
+          <li>
+            
+              <a href="/categories/broadcom/">broadcom<span class="count">3</span></a>
+            
+          
+          <li>
+            
+              <a href="/categories/career/">career<span class="count">3</span></a>
+            
+          
+          <li>
+            
+              <a href="/categories/api/">api<span class="count">1</span></a>
+            
+          
+          <li>
+            
+              <a href="/categories/github/">github<span class="count">1</span></a>
+            
+          
+          <li>
+            
+              <a href="/categories/psustevens/">psustevens<span class="count">1</span></a>
+            
+          
+          <li>
+            
+              <a href="/categories/pure-storage/">pure storage<span class="count">1</span></a>
+            
+          
+          <li>
+            
+              <a href="/categories/synology/">synology<span class="count">1</span></a>
+            
+          
+          </li>
+        </ul>
+      </section>
+    
+  
+
+  <section id="mini-bio">
+    <header>
+      <h1>About</h1>
+    </header>
+    <p>This is my personal blog about technical topics including virtualization, storage, networking, backups, and some random IT stuff that strikes my fancy.</p>
+    <footer>
+      <a href="/about" class="button">Learn More</a>
+    </footer>
+  </section>
+</section>
+
+      <footer id="site-footer">
+  
+      <ul class="socnet-icons">
+        
+
+        <li><a href="//github.com/psustevens" target="_blank" rel="noopener" title="GitHub" class="fab fa-github"></a></li>
+
+
+
+
+
+
+
+
+
+
+
+<li><a href="//linkedin.com/in/davidlstevens" target="_blank" rel="noopener" title="LinkedIn" class="fab fa-linkedin"></a></li>
+<li><a href="//linkedin.com/company/purestorage" target="_blank" rel="noopener" title="LinkedIn Company" class="fab fa-linkedin"></a></li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<li><a href="//twitter.com/PSUStevens" target="_blank" rel="noopener" title="Twitter" class="fab fa-twitter"></a></li>
+
+
+
+
+
+
+
+
+
+
+
+<li><a href="//bsky.app@psustevens.bsky.social" target="_blank" rel="noopener" title="bluesky" class="fab fa-bluesky"></a></li>
+
+      </ul>
+  
+  <p class="copyright">
+    
+      © 2025 David Stevens
+    . <br>
+    Theme: <a href='https://github.com/pacollins/hugo-future-imperfect-slim' target='_blank' rel='noopener'>Hugo Future Imperfect Slim</a><br>A <a href='https://html5up.net/future-imperfect' target='_blank' rel='noopener'>HTML5 UP port</a> | Powered by <a href='https://gohugo.io/' title='0.145.0' target='_blank' rel='noopener'>Hugo</a>
+  </p>
+</footer>
+<a id="back-to-top" href="#" class="fas fa-arrow-up fa-2x"></a>
+
+      
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/highlight.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/languages/html.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/languages/css.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/languages/js.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/languages/toml.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/languages/PowerShell.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/languages/markdown.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/languages/plaintext.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script>
+
+
+  
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/skel/3.0.1/skel.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.3.5/jquery.fancybox.min.js"></script>
+  <script src=/js/util.js></script>
+  <script src=/js/main.js></script>
+  <script src=/js/add-on.js></script>
+  
+
+
+
+
+    </div>
+  </body>
+</html>
