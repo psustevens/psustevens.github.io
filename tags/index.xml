@@ -7,20 +7,34 @@
     <generator>Hugo</generator>
     <language>en</language>
     <copyright>© 2025 David Stevens</copyright>
-    <lastBuildDate>Tue, 25 Nov 2025 13:10:38 -0400</lastBuildDate>
+    <lastBuildDate>Sun, 07 Dec 2025 11:01:48 -0500</lastBuildDate>
     <atom:link href="https://blog.psustevens.com/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Certificates</title>
-      <link>https://blog.psustevens.com/tags/certificates/</link>
-      <pubDate>Tue, 25 Nov 2025 13:10:38 -0400</pubDate>
-      <guid>https://blog.psustevens.com/tags/certificates/</guid>
+      <title>Pure Plugin</title>
+      <link>https://blog.psustevens.com/tags/pure-plugin/</link>
+      <pubDate>Sun, 07 Dec 2025 11:01:48 -0500</pubDate>
+      <guid>https://blog.psustevens.com/tags/pure-plugin/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Storage</title>
+      <link>https://blog.psustevens.com/tags/storage/</link>
+      <pubDate>Sun, 07 Dec 2025 11:01:48 -0500</pubDate>
+      <guid>https://blog.psustevens.com/tags/storage/</guid>
       <description></description>
     </item>
     <item>
       <title>VCenter</title>
       <link>https://blog.psustevens.com/tags/vcenter/</link>
-      <pubDate>Tue, 25 Nov 2025 13:10:38 -0400</pubDate>
+      <pubDate>Sun, 07 Dec 2025 11:01:48 -0500</pubDate>
       <guid>https://blog.psustevens.com/tags/vcenter/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Certificates</title>
+      <link>https://blog.psustevens.com/tags/certificates/</link>
+      <pubDate>Tue, 25 Nov 2025 13:10:38 -0400</pubDate>
+      <guid>https://blog.psustevens.com/tags/certificates/</guid>
       <description></description>
     </item>
     <item>

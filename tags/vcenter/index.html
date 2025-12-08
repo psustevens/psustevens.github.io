@@ -7,12 +7,12 @@
 
 
 
-  <meta name="generator" content="Hugo 0.145.0">
+  <meta name="generator" content="Hugo 0.147.8">
   
   <meta itemprop="name" content="VCenter">
   <meta itemprop="description" content="The blog of @PSUStevens on Twitter and davidlstevens on LinkedIn.">
-  <meta itemprop="datePublished" content="2025-11-25T13:10:38-04:00">
-  <meta itemprop="dateModified" content="2025-11-25T13:10:38-04:00">
+  <meta itemprop="datePublished" content="2025-12-07T11:01:48-05:00">
+  <meta itemprop="dateModified" content="2025-12-07T11:01:48-05:00">
   <meta itemprop="image" content="https://blog.psustevens.com/img/main/logo.jpg">
   <meta property="og:url" content="https://blog.psustevens.com/tags/vcenter/">
   <meta property="og:site_name" content="@PSUStevens Blog">
@@ -236,6 +236,87 @@
   <header>
   <div class="title">
     
+        <h2><a href="/2025/12/07/identifying-pure-scsi-volumes-in-vcenter/">Identifying Pure Storage SCSI Volumes in VCenter</a></h2>
+    
+    
+        <p>In this blog post I&#39;m going to cover a method to identify a SCSI (FC or iSCSI) datastore in vCenter and map it back to a Pure Storage volume.</p>
+    
+</div>
+  <div class="meta">
+    <time class="published" datetime="2025-12-07 11:01:48 -0500 EST">
+      December 7, 2025
+    </time>
+    <span class="author">PSUStevens</span>
+    
+      <p>4 minutes read</p>
+    
+  </div>
+</header>
+
+  
+  <a href="/2025/12/07/identifying-pure-scsi-volumes-in-vcenter/" class="image featured">
+    <img src="/img/2025/12/vCenterNaaIdSCSI.png" alt="NAA ID for a Pure Storage-backed datastore">
+  </a>
+
+
+  
+  
+  
+  <p>I was recently on a call with the storage team for a customer and they were still tracking LUN IDs so they could map them back to a VMware datastore in vCenter.  When I noticed them doing this, I let them know they don&rsquo;t really need to do this anymore. In vCenter it is quite easy to map a datastore back to a <a href="https://www.purestorage.com">Pure Storage</a> volume by viewing what is known as the NAA ID. In this blog post, I will cover one way to do this as well as explain what is an NAA ID.</p>
+  <footer>
+    <a href="/2025/12/07/identifying-pure-scsi-volumes-in-vcenter/" class="button big">Read more</a>
+    <ul class="stats">
+  
+    
+    
+      <li class="categories">
+        <ul>
+          
+            
+            <li><a class="article-category-link" href="https://blog.psustevens.com/categories/howto">HowTo</a></li>
+          
+            
+            <li><a class="article-category-link" href="https://blog.psustevens.com/categories/pure-storage">Pure Storage</a></li>
+          
+            
+            <li><a class="article-category-link" href="https://blog.psustevens.com/categories/vmware">VMware</a></li>
+          
+            
+            <li><a class="article-category-link" href="https://blog.psustevens.com/categories/broadcom">Broadcom</a></li>
+          
+        </ul>
+      </li>
+    
+  
+  
+    
+    
+      <li class="tags">
+        <ul>
+          
+            
+            <li><a class="article-category-link" href="https://blog.psustevens.com/tags/storage">storage</a></li>
+          
+            
+            <li><a class="article-category-link" href="https://blog.psustevens.com/tags/vcenter">vCenter</a></li>
+          
+            
+            <li><a class="article-category-link" href="https://blog.psustevens.com/tags/pure-plugin">Pure Plugin</a></li>
+          
+        </ul>
+      </li>
+    
+  
+</ul>
+
+  </footer>
+</article>
+
+        
+            <article class="post">
+  <header>
+  <div class="title">
+    
         <h2><a href="/2025/11/25/resolve-untrusted-ova-certificate/">How to resolve an untrusted OVA Certificate in vCenter</a></h2>
     
     
@@ -381,90 +462,6 @@
 </article>
 
         
-            <article class="post">
-  <header>
-  <div class="title">
-    
-        <h2><a href="/2023/02/24/2023-02-24-how-to-update-esxi-7.0u3d_to_7.0u3k_using_vsphere_lifecycle_manager/">How to Update Esxi 7.0u3d to 7.0u3k using vSphere Lifecycle_Manager</a></h2>
-    
-    
-        <p>This post will cover how to update an ESXi host to 7.0u3k from 7.0u3d using vSphere Lifecycle Manager.</p>
-    
-</div>
-  <div class="meta">
-    <time class="published" datetime="2023-02-24 19:14:04 -0500 EST">
-      February 24, 2023
-    </time>
-    <span class="author">PSUStevens</span>
-    
-      <p>3 minutes read</p>
-    
-  </div>
-</header>
-
-  
-  <a href="/2023/02/24/2023-02-24-how-to-update-esxi-7.0u3d_to_7.0u3k_using_vsphere_lifecycle_manager/" class="image featured">
-    <img src="/img/2023/02/vSphere_LCM.png" alt="vSphere Lifecycle Manager">
-  </a>
-
-
-  
-  
-  
-  <p>Recently, I ran into an issue where I really needed to get my vSphere homelab upgraded to version 7.0U3k.  More on why this was so urgent in a future post.  However, I was still back on 7.0U3d.  To get to 7.0U3 I used vSphere Lifecycle Manager (vLCM).  In case you missed it, vSphere Lifecycle Manager is built into vSphere 7.</p>
-  <footer>
-    <a href="/2023/02/24/2023-02-24-how-to-update-esxi-7.0u3d_to_7.0u3k_using_vsphere_lifecycle_manager/" class="button big">Read more</a>
-    <ul class="stats">
-  
-    
-    
-      <li class="categories">
-        <ul>
-          
-            
-            <li><a class="article-category-link" href="https://blog.psustevens.com/categories/vmware">VMware</a></li>
-          
-            
-            <li><a class="article-category-link" href="https://blog.psustevens.com/categories/howto">HowTo</a></li>
-          
-        </ul>
-      </li>
-    
-  
-  
-    
-    
-      <li class="tags">
-        <ul>
-          
-            
-            <li><a class="article-category-link" href="https://blog.psustevens.com/tags/vmware">VMware</a></li>
-          
-            
-            <li><a class="article-category-link" href="https://blog.psustevens.com/tags/vcenter">vCenter</a></li>
-          
-            
-            <li><a class="article-category-link" href="https://blog.psustevens.com/tags/vsphere">vSphere</a></li>
-          
-            
-            <li><a class="article-category-link" href="https://blog.psustevens.com/tags/esxi">ESXi</a></li>
-          
-            
-            <li><a class="article-category-link" href="https://blog.psustevens.com/tags/update">Update</a></li>
-          
-            
-            <li><a class="article-category-link" href="https://blog.psustevens.com/tags/lifecycle-manager">Lifecycle Manager</a></li>
-          
-        </ul>
-      </li>
-    
-  
-</ul>
-
-  </footer>
-</article>
-
-        
         
 <div class="pagination">
   
@@ -482,6 +479,21 @@
       <header>
         <h1>Recent posts</h1>
       </header>
+      
+      <article class="mini-post">
+        <section>
+          
+  <a href="/2025/12/07/identifying-pure-scsi-volumes-in-vcenter/" class="image featured">
+    <img src="/img/2025/12/vCenterNaaIdSCSI.png" alt="NAA ID for a Pure Storage-backed datastore">
+  </a>
+
+
+        </section>
+        <header>
+          <h1><a href="/2025/12/07/identifying-pure-scsi-volumes-in-vcenter/">Identifying Pure Storage SCSI Volumes in VCenter</a></h1>
+          <time class="published" datetime="">December 7, 2025</time>
+        </header>
+      </article>
       
       <article class="mini-post">
         <section>
@@ -513,21 +525,6 @@
         </header>
       </article>
       
-      <article class="mini-post">
-        <section>
-          
-  <a href="/2025/02/22/no-storage-replication-adapters-installed/" class="image featured">
-    <img src="/img/2025/02/frustrated-IT-guy.jpg" alt="A frustrated IT guy kneeling on both knees in his office">
-  </a>
-
-
-        </section>
-        <header>
-          <h1><a href="/2025/02/22/no-storage-replication-adapters-installed/">No Storage Replication Adapters Installed</a></h1>
-          <time class="published" datetime="">February 22, 2025</time>
-        </header>
-      </article>
-      
       
         <a href="/blog/" class="button">See more</a>
       
@@ -547,12 +544,12 @@
           
           <li>
             
-              <a href="/categories/vmware/">vmware<span class="count">14</span></a>
+              <a href="/categories/vmware/">vmware<span class="count">15</span></a>
             
           
           <li>
             
-              <a href="/categories/howto/">howto<span class="count">12</span></a>
+              <a href="/categories/howto/">howto<span class="count">13</span></a>
             
           
           <li>
@@ -572,12 +569,17 @@
           
           <li>
             
-              <a href="/categories/broadcom/">broadcom<span class="count">3</span></a>
+              <a href="/categories/broadcom/">broadcom<span class="count">4</span></a>
             
           
           <li>
             
               <a href="/categories/career/">career<span class="count">3</span></a>
+            
+          
+          <li>
+            
+              <a href="/categories/pure-storage/">pure storage<span class="count">2</span></a>
             
           
           <li>
@@ -593,11 +595,6 @@
           <li>
             
               <a href="/categories/psustevens/">psustevens<span class="count">1</span></a>
-            
-          
-          <li>
-            
-              <a href="/categories/pure-storage/">pure storage<span class="count">1</span></a>
             
           
           <li>
@@ -677,7 +674,7 @@
     
       © 2025 David Stevens
     . <br>
-    Theme: <a href='https://github.com/pacollins/hugo-future-imperfect-slim' target='_blank' rel='noopener'>Hugo Future Imperfect Slim</a><br>A <a href='https://html5up.net/future-imperfect' target='_blank' rel='noopener'>HTML5 UP port</a> | Powered by <a href='https://gohugo.io/' title='0.145.0' target='_blank' rel='noopener'>Hugo</a>
+    Theme: <a href='https://github.com/pacollins/hugo-future-imperfect-slim' target='_blank' rel='noopener'>Hugo Future Imperfect Slim</a><br>A <a href='https://html5up.net/future-imperfect' target='_blank' rel='noopener'>HTML5 UP port</a> | Powered by <a href='https://gohugo.io/' title='0.147.8' target='_blank' rel='noopener'>Hugo</a>
   </p>
 </footer>
 <a id="back-to-top" href="#" class="fas fa-arrow-up fa-2x"></a>

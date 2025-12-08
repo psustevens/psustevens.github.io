@@ -7,12 +7,12 @@
 
 
 
-  <meta name="generator" content="Hugo 0.145.0">
+  <meta name="generator" content="Hugo 0.147.8">
   
   <meta itemprop="name" content="HowTo">
   <meta itemprop="description" content="The blog of @PSUStevens on Twitter and davidlstevens on LinkedIn.">
-  <meta itemprop="datePublished" content="2025-11-25T13:10:38-04:00">
-  <meta itemprop="dateModified" content="2025-11-25T13:10:38-04:00">
+  <meta itemprop="datePublished" content="2025-12-07T11:01:48-05:00">
+  <meta itemprop="dateModified" content="2025-12-07T11:01:48-05:00">
   <meta itemprop="image" content="https://blog.psustevens.com/img/main/logo.jpg">
   <meta property="og:url" content="https://blog.psustevens.com/categories/howto/">
   <meta property="og:site_name" content="@PSUStevens Blog">
@@ -231,6 +231,91 @@
       <main id="site-main">
         <h1>HowTo</h1>
         
+        
+            <article class="post">
+  <header>
+  <div class="title">
+    
+        <h2><a href="/2021/10/01/how-to-deploy-entrust-keycontrol-5.4/">How to Deploy Entrust KeyControl 5.4</a></h2>
+    
+    
+        <p>Read how easy it is to deploy a 2-node Entrust (formerly HyTrust) KeyControl Key Management Server (KMS) for encrypting sensitive data in virtual machines.</p>
+    
+</div>
+  <div class="meta">
+    <time class="published" datetime="2021-10-01 09:45:33 -0400 EDT">
+      October 1, 2021
+    </time>
+    <span class="author">PSUStevens</span>
+    
+      <p>8 minutes read</p>
+    
+  </div>
+</header>
+
+  
+  <a href="/2021/10/01/how-to-deploy-entrust-keycontrol-5.4/" class="image featured">
+    <img src="/img/2021/10/ETKC.png" alt="Entrust Keycontrol 5.4 Login screen">
+  </a>
+
+
+  
+  
+  
+  <p>Around this time last year I wrote about how to deploy a 2-node HyTrust KeyControl cluster.  That post covered KeyControl version 5.2.1. You can find that blog post over <a href="2020/10/31/how-to-deploy-a-hytrust-keycontrol-2-node-cluster/">here.</a></p>
+<p>This post is very similar.  The difference between it and the last post is that I will cover <a href="https://www.entrust.com/solutions/use-cases/key-management-control">Entrust KeyControl version 5.4.</a>.  Are you scratching your head about the name change?  Head over to this post I wrote about changes that occurred in January of this year where I talk about HyTrust being acquired by <a href="https://www.entrust.com">Entrust</a>.  The full press release can be found <a href="https://www.entrust.com/newsroom/press-releases/2021/entrust-acquires-hytrust">here.</a></p>
+  <footer>
+    <a href="/2021/10/01/how-to-deploy-entrust-keycontrol-5.4/" class="button big">Read more</a>
+    <ul class="stats">
+  
+    
+    
+      <li class="categories">
+        <ul>
+          
+            
+            <li><a class="article-category-link" href="https://blog.psustevens.com/categories/entrust">Entrust</a></li>
+          
+            
+            <li><a class="article-category-link" href="https://blog.psustevens.com/categories/hytrust">HyTrust</a></li>
+          
+            
+            <li><a class="article-category-link" href="https://blog.psustevens.com/categories/vmware">VMware</a></li>
+          
+            
+            <li><a class="article-category-link" href="https://blog.psustevens.com/categories/howto">HowTo</a></li>
+          
+        </ul>
+      </li>
+    
+  
+  
+    
+    
+      <li class="tags">
+        <ul>
+          
+            
+            <li><a class="article-category-link" href="https://blog.psustevens.com/tags/keycontrol">KeyControl</a></li>
+          
+            
+            <li><a class="article-category-link" href="https://blog.psustevens.com/tags/kms">KMS</a></li>
+          
+            
+            <li><a class="article-category-link" href="https://blog.psustevens.com/tags/key-management-server">Key Management Server</a></li>
+          
+            
+            <li><a class="article-category-link" href="https://blog.psustevens.com/tags/vcenter">vCenter</a></li>
+          
+        </ul>
+      </li>
+    
+  
+</ul>
+
+  </footer>
+</article>
+
         
             <article class="post">
   <header>
@@ -517,88 +602,13 @@
 </article>
 
         
-            <article class="post">
-  <header>
-  <div class="title">
-    
-        <h2><a href="/2020/10/26/building-a-blog-with-hugo-part5/">Building a Blog With Hugo - Part 5</a></h2>
-    
-    
-        <p>You finished customizing your site and wrote your first blog entry.  Now let&#39;s get it published to Github so others can enjoy it and share it with the world.</p>
-    
-</div>
-  <div class="meta">
-    <time class="published" datetime="2020-10-26 12:21:08 -0400 EDT">
-      October 26, 2020
-    </time>
-    <span class="author">PSUStevens</span>
-    
-      <p>5 minutes read</p>
-    
-  </div>
-</header>
-
-  
-  <a href="/2020/10/26/building-a-blog-with-hugo-part5/" class="image featured">
-    <img src="/img/2020/10/Hugo-publish.png" alt="Publish to Github">
-  </a>
-
-
-  
-  
-  
-  <p>It&rsquo;s been a long time since I last updated this series.  I apologize to anyone who is following it and lost interest.  I hope to be quicker in future series I write.</p>
-<hr>
-<h2 id="introduction">Introduction</h2>
-<p>In this post, I will walk through what I do to publish my blog to <a href="https://github.com/psustevens/">Github</a>.  I use private and public repositories and <a href="https://desktop.github.com/">GitHub Desktop</a>.  This way, I can do some testing in my private repo before pushing it to my public repo.</p>
-  <footer>
-    <a href="/2020/10/26/building-a-blog-with-hugo-part5/" class="button big">Read more</a>
-    <ul class="stats">
-  
-    
-    
-      <li class="categories">
-        <ul>
-          
-            
-            <li><a class="article-category-link" href="https://blog.psustevens.com/categories/blogging">Blogging</a></li>
-          
-            
-            <li><a class="article-category-link" href="https://blog.psustevens.com/categories/howto">HowTo</a></li>
-          
-        </ul>
-      </li>
-    
-  
-  
-    
-    
-      <li class="tags">
-        <ul>
-          
-            
-            <li><a class="article-category-link" href="https://blog.psustevens.com/tags/hugo">Hugo</a></li>
-          
-            
-            <li><a class="article-category-link" href="https://blog.psustevens.com/tags/github">Github</a></li>
-          
-        </ul>
-      </li>
-    
-  
-</ul>
-
-  </footer>
-</article>
-
-        
         
 <div class="pagination">
   
     <a href="/categories/howto/page/3/" class="button big previous"><i class="fas fa-angle-left"></i></a>
   
   
-    <a href="#" class="disabled button big next"><i class="fas fa-angle-right"></i></a>
+    <a href="/categories/howto/page/5/" class="button big next"><i class="fas fa-angle-right"></i></a>
   
 </div>
 
@@ -609,6 +619,21 @@
       <header>
         <h1>Recent posts</h1>
       </header>
+      
+      <article class="mini-post">
+        <section>
+          
+  <a href="/2025/12/07/identifying-pure-scsi-volumes-in-vcenter/" class="image featured">
+    <img src="/img/2025/12/vCenterNaaIdSCSI.png" alt="NAA ID for a Pure Storage-backed datastore">
+  </a>
+
+
+        </section>
+        <header>
+          <h1><a href="/2025/12/07/identifying-pure-scsi-volumes-in-vcenter/">Identifying Pure Storage SCSI Volumes in VCenter</a></h1>
+          <time class="published" datetime="">December 7, 2025</time>
+        </header>
+      </article>
       
       <article class="mini-post">
         <section>
@@ -640,21 +665,6 @@
         </header>
       </article>
       
-      <article class="mini-post">
-        <section>
-          
-  <a href="/2025/02/22/no-storage-replication-adapters-installed/" class="image featured">
-    <img src="/img/2025/02/frustrated-IT-guy.jpg" alt="A frustrated IT guy kneeling on both knees in his office">
-  </a>
-
-
-        </section>
-        <header>
-          <h1><a href="/2025/02/22/no-storage-replication-adapters-installed/">No Storage Replication Adapters Installed</a></h1>
-          <time class="published" datetime="">February 22, 2025</time>
-        </header>
-      </article>
-      
       
         <a href="/blog/" class="button">See more</a>
       
@@ -674,12 +684,12 @@
           
           <li>
             
-              <a href="/categories/vmware/">vmware<span class="count">14</span></a>
+              <a href="/categories/vmware/">vmware<span class="count">15</span></a>
             
           
           <li>
             
-              <a href="/categories/howto/">howto<span class="count">12</span></a>
+              <a href="/categories/howto/">howto<span class="count">13</span></a>
             
           
           <li>
@@ -699,12 +709,17 @@
           
           <li>
             
-              <a href="/categories/broadcom/">broadcom<span class="count">3</span></a>
+              <a href="/categories/broadcom/">broadcom<span class="count">4</span></a>
             
           
           <li>
             
               <a href="/categories/career/">career<span class="count">3</span></a>
+            
+          
+          <li>
+            
+              <a href="/categories/pure-storage/">pure storage<span class="count">2</span></a>
             
           
           <li>
@@ -720,11 +735,6 @@
           <li>
             
               <a href="/categories/psustevens/">psustevens<span class="count">1</span></a>
-            
-          
-          <li>
-            
-              <a href="/categories/pure-storage/">pure storage<span class="count">1</span></a>
             
           
           <li>
@@ -804,7 +814,7 @@
     
       © 2025 David Stevens
     . <br>
-    Theme: <a href='https://github.com/pacollins/hugo-future-imperfect-slim' target='_blank' rel='noopener'>Hugo Future Imperfect Slim</a><br>A <a href='https://html5up.net/future-imperfect' target='_blank' rel='noopener'>HTML5 UP port</a> | Powered by <a href='https://gohugo.io/' title='0.145.0' target='_blank' rel='noopener'>Hugo</a>
+    Theme: <a href='https://github.com/pacollins/hugo-future-imperfect-slim' target='_blank' rel='noopener'>Hugo Future Imperfect Slim</a><br>A <a href='https://html5up.net/future-imperfect' target='_blank' rel='noopener'>HTML5 UP port</a> | Powered by <a href='https://gohugo.io/' title='0.147.8' target='_blank' rel='noopener'>Hugo</a>
   </p>
 </footer>
 <a id="back-to-top" href="#" class="fas fa-arrow-up fa-2x"></a>
