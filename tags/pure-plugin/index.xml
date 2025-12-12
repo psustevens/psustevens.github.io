@@ -7,8 +7,15 @@
     <generator>Hugo</generator>
     <language>en</language>
     <copyright>© 2025 David Stevens</copyright>
-    <lastBuildDate>Sun, 07 Dec 2025 11:01:48 -0500</lastBuildDate>
+    <lastBuildDate>Fri, 12 Dec 2025 12:15:29 -0500</lastBuildDate>
     <atom:link href="https://blog.psustevens.com/tags/pure-plugin/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Identifying Pure NVMe Volumes in VCenter</title>
+      <link>https://blog.psustevens.com/2025/12/12/identifying-pure-nvme-volumes-in-vcenter/</link>
+      <pubDate>Fri, 12 Dec 2025 12:15:29 -0500</pubDate>
+      <guid>https://blog.psustevens.com/2025/12/12/identifying-pure-nvme-volumes-in-vcenter/</guid>
+      <description>&lt;p&gt;If you didn&amp;rsquo;t figure it out already by the title of the post, this one is about how to map an NVMe-TCP datastore back to a &lt;a href=&#34;https://www.purestorage.com&#34;&gt;Pure Storage&lt;/a&gt; volume by viewing what is known as the EUI ID. In this blog post, I will cover one way to do this as well as explain what is an EUI ID.&lt;/p&gt;</description>
+    </item>
     <item>
       <title>Identifying Pure Storage SCSI Volumes in VCenter</title>
       <link>https://blog.psustevens.com/2025/12/07/identifying-pure-scsi-volumes-in-vcenter/</link>

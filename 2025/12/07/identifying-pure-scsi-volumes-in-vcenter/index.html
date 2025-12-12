@@ -13,7 +13,7 @@
   <meta itemprop="description" content="In this blog post I&#39;m going to cover a method to identify a SCSI (FC or iSCSI) datastore in vCenter and map it back to a Pure Storage volume.">
   <meta itemprop="datePublished" content="2025-12-07T11:01:48-05:00">
   <meta itemprop="dateModified" content="2025-12-07T11:01:48-05:00">
-  <meta itemprop="wordCount" content="827">
+  <meta itemprop="wordCount" content="849">
   <meta itemprop="image" content="https://blog.psustevens.com/img/main/logo.jpg">
   <meta itemprop="keywords" content="Storage,VCenter,Pure Plugin">
   <meta property="og:url" content="https://blog.psustevens.com/2025/12/07/identifying-pure-scsi-volumes-in-vcenter/">
@@ -387,7 +387,7 @@
 This is the serial number you would use to search for the volume directly on the Pure Storage FlashArray using the GUI or the following CLI command:</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>purevol list | grep -i 730D187406C14775007B3AB1
 </span></span></code></pre></div><h3 id="vsphere-plugin-assist">vSphere Plugin Assist</h3>
-<p>If you are using the <a href="https://www.purestorage.com">Pure Storage</a> vSphere plugin, then by selecting the Summary tab for the datastore you don’t need to go through all of the steps above. Simply look in the widget and the serial number will be there.</p>
+<p>If you are using the <a href="https://www.purestorage.com">Pure Storage</a> <a href="https://support.purestorage.com/bundle/m_user_guides_for_vmware_solutions/page/Solutions/VMware_Platform_Guide/User_Guides_for_VMware_Solutions/topics/concept/c_using_the_pure_storage_plugin_for_the_vsphere_client.html">vSphere plugin</a>, then by selecting the Summary tab for the datastore you don’t need to go through all of the steps above. Simply look in the widget and the serial number will be there.</p>
 <figure><img src="/img/2025/12/07/purePluginvCenterWidgetSCSI.png"
     alt="An image showing the NAA ID for a datastore in the Pure Storage Plugin widget in vCenter"><figcaption>
       <h4>Volume serial number in Pure Storage Plugin widget</h4>
@@ -411,6 +411,11 @@ This is the serial number you would use to search for the volume directly on the
 <li>I explained how to convert an NAA ID to a Pure Storage volume serial number</li>
 </ul>
 <hr>
+<h2 id="series-table-of-contents">Series Table of Contents</h2>
+<p>Here are links to the rest of the series:</p>
+<ul>
+<li><a href="/2025/12/12/identifying-pure-nvme-volumes-in-vcenter//">Part 2: Identifying Pure Storage NVMe Volumes in vCenter</a></li>
+</ul>
 <p>If there is something you think I&rsquo;m missing and feel should be added/corrected, please let me know.<br>
 Thanks for reading!</p>
 
@@ -469,6 +474,8 @@ Thanks for reading!</p>
     <a href="/2025/11/25/resolve-untrusted-ova-certificate/" class="button big previous"><i class="fas fa-angle-left"></i> How to resolve an untrusted OVA Certificate in vCenter</a>
   
   
+    <a href="/2025/12/12/identifying-pure-nvme-volumes-in-vcenter/" class="button big next">Identifying Pure NVMe Volumes in VCenter <i class="fas fa-angle-right"></i></a>
+  
 </div>
 
 
@@ -479,6 +486,21 @@ Thanks for reading!</p>
       <header>
         <h1>Recent posts</h1>
       </header>
+      
+      <article class="mini-post">
+        <section>
+          
+  <a href="/2025/12/12/identifying-pure-nvme-volumes-in-vcenter/" class="image featured">
+    <img src="/img/2025/12/vCenterNaaIdNVMe.png" alt="EUI ID for a Pure Storage NVMe-backed datastore">
+  </a>
+
+
+        </section>
+        <header>
+          <h1><a href="/2025/12/12/identifying-pure-nvme-volumes-in-vcenter/">Identifying Pure NVMe Volumes in VCenter</a></h1>
+          <time class="published" datetime="">December 12, 2025</time>
+        </header>
+      </article>
       
       <article class="mini-post">
         <section>
@@ -510,21 +532,6 @@ Thanks for reading!</p>
         </header>
       </article>
       
-      <article class="mini-post">
-        <section>
-          
-  <a href="/2025/03/29/2025-vexpert-renewal/" class="image featured">
-    <img src="/img/2025/03/IT-guy-holding-7x-vExpert-placard.jpg" alt="IT guy holding 7x vExpert placard">
-  </a>
-
-
-        </section>
-        <header>
-          <h1><a href="/2025/03/29/2025-vexpert-renewal/">2025 vExpert Renewal</a></h1>
-          <time class="published" datetime="">March 29, 2025</time>
-        </header>
-      </article>
-      
       
         <a href="/blog/" class="button">See more</a>
       
@@ -544,12 +551,12 @@ Thanks for reading!</p>
           
           <li>
             
-              <a href="/categories/vmware/">vmware<span class="count">15</span></a>
+              <a href="/categories/vmware/">vmware<span class="count">16</span></a>
             
           
           <li>
             
-              <a href="/categories/howto/">howto<span class="count">13</span></a>
+              <a href="/categories/howto/">howto<span class="count">14</span></a>
             
           
           <li>
@@ -564,12 +571,12 @@ Thanks for reading!</p>
           
           <li>
             
-              <a href="/categories/entrust/">entrust<span class="count">5</span></a>
+              <a href="/categories/broadcom/">broadcom<span class="count">5</span></a>
             
           
           <li>
             
-              <a href="/categories/broadcom/">broadcom<span class="count">4</span></a>
+              <a href="/categories/entrust/">entrust<span class="count">5</span></a>
             
           
           <li>
@@ -579,7 +586,7 @@ Thanks for reading!</p>
           
           <li>
             
-              <a href="/categories/pure-storage/">pure storage<span class="count">2</span></a>
+              <a href="/categories/pure-storage/">pure storage<span class="count">3</span></a>
             
           
           <li>

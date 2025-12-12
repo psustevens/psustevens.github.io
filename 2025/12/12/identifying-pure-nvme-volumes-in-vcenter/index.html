@@ -1,0 +1,722 @@
+<!doctype html>
+<html lang="en">
+  <head>
+  <meta charset="utf-8">
+<title>Identifying Pure NVMe Volumes in VCenter - @PSUStevens Blog</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+
+  <meta name="generator" content="Hugo 0.147.8">
+  
+  <meta itemprop="name" content="Identifying Pure NVMe Volumes in VCenter">
+  <meta itemprop="description" content="In this blog post I&#39;m going to cover a method to identify an NVMe-backed datastore in vCenter and map it back to a Pure Storage volume.">
+  <meta itemprop="datePublished" content="2025-12-12T12:15:29-05:00">
+  <meta itemprop="dateModified" content="2025-12-12T12:15:29-05:00">
+  <meta itemprop="wordCount" content="1173">
+  <meta itemprop="image" content="https://blog.psustevens.com/img/main/logo.jpg">
+  <meta itemprop="keywords" content="Storage,VCenter,Pure Plugin">
+  <meta property="og:url" content="https://blog.psustevens.com/2025/12/12/identifying-pure-nvme-volumes-in-vcenter/">
+  <meta property="og:site_name" content="@PSUStevens Blog">
+  <meta property="og:title" content="Identifying Pure NVMe Volumes in VCenter">
+  <meta property="og:description" content="In this blog post I&#39;m going to cover a method to identify an NVMe-backed datastore in vCenter and map it back to a Pure Storage volume.">
+  <meta property="og:locale" content="en">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="blog">
+    <meta property="article:published_time" content="2025-12-12T12:15:29-05:00">
+    <meta property="article:modified_time" content="2025-12-12T12:15:29-05:00">
+    <meta property="article:tag" content="Storage">
+    <meta property="article:tag" content="VCenter">
+    <meta property="article:tag" content="Pure Plugin">
+    <meta property="og:image" content="https://blog.psustevens.com/img/main/logo.jpg">
+
+  
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="https://blog.psustevens.com/img/main/logo.jpg">
+  <meta name="twitter:title" content="Identifying Pure NVMe Volumes in VCenter">
+  <meta name="twitter:description" content="In this blog post I&#39;m going to cover a method to identify an NVMe-backed datastore in vCenter and map it back to a Pure Storage volume.">
+      <meta name="twitter:site" content="@PSUStevens">
+
+  
+      <script async src="https://www.googletagmanager.com/gtag/js?id=G-GL096KPBB9"></script>
+      <script>
+        var doNotTrack = false;
+        if ( false ) {
+          var dnt = (navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack);
+          var doNotTrack = (dnt == "1" || dnt == "yes");
+        }
+        if (!doNotTrack) {
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', 'G-GL096KPBB9');
+        }
+      </script>
+
+  
+    <link rel="stylesheet"
+    href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/styles/github.min.css">
+  
+  
+    
+      <link rel="stylesheet" href="/css/normalize.css">
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway:400,800,900|Source+Sans+Pro:400,700">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/academicons/1.8.6/css/academicons.min.css">
+      <link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.7.2/css/all.css" integrity="sha384-nRgPTkuX86pH8yjPJUAFuASXQSSl2/bBUiNV47vSYpKFxHJhbcrGnmlYpYJMeD7a" crossorigin="anonymous">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.3.5/jquery.fancybox.min.css" />
+      
+       
+        
+          
+            <link rel="stylesheet" href="/css/main.min.cb6a3b646f6814df0826c8d8cf09f98c363dc5ac439e87240cd8066e3cd7cd68.css" integrity="sha256-y2o7ZG9oFN8IJsjYzwn5jDY9xaxDnockDNgGbjzXzWg=" crossorigin="anonymous">
+          
+        <link rel="stylesheet" href="/css/add-on.css">
+          
+      
+    
+  
+  
+  
+  
+</head>
+
+  <body>
+    
+<header id="site-header">
+  <nav id="site-nav">
+    <h1 class="nav-title">
+      <a href="/">
+        
+          
+            Blog
+          
+        
+      </a>
+    </h1>
+    <menu id="site-nav-menu" class="flyout-menu">
+      
+        
+          
+          
+            <a href="/" class="link"><i class='fa fa-home'></i> Home</a>
+          
+        
+      
+        
+          
+          
+            <a href="/about/" class="link"><i class='far fa-id-card'></i> About</a>
+          
+        
+      
+        
+          
+          
+            <a href="/categories/" class="link"><i class='fas fa-sitemap'></i> Categories</a>
+          
+        
+      
+        
+          
+          
+            <a href="/tags/" class="link"><i class='fas fa-sitemap'></i> Tags</a>
+          
+        
+      
+      <a href="#share-menu" class="share-toggle"><i class="fas fa-share-alt">&nbsp;</i>Share</a>
+      
+
+    </menu>
+    
+
+    <a href="#share-menu" class="share-toggle"><i class="fas fa-share-alt fa-2x">&nbsp;</i></a>
+    
+    <a href="#site-nav" class="nav-toggle"><i class="fas fa-bars fa-2x"></i></a>
+  </nav>
+  
+  
+    <menu id="share-menu" class="flyout-menu">
+      <h1>Share Post</h1>
+      
+
+
+
+
+  
+    
+    <a href="//twitter.com/share?text=Identifying%20Pure%20NVMe%20Volumes%20in%20VCenter&amp;url=https%3a%2f%2fblog.psustevens.com%2f2025%2f12%2f12%2fidentifying-pure-nvme-volumes-in-vcenter%2f" target="_blank" rel="noopener" class="share-btn twitter">
+        <i class="fab fa-twitter"></i><p>&nbsp;Twitter</p>
+      </a>
+  
+
+  
+        <a href="//www.linkedin.com/shareArticle?url=https%3a%2f%2fblog.psustevens.com%2f2025%2f12%2f12%2fidentifying-pure-nvme-volumes-in-vcenter%2f&amp;title=Identifying%20Pure%20NVMe%20Volumes%20in%20VCenter" target="_blank" rel="noopener" class="share-btn linkedin">
+            <i class="fab fa-linkedin"></i><p>&nbsp;LinkedIn</p>
+          </a>
+  
+
+  
+        <a href="mailto:?subject=Check out this post by map%5bname%3a%40PSUStevens%5d&amp;body=https%3a%2f%2fblog.psustevens.com%2f2025%2f12%2f12%2fidentifying-pure-nvme-volumes-in-vcenter%2f" target="_blank" class="share-btn email" data-proofer-ignore>
+          <i class="fas fa-envelope"></i><p>&nbsp;Email</p>
+        </a>
+  
+
+  
+        <a href="//bsky.app/intent/compose?text=Identifying%20Pure%20NVMe%20Volumes%20in%20VCenter&nbsp;https%3a%2f%2fblog.psustevens.com%2f2025%2f12%2f12%2fidentifying-pure-nvme-volumes-in-vcenter%2f" target="_blank" rel="noopener" class="share-btn bluesky">
+          <i class="fab fa-bluesky"></i><p>&nbsp;Bluesky</p>
+        </a>
+        
+  
+
+
+    </menu>
+  
+</header>
+
+    <div id="wrapper">
+      <section id="site-intro">
+  <a href="/"><img src="/img/main/logo.jpg" class="circle" width="" alt="@PSUStevens headshot" /></a>
+  <header>
+    <h1>@PSUStevens blog</h1>
+  </header>
+  <main>
+    <p>You are reading the blog of <a href='https://twitter.com/PSUStevens'>@PSUStevens</a>.  </br>You can reach me through one of the social accounts below.</p>
+  </main>
+  
+    <footer>
+      <ul class="socnet-icons">
+        
+
+        <li><a href="//github.com/psustevens" target="_blank" rel="noopener" title="GitHub" class="fab fa-github"></a></li>
+
+
+
+
+
+
+
+
+
+
+
+<li><a href="//linkedin.com/in/davidlstevens" target="_blank" rel="noopener" title="LinkedIn" class="fab fa-linkedin"></a></li>
+<li><a href="//linkedin.com/company/purestorage" target="_blank" rel="noopener" title="LinkedIn Company" class="fab fa-linkedin"></a></li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<li><a href="//twitter.com/PSUStevens" target="_blank" rel="noopener" title="Twitter" class="fab fa-twitter"></a></li>
+
+
+
+
+
+
+
+
+
+
+
+<li><a href="//bsky.app@psustevens.bsky.social" target="_blank" rel="noopener" title="bluesky" class="fab fa-bluesky"></a></li>
+
+      </ul>
+    </footer>
+  
+</section>
+
+      <main id="site-main">
+        <article class="post">
+  <header>
+  <div class="title">
+    
+        <h2><a href="/2025/12/12/identifying-pure-nvme-volumes-in-vcenter/">Identifying Pure NVMe Volumes in VCenter</a></h2>
+    
+    
+        <p>In this blog post I&#39;m going to cover a method to identify an NVMe-backed datastore in vCenter and map it back to a Pure Storage volume.</p>
+    
+</div>
+  <div class="meta">
+    <time class="published" datetime="2025-12-12 12:15:29 -0500 EST">
+      December 12, 2025
+    </time>
+    <span class="author">PSUStevens</span>
+    
+      <p>6 minutes read</p>
+    
+  </div>
+</header>
+
+  <section id="socnet-share">
+    
+
+
+
+
+  
+    
+    <a href="//twitter.com/share?text=Identifying%20Pure%20NVMe%20Volumes%20in%20VCenter&amp;url=https%3a%2f%2fblog.psustevens.com%2f2025%2f12%2f12%2fidentifying-pure-nvme-volumes-in-vcenter%2f" target="_blank" rel="noopener" class="share-btn twitter">
+        <i class="fab fa-twitter"></i><p>&nbsp;Twitter</p>
+      </a>
+  
+
+  
+        <a href="//www.linkedin.com/shareArticle?url=https%3a%2f%2fblog.psustevens.com%2f2025%2f12%2f12%2fidentifying-pure-nvme-volumes-in-vcenter%2f&amp;title=Identifying%20Pure%20NVMe%20Volumes%20in%20VCenter" target="_blank" rel="noopener" class="share-btn linkedin">
+            <i class="fab fa-linkedin"></i><p>&nbsp;LinkedIn</p>
+          </a>
+  
+
+  
+        <a href="mailto:?subject=Check out this post by map%5bname%3a%40PSUStevens%5d&amp;body=https%3a%2f%2fblog.psustevens.com%2f2025%2f12%2f12%2fidentifying-pure-nvme-volumes-in-vcenter%2f" target="_blank" class="share-btn email" data-proofer-ignore>
+          <i class="fas fa-envelope"></i><p>&nbsp;Email</p>
+        </a>
+  
+
+  
+        <a href="//bsky.app/intent/compose?text=Identifying%20Pure%20NVMe%20Volumes%20in%20VCenter&nbsp;https%3a%2f%2fblog.psustevens.com%2f2025%2f12%2f12%2fidentifying-pure-nvme-volumes-in-vcenter%2f" target="_blank" rel="noopener" class="share-btn bluesky">
+          <i class="fab fa-bluesky"></i><p>&nbsp;Bluesky</p>
+        </a>
+        
+  
+
+
+  </section>
+  
+  <a href="/2025/12/12/identifying-pure-nvme-volumes-in-vcenter/" class="image featured">
+    <img src="/img/2025/12/vCenterNaaIdNVMe.png" alt="EUI ID for a Pure Storage NVMe-backed datastore">
+  </a>
+
+
+  <div class="content">
+    <p>If you didn&rsquo;t figure it out already by the title of the post, this one is about how to map an NVMe-TCP datastore back to a <a href="https://www.purestorage.com">Pure Storage</a> volume by viewing what is known as the EUI ID. In this blog post, I will cover one way to do this as well as explain what is an EUI ID.</p>
+<p>I didn&rsquo;t intend it this way, but because of this second post I&rsquo;ve convinced myself into working on a series on how to work with <a href="https://www.purestorage.com">Pure Storage</a> volumes inside VMware vCenter via the GUI and CLI.   I&rsquo;ll have links to all posts in the series at the bottom of each page.  I&rsquo;ll also make sure to update the last post with a pointer to this one.</p>
+<h2 id="nvme-discovery-process">NVMe Discovery Process</h2>
+<p>In my last post I mentioned at a high-level how an ESXi host gathers information about a SCSI volume using the SCSI INQUIRY command.  For NVMe, this process is very different.  An ESXi host determines information about NVMe volumes via a connection process utilizing NVMe protocol structures:</p>
+<ul>
+<li>NVMe Qualified Names (NQNs)</li>
+<li>Controllers</li>
+<li>Namespaces</li>
+</ul>
+<h3 id="nvme-qualified-names-nqns">NVMe Qualified Names (NQNs)</h3>
+<p>Similar to iSCSI and Fibre Channel, the ESXi host and the storage array must have a capable adapter (hardware or software) that supports the NVMe protocol.  This adapter is the identity of the ESXi host(s) and <a href="https://www.purestorage.com/products/unified-block-file-storage.html">FlashArray</a> on the NVMe fabric.  Each presents a unique <strong>NVMe Qualified Name (NQN)</strong> on the fabric.</p>
+<h3 id="controller-discovery">Controller Discovery</h3>
+<p>To begin, the ESXi host initiates a connection to a <strong>Discovery Controller</strong> on the storage array.  The <a href="https://www.purestorage.com/products/unified-block-file-storage.html">FlashArray</a> is the target in this scenario.  When the Discovery Controller on the FlashArray receives the ESXi host&rsquo;s request it returns a list of available I/O Controllers that it can connect to.  The I/O Controller acts as the access path to the volumes on the FlashArray.  For high availability, the ESXi host connects to multiple I/O controllers, think ports on the FlashArray configured for NVMe.</p>
+<h3 id="nvme-namespaces">NVMe Namespaces</h3>
+<p>After the ESXi host connects to the I/O controller(s) it queries for available <strong>NVMe Namespaces</strong>.  An <strong>NVMe Namespace</strong> is equivalent to a SCSI LUN/volume.  On the FlashArray an adminstrator would map the volumes to an associated host object(s) or host group.  After the ESXi host discovers the appropriate namespace it is presented as a storage device.</p>
+<h2 id="what-is-an-eui-id">What is an EUI ID?</h2>
+<p>After the Discovery Process completes the returned data is used to generate a globally unique, 64-bit identifier for the storage device. This unique identifier is referred to as the EUI ID or the <strong>Extended Unique Identifier (EUI)</strong>.  The EUI ID contains the unique OUI for the <a href="https://www.purestorage.com/products/unified-block-file-storage.html">FlashArray</a> and the storage volume&rsquo;s specific serial number, making it a persistent identifier for the volume, even across ESXi host reboots.</p>
+<p>While the NVMe protocol doesn&rsquo;t technically use LUN numbers like SCSI, an ESXi still needs a path identifier. The <strong>Namespace ID (NSID)</strong>, which is an integer assigned by the FlashArray to the volume, is used by ESXi to create an internal, path-specific identifier (sometimes appearing as a non-standard LUN ID in some esxcli output).  ESXi uses its <strong>High-Performance Plug-in (HPP)</strong> to claim the NVMe targets and apply path selection policies (like Round Robin) for optimal performance and redundancy.  The High-Performance Plug-in is different from the <a href="https://techdocs.broadcom.com/us/en/vmware-cis/vsphere/vsphere/9-0/vsphere-storage/understanding-multipathing-and-failover-in-the-esxi-environment/vmware-multipathing-module.html#GUID-9DED1F73-7375-4957-BF69-41B56C3E5224-en">VMware Native Mulitpathing Plug-in (NMP)</a>.</p>
+<p>Here is an example of an EUI ID:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>eui.00f269a91400c54024a9378f007813b1
+</span></span></code></pre></div><h2 id="where-can-i-find-an-eui-id">Where can I find an EUI ID?</h2>
+<p>You can see the ID using multiple methods.  The first would be to look in vCenter by following the steps below:</p>
+<ol>
+<li>Click on a datastore being hosted on a Pure Storage FlashArray</li>
+<li>Click on the <strong>Configure</strong> tab of the datastore</li>
+<li>Click on <strong>Device Backing</strong></li>
+</ol>
+<p>At this point the EUI ID will be displayed to the right.</p>
+<figure><img src="/img/2025/12/12/vCenterNaaIdNVMe.png"
+    alt="An image showing the NAA ID for a datastore in vCenter"><figcaption>
+      <h4>EUI ID in vCenter</h4>
+    </figcaption>
+</figure>
+
+<p>The other way to view the EUI ID is to use the <em><strong>esxcli storage core device list</strong></em> command.  Simply SSH into one of your ESX hosts and run the command.  You will see output similar to what I shown below.  This is just a snippet of the full output.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#75715e"># esxcli storage core device list</span>
+</span></span><span style="display:flex;"><span>eui.00f269a91400c54024a9378f007813b1
+</span></span><span style="display:flex;"><span>    Display Name: NVMe TCP Disk<span style="color:#f92672">(</span>eui.00f269a91400c54024a9378f007813b1<span style="color:#f92672">)</span>
+</span></span><span style="display:flex;"><span>    ... 
+</span></span><span style="display:flex;"><span>    Device Type: Direct-Access 
+</span></span><span style="display:flex;"><span>    Multipath Plugin: HPP
+</span></span><span style="display:flex;"><span>    Devfs Path: /vmfs/devices/disks/eui.00f269a91400c54024a9378f007813b1
+</span></span><span style="display:flex;"><span>    Vendor: NVMe
+</span></span><span style="display:flex;"><span>    Model: Pure Storage FlashArray
+</span></span><span style="display:flex;"><span>    ...
+</span></span><span style="display:flex;"><span>    Other UIDs: vml.0600f269a91400c54024a9378f007813b1
+</span></span><span style="display:flex;"><span>    ...
+</span></span></code></pre></div><h2 id="break-down-of-an-eui-id">Break down of an EUI ID</h2>
+<p>At first glance an EUI ID looks like gobbledy gook.  Fortunately, once you know the “formula,” of an EUI ID it’s easy to determine which NVMe datastores are backed by a <a href="https://www.purestorage.com">Pure Storage</a> volume.</p>
+<p>Let’s take the EUI identifier for a vSphere datastore accessed over the NVMe-TCP protocol:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>eui.00f269a91400c54024a9378f007813b1
+</span></span></code></pre></div><p>Here is the &ldquo;formula&rdquo; for breaking down that identifier:</p>
+<table>
+  <thead>
+      <tr>
+          <th>Segment</th>
+          <th>Length (Hex Digits)</th>
+          <th>Value</th>
+          <th>Interpretation</th>
+          <th>Description</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>1</td>
+          <td>2</td>
+          <td>eui.00</td>
+          <td>Standard EUI Prefix</td>
+          <td>Standard prefix for an EUI identifier</td>
+      </tr>
+      <tr>
+          <td>2</td>
+          <td>14</td>
+          <td>f269a91400c540</td>
+          <td>Pure Array ID (World Wide Name - WWN)</td>
+          <td>This 14-digit hex string is the unique WWN of the Pure Storage FlashArray</td>
+      </tr>
+      <tr>
+          <td>3</td>
+          <td>6</td>
+          <td>24a937</td>
+          <td>Pure Storage OUI (Organizational Unique Identifier)</td>
+          <td>This segment is often a fixed or reserved value used as a separator/indicator by VMware or the storage driver, and it&rsquo;s discarded when forming the final Pure Volume ID. It is NOT part of the Pure Volume ID</td>
+      </tr>
+      <tr>
+          <td>4</td>
+          <td>10</td>
+          <td>8f007813b1</td>
+          <td>Pure Volume Identifier Suffix</td>
+          <td>The unique hex digits that identify the specific volume</td>
+      </tr>
+  </tbody>
+</table>
+<h2 id="conversion-to-pure-volume-serial-number">Conversion to Pure Volume Serial Number</h2>
+<p>The final Pure Volume Serial Number is formed by concatenating the Pure Array ID (WWN) and the Pure Volume ID Suffix.</p>
+<h5 id="pure-volume-serial--array-id--volume-suffix">Pure Volume Serial = Array ID + Volume Suffix</h5>
+<ol>
+<li>Pure Array ID (WWN): F269A91400C540</li>
+<li>Pure Volume Identifier Suffix: 8F007813B1</li>
+<li>Concatenate: F269A91400C540 + 8F007813B1</li>
+</ol>
+<p>The resulting 24-digit hexadecimal volume serial number is:  <strong>F269A91400C5408F007813B1</strong>
+This is the serial number you would use to search for the volume directly on the Pure Storage FlashArray using the GUI or the following CLI command:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>purevol list | grep -i 730D187406C14775007B3AB1
+</span></span></code></pre></div><h3 id="vsphere-plugin-assist">vSphere Plugin Assist</h3>
+<p>If you are using the <a href="https://www.purestorage.com">Pure Storage</a> <a href="https://support.purestorage.com/bundle/m_user_guides_for_vmware_solutions/page/Solutions/VMware_Platform_Guide/User_Guides_for_VMware_Solutions/topics/concept/c_using_the_pure_storage_plugin_for_the_vsphere_client.html">vSphere plugin</a>, then by selecting the Summary tab for the datastore you don’t need to go through all of the steps above. Simply look in the widget and the serial number will be there.</p>
+<figure><img src="/img/2025/12/12/purePluginvCenterWidgetNVMe.png"
+    alt="An image showing the EUI ID for a datastore in the Pure Storage Plugin widget in vCenter"><figcaption>
+      <h4>Volume serial number in Pure Storage Plugin widget</h4>
+    </figcaption>
+</figure>
+
+<h3 id="broadcom-techdocs">Broadcom Techdocs</h3>
+<p>While doing some research for this post I ran into several Broadcom technical documents on this subject.  Here are a few of them that pertain to this topic.</p>
+<ul>
+<li><a href="https://techdocs.broadcom.com/us/en/vmware-cis/vsphere/vsphere/9-0/vsphere-storage/managing-esxi-storage-devices/viewing-storage-device-available-to-an-esxi-host/display-storage-devices-for-an-adapter.html">ESX Storage Device Names and Identifiers</a></li>
+<li><a href="https://techdocs.broadcom.com/us/en/vmware-cis/vsphere/vsphere/9-0/vsphere-storage/managing-esxi-storage-devices/viewing-storage-device-available-to-an-esxi-host.html">Viewing Storage Devices Available to ESX Hosts</a></li>
+<li><a href="https://techdocs.broadcom.com/us/en/vmware-cis/vsphere/vsphere/9-0/vsphere-storage/managing-esxi-storage-devices/viewing-storage-device-available-to-an-esxi-host/display-storage-devices-for-an-esxi-host.html">Display Storage Devices for an ESX Host</a></li>
+<li><a href="https://techdocs.broadcom.com/us/en/vmware-cis/vsphere/vsphere/9-0/vsphere-storage/managing-esxi-storage-devices/viewing-storage-device-available-to-an-esxi-host/display-storage-devices-for-an-adapter.html">Display Storage Devices for an Adapter</a></li>
+<li><a href="https://techdocs.broadcom.com/us/en/vmware-cis/vsphere/vsphere/9-0/vsphere-storage/managing-esxi-storage-devices/nvme-devices-with-nguid-identifiers.html">NVMe Devices with NGUID Device Identifiers</a></li>
+</ul>
+<h2 id="summary">Summary</h2>
+<p>Let&rsquo;s summarize what we covered in this post:</p>
+<ul>
+<li>I covered the NVMe Discovery process</li>
+<li>I mentioned what is an EUI ID</li>
+<li>I mentioned how to find an EUI ID in vSphere</li>
+<li>I broke down the format of an EUI ID</li>
+<li>I explained how to convert an EUI ID to a Pure Storage volume serial number</li>
+</ul>
+<hr>
+<h2 id="series-table-of-contents">Series Table of Contents</h2>
+<p>Here are links to the rest of the series:</p>
+<ul>
+<li><a href="/2025/12/07/identifying-pure-scsi-volumes-in-vcenter//">Part 1: Identifying Pure Storage SCSI Volumes in vCenter</a></li>
+</ul>
+<p>If there is something you think I&rsquo;m missing and feel should be added/corrected, please let me know.<br>
+Thanks for reading!</p>
+
+  </div>
+  <footer>
+    <ul class="stats">
+  
+    
+    
+      <li class="categories">
+        <ul>
+          
+            
+            <li><a class="article-category-link" href="https://blog.psustevens.com/categories/howto">HowTo</a></li>
+          
+            
+            <li><a class="article-category-link" href="https://blog.psustevens.com/categories/pure-storage">Pure Storage</a></li>
+          
+            
+            <li><a class="article-category-link" href="https://blog.psustevens.com/categories/vmware">VMware</a></li>
+          
+            
+            <li><a class="article-category-link" href="https://blog.psustevens.com/categories/broadcom">Broadcom</a></li>
+          
+        </ul>
+      </li>
+    
+  
+  
+    
+    
+      <li class="tags">
+        <ul>
+          
+            
+            <li><a class="article-category-link" href="https://blog.psustevens.com/tags/storage">storage</a></li>
+          
+            
+            <li><a class="article-category-link" href="https://blog.psustevens.com/tags/vcenter">vCenter</a></li>
+          
+            
+            <li><a class="article-category-link" href="https://blog.psustevens.com/tags/pure-plugin">Pure Plugin</a></li>
+          
+        </ul>
+      </li>
+    
+  
+</ul>
+
+  </footer>
+</article>
+
+
+<div class="pagination">
+  
+    <a href="/2025/12/07/identifying-pure-scsi-volumes-in-vcenter/" class="button big previous"><i class="fas fa-angle-left"></i> Identifying Pure Storage SCSI Volumes in VCenter</a>
+  
+  
+</div>
+
+
+      </main>
+      <section id="site-sidebar">
+  
+    <section id="recent-posts">
+      <header>
+        <h1>Recent posts</h1>
+      </header>
+      
+      <article class="mini-post">
+        <section>
+          
+  <a href="/2025/12/12/identifying-pure-nvme-volumes-in-vcenter/" class="image featured">
+    <img src="/img/2025/12/vCenterNaaIdNVMe.png" alt="EUI ID for a Pure Storage NVMe-backed datastore">
+  </a>
+
+
+        </section>
+        <header>
+          <h1><a href="/2025/12/12/identifying-pure-nvme-volumes-in-vcenter/">Identifying Pure NVMe Volumes in VCenter</a></h1>
+          <time class="published" datetime="">December 12, 2025</time>
+        </header>
+      </article>
+      
+      <article class="mini-post">
+        <section>
+          
+  <a href="/2025/12/07/identifying-pure-scsi-volumes-in-vcenter/" class="image featured">
+    <img src="/img/2025/12/vCenterNaaIdSCSI.png" alt="NAA ID for a Pure Storage-backed datastore">
+  </a>
+
+
+        </section>
+        <header>
+          <h1><a href="/2025/12/07/identifying-pure-scsi-volumes-in-vcenter/">Identifying Pure Storage SCSI Volumes in VCenter</a></h1>
+          <time class="published" datetime="">December 7, 2025</time>
+        </header>
+      </article>
+      
+      <article class="mini-post">
+        <section>
+          
+  <a href="/2025/11/25/resolve-untrusted-ova-certificate/" class="image featured">
+    <img src="/img/2025/11/suspicious-ITguy.jpg" alt="An IT guy suspiciously staring at a computer screen">
+  </a>
+
+
+        </section>
+        <header>
+          <h1><a href="/2025/11/25/resolve-untrusted-ova-certificate/">How to resolve an untrusted OVA Certificate in vCenter</a></h1>
+          <time class="published" datetime="">November 25, 2025</time>
+        </header>
+      </article>
+      
+      
+        <a href="/blog/" class="button">See more</a>
+      
+    </section>
+  
+
+  
+    
+      <section id="categories">
+        <header>
+          <h1><a href="/categories">Categories</a></h1>
+        </header>
+        <ul>
+          
+            
+          
+          
+          <li>
+            
+              <a href="/categories/vmware/">vmware<span class="count">16</span></a>
+            
+          
+          <li>
+            
+              <a href="/categories/howto/">howto<span class="count">14</span></a>
+            
+          
+          <li>
+            
+              <a href="/categories/hytrust/">hytrust<span class="count">7</span></a>
+            
+          
+          <li>
+            
+              <a href="/categories/blogging/">blogging<span class="count">6</span></a>
+            
+          
+          <li>
+            
+              <a href="/categories/broadcom/">broadcom<span class="count">5</span></a>
+            
+          
+          <li>
+            
+              <a href="/categories/entrust/">entrust<span class="count">5</span></a>
+            
+          
+          <li>
+            
+              <a href="/categories/career/">career<span class="count">3</span></a>
+            
+          
+          <li>
+            
+              <a href="/categories/pure-storage/">pure storage<span class="count">3</span></a>
+            
+          
+          <li>
+            
+              <a href="/categories/api/">api<span class="count">1</span></a>
+            
+          
+          <li>
+            
+              <a href="/categories/github/">github<span class="count">1</span></a>
+            
+          
+          <li>
+            
+              <a href="/categories/psustevens/">psustevens<span class="count">1</span></a>
+            
+          
+          <li>
+            
+              <a href="/categories/synology/">synology<span class="count">1</span></a>
+            
+          
+          </li>
+        </ul>
+      </section>
+    
+  
+
+  <section id="mini-bio">
+    <header>
+      <h1>About</h1>
+    </header>
+    <p>This is my personal blog about technical topics including virtualization, storage, networking, backups, and some random IT stuff that strikes my fancy.</p>
+    <footer>
+      <a href="/about" class="button">Learn More</a>
+    </footer>
+  </section>
+</section>
+
+      <footer id="site-footer">
+  
+      <ul class="socnet-icons">
+        
+
+        <li><a href="//github.com/psustevens" target="_blank" rel="noopener" title="GitHub" class="fab fa-github"></a></li>
+
+
+
+
+
+
+
+
+
+
+
+<li><a href="//linkedin.com/in/davidlstevens" target="_blank" rel="noopener" title="LinkedIn" class="fab fa-linkedin"></a></li>
+<li><a href="//linkedin.com/company/purestorage" target="_blank" rel="noopener" title="LinkedIn Company" class="fab fa-linkedin"></a></li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<li><a href="//twitter.com/PSUStevens" target="_blank" rel="noopener" title="Twitter" class="fab fa-twitter"></a></li>
+
+
+
+
+
+
+
+
+
+
+
+<li><a href="//bsky.app@psustevens.bsky.social" target="_blank" rel="noopener" title="bluesky" class="fab fa-bluesky"></a></li>
+
+      </ul>
+  
+  <p class="copyright">
+    
+      © 2025 David Stevens
+    . <br>
+    Theme: <a href='https://github.com/pacollins/hugo-future-imperfect-slim' target='_blank' rel='noopener'>Hugo Future Imperfect Slim</a><br>A <a href='https://html5up.net/future-imperfect' target='_blank' rel='noopener'>HTML5 UP port</a> | Powered by <a href='https://gohugo.io/' title='0.147.8' target='_blank' rel='noopener'>Hugo</a>
+  </p>
+</footer>
+<a id="back-to-top" href="#" class="fas fa-arrow-up fa-2x"></a>
+
+      
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/highlight.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/languages/html.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/languages/css.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/languages/js.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/languages/toml.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/languages/PowerShell.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/languages/markdown.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/languages/plaintext.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script>
+
+
+  
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/skel/3.0.1/skel.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.3.5/jquery.fancybox.min.js"></script>
+  <script src=/js/util.js></script>
+  <script src=/js/main.js></script>
+  <script src=/js/add-on.js></script>
+  
+
+
+
+
+    </div>
+  </body>
+</html>

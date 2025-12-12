@@ -12,7 +12,7 @@
   <meta itemprop="name" content="VCenter">
   <meta itemprop="description" content="The blog of @PSUStevens on Twitter and davidlstevens on LinkedIn.">
   <meta itemprop="datePublished" content="2025-12-07T11:01:48-05:00">
-  <meta itemprop="dateModified" content="2025-12-07T11:01:48-05:00">
+  <meta itemprop="dateModified" content="2025-12-12T12:15:29-05:00">
   <meta itemprop="image" content="https://blog.psustevens.com/img/main/logo.jpg">
   <meta property="og:url" content="https://blog.psustevens.com/tags/vcenter/">
   <meta property="og:site_name" content="@PSUStevens Blog">
@@ -236,6 +236,87 @@
   <header>
   <div class="title">
     
+        <h2><a href="/2025/12/12/identifying-pure-nvme-volumes-in-vcenter/">Identifying Pure NVMe Volumes in VCenter</a></h2>
+    
+    
+        <p>In this blog post I&#39;m going to cover a method to identify an NVMe-backed datastore in vCenter and map it back to a Pure Storage volume.</p>
+    
+</div>
+  <div class="meta">
+    <time class="published" datetime="2025-12-12 12:15:29 -0500 EST">
+      December 12, 2025
+    </time>
+    <span class="author">PSUStevens</span>
+    
+      <p>6 minutes read</p>
+    
+  </div>
+</header>
+
+  
+  <a href="/2025/12/12/identifying-pure-nvme-volumes-in-vcenter/" class="image featured">
+    <img src="/img/2025/12/vCenterNaaIdNVMe.png" alt="EUI ID for a Pure Storage NVMe-backed datastore">
+  </a>
+
+
+  
+  
+  
+  <p>If you didn&rsquo;t figure it out already by the title of the post, this one is about how to map an NVMe-TCP datastore back to a <a href="https://www.purestorage.com">Pure Storage</a> volume by viewing what is known as the EUI ID. In this blog post, I will cover one way to do this as well as explain what is an EUI ID.</p>
+  <footer>
+    <a href="/2025/12/12/identifying-pure-nvme-volumes-in-vcenter/" class="button big">Read more</a>
+    <ul class="stats">
+  
+    
+    
+      <li class="categories">
+        <ul>
+          
+            
+            <li><a class="article-category-link" href="https://blog.psustevens.com/categories/howto">HowTo</a></li>
+          
+            
+            <li><a class="article-category-link" href="https://blog.psustevens.com/categories/pure-storage">Pure Storage</a></li>
+          
+            
+            <li><a class="article-category-link" href="https://blog.psustevens.com/categories/vmware">VMware</a></li>
+          
+            
+            <li><a class="article-category-link" href="https://blog.psustevens.com/categories/broadcom">Broadcom</a></li>
+          
+        </ul>
+      </li>
+    
+  
+  
+    
+    
+      <li class="tags">
+        <ul>
+          
+            
+            <li><a class="article-category-link" href="https://blog.psustevens.com/tags/storage">storage</a></li>
+          
+            
+            <li><a class="article-category-link" href="https://blog.psustevens.com/tags/vcenter">vCenter</a></li>
+          
+            
+            <li><a class="article-category-link" href="https://blog.psustevens.com/tags/pure-plugin">Pure Plugin</a></li>
+          
+        </ul>
+      </li>
+    
+  
+</ul>
+
+  </footer>
+</article>
+
+        
+            <article class="post">
+  <header>
+  <div class="title">
+    
         <h2><a href="/2025/12/07/identifying-pure-scsi-volumes-in-vcenter/">Identifying Pure Storage SCSI Volumes in VCenter</a></h2>
     
     
@@ -393,75 +474,6 @@
 </article>
 
         
-            <article class="post">
-  <header>
-  <div class="title">
-    
-        <h2><a href="/2023/03/30/2023-03-30-did_you_know_about_vcenter_api-commands/">Did you know about vCenter API Commands?</a></h2>
-    
-    
-        <p>In this post I&#39;m going to cover the vCenter API Commands.  These API Commands are accessible from the vCenter CLI.  Intrigued?  Read on...</p>
-    
-</div>
-  <div class="meta">
-    <time class="published" datetime="2023-03-30 20:10:36 -0500 -0500">
-      March 30, 2023
-    </time>
-    <span class="author">PSUStevens</span>
-    
-      <p>5 minutes read</p>
-    
-  </div>
-</header>
-
-  
-  <a href="/2023/03/30/2023-03-30-did_you_know_about_vcenter_api-commands/" class="image featured">
-    <img src="/img/2023/03/API-image.png" alt="">
-  </a>
-
-
-  
-  
-  
-  <p>I recently wrote about a little issue where I had to quickly get my lab hosts and vCenter upgraded to vSphere 7.0U3k luckily vSphere Lifecycle Manager saved me.  During that process I discovered in vCenter there are a bunch of API calls you can make directly from the CLI once you SSH into vCenter.</p>
-  <footer>
-    <a href="/2023/03/30/2023-03-30-did_you_know_about_vcenter_api-commands/" class="button big">Read more</a>
-    <ul class="stats">
-  
-    
-    
-      <li class="categories">
-        <ul>
-          
-            
-            <li><a class="article-category-link" href="https://blog.psustevens.com/categories/vmware">VMware</a></li>
-          
-            
-            <li><a class="article-category-link" href="https://blog.psustevens.com/categories/api">API</a></li>
-          
-        </ul>
-      </li>
-    
-  
-  
-    
-    
-      <li class="tags">
-        <ul>
-          
-            
-            <li><a class="article-category-link" href="https://blog.psustevens.com/tags/vcenter">vCenter</a></li>
-          
-        </ul>
-      </li>
-    
-  
-</ul>
-
-  </footer>
-</article>
-
-        
         
 <div class="pagination">
   
@@ -479,6 +491,21 @@
       <header>
         <h1>Recent posts</h1>
       </header>
+      
+      <article class="mini-post">
+        <section>
+          
+  <a href="/2025/12/12/identifying-pure-nvme-volumes-in-vcenter/" class="image featured">
+    <img src="/img/2025/12/vCenterNaaIdNVMe.png" alt="EUI ID for a Pure Storage NVMe-backed datastore">
+  </a>
+
+
+        </section>
+        <header>
+          <h1><a href="/2025/12/12/identifying-pure-nvme-volumes-in-vcenter/">Identifying Pure NVMe Volumes in VCenter</a></h1>
+          <time class="published" datetime="">December 12, 2025</time>
+        </header>
+      </article>
       
       <article class="mini-post">
         <section>
@@ -510,21 +537,6 @@
         </header>
       </article>
       
-      <article class="mini-post">
-        <section>
-          
-  <a href="/2025/03/29/2025-vexpert-renewal/" class="image featured">
-    <img src="/img/2025/03/IT-guy-holding-7x-vExpert-placard.jpg" alt="IT guy holding 7x vExpert placard">
-  </a>
-
-
-        </section>
-        <header>
-          <h1><a href="/2025/03/29/2025-vexpert-renewal/">2025 vExpert Renewal</a></h1>
-          <time class="published" datetime="">March 29, 2025</time>
-        </header>
-      </article>
-      
       
         <a href="/blog/" class="button">See more</a>
       
@@ -544,12 +556,12 @@
           
           <li>
             
-              <a href="/categories/vmware/">vmware<span class="count">15</span></a>
+              <a href="/categories/vmware/">vmware<span class="count">16</span></a>
             
           
           <li>
             
-              <a href="/categories/howto/">howto<span class="count">13</span></a>
+              <a href="/categories/howto/">howto<span class="count">14</span></a>
             
           
           <li>
@@ -564,12 +576,12 @@
           
           <li>
             
-              <a href="/categories/entrust/">entrust<span class="count">5</span></a>
+              <a href="/categories/broadcom/">broadcom<span class="count">5</span></a>
             
           
           <li>
             
-              <a href="/categories/broadcom/">broadcom<span class="count">4</span></a>
+              <a href="/categories/entrust/">entrust<span class="count">5</span></a>
             
           
           <li>
@@ -579,7 +591,7 @@
           
           <li>
             
-              <a href="/categories/pure-storage/">pure storage<span class="count">2</span></a>
+              <a href="/categories/pure-storage/">pure storage<span class="count">3</span></a>
             
           
           <li>
