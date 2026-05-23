@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>PureStoragePowerShellSDK2 on @PSUStevens Blog</title>
+    <link>https://blog.psustevens.com/tags/purestoragepowershellsdk2/</link>
+    <description>Recent content in PureStoragePowerShellSDK2 on @PSUStevens Blog</description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <copyright>© 2025 David Stevens</copyright>
+    <lastBuildDate>Fri, 22 May 2026 09:15:25 -0400</lastBuildDate>
+    <atom:link href="https://blog.psustevens.com/tags/purestoragepowershellsdk2/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>How to Get Everpure Flashmodule Capacity</title>
+      <link>https://blog.psustevens.com/2026/05/22/how-to-get-everpure-flashmodule-capacity/</link>
+      <pubDate>Fri, 22 May 2026 09:15:25 -0400</pubDate>
+      <guid>https://blog.psustevens.com/2026/05/22/how-to-get-everpure-flashmodule-capacity/</guid>
+      <description>&lt;p&gt;If you manage one or more &lt;a href=&#34;https://www.everpuredata.com&#34;&gt;Everpure&lt;/a&gt; &lt;a href=&#34;https://www.everpuredata.com/flasharray&#34;&gt;FlashArrays&lt;/a&gt;, you&amp;rsquo;ve probably needed a quick answer to a simple question: &lt;em&gt;What flash modules are installed, in which slot, and what is the capacity of each one?&lt;/em&gt;  If this is you, then continue reading for more details.&lt;/p&gt;&#xA;&lt;p&gt;Purity//FA&amp;rsquo;s UI and the combination of the CLI commands &lt;code&gt;purehw&lt;/code&gt; and &lt;code&gt;puredrive&lt;/code&gt;expose this information, but neither is convenient when you want a clean tabular view across several arrays at once — for example, when planning a capacity expansion, validating that two arrays are configured identically, or feeding the data into a spreadsheet for an asset audit.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

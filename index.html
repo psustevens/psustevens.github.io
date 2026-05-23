@@ -11,8 +11,8 @@
   
   <meta itemprop="name" content="@PSUStevens Blog">
   <meta itemprop="description" content="The blog of @PSUStevens on Twitter and davidlstevens on LinkedIn.">
-  <meta itemprop="datePublished" content="2025-12-07T11:01:48-05:00">
-  <meta itemprop="dateModified" content="2025-12-12T12:15:29-05:00">
+  <meta itemprop="datePublished" content="2026-05-22T09:15:25-04:00">
+  <meta itemprop="dateModified" content="2026-05-22T09:15:25-04:00">
   <meta itemprop="image" content="https://blog.psustevens.com/img/main/logo.jpg">
   <meta property="og:url" content="https://blog.psustevens.com/">
   <meta property="og:site_name" content="@PSUStevens Blog">
@@ -233,6 +233,88 @@
   <header>
   <div class="title">
     
+        <h2><a href="/2026/05/22/how-to-get-everpure-flashmodule-capacity/">How to Get Everpure Flashmodule Capacity</a></h2>
+    
+    
+        <p>In this blog post I cover a lightweight PowerShell Script for auditing Everpure FlashArray flash module capacity</p>
+    
+</div>
+  <div class="meta">
+    <time class="published" datetime="2026-05-22 09:15:25 -0400 EDT">
+      May 22, 2026
+    </time>
+    <span class="author">PSUStevens</span>
+    
+      <p>5 minutes read</p>
+    
+  </div>
+</header>
+
+  
+  <a href="/2026/05/22/how-to-get-everpure-flashmodule-capacity/" class="image featured">
+    <img src="/img/2026/05/flash-module-capacity.png" alt="What is the capacity of each of these generic flash modules?">
+  </a>
+
+
+  
+  
+  
+  <p>If you manage one or more <a href="https://www.everpuredata.com">Everpure</a> <a href="https://www.everpuredata.com/flasharray">FlashArrays</a>, you&rsquo;ve probably needed a quick answer to a simple question: <em>What flash modules are installed, in which slot, and what is the capacity of each one?</em>  If this is you, then continue reading for more details.</p>
+<p>Purity//FA&rsquo;s UI and the combination of the CLI commands <code>purehw</code> and <code>puredrive</code>expose this information, but neither is convenient when you want a clean tabular view across several arrays at once — for example, when planning a capacity expansion, validating that two arrays are configured identically, or feeding the data into a spreadsheet for an asset audit.</p>
+  <footer>
+    <a href="/2026/05/22/how-to-get-everpure-flashmodule-capacity/" class="button big">Read more</a>
+    <ul class="stats">
+  
+    
+    
+      <li class="categories">
+        <ul>
+          
+            
+            <li><a class="article-category-link" href="https://blog.psustevens.com/categories/everpure">Everpure</a></li>
+          
+            
+            <li><a class="article-category-link" href="https://blog.psustevens.com/categories/howto">HowTo</a></li>
+          
+        </ul>
+      </li>
+    
+  
+  
+    
+    
+      <li class="tags">
+        <ul>
+          
+            
+            <li><a class="article-category-link" href="https://blog.psustevens.com/tags/flashmodule">flashmodule</a></li>
+          
+            
+            <li><a class="article-category-link" href="https://blog.psustevens.com/tags/flasharray">FlashArray</a></li>
+          
+            
+            <li><a class="article-category-link" href="https://blog.psustevens.com/tags/capacity">capacity</a></li>
+          
+            
+            <li><a class="article-category-link" href="https://blog.psustevens.com/tags/storage">storage</a></li>
+          
+            
+            <li><a class="article-category-link" href="https://blog.psustevens.com/tags/purestoragepowershellsdk2">PureStoragePowerShellSDK2</a></li>
+          
+        </ul>
+      </li>
+    
+  
+</ul>
+
+  </footer>
+</article>
+
+        
+          <article class="post">
+  <header>
+  <div class="title">
+    
         <h2><a href="/2025/12/12/identifying-pure-nvme-volumes-in-vcenter/">Identifying Pure NVMe Volumes in VCenter</a></h2>
     
     
@@ -391,86 +473,6 @@
 </article>
 
         
-          <article class="post">
-  <header>
-  <div class="title">
-    
-        <h2><a href="/2025/11/25/resolve-untrusted-ova-certificate/">How to resolve an untrusted OVA Certificate in vCenter</a></h2>
-    
-    
-        <p>In this blog post I&#39;m going to cover the steps to resolve an untrusted or invalid certificate of an OVA when deploying a new virtual appliance in vCenter.</p>
-    
-</div>
-  <div class="meta">
-    <time class="published" datetime="2025-11-25 13:10:38 -0400 -0400">
-      November 25, 2025
-    </time>
-    <span class="author">PSUStevens</span>
-    
-      <p>5 minutes read</p>
-    
-  </div>
-</header>
-
-  
-  <a href="/2025/11/25/resolve-untrusted-ova-certificate/" class="image featured">
-    <img src="/img/2025/11/suspicious-ITguy.jpg" alt="An IT guy suspiciously staring at a computer screen">
-  </a>
-
-
-  
-  
-  
-  <p>When deploying an OVA in vSphere 8, it is not uncommon for the workflow to flag the OVA publisher certificate as untrusted.  This can be a significant issue for organizations that prioritize security.  In this blog post, I will cover how to overcome this issue.</p>
-<h2 id="the-problem">The Problem</h2>
-<p>Deploying an OVF Template/OVA is a common operation for a VMware Administrator.  You right-click on the ESX Cluster or an ESX host in the inventory browser and click Deploy OVF Template.  This action initiates the Deploy OVF Template workflow.  Typically, there are ten steps to this workflow.  The first three steps ask for:</p>
-  <footer>
-    <a href="/2025/11/25/resolve-untrusted-ova-certificate/" class="button big">Read more</a>
-    <ul class="stats">
-  
-    
-    
-      <li class="categories">
-        <ul>
-          
-            
-            <li><a class="article-category-link" href="https://blog.psustevens.com/categories/howto">HowTo</a></li>
-          
-            
-            <li><a class="article-category-link" href="https://blog.psustevens.com/categories/pure-storage">Pure Storage</a></li>
-          
-            
-            <li><a class="article-category-link" href="https://blog.psustevens.com/categories/vmware">VMware</a></li>
-          
-            
-            <li><a class="article-category-link" href="https://blog.psustevens.com/categories/broadcom">Broadcom</a></li>
-          
-        </ul>
-      </li>
-    
-  
-  
-    
-    
-      <li class="tags">
-        <ul>
-          
-            
-            <li><a class="article-category-link" href="https://blog.psustevens.com/tags/certificates">certificates</a></li>
-          
-            
-            <li><a class="article-category-link" href="https://blog.psustevens.com/tags/vcenter">vCenter</a></li>
-          
-        </ul>
-      </li>
-    
-  
-</ul>
-
-  </footer>
-</article>
-
-        
         
 <div class="pagination">
   
@@ -488,6 +490,21 @@
       <header>
         <h1>Recent posts</h1>
       </header>
+      
+      <article class="mini-post">
+        <section>
+          
+  <a href="/2026/05/22/how-to-get-everpure-flashmodule-capacity/" class="image featured">
+    <img src="/img/2026/05/flash-module-capacity.png" alt="What is the capacity of each of these generic flash modules?">
+  </a>
+
+
+        </section>
+        <header>
+          <h1><a href="/2026/05/22/how-to-get-everpure-flashmodule-capacity/">How to Get Everpure Flashmodule Capacity</a></h1>
+          <time class="published" datetime="">May 22, 2026</time>
+        </header>
+      </article>
       
       <article class="mini-post">
         <section>
@@ -519,21 +536,6 @@
         </header>
       </article>
       
-      <article class="mini-post">
-        <section>
-          
-  <a href="/2025/11/25/resolve-untrusted-ova-certificate/" class="image featured">
-    <img src="/img/2025/11/suspicious-ITguy.jpg" alt="An IT guy suspiciously staring at a computer screen">
-  </a>
-
-
-        </section>
-        <header>
-          <h1><a href="/2025/11/25/resolve-untrusted-ova-certificate/">How to resolve an untrusted OVA Certificate in vCenter</a></h1>
-          <time class="published" datetime="">November 25, 2025</time>
-        </header>
-      </article>
-      
       
         <a href="/blog/" class="button">See more</a>
       
@@ -558,7 +560,7 @@
           
           <li>
             
-              <a href="/categories/howto/">howto<span class="count">14</span></a>
+              <a href="/categories/howto/">howto<span class="count">15</span></a>
             
           
           <li>
@@ -594,6 +596,11 @@
           <li>
             
               <a href="/categories/api/">api<span class="count">1</span></a>
+            
+          
+          <li>
+            
+              <a href="/categories/everpure/">everpure<span class="count">1</span></a>
             
           
           <li>

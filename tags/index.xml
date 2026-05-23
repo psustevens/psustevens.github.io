@@ -7,26 +7,54 @@
     <generator>Hugo</generator>
     <language>en</language>
     <copyright>© 2025 David Stevens</copyright>
-    <lastBuildDate>Fri, 12 Dec 2025 12:15:29 -0500</lastBuildDate>
+    <lastBuildDate>Fri, 22 May 2026 09:15:25 -0400</lastBuildDate>
     <atom:link href="https://blog.psustevens.com/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Pure Plugin</title>
-      <link>https://blog.psustevens.com/tags/pure-plugin/</link>
-      <pubDate>Sun, 07 Dec 2025 11:01:48 -0500</pubDate>
-      <guid>https://blog.psustevens.com/tags/pure-plugin/</guid>
+      <title>Capacity</title>
+      <link>https://blog.psustevens.com/tags/capacity/</link>
+      <pubDate>Fri, 22 May 2026 09:15:25 -0400</pubDate>
+      <guid>https://blog.psustevens.com/tags/capacity/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>FlashArray</title>
+      <link>https://blog.psustevens.com/tags/flasharray/</link>
+      <pubDate>Fri, 22 May 2026 09:15:25 -0400</pubDate>
+      <guid>https://blog.psustevens.com/tags/flasharray/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Flashmodule</title>
+      <link>https://blog.psustevens.com/tags/flashmodule/</link>
+      <pubDate>Fri, 22 May 2026 09:15:25 -0400</pubDate>
+      <guid>https://blog.psustevens.com/tags/flashmodule/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>PureStoragePowerShellSDK2</title>
+      <link>https://blog.psustevens.com/tags/purestoragepowershellsdk2/</link>
+      <pubDate>Fri, 22 May 2026 09:15:25 -0400</pubDate>
+      <guid>https://blog.psustevens.com/tags/purestoragepowershellsdk2/</guid>
       <description></description>
     </item>
     <item>
       <title>Storage</title>
       <link>https://blog.psustevens.com/tags/storage/</link>
-      <pubDate>Sun, 07 Dec 2025 11:01:48 -0500</pubDate>
+      <pubDate>Fri, 22 May 2026 09:15:25 -0400</pubDate>
       <guid>https://blog.psustevens.com/tags/storage/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Pure Plugin</title>
+      <link>https://blog.psustevens.com/tags/pure-plugin/</link>
+      <pubDate>Fri, 12 Dec 2025 12:15:29 -0500</pubDate>
+      <guid>https://blog.psustevens.com/tags/pure-plugin/</guid>
       <description></description>
     </item>
     <item>
       <title>VCenter</title>
       <link>https://blog.psustevens.com/tags/vcenter/</link>
-      <pubDate>Sun, 07 Dec 2025 11:01:48 -0500</pubDate>
+      <pubDate>Fri, 12 Dec 2025 12:15:29 -0500</pubDate>
       <guid>https://blog.psustevens.com/tags/vcenter/</guid>
       <description></description>
     </item>

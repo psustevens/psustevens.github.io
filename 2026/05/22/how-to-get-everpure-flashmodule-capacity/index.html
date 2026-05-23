@@ -1,0 +1,699 @@
+<!doctype html>
+<html lang="en">
+  <head>
+  <meta charset="utf-8">
+<title>How to Get Everpure Flashmodule Capacity - @PSUStevens Blog</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+
+  <meta name="generator" content="Hugo 0.147.8">
+  
+  <meta itemprop="name" content="How to Get Everpure Flashmodule Capacity">
+  <meta itemprop="description" content="In this blog post I cover a lightweight PowerShell Script for auditing Everpure FlashArray flash module capacity">
+  <meta itemprop="datePublished" content="2026-05-22T09:15:25-04:00">
+  <meta itemprop="dateModified" content="2026-05-22T09:15:25-04:00">
+  <meta itemprop="wordCount" content="898">
+  <meta itemprop="image" content="https://blog.psustevens.com/img/main/logo.jpg">
+  <meta itemprop="keywords" content="Flashmodule,FlashArray,Capacity,Storage,PureStoragePowerShellSDK2">
+  <meta property="og:url" content="https://blog.psustevens.com/2026/05/22/how-to-get-everpure-flashmodule-capacity/">
+  <meta property="og:site_name" content="@PSUStevens Blog">
+  <meta property="og:title" content="How to Get Everpure Flashmodule Capacity">
+  <meta property="og:description" content="In this blog post I cover a lightweight PowerShell Script for auditing Everpure FlashArray flash module capacity">
+  <meta property="og:locale" content="en">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="blog">
+    <meta property="article:published_time" content="2026-05-22T09:15:25-04:00">
+    <meta property="article:modified_time" content="2026-05-22T09:15:25-04:00">
+    <meta property="article:tag" content="Flashmodule">
+    <meta property="article:tag" content="FlashArray">
+    <meta property="article:tag" content="Capacity">
+    <meta property="article:tag" content="Storage">
+    <meta property="article:tag" content="PureStoragePowerShellSDK2">
+    <meta property="og:image" content="https://blog.psustevens.com/img/main/logo.jpg">
+
+  
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="https://blog.psustevens.com/img/main/logo.jpg">
+  <meta name="twitter:title" content="How to Get Everpure Flashmodule Capacity">
+  <meta name="twitter:description" content="In this blog post I cover a lightweight PowerShell Script for auditing Everpure FlashArray flash module capacity">
+      <meta name="twitter:site" content="@PSUStevens">
+
+  
+      <script async src="https://www.googletagmanager.com/gtag/js?id=G-GL096KPBB9"></script>
+      <script>
+        var doNotTrack = false;
+        if ( false ) {
+          var dnt = (navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack);
+          var doNotTrack = (dnt == "1" || dnt == "yes");
+        }
+        if (!doNotTrack) {
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', 'G-GL096KPBB9');
+        }
+      </script>
+
+  
+    <link rel="stylesheet"
+    href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/styles/github.min.css">
+  
+  
+    
+      <link rel="stylesheet" href="/css/normalize.css">
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway:400,800,900|Source+Sans+Pro:400,700">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/academicons/1.8.6/css/academicons.min.css">
+      <link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.7.2/css/all.css" integrity="sha384-nRgPTkuX86pH8yjPJUAFuASXQSSl2/bBUiNV47vSYpKFxHJhbcrGnmlYpYJMeD7a" crossorigin="anonymous">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.3.5/jquery.fancybox.min.css" />
+      
+       
+        
+          
+            <link rel="stylesheet" href="/css/main.min.cb6a3b646f6814df0826c8d8cf09f98c363dc5ac439e87240cd8066e3cd7cd68.css" integrity="sha256-y2o7ZG9oFN8IJsjYzwn5jDY9xaxDnockDNgGbjzXzWg=" crossorigin="anonymous">
+          
+        <link rel="stylesheet" href="/css/add-on.css">
+          
+      
+    
+  
+  
+  
+  
+</head>
+
+  <body>
+    
+<header id="site-header">
+  <nav id="site-nav">
+    <h1 class="nav-title">
+      <a href="/">
+        
+          
+            Blog
+          
+        
+      </a>
+    </h1>
+    <menu id="site-nav-menu" class="flyout-menu">
+      
+        
+          
+          
+            <a href="/" class="link"><i class='fa fa-home'></i> Home</a>
+          
+        
+      
+        
+          
+          
+            <a href="/about/" class="link"><i class='far fa-id-card'></i> About</a>
+          
+        
+      
+        
+          
+          
+            <a href="/categories/" class="link"><i class='fas fa-sitemap'></i> Categories</a>
+          
+        
+      
+        
+          
+          
+            <a href="/tags/" class="link"><i class='fas fa-sitemap'></i> Tags</a>
+          
+        
+      
+      <a href="#share-menu" class="share-toggle"><i class="fas fa-share-alt">&nbsp;</i>Share</a>
+      
+
+    </menu>
+    
+
+    <a href="#share-menu" class="share-toggle"><i class="fas fa-share-alt fa-2x">&nbsp;</i></a>
+    
+    <a href="#site-nav" class="nav-toggle"><i class="fas fa-bars fa-2x"></i></a>
+  </nav>
+  
+  
+    <menu id="share-menu" class="flyout-menu">
+      <h1>Share Post</h1>
+      
+
+
+
+
+  
+    
+    <a href="//twitter.com/share?text=How%20to%20Get%20Everpure%20Flashmodule%20Capacity&amp;url=https%3a%2f%2fblog.psustevens.com%2f2026%2f05%2f22%2fhow-to-get-everpure-flashmodule-capacity%2f" target="_blank" rel="noopener" class="share-btn twitter">
+        <i class="fab fa-twitter"></i><p>&nbsp;Twitter</p>
+      </a>
+  
+
+  
+        <a href="//www.linkedin.com/shareArticle?url=https%3a%2f%2fblog.psustevens.com%2f2026%2f05%2f22%2fhow-to-get-everpure-flashmodule-capacity%2f&amp;title=How%20to%20Get%20Everpure%20Flashmodule%20Capacity" target="_blank" rel="noopener" class="share-btn linkedin">
+            <i class="fab fa-linkedin"></i><p>&nbsp;LinkedIn</p>
+          </a>
+  
+
+  
+        <a href="mailto:?subject=Check out this post by map%5bname%3a%40PSUStevens%5d&amp;body=https%3a%2f%2fblog.psustevens.com%2f2026%2f05%2f22%2fhow-to-get-everpure-flashmodule-capacity%2f" target="_blank" class="share-btn email" data-proofer-ignore>
+          <i class="fas fa-envelope"></i><p>&nbsp;Email</p>
+        </a>
+  
+
+  
+        <a href="//bsky.app/intent/compose?text=How%20to%20Get%20Everpure%20Flashmodule%20Capacity&nbsp;https%3a%2f%2fblog.psustevens.com%2f2026%2f05%2f22%2fhow-to-get-everpure-flashmodule-capacity%2f" target="_blank" rel="noopener" class="share-btn bluesky">
+          <i class="fab fa-bluesky"></i><p>&nbsp;Bluesky</p>
+        </a>
+        
+  
+
+
+    </menu>
+  
+</header>
+
+    <div id="wrapper">
+      <section id="site-intro">
+  <a href="/"><img src="/img/main/logo.jpg" class="circle" width="" alt="@PSUStevens headshot" /></a>
+  <header>
+    <h1>@PSUStevens blog</h1>
+  </header>
+  <main>
+    <p>You are reading the blog of <a href='https://twitter.com/PSUStevens'>@PSUStevens</a>.  </br>You can reach me through one of the social accounts below.</p>
+  </main>
+  
+    <footer>
+      <ul class="socnet-icons">
+        
+
+        <li><a href="//github.com/psustevens" target="_blank" rel="noopener" title="GitHub" class="fab fa-github"></a></li>
+
+
+
+
+
+
+
+
+
+
+
+<li><a href="//linkedin.com/in/davidlstevens" target="_blank" rel="noopener" title="LinkedIn" class="fab fa-linkedin"></a></li>
+<li><a href="//linkedin.com/company/purestorage" target="_blank" rel="noopener" title="LinkedIn Company" class="fab fa-linkedin"></a></li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<li><a href="//twitter.com/PSUStevens" target="_blank" rel="noopener" title="Twitter" class="fab fa-twitter"></a></li>
+
+
+
+
+
+
+
+
+
+
+
+<li><a href="//bsky.app@psustevens.bsky.social" target="_blank" rel="noopener" title="bluesky" class="fab fa-bluesky"></a></li>
+
+      </ul>
+    </footer>
+  
+</section>
+
+      <main id="site-main">
+        <article class="post">
+  <header>
+  <div class="title">
+    
+        <h2><a href="/2026/05/22/how-to-get-everpure-flashmodule-capacity/">How to Get Everpure Flashmodule Capacity</a></h2>
+    
+    
+        <p>In this blog post I cover a lightweight PowerShell Script for auditing Everpure FlashArray flash module capacity</p>
+    
+</div>
+  <div class="meta">
+    <time class="published" datetime="2026-05-22 09:15:25 -0400 EDT">
+      May 22, 2026
+    </time>
+    <span class="author">PSUStevens</span>
+    
+      <p>5 minutes read</p>
+    
+  </div>
+</header>
+
+  <section id="socnet-share">
+    
+
+
+
+
+  
+    
+    <a href="//twitter.com/share?text=How%20to%20Get%20Everpure%20Flashmodule%20Capacity&amp;url=https%3a%2f%2fblog.psustevens.com%2f2026%2f05%2f22%2fhow-to-get-everpure-flashmodule-capacity%2f" target="_blank" rel="noopener" class="share-btn twitter">
+        <i class="fab fa-twitter"></i><p>&nbsp;Twitter</p>
+      </a>
+  
+
+  
+        <a href="//www.linkedin.com/shareArticle?url=https%3a%2f%2fblog.psustevens.com%2f2026%2f05%2f22%2fhow-to-get-everpure-flashmodule-capacity%2f&amp;title=How%20to%20Get%20Everpure%20Flashmodule%20Capacity" target="_blank" rel="noopener" class="share-btn linkedin">
+            <i class="fab fa-linkedin"></i><p>&nbsp;LinkedIn</p>
+          </a>
+  
+
+  
+        <a href="mailto:?subject=Check out this post by map%5bname%3a%40PSUStevens%5d&amp;body=https%3a%2f%2fblog.psustevens.com%2f2026%2f05%2f22%2fhow-to-get-everpure-flashmodule-capacity%2f" target="_blank" class="share-btn email" data-proofer-ignore>
+          <i class="fas fa-envelope"></i><p>&nbsp;Email</p>
+        </a>
+  
+
+  
+        <a href="//bsky.app/intent/compose?text=How%20to%20Get%20Everpure%20Flashmodule%20Capacity&nbsp;https%3a%2f%2fblog.psustevens.com%2f2026%2f05%2f22%2fhow-to-get-everpure-flashmodule-capacity%2f" target="_blank" rel="noopener" class="share-btn bluesky">
+          <i class="fab fa-bluesky"></i><p>&nbsp;Bluesky</p>
+        </a>
+        
+  
+
+
+  </section>
+  
+  <a href="/2026/05/22/how-to-get-everpure-flashmodule-capacity/" class="image featured">
+    <img src="/img/2026/05/flash-module-capacity.png" alt="What is the capacity of each of these generic flash modules?">
+  </a>
+
+
+  <div class="content">
+    <p>If you manage one or more <a href="https://www.everpuredata.com">Everpure</a> <a href="https://www.everpuredata.com/flasharray">FlashArrays</a>, you&rsquo;ve probably needed a quick answer to a simple question: <em>What flash modules are installed, in which slot, and what is the capacity of each one?</em>  If this is you, then continue reading for more details.</p>
+<p>Purity//FA&rsquo;s UI and the combination of the CLI commands <code>purehw</code> and <code>puredrive</code>expose this information, but neither is convenient when you want a clean tabular view across several arrays at once — for example, when planning a capacity expansion, validating that two arrays are configured identically, or feeding the data into a spreadsheet for an asset audit.</p>
+<p>This post walks through <code>Get-PfaModuleCapacity.ps1</code>, a small PowerShell script I wrote that produces exactly that view. The full source is on <a href="https://github.com/psustevens/My-FlashArray-scripts">GitHub</a>.</p>
+<hr>
+<h2 id="what-the-script-does">What the script does</h2>
+<p>By default,<code>Get-PfaModuleCapacity.ps1</code> connects to one or more Everpure FlashArray using the official <a href="https://www.powershellgallery.com/packages/PureStoragePowerShellSDK2">PureStoragePowerShellSDK2</a> module and for each flash module the script produces a per-array Format-List view to the host.</p>
+<p>For each flash module the script reports:
+- Name (e.g. CH0.BAY0)
+- Type, Protocol, Status, Details
+- CapacityBytes (raw integer) and Capacity (human-readable)
+- Model, Serial, Slot, Speed, HardwareStatus (from the hardware record)</p>
+<ul>
+<li><strong>Name</strong> — the chassis/bay identifier, e.g. <code>CH0.BAY0</code></li>
+<li><strong>Type, Protocol, Status, Details</strong> — drive metadata from the array</li>
+<li><strong>CapacityBytes</strong> and <strong>Capacity</strong> — raw bytes plus a human-readable form like <code>18.32 TiB</code></li>
+<li><strong>Model, Serial, Slot, Speed, HardwareStatus</strong> — hardware-level fields</li>
+</ul>
+<p>The interesting part is that no single SDK cmdlet returns all of this. The script gets capacity from <code>Get-Pfa2Drive</code> and chassis/serial/slot detail from <code>Get-Pfa2Hardware</code>, then joins the two on the <code>Name</code> field so each row tells you everything you need to know about that physical module.</p>
+<p>It also sorts the output naturally, so <code>BAY10</code> comes after <code>BAY9</code> rather than after <code>BAY1</code>.</p>
+<hr>
+<h3 id="prerequisites">Prerequisites</h3>
+<p>Before running the script, you&rsquo;ll need:</p>
+<ol>
+<li>
+<p><strong>PowerShell 7+</strong> (recommended) or Windows PowerShell 5.1.</p>
+</li>
+<li>
+<p><strong>The PureStoragePowerShellSDK2 module:</strong></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-powershell" data-lang="powershell"><span style="display:flex;"><span>Install-Module PureStoragePowerShellSDK2 -Scope CurrentUser
+</span></span></code></pre></div></li>
+<li>
+<p><strong>Credentials with read access</strong> to your array(s). The script prompts once with <code>Get-Credential</code> and reuses the same credentials for every array you supply.</p>
+</li>
+<li>
+<p><strong>Network connectivity</strong> to each array&rsquo;s management endpoint.</p>
+</li>
+</ol>
+<hr>
+<h2 id="quick-start">Quick start</h2>
+<p>The simplest invocation points the script at a single array:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-powershell" data-lang="powershell"><span style="display:flex;"><span>.\Get-PfaModuleCapacity.ps1 -FlashArrayEndpoints array1.example.com
+</span></span></code></pre></div><p>You&rsquo;ll be prompted for credentials, and the script will print a <code>Format-List</code> view to the host:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-text" data-lang="text"><span style="display:flex;"><span>ArrayName      : array1
+</span></span><span style="display:flex;"><span>Name           : CH0.BAY0
+</span></span><span style="display:flex;"><span>Type           : SSD
+</span></span><span style="display:flex;"><span>Protocol       : NVMe
+</span></span><span style="display:flex;"><span>Status         : healthy
+</span></span><span style="display:flex;"><span>CapacityBytes  : 18316288000000
+</span></span><span style="display:flex;"><span>Capacity       : 18.32 TiB
+</span></span><span style="display:flex;"><span>Model          : DFM-37
+</span></span><span style="display:flex;"><span>Serial         : PSU12345678
+</span></span><span style="display:flex;"><span>Slot           : 1
+</span></span><span style="display:flex;"><span>Speed          : 32 Gb/s
+</span></span><span style="display:flex;"><span>HardwareStatus : ok
+</span></span></code></pre></div><h3 id="auditing-multiple-arrays">Auditing multiple arrays</h3>
+<p><code>-FlashArrayEndpoints</code> accepts an array of values, so you can sweep several FlashArrays in one run:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-powershell" data-lang="powershell"><span style="display:flex;"><span>.\Get-PfaModuleCapacity.ps1 -FlashArrayEndpoints array1.example.com,array2.example.com
+</span></span></code></pre></div><p>Each array&rsquo;s results are preceded by a colored banner in the host so you can scan visually for differences.</p>
+<h3 id="csv-output-for-spreadsheets-and-reporting">CSV output for spreadsheets and reporting</h3>
+<p>For anything beyond a quick look, switch to CSV mode. The <code>-CsvPath</code> parameter writes a single combined CSV containing rows from every endpoint, each row tagged with an <code>ArrayName</code> column so you can filter or pivot later:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-powershell" data-lang="powershell"><span style="display:flex;"><span>.\Get-PfaModuleCapacity.ps1 `
+</span></span><span style="display:flex;"><span>    -FlashArrayEndpoints array1.example.com,array2.example.com `
+</span></span><span style="display:flex;"><span>    -CsvPath modules.csv
+</span></span></code></pre></div><p>Open <code>modules.csv</code> in Excel or your favorite spreadsheet tool and you can sort by <code>Capacity</code>, group by <code>Model</code>, or count modules per chassis with a pivot table.</p>
+<p>If you&rsquo;d rather stream the CSV through a pipeline — for example, into <code>Where-Object</code> or another tool — use <code>-Csv</code> instead and the CSV will be written to stdout:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-powershell" data-lang="powershell"><span style="display:flex;"><span>.\Get-PfaModuleCapacity.ps1 -FlashArrayEndpoints array1.example.com -Csv |
+</span></span><span style="display:flex;"><span>    ConvertFrom-Csv |
+</span></span><span style="display:flex;"><span>    Where-Object Status <span style="color:#f92672">-ne</span> <span style="color:#e6db74">&#39;healthy&#39;</span>
+</span></span></code></pre></div><p>The same script that produced your spreadsheet now drives a quick health check.</p>
+<hr>
+<h2 id="how-the-join-works-in-plain-terms">How the join works (in plain terms)</h2>
+<p>If you&rsquo;ve ever tried to combine results from two cmdlets in PowerShell, the pattern in this script is worth borrowing:</p>
+<ol>
+<li>
+<p>Call both cmdlets and hold onto the results.</p>
+</li>
+<li>
+<p>Build a hashtable that maps <code>Name</code> to the hardware record:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-powershell" data-lang="powershell"><span style="display:flex;"><span>$hardwareByName = @{}
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">foreach</span> ($h <span style="color:#66d9ef">in</span> $hardware) { $hardwareByName[$h.Name] = $h }
+</span></span></code></pre></div></li>
+<li>
+<p>For each drive, look up the matching hardware record in the hashtable (constant time) and project a combined <code>[pscustomobject]</code>.</p>
+</li>
+</ol>
+<p>This is how SQL-style joins look in PowerShell when you don&rsquo;t want to install a database. It&rsquo;s fast even on arrays with hundreds of modules.</p>
+<h3 id="a-note-on-capacity-units">A note on capacity units</h3>
+<p>Capacity is reported in IEC-style units (<code>KiB</code>, <code>MiB</code>, <code>GiB</code>, <code>TiB</code>) with a divisor of 1000 at each step. This matches how Purity reports raw module capacity in the UI, where an &ldquo;18 TB&rdquo; DFM is shown as <code>18.32 TiB</code> after binary rounding overhead.</p>
+<p>If you&rsquo;d rather report in base-1024 units, that&rsquo;s a one-line change to the <code>Convert-ToReadableCapacity</code> function — the script is small and easy to fork.</p>
+<hr>
+<h2 id="getting-the-script">Getting the script</h2>
+<p>The script and its documentation live in <a href="https://github.com/psustevens/My-FlashArray-scripts">psustevens/My-FlashArray-scripts</a> on GitHub under the MIT license. Once cloned, run the following code to see every parameter and example documented inline.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-powershell" data-lang="powershell"><span style="display:flex;"><span>Get-Help .\Get-PfaModuleCapacity.ps1 -Full
+</span></span></code></pre></div><p>If you find a bug, want a new output column, or have ideas for related FlashArray scripts, issues and pull requests are welcome.</p>
+<hr>
+<h2 id="summary">Summary</h2>
+<p>Let&rsquo;s summarize what we covered in this post:</p>
+<ol>
+<li>What the script does</li>
+<li>Prerequisites for running the script</li>
+<li>A quick one-liner to get the basics from a single array</li>
+<li>How to obtain capacity info for multiple arrays</li>
+<li>How to output the info as a CSV and output it to a file</li>
+<li>How the data from two PowerShell SDK2 commandlets are joined together</li>
+<li>How to get the script from my Github repository</li>
+</ol>
+<p>If there is something you think I&rsquo;m missing and feel should be added/corrected, please let me know.<br>
+Thanks for reading!</p>
+
+  </div>
+  <footer>
+    <ul class="stats">
+  
+    
+    
+      <li class="categories">
+        <ul>
+          
+            
+            <li><a class="article-category-link" href="https://blog.psustevens.com/categories/everpure">Everpure</a></li>
+          
+            
+            <li><a class="article-category-link" href="https://blog.psustevens.com/categories/howto">HowTo</a></li>
+          
+        </ul>
+      </li>
+    
+  
+  
+    
+    
+      <li class="tags">
+        <ul>
+          
+            
+            <li><a class="article-category-link" href="https://blog.psustevens.com/tags/flashmodule">flashmodule</a></li>
+          
+            
+            <li><a class="article-category-link" href="https://blog.psustevens.com/tags/flasharray">FlashArray</a></li>
+          
+            
+            <li><a class="article-category-link" href="https://blog.psustevens.com/tags/capacity">capacity</a></li>
+          
+            
+            <li><a class="article-category-link" href="https://blog.psustevens.com/tags/storage">storage</a></li>
+          
+            
+            <li><a class="article-category-link" href="https://blog.psustevens.com/tags/purestoragepowershellsdk2">PureStoragePowerShellSDK2</a></li>
+          
+        </ul>
+      </li>
+    
+  
+</ul>
+
+  </footer>
+</article>
+
+
+<div class="pagination">
+  
+    <a href="/2025/12/12/identifying-pure-nvme-volumes-in-vcenter/" class="button big previous"><i class="fas fa-angle-left"></i> Identifying Pure NVMe Volumes in VCenter</a>
+  
+  
+</div>
+
+
+      </main>
+      <section id="site-sidebar">
+  
+    <section id="recent-posts">
+      <header>
+        <h1>Recent posts</h1>
+      </header>
+      
+      <article class="mini-post">
+        <section>
+          
+  <a href="/2026/05/22/how-to-get-everpure-flashmodule-capacity/" class="image featured">
+    <img src="/img/2026/05/flash-module-capacity.png" alt="What is the capacity of each of these generic flash modules?">
+  </a>
+
+
+        </section>
+        <header>
+          <h1><a href="/2026/05/22/how-to-get-everpure-flashmodule-capacity/">How to Get Everpure Flashmodule Capacity</a></h1>
+          <time class="published" datetime="">May 22, 2026</time>
+        </header>
+      </article>
+      
+      <article class="mini-post">
+        <section>
+          
+  <a href="/2025/12/12/identifying-pure-nvme-volumes-in-vcenter/" class="image featured">
+    <img src="/img/2025/12/vCenterNaaIdNVMe.png" alt="EUI ID for a Pure Storage NVMe-backed datastore">
+  </a>
+
+
+        </section>
+        <header>
+          <h1><a href="/2025/12/12/identifying-pure-nvme-volumes-in-vcenter/">Identifying Pure NVMe Volumes in VCenter</a></h1>
+          <time class="published" datetime="">December 12, 2025</time>
+        </header>
+      </article>
+      
+      <article class="mini-post">
+        <section>
+          
+  <a href="/2025/12/07/identifying-pure-scsi-volumes-in-vcenter/" class="image featured">
+    <img src="/img/2025/12/vCenterNaaIdSCSI.png" alt="NAA ID for a Pure Storage-backed datastore">
+  </a>
+
+
+        </section>
+        <header>
+          <h1><a href="/2025/12/07/identifying-pure-scsi-volumes-in-vcenter/">Identifying Pure Storage SCSI Volumes in VCenter</a></h1>
+          <time class="published" datetime="">December 7, 2025</time>
+        </header>
+      </article>
+      
+      
+        <a href="/blog/" class="button">See more</a>
+      
+    </section>
+  
+
+  
+    
+      <section id="categories">
+        <header>
+          <h1><a href="/categories">Categories</a></h1>
+        </header>
+        <ul>
+          
+            
+          
+          
+          <li>
+            
+              <a href="/categories/vmware/">vmware<span class="count">16</span></a>
+            
+          
+          <li>
+            
+              <a href="/categories/howto/">howto<span class="count">15</span></a>
+            
+          
+          <li>
+            
+              <a href="/categories/hytrust/">hytrust<span class="count">7</span></a>
+            
+          
+          <li>
+            
+              <a href="/categories/blogging/">blogging<span class="count">6</span></a>
+            
+          
+          <li>
+            
+              <a href="/categories/broadcom/">broadcom<span class="count">5</span></a>
+            
+          
+          <li>
+            
+              <a href="/categories/entrust/">entrust<span class="count">5</span></a>
+            
+          
+          <li>
+            
+              <a href="/categories/career/">career<span class="count">3</span></a>
+            
+          
+          <li>
+            
+              <a href="/categories/pure-storage/">pure storage<span class="count">3</span></a>
+            
+          
+          <li>
+            
+              <a href="/categories/api/">api<span class="count">1</span></a>
+            
+          
+          <li>
+            
+              <a href="/categories/everpure/">everpure<span class="count">1</span></a>
+            
+          
+          <li>
+            
+              <a href="/categories/github/">github<span class="count">1</span></a>
+            
+          
+          <li>
+            
+              <a href="/categories/psustevens/">psustevens<span class="count">1</span></a>
+            
+          
+          <li>
+            
+              <a href="/categories/synology/">synology<span class="count">1</span></a>
+            
+          
+          </li>
+        </ul>
+      </section>
+    
+  
+
+  <section id="mini-bio">
+    <header>
+      <h1>About</h1>
+    </header>
+    <p>This is my personal blog about technical topics including virtualization, storage, networking, backups, and some random IT stuff that strikes my fancy.</p>
+    <footer>
+      <a href="/about" class="button">Learn More</a>
+    </footer>
+  </section>
+</section>
+
+      <footer id="site-footer">
+  
+      <ul class="socnet-icons">
+        
+
+        <li><a href="//github.com/psustevens" target="_blank" rel="noopener" title="GitHub" class="fab fa-github"></a></li>
+
+
+
+
+
+
+
+
+
+
+
+<li><a href="//linkedin.com/in/davidlstevens" target="_blank" rel="noopener" title="LinkedIn" class="fab fa-linkedin"></a></li>
+<li><a href="//linkedin.com/company/purestorage" target="_blank" rel="noopener" title="LinkedIn Company" class="fab fa-linkedin"></a></li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<li><a href="//twitter.com/PSUStevens" target="_blank" rel="noopener" title="Twitter" class="fab fa-twitter"></a></li>
+
+
+
+
+
+
+
+
+
+
+
+<li><a href="//bsky.app@psustevens.bsky.social" target="_blank" rel="noopener" title="bluesky" class="fab fa-bluesky"></a></li>
+
+      </ul>
+  
+  <p class="copyright">
+    
+      © 2025 David Stevens
+    . <br>
+    Theme: <a href='https://github.com/pacollins/hugo-future-imperfect-slim' target='_blank' rel='noopener'>Hugo Future Imperfect Slim</a><br>A <a href='https://html5up.net/future-imperfect' target='_blank' rel='noopener'>HTML5 UP port</a> | Powered by <a href='https://gohugo.io/' title='0.147.8' target='_blank' rel='noopener'>Hugo</a>
+  </p>
+</footer>
+<a id="back-to-top" href="#" class="fas fa-arrow-up fa-2x"></a>
+
+      
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/highlight.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/languages/html.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/languages/css.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/languages/js.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/languages/toml.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/languages/PowerShell.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/languages/markdown.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/languages/plaintext.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script>
+
+
+  
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/skel/3.0.1/skel.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.3.5/jquery.fancybox.min.js"></script>
+  <script src=/js/util.js></script>
+  <script src=/js/main.js></script>
+  <script src=/js/add-on.js></script>
+  
+
+
+
+
+    </div>
+  </body>
+</html>
